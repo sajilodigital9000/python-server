@@ -5,6 +5,7 @@ data/*
 #Uploaded files
 Home/*
 !Home/qr.png
+!Home/Portal.html
 
 #my own to do list
 to-do.txt

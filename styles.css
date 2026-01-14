@@ -476,6 +476,48 @@ body.light-mode .file-card:hover {
   color: white;
 }
 
+.dropdown-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 4px 0;
+}
+
+/* Submenus */
+.dropdown-item.has-submenu {
+    position: relative;
+    justify-content: space-between;
+}
+
+.submenu-arrow {
+    width: 14px;
+    height: 14px;
+    opacity: 0.6;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -5px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    width: 180px;
+    padding: 5px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    margin-left: 2px;
+}
+
+.dropdown-item.has-submenu:hover .submenu {
+    display: block;
+    animation: submenu-fade 0.2s ease-out;
+}
+
+@keyframes submenu-fade {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
 /* Properties Sidebar / Bottom Sheet */
 #detailsPanel {
   position: fixed;

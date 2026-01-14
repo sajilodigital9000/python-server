@@ -1,312 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>SajiloCloud | Sajilo Digital</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- Highlight.js fallback (keeping for inline simple views) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <!-- Monaco Editor -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body oncontextmenu="return false;">
-    <div id="globalLoader" class="loader-overlay" style="display: none">
-      <div class="loader"></div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>SajiloCloud | Sajilo Digital</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Highlight.js fallback (keeping for inline simple views) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <!-- Monaco Editor -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <div id="dragOverlay">
-      <i
-        data-lucide="upload-cloud"
-        style="width: 48px; height: 48px; margin-bottom: 20px"
-      ></i>
-      Drop to Upload
-    </div>
-    <div id="topProgress"></div>
+<body oncontextmenu="return false;">
+  <div id="globalLoader" class="loader-overlay" style="display: none">
+    <div class="loader"></div>
+  </div>
 
-    <div id="uploadDrawer" class="upload-drawer">
-      <div class="upload-drawer-header">
-        <b>Uploads</b>
-        <button class="btn-clear" onclick="closeUploadDrawer()">
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <div id="uploadList" class="upload-list"></div>
-    </div>
-    <div id="uploadStatus">
-      <i data-lucide="cloud-upload"></i> Uploading... <b id="percentText">0%</b>
-    </div>
-    <div id="toast-container"></div>
+  <div id="dragOverlay">
+    <i data-lucide="upload-cloud" style="width: 48px; height: 48px; margin-bottom: 20px"></i>
+    Drop to Upload
+  </div>
+  <div id="topProgress"></div>
 
-    <div
-      id="mediaFullscreenOverlay"
-      class="media-fullscreen"
-      style="display: none"
-      tabindex="-1"
-    >
-      <div class="fullscreen-actions">
-        <button
-          class="fullscreen-action-btn"
-          onclick="downloadCurrentMedia()"
-          title="Download"
-        >
-          <i data-lucide="download"></i>
-        </button>
-        <button
-          class="fullscreen-action-btn"
-          onclick="closeMediaFullscreen()"
-          title="Close"
-        >
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <button class="nav-btn prev" onclick="navigateMedia(-1)" title="Previous">
-        <i data-lucide="chevron-left"></i>
-      </button>
-      <div id="fullscreenContent"></div>
-      <button class="nav-btn next" onclick="navigateMedia(1)" title="Next">
-        <i data-lucide="chevron-right"></i>
+  <div id="uploadDrawer" class="upload-drawer">
+    <div class="upload-drawer-header">
+      <b>Uploads</b>
+      <button class="btn-clear" onclick="closeUploadDrawer()">
+        <i data-lucide="x"></i>
       </button>
     </div>
+    <div id="uploadList" class="upload-list"></div>
+  </div>
+  <div id="uploadStatus">
+    <i data-lucide="cloud-upload"></i> Uploading... <b id="percentText">0%</b>
+  </div>
+  <div id="toast-container"></div>
 
-    <header>
-      <div class="brand" onclick="fetchFiles('')">Sajilo<span>Cloud</span></div>
-      <div class="header-actions">
-        <div id="sysInfo"></div>
-        <button class="btn" onclick="toggleTheme()" title="Toggle Theme">
-          <i data-lucide="sun" id="themeIcon"></i>
-        </button>
-        <select class="btn" onchange="changeSort(this.value)" title="Sort">
-          <option value="name_asc">Name (A-Z)</option>
-          <option value="name_desc">Name (Z-A)</option>
-          <option value="size_asc">Size</option>
-        </select>
-        <button class="btn" onclick="toggleView()">
-          <i data-lucide="layers" id="viewIcon"></i>
-        </button>
-        <button class="btn" onclick="openActivityLog()" title="Activity Log">
-          <i data-lucide="activity"></i>
-        </button>
-        <button
-          class="btn btn-primary"
-          onclick="document.getElementById('fileInput').click()"
-        >
-          <i data-lucide="upload"></i> Upload
-        </button>
-        <input type="file" id="fileInput" multiple class="file-input" />
-      </div>
-    </header>
-
-    <div class="toolbar">
-      <button class="btn" onclick="goBack()" title="Back">
-        <i data-lucide="arrow-left"></i>
+  <div id="mediaFullscreenOverlay" class="media-fullscreen" style="display: none" tabindex="-1">
+    <div class="fullscreen-actions">
+      <button class="fullscreen-action-btn" onclick="downloadCurrentMedia()" title="Download">
+        <i data-lucide="download"></i>
       </button>
-      <div class="breadcrumb" id="breadcrumb"></div>
-      <div style="display: flex; align-items: center; gap: 8px">
-        <input
-          type="text"
-          class="search-box"
-          id="searchInput"
-          placeholder="Search (/)"
-        />
-        <label
-          style="
+      <button class="fullscreen-action-btn" onclick="closeMediaFullscreen()" title="Close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <button class="nav-btn prev" onclick="navigateMedia(-1)" title="Previous">
+      <i data-lucide="chevron-left"></i>
+    </button>
+    <div id="fullscreenContent"></div>
+    <button class="nav-btn next" onclick="navigateMedia(1)" title="Next">
+      <i data-lucide="chevron-right"></i>
+    </button>
+  </div>
+
+  <header>
+    <div class="brand" onclick="fetchFiles('')">Sajilo<span>Cloud</span></div>
+    <div class="header-actions">
+      <div id="sysInfo"></div>
+      <button class="btn" onclick="toggleTheme()" title="Toggle Theme">
+        <i data-lucide="sun" id="themeIcon"></i>
+      </button>
+      <select class="btn" onchange="changeSort(this.value)" title="Sort">
+        <option value="name_asc">Name (A-Z)</option>
+        <option value="name_desc">Name (Z-A)</option>
+        <option value="size_asc">Size</option>
+      </select>
+      <button class="btn" onclick="toggleView()">
+        <i data-lucide="layers" id="viewIcon"></i>
+      </button>
+      <button class="btn" onclick="openActivityLog()" title="Activity Log">
+        <i data-lucide="activity"></i>
+      </button>
+      <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+        <i data-lucide="upload"></i> Upload
+      </button>
+      <input type="file" id="fileInput" multiple class="file-input" />
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="btn" onclick="goBack()" title="Back">
+      <i data-lucide="arrow-left"></i>
+    </button>
+    <div class="breadcrumb" id="breadcrumb"></div>
+    <div style="display: flex; align-items: center; gap: 8px">
+      <input type="text" class="search-box" id="searchInput" placeholder="Search (/)" />
+      <label style="
             font-size: 0.75rem;
             display: flex;
             align-items: center;
             gap: 4px;
             cursor: pointer;
-          "
-        >
-          <input type="checkbox" id="globalSearch" /> Global
-        </label>
-      </div>
-      <button class="btn" onclick="toggleSelectMode()" id="selectModeBtn">
-        <i data-lucide="check-square"></i> Select
-      </button>
-      <button class="btn" onclick="createNewFolder()">
-        <i data-lucide="folder-plus"></i> Folder
-      </button>
-      <button
-        class="btn"
-        onclick="toggleRecycleBin()"
-        title="Recycle Bin"
-        id="recycleBinBtn"
-      >
-        <i data-lucide="trash-2"></i>
-      </button>
+          ">
+        <input type="checkbox" id="globalSearch" /> Global
+      </label>
     </div>
+    <button class="btn" onclick="toggleSelectMode()" id="selectModeBtn">
+      <i data-lucide="check-square"></i> Select
+    </button>
+    <button class="btn" onclick="createNewFolder()">
+      <i data-lucide="folder-plus"></i> Folder
+    </button>
+    <button class="btn" onclick="toggleRecycleBin()" title="Recycle Bin" id="recycleBinBtn">
+      <i data-lucide="trash-2"></i>
+    </button>
+  </div>
 
-    <div id="statsBar" class="status-bar"></div>
-    <div id="filterBar" class="filter-bar">
-      <button
-        class="btn filter-btn active"
-        data-filter="all"
-        onclick="setFilter(this)"
-      >
-        All
-      </button>
-      <button
-        class="btn filter-btn"
-        data-filter="image"
-        onclick="setFilter(this)"
-      >
-        Images
-      </button>
-      <button
-        class="btn filter-btn"
-        data-filter="video"
-        onclick="setFilter(this)"
-      >
-        Videos
-      </button>
-      <button
-        class="btn filter-btn"
-        data-filter="pdf"
-        onclick="setFilter(this)"
-      >
-        PDFs
-      </button>
-      <button
-        class="btn filter-btn"
-        data-filter="text"
-        onclick="setFilter(this)"
-      >
-        Text
-      </button>
-      <button
-        class="btn filter-btn"
-        data-filter="code"
-        onclick="setFilter(this)"
-      >
-        Code
-      </button>
-      <button
-        class="btn filter-btn"
-        data-filter="archive"
-        onclick="setFilter(this)"
-      >
-        Zip
-      </button>
-      <button
-        class="btn filter-btn"
-        data-filter="others"
-        onclick="setFilter(this)"
-      >
-        Other
-      </button>
-    </div>
+  <div id="statsBar" class="status-bar"></div>
+  <div id="filterBar" class="filter-bar">
+    <button class="btn filter-btn active" data-filter="all" onclick="setFilter(this)">
+      All
+    </button>
+    <button class="btn filter-btn" data-filter="image" onclick="setFilter(this)">
+      Images
+    </button>
+    <button class="btn filter-btn" data-filter="video" onclick="setFilter(this)">
+      Videos
+    </button>
+    <button class="btn filter-btn" data-filter="pdf" onclick="setFilter(this)">
+      PDFs
+    </button>
+    <button class="btn filter-btn" data-filter="text" onclick="setFilter(this)">
+      Text
+    </button>
+    <button class="btn filter-btn" data-filter="code" onclick="setFilter(this)">
+      Code
+    </button>
+    <button class="btn filter-btn" data-filter="archive" onclick="setFilter(this)">
+      Zip
+    </button>
+    <button class="btn filter-btn" data-filter="others" onclick="setFilter(this)">
+      Other
+    </button>
+  </div>
 
-    <div class="main-container">
-      <div id="explorer" class="grid"></div>
-      <aside id="detailsPanel">
-        <div id="panelResizer" class="panel-resizer"></div>
-        <div class="details-header">
-          <b>Properties</b>
-          <div style="display: flex; gap: 8px">
-            <button
-              class="btn"
-              id="saveFileBtn"
-              style="display: none"
-              onclick="saveEditorContent()"
-            >
-              <i data-lucide="save"></i> Save
-            </button>
-            <button class="btn" onclick="toggleDetails(false)">
-              <i data-lucide="x"></i>
-            </button>
-          </div>
+  <div class="main-container">
+    <div id="explorer" class="grid"></div>
+    <aside id="detailsPanel">
+      <div id="panelResizer" class="panel-resizer"></div>
+      <div class="details-header">
+        <b>Properties</b>
+        <div style="display: flex; gap: 8px">
+          <button class="btn" id="saveFileBtn" style="display: none" onclick="saveEditorContent()">
+            <i data-lucide="save"></i> Save
+          </button>
+          <button class="btn" onclick="toggleDetails(false)">
+            <i data-lucide="x"></i>
+          </button>
         </div>
-        <div class="details-content" id="detailContent"></div>
-      </aside>
-    </div>
+      </div>
+      <div class="details-content" id="detailContent"></div>
+    </aside>
+  </div>
 
-    <div id="batchToolbar" class="batch-toolbar">
-      <span id="batchCount">0 items selected</span>
-      <button
-        class="btn"
-        onclick="downloadBatch()"
-        style="background: transparent; border-color: white; color: white"
-      >
-        <i data-lucide="file-archive"></i> Zip
-      </button>
-      <button
-        class="btn"
-        onclick="openBatchMove()"
-        style="background: transparent; border-color: white; color: white"
-      >
-        <i data-lucide="send"></i> Move
-      </button>
-      <button
-        class="btn"
-        onclick="deleteBatch()"
-        style="background: #fb7185; border: none; color: white"
-      >
-        <i data-lucide="trash-2"></i> Delete
-      </button>
-    </div>
+  <div id="batchToolbar" class="batch-toolbar">
+    <span id="batchCount">0 items selected</span>
+    <button class="btn" onclick="downloadBatch()" style="background: transparent; border-color: white; color: white">
+      <i data-lucide="file-archive"></i> Zip
+    </button>
+    <button class="btn" onclick="openBatchMove()" style="background: transparent; border-color: white; color: white">
+      <i data-lucide="send"></i> Move
+    </button>
+    <button class="btn" onclick="deleteBatch()" style="background: #fb7185; border: none; color: white">
+      <i data-lucide="trash-2"></i> Delete
+    </button>
+  </div>
 
-    <div id="contextMenu" class="dropdown">
-      <div class="dropdown-item" onclick="handleMenuAction('details')">
-        <i data-lucide="info"></i> Details
-      </div>
-      <div
-        class="dropdown-item file-only"
-        onclick="handleMenuAction('download')"
-      >
-        <i data-lucide="download"></i> Download
-      </div>
-      <div class="dropdown-item file-only" onclick="handleMenuAction('share')">
-        <i data-lucide="share-2"></i> Share
-      </div>
-      <div
-        class="dropdown-item file-only"
-        onclick="handleMenuAction('open-page')"
-      >
-        <i data-lucide="external-link"></i> Open Page
-      </div>
-      <div class="dropdown-item" onclick="handleMenuAction('rename')">
-        <i data-lucide="edit-3"></i> Rename
-      </div>
-      <div class="dropdown-item" onclick="openSendToModal()">
-        <i data-lucide="send"></i> Send To...
-      </div>
-      <div class="dropdown-item" onclick="handleMenuAction('restore')">
-        <i data-lucide="rotate-ccw"></i> Restore
-      </div>
-      <div
-        class="dropdown-item"
-        onclick="handleMenuAction('purge')"
-        style="color: #fb7185"
-      >
-        <i data-lucide="trash-2"></i> Delete Forever
-      </div>
-      <div
-        class="dropdown-item"
-        onclick="handleMenuAction('delete')"
-        style="color: #fb7185"
-      >
-        <i data-lucide="trash"></i> Delete
+  <div id="contextMenu" class="dropdown">
+    <div class="dropdown-item" onclick="handleMenuAction('details')">
+      <i data-lucide="info"></i> Details
+    </div>
+    <div class="dropdown-item file-only" onclick="handleMenuAction('download')">
+      <i data-lucide="download"></i> Download
+    </div>
+    <div class="dropdown-item file-only" onclick="handleMenuAction('share')">
+      <i data-lucide="share-2"></i> Share
+    </div>
+    <div class="dropdown-item file-only" onclick="handleMenuAction('open-page')">
+      <i data-lucide="external-link"></i> Open Page
+    </div>
+    <div class="dropdown-item" onclick="handleMenuAction('rename')">
+      <i data-lucide="edit-3"></i> Rename
+    </div>
+    <div class="dropdown-item" onclick="openSendToModal()">
+      <i data-lucide="send"></i> Send To...
+    </div>
+    <div class="dropdown-item" onclick="handleMenuAction('restore')">
+      <i data-lucide="rotate-ccw"></i> Restore
+    </div>
+    <div class="dropdown-item" onclick="handleMenuAction('purge')" style="color: #fb7185">
+      <i data-lucide="trash-2"></i> Delete Forever
+    </div>
+    <div class="dropdown-item" onclick="handleMenuAction('delete')" style="color: #fb7185">
+      <i data-lucide="trash"></i> Delete
+    </div>
+  </div>
+
+  <!-- Global Context Menu (Background) -->
+  <div id="globalContextMenu" class="dropdown">
+    <div class="dropdown-item has-submenu">
+      <i data-lucide="plus"></i> New
+      <i data-lucide="chevron-right" class="submenu-arrow"></i>
+      <div class="submenu">
+        <div class="dropdown-item" onclick="createNewFolder()">
+          <i data-lucide="folder-plus"></i> Folder
+        </div>
+        <div class="dropdown-item" onclick="createNewFile('txt')">
+          <i data-lucide="file-text"></i> Text File
+        </div>
+        <div class="dropdown-item" onclick="createNewFile('md')">
+          <i data-lucide="file-type-2"></i> Markdown
+        </div>
+        <div class="dropdown-item" onclick="createNewFile('code')">
+          <i data-lucide="code-2"></i> Code File
+        </div>
       </div>
     </div>
+    <div class="dropdown-item has-submenu">
+      <i data-lucide="hammer"></i> Tools
+      <i data-lucide="chevron-right" class="submenu-arrow"></i>
+      <div class="submenu">
+        <div class="dropdown-item" onclick="openScratchpad()">
+          <i data-lucide="sticky-note"></i> Scratchpad
+        </div>
+        <div class="dropdown-item" onclick="showCheatsheets()">
+          <i data-lucide="keyboard"></i> Shortcuts
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-divider"></div>
+    <div class="dropdown-item" onclick="fetchFiles(currentPath)">
+      <i data-lucide="refresh-cw"></i> Refresh
+    </div>
+  </div>
 
-    <div
-      id="sendToModal"
-      style="
+  <div id="sendToModal" style="
         display: none;
         position: fixed;
         inset: 0;
@@ -314,10 +250,8 @@
         z-index: 9000;
         align-items: center;
         justify-content: center;
-      "
-    >
-      <div
-        style="
+      ">
+    <div style="
           background: var(--bg-surface);
           padding: 20px;
           border-radius: 15px;
@@ -327,32 +261,22 @@
           max-height: 80vh;
           display: flex;
           flex-direction: column;
-        "
-      >
-        <h3 style="margin-bottom: 15px">Send to Folder</h3>
-        <div
-          id="folderList"
-          style="
+        ">
+      <h3 style="margin-bottom: 15px">Send to Folder</h3>
+      <div id="folderList" style="
             overflow-y: auto;
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 8px;
-          "
-        ></div>
-        <button
-          class="btn"
-          style="margin-top: 15px; width: 100%; justify-content: center"
-          onclick="closeSendToModal()"
-        >
-          Cancel
-        </button>
-      </div>
+          "></div>
+      <button class="btn" style="margin-top: 15px; width: 100%; justify-content: center" onclick="closeSendToModal()">
+        Cancel
+      </button>
     </div>
+  </div>
 
-    <div
-      id="activityModal"
-      style="
+  <div id="activityModal" style="
         display: none;
         position: fixed;
         inset: 0;
@@ -360,10 +284,8 @@
         z-index: 9000;
         align-items: center;
         justify-content: center;
-      "
-    >
-      <div
-        style="
+      ">
+    <div style="
           background: var(--bg-surface);
           width: 90%;
           max-width: 600px;
@@ -373,34 +295,29 @@
           display: flex;
           flex-direction: column;
           padding: 20px;
-        "
-      >
-        <div
-          style="
+        ">
+      <div style="
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
-          "
-        >
-          <h3>Recent Activity</h3>
-          <button class="btn" onclick="closeActivityLog()">
-            <i data-lucide="x"></i>
-          </button>
-        </div>
-        <div
-          id="activityList"
-          style="
+          ">
+        <h3>Recent Activity</h3>
+        <button class="btn" onclick="closeActivityLog()">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div id="activityList" style="
             overflow-y: auto;
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 10px;
-          "
-        ></div>
-      </div>
+          "></div>
     </div>
+  </div>
 
-    <script src="app.js"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
+
 </html>

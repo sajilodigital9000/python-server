@@ -1353,8 +1353,151 @@ function postComment(path) {
     fetch('/api/comments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ path: path, text: text })
     }).then(res => {
         if (res.ok) loadComments(path);
     });
+}
+
+// Global Context Menu Logic
+document.addEventListener('contextmenu', (e) => {
+    // If the target is inside a file-card or existing context menu, do nothing (handled elsewhere)
+    if (e.target.closest('.file-card') || e.target.closest('#contextMenu') || e.target.closest('#globalContextMenu')) {
+        return;
+    }
+
+    e.preventDefault();
+    const menu = document.getElementById('globalContextMenu');
+
+    // Hide standard context menu if open
+    document.getElementById('contextMenu').style.display = 'none';
+
+    menu.style.display = 'block';
+
+    // Adjust position to stay on screen
+    let x = e.clientX;
+    let y = e.clientY;
+
+    const rect = menu.getBoundingClientRect();
+    if (x + rect.width > window.innerWidth) x -= rect.width;
+    if (y + rect.height > window.innerHeight) y -= rect.height;
+
+    menu.style.left = `${x}px`;
+    menu.style.top = `${y}px`;
+});
+
+// Close global menu on click
+document.addEventListener('click', (e) => {
+    const menu = document.getElementById('globalContextMenu');
+    if (menu && menu.style.display === 'block') {
+        menu.style.display = 'none';
+    }
+});
+
+async function createNewFile(type) {
+    let name = prompt(`Enter ${type === 'code' ? 'Code' : type.toUpperCase()} filename (with extension if needed):`);
+    if (!name) return;
+
+    // Auto-append extension if missing and known type
+    if (type === 'txt' && !name.includes('.')) name += '.txt';
+    if (type === 'md' && !name.includes('.')) name += '.md';
+
+    // Check if file exists (basic check via list)
+    if (filesList.some(f => f.name === name)) {
+        showToast('File already exists!', 'error');
+        return;
+    }
+
+    await fetch('/api/save_json', { // Using save_json generic handler for raw text save too
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            filename: currentPath ? `${currentPath}/${name}` : name,
+            content: "",
+            raw: true
+        })
+    });
+
+    showToast('File created!');
+    fetchFiles(currentPath);
+}
+
+function openScratchpad() {
+    // We can reuse the "New File" flow but pre-fill or just open an empty editor
+    // For a specific "Scratchpad", let's create a temp file in memory or just open the editor panel blank.
+
+    // Logic: Open Details Panel with Editor Mode enabled, but no file attached.
+    const panel = document.getElementById('detailsPanel');
+    const content = document.getElementById('detailContent');
+    const saveBtn = document.getElementById('saveFileBtn');
+
+    currentEditorFile = null; // No file associated yet
+
+    saveBtn.style.display = 'block';
+    // HACK: Override save button temporarily to "Save As"
+    saveBtn.setAttribute('onclick', 'saveScratchpad()');
+
+    content.innerHTML = `
+        <div class="glass-info" style="margin-bottom:16px; padding:12px;">
+            <h3 style="margin:0;"><i data-lucide="sticky-note"></i> Scratchpad</h3>
+            <p style="margin:4px 0; font-size:0.8rem; opacity:0.7;">Type freely. Click Save to save as a file.</p>
+        </div>
+        <div id="monaco-container" class="editor-container" style="height:600px; position:relative;">
+             <button class="btn" style="position:absolute; top:8px; right:8px; z-index:10; padding:4px;" onclick="toggleFullscreen()" title="Fullscreen"><i data-lucide="maximize"></i></button>
+        </div>
+    `;
+
+    panel.classList.add('active');
+    setTimeout(() => {
+        createMonaco("// Start typing...", "markdown");
+        lucide.createIcons();
+    }, 100);
+}
+
+async function saveScratchpad() {
+    const content = monacoEditor ? monacoEditor.getValue() : "";
+    const name = prompt("Save as filename (e.g. notes.txt):", "notes.txt");
+    if (!name) return;
+
+    await fetch('/api/save_json', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            filename: currentPath ? `${currentPath}/${name}` : name,
+            content: content,
+            raw: true
+        })
+    });
+
+    showToast("Saved!");
+    document.getElementById('saveFileBtn').setAttribute('onclick', 'saveEditorContent()'); // Reset
+    fetchFiles(currentPath);
+    toggleDetails(false); // Close panel
+}
+
+function showCheatsheets() {
+    const shortcuts = [
+        { keys: "Ctrl + F", desc: "Search files" },
+        { keys: "Alt + N", desc: "For new folder" },
+        { keys: "Delete", desc: "Delete selected" },
+        { keys: "Esc", desc: "Close viewer/modals" },
+        { keys: "Right Click", desc: "Context menus" }
+    ];
+
+    let html = `<div style="display:grid; gap:10px;">`;
+    shortcuts.forEach(s => {
+        html += `
+            <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-card); padding:8px 12px; border-radius:8px;">
+                <span style="font-family:'Fira Code', monospace; background:var(--bg-surface); padding:2px 6px; border-radius:4px; font-size:0.85rem;">${s.keys}</span>
+                <span style="font-size:0.9rem;">${s.desc}</span>
+            </div>
+        `;
+    });
+    html += `</div>`;
+
+    // Reuse Activity Modal for quick display
+    const modal = document.getElementById('activityModal');
+    const list = document.getElementById('activityList');
+    modal.style.display = 'flex';
+    document.querySelector('#activityModal h3').textContent = "Shortcuts";
+    list.innerHTML = html;
 }
