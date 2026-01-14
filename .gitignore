@@ -1,0 +1,8 @@
+data/*
+!data/.geetkeep
+
+Home/*
+!Home/qr.png
+
+to-do.txt
+config.json
