@@ -1,6 +1,6 @@
-# SajiloSpace Pro
+# SajiloCloud | SajiloDigital
 
-SajiloSpace Pro is a modern, self-hosted file manager and server built with Python and vanilla web technologies. It provides a beautiful, responsive interface for managing files, monitoring system status, and editing code directly from your browser.
+SajiloCloud is a modern, self-hosted file manager and server built with Python and vanilla web technologies. It provides a beautiful, responsive interface for managing files, monitoring system status, and editing code directly from your browser.
 
 ## Features
 
