@@ -1,8 +1,16 @@
+#log data
 data/*
 !data/.geetkeep
 
+#Uploaded files
 Home/*
 !Home/qr.png
 
+#my own to do list
 to-do.txt
+#server password
 config.json
+
+#ypthon cache
+__pycache__/
+*.pyc
