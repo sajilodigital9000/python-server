@@ -4,12 +4,13 @@ data/*
 
 #Uploaded files
 Home/*
-!Home/qr.png
 !Home/Portal.html
 !Home/Commands.html
+!Home/Todo.html
 !Home/useful-info
 !Home/commands
 !Home/Dashboard.json
+!Home/.collaborative
 
 #my own to do list
 to-do.txt

@@ -16,6 +16,7 @@ import platform
 import sys
 
 import api_handlers
+from collaborative_manager import CollaborativeManager
 
 # Load Config
 CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
@@ -46,6 +47,9 @@ RECYCLE_BIN = os.path.join(UPLOAD_ROOT, ".recycle_bin")
 
 os.makedirs(RECYCLE_BIN, exist_ok=True)
 os.makedirs(UPLOAD_ROOT, exist_ok=True)
+
+# Initialize Collaborative Manager
+COLLAB_MANAGER = CollaborativeManager(UPLOAD_ROOT)
 
 def get_local_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -96,6 +100,7 @@ class FileServerHandler(SimpleHTTPRequestHandler):
             elif path == "/api/recycle_bin": api_handlers.handle_recycle_bin_list(self, RECYCLE_BIN)
             elif path == "/api/activity": api_handlers.handle_activity_list(self)
             elif path == "/api/comments": api_handlers.handle_comments(self, parsed)
+            elif path == "/api/collaborative/sessions": api_handlers.handle_collaborative_sessions(self, COLLAB_MANAGER)
             else: self.send_error(404, "API not found")
             return
 
@@ -150,17 +155,23 @@ class FileServerHandler(SimpleHTTPRequestHandler):
             shutil.copyfileobj(f, self.wfile)
 
     def do_POST(self):
-        parsed = urlparse(self.path)
-        if parsed.path == "/api/upload": api_handlers.handle_upload(self, parsed, UPLOAD_ROOT, safe_join)
-        elif parsed.path == "/api/mkdir": api_handlers.handle_mkdir(self, UPLOAD_ROOT, safe_join)
-        elif parsed.path == "/api/delete": api_handlers.handle_delete(self, UPLOAD_ROOT, RECYCLE_BIN, safe_join)
-        elif parsed.path == "/api/rename": api_handlers.handle_rename(self, UPLOAD_ROOT, safe_join)
-        elif parsed.path == "/api/save_json": api_handlers.handle_save_json(self, UPLOAD_ROOT, safe_join)
-        elif parsed.path == "/api/batch_delete": api_handlers.handle_batch_delete(self, UPLOAD_ROOT, RECYCLE_BIN, safe_join)
-        elif parsed.path == "/api/zip": api_handlers.handle_zip(self, parsed, UPLOAD_ROOT, safe_join)
-        elif parsed.path == "/api/restore": api_handlers.handle_restore(self, UPLOAD_ROOT, RECYCLE_BIN, safe_join)
-        elif parsed.path == "/api/purge": api_handlers.handle_purge(self, RECYCLE_BIN)
-        else: self.send_error(404)
+        try:
+            parsed = urlparse(self.path)
+            if parsed.path == "/api/upload": api_handlers.handle_upload(self, parsed, UPLOAD_ROOT, safe_join)
+            elif parsed.path == "/api/mkdir": api_handlers.handle_mkdir(self, UPLOAD_ROOT, safe_join)
+            elif parsed.path == "/api/delete": api_handlers.handle_delete(self, UPLOAD_ROOT, RECYCLE_BIN, safe_join)
+            elif parsed.path == "/api/rename": api_handlers.handle_rename(self, UPLOAD_ROOT, safe_join)
+            elif parsed.path == "/api/save_json": api_handlers.handle_save_json(self, UPLOAD_ROOT, safe_join)
+            elif parsed.path == "/api/batch_delete": api_handlers.handle_batch_delete(self, UPLOAD_ROOT, RECYCLE_BIN, safe_join)
+            elif parsed.path == "/api/zip": api_handlers.handle_zip(self, parsed, UPLOAD_ROOT, safe_join)
+            elif parsed.path == "/api/restore": api_handlers.handle_restore(self, UPLOAD_ROOT, RECYCLE_BIN, safe_join)
+            elif parsed.path == "/api/purge": api_handlers.handle_purge(self, RECYCLE_BIN)
+            elif parsed.path == "/api/comments": api_handlers.handle_comments(self, parsed)
+            elif parsed.path == "/api/collaborative/save": api_handlers.handle_collaborative_save(self, COLLAB_MANAGER)
+            else: self.send_error(404)
+        except Exception as e:
+            print(f"[{time.strftime('%H:%M:%S')}] POST Error: {e}")
+            self.send_error(500, f"Internal Server Error: {e}")
 
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer): pass
 

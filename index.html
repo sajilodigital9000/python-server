@@ -22,6 +22,11 @@
     <!-- Monaco Editor -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="/images/icons/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
 
   <body oncontextmenu="return false;">
@@ -100,6 +105,13 @@
         </button>
         <button class="btn" onclick="openActivityLog()" title="Activity Log">
           <i data-lucide="activity"></i>
+        </button>
+        <button
+          class="btn btn-collab"
+          onclick="openCollaborativeTools()"
+          title="Collaborative Tools"
+        >
+          <i data-lucide="users"></i> Collaborate
         </button>
         <button
           class="btn btn-primary"
@@ -439,6 +451,126 @@
       </div>
     </div>
 
+    <!-- Collaborative Tools Modal -->
+    <div id="collaborativeModal" class="collab-modal">
+      <div class="collab-container">
+        <!-- Header -->
+        <div class="collab-header">
+          <div class="collab-title">
+            <i data-lucide="users"></i>
+            Collaborative Tools
+          </div>
+          <div class="collab-header-actions">
+            <div class="collab-status" id="collabStatus">
+              <i data-lucide="wifi-off"></i> Disconnected
+            </div>
+            <div class="collab-user-count">
+              <i data-lucide="users"></i>
+              <span id="collabUserCount">0</span> online
+            </div>
+            <button
+              class="collab-header-btn"
+              onclick="minimizeCollaborativeTools()"
+              title="Minimize"
+            >
+              <i data-lucide="minimize-2"></i>
+            </button>
+            <button
+              class="collab-header-btn"
+              onclick="closeCollaborativeTools()"
+              title="Close"
+            >
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="collab-tabs">
+          <button
+            class="collab-tab-btn active"
+            data-tab="canvas"
+            onclick="switchCollabTab('canvas')"
+          >
+            <i data-lucide="pen-tool"></i>
+            Canvas
+          </button>
+          <button
+            class="collab-tab-btn"
+            data-tab="scratchpad"
+            onclick="switchCollabTab('scratchpad')"
+          >
+            <i data-lucide="file-text"></i>
+            Scratchpad
+          </button>
+        </div>
+
+        <!-- Content -->
+        <div class="collab-content">
+          <div class="collab-main">
+            <!-- Canvas Tab -->
+            <div id="collab-canvas" class="collab-tab-content active">
+              <div
+                style="
+                  flex: 1;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #64748b;
+                "
+              >
+                <div style="text-align: center">
+                  <i
+                    data-lucide="pen-tool"
+                    style="width: 48px; height: 48px; margin-bottom: 16px"
+                  ></i>
+                  <p>Canvas tool loading...</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scratchpad Tab -->
+            <div id="collab-scratchpad" class="collab-tab-content">
+              <div
+                style="
+                  flex: 1;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #64748b;
+                "
+              >
+                <div style="text-align: center">
+                  <i
+                    data-lucide="file-text"
+                    style="width: 48px; height: 48px; margin-bottom: 16px"
+                  ></i>
+                  <p>Scratchpad tool loading...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar - Active Users -->
+          <div class="collab-sidebar">
+            <div class="collab-sidebar-header">Active Users</div>
+            <div class="collab-users-list" id="collabActiveUsers">
+              <div class="no-users">No users online</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collaborative Notifications -->
+    <div id="collabNotifications"></div>
+
+    <!-- Scripts -->
+    <link rel="stylesheet" href="modules/collaborative/collaborative.css" />
+    <script src="modules/collaborative/collaborative-core.js"></script>
+    <script src="modules/collaborative/collaborative-ui.js"></script>
+    <script src="modules/collaborative/canvas-tool.js"></script>
+    <script src="modules/collaborative/scratchpad-tool.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

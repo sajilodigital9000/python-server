@@ -250,6 +250,7 @@ def handle_activity_list(handler):
 
 def handle_comments(handler, parsed):
     DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+    os.makedirs(DATA_DIR, exist_ok=True)
     COMMENTS_FILE = os.path.join(DATA_DIR, "comments.json")
     
     if handler.command == "GET":
@@ -297,3 +298,34 @@ def handle_comments(handler, parsed):
         handler.send_response(200)
         handler.end_headers()
         handler.wfile.write(b"OK")
+
+# ===== Collaborative API Handlers =====
+
+def handle_collaborative_sessions(handler, collab_manager):
+    """List all available collaborative sessions"""
+    sessions = collab_manager.get_active_sessions()
+    handler.send_response(200)
+    handler.send_header("Content-Type", "application/json")
+    handler.end_headers()
+    handler.wfile.write(json.dumps(sessions).encode())
+
+def handle_collaborative_save(handler, collab_manager):
+    """Manually save collaborative session"""
+    data = json.loads(handler.rfile.read(int(handler.headers.get("Content-Length", 0))))
+    session_type = data.get("type")  # "canvas" or "scratchpad"
+    session_id = data.get("id")
+    
+    if session_type == "canvas":
+        result = collab_manager.save_canvas(session_id, data.get("data", {}))
+    elif session_type == "scratchpad":
+        content = data.get("content", "")
+        metadata = data.get("metadata", {})
+        result = collab_manager.save_scratchpad(session_id, content, metadata)
+    else:
+        handler.send_error(400, "Invalid session type")
+        return
+    
+    handler.send_response(200)
+    handler.send_header("Content-Type", "application/json")
+    handler.end_headers()
+    handler.wfile.write(json.dumps(result).encode())

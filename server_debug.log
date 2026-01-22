@@ -1,0 +1,6 @@
+[19:12:11] Error processing message: name 'broadcast_active_users' is not defined
+Traceback (most recent call last):
+  File "E:\Server\websocket_server.py", line 320, in handle_client
+    await broadcast_active_users(current_websocket_room)
+NameError: name 'broadcast_active_users' is not defined
+
