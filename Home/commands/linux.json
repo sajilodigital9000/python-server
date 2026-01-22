@@ -1,0 +1,1742 @@
+[
+  {
+    "title": "file-management",
+    "command": "ls",
+    "description": "List directory contents.",
+    "tags": ["list", "directory", "files", "basic"]
+  },
+  {
+    "title": "file-management",
+    "command": "ls -la",
+    "description": "List all files including hidden ones in long format.",
+    "tags": ["list", "detailed", "hidden", "permissions"]
+  },
+  {
+    "title": "file-management",
+    "command": "pwd",
+    "description": "Print working directory - shows current directory path.",
+    "tags": ["directory", "path", "current", "location"]
+  },
+  {
+    "title": "file-management",
+    "command": "cd <directory>",
+    "description": "Change directory - navigate to specified directory.",
+    "tags": ["navigate", "directory", "change", "path"]
+  },
+  {
+    "title": "file-management",
+    "command": "cd ~",
+    "description": "Change to home directory.",
+    "tags": ["home", "directory", "navigate", "shortcut"]
+  },
+  {
+    "title": "file-management",
+    "command": "cd ..",
+    "description": "Move up one directory level.",
+    "tags": ["parent", "directory", "up", "navigate"]
+  },
+  {
+    "title": "file-management",
+    "command": "mkdir <directory_name>",
+    "description": "Create a new directory.",
+    "tags": ["create", "directory", "folder", "make"]
+  },
+  {
+    "title": "file-management",
+    "command": "mkdir -p parent/child/grandchild",
+    "description": "Create nested directories with parent flag.",
+    "tags": ["create", "nested", "directory", "recursive"]
+  },
+  {
+    "title": "file-management",
+    "command": "rmdir <directory_name>",
+    "description": "Remove empty directory.",
+    "tags": ["remove", "delete", "directory", "empty"]
+  },
+  {
+    "title": "file-management",
+    "command": "rm -r <directory_name>",
+    "description": "Remove directory and its contents recursively.",
+    "tags": ["remove", "delete", "recursive", "directory"]
+  },
+  {
+    "title": "file-management",
+    "command": "rm -rf <directory_name>",
+    "description": "Force remove directory without confirmation.",
+    "tags": ["remove", "force", "delete", "dangerous"]
+  },
+  {
+    "title": "file-management",
+    "command": "touch <filename>",
+    "description": "Create empty file or update file timestamp.",
+    "tags": ["create", "file", "empty", "timestamp"]
+  },
+  {
+    "title": "file-management",
+    "command": "cp <source> <destination>",
+    "description": "Copy files or directories.",
+    "tags": ["copy", "file", "duplicate", "backup"]
+  },
+  {
+    "title": "file-management",
+    "command": "cp -r <source> <destination>",
+    "description": "Copy directories recursively.",
+    "tags": ["copy", "recursive", "directory", "folder"]
+  },
+  {
+    "title": "file-management",
+    "command": "mv <source> <destination>",
+    "description": "Move or rename files and directories.",
+    "tags": ["move", "rename", "file", "directory"]
+  },
+  {
+    "title": "file-management",
+    "command": "rm <filename>",
+    "description": "Remove/delete file.",
+    "tags": ["remove", "delete", "file", "unlink"]
+  },
+  {
+    "title": "file-management",
+    "command": "cat <filename>",
+    "description": "Display file contents.",
+    "tags": ["view", "file", "contents", "display"]
+  },
+  {
+    "title": "file-management",
+    "command": "cat > <filename>",
+    "description": "Create file with input from terminal (Ctrl+D to save).",
+    "tags": ["create", "file", "input", "terminal"]
+  },
+  {
+    "title": "file-management",
+    "command": "cat file1 file2 > combined",
+    "description": "Concatenate multiple files into one.",
+    "tags": ["concatenate", "combine", "files", "merge"]
+  },
+  {
+    "title": "file-management",
+    "command": "head <filename>",
+    "description": "Display first 10 lines of a file.",
+    "tags": ["view", "beginning", "lines", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "head -n 20 <filename>",
+    "description": "Display first N lines of a file.",
+    "tags": ["view", "lines", "beginning", "custom"]
+  },
+  {
+    "title": "file-management",
+    "command": "tail <filename>",
+    "description": "Display last 10 lines of a file.",
+    "tags": ["view", "end", "lines", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "tail -n 20 <filename>",
+    "description": "Display last N lines of a file.",
+    "tags": ["view", "lines", "end", "custom"]
+  },
+  {
+    "title": "file-management",
+    "command": "tail -f <filename>",
+    "description": "Follow file changes in real-time (great for logs).",
+    "tags": ["follow", "monitor", "log", "realtime"]
+  },
+  {
+    "title": "file-management",
+    "command": "less <filename>",
+    "description": "View file with pagination (space to page, q to quit).",
+    "tags": ["view", "pager", "scroll", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "more <filename>",
+    "description": "View file one screen at a time (older than less).",
+    "tags": ["view", "pager", "screen", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "nano <filename>",
+    "description": "Simple terminal text editor.",
+    "tags": ["edit", "text", "editor", "simple"]
+  },
+  {
+    "title": "file-management",
+    "command": "vim <filename>",
+    "description": "Advanced terminal text editor (modal editor).",
+    "tags": ["edit", "text", "editor", "advanced"]
+  },
+  {
+    "title": "file-management",
+    "command": "find /path -name \"*.txt\"",
+    "description": "Find files by name in specified directory.",
+    "tags": ["search", "find", "files", "pattern"]
+  },
+  {
+    "title": "file-management",
+    "command": "find . -type f -name \"*.js\"",
+    "description": "Find JavaScript files in current directory.",
+    "tags": ["search", "find", "files", "javascript"]
+  },
+  {
+    "title": "file-management",
+    "command": "find . -type d -name \"node_modules\"",
+    "description": "Find directories named node_modules.",
+    "tags": ["search", "find", "directory", "node"]
+  },
+  {
+    "title": "file-management",
+    "command": "find . -size +100M",
+    "description": "Find files larger than 100MB.",
+    "tags": ["search", "find", "size", "large"]
+  },
+  {
+    "title": "file-management",
+    "command": "find . -mtime -7",
+    "description": "Find files modified in last 7 days.",
+    "tags": ["search", "find", "modified", "recent"]
+  },
+  {
+    "title": "file-management",
+    "command": "locate <filename>",
+    "description": "Find files using database (faster than find).",
+    "tags": ["search", "find", "fast", "database"]
+  },
+  {
+    "title": "file-management",
+    "command": "updatedb",
+    "description": "Update locate database (run as root).",
+    "tags": ["update", "database", "locate", "search"]
+  },
+  {
+    "title": "file-management",
+    "command": "grep \"pattern\" <filename>",
+    "description": "Search for pattern in file.",
+    "tags": ["search", "pattern", "text", "grep"]
+  },
+  {
+    "title": "file-management",
+    "command": "grep -r \"pattern\" /path",
+    "description": "Search recursively in directory.",
+    "tags": ["search", "recursive", "pattern", "grep"]
+  },
+  {
+    "title": "file-management",
+    "command": "grep -i \"pattern\" <filename>",
+    "description": "Case-insensitive search.",
+    "tags": ["search", "case", "insensitive", "grep"]
+  },
+  {
+    "title": "file-management",
+    "command": "grep -v \"pattern\" <filename>",
+    "description": "Inverse search (lines NOT containing pattern).",
+    "tags": ["search", "inverse", "exclude", "grep"]
+  },
+  {
+    "title": "file-management",
+    "command": "grep -n \"pattern\" <filename>",
+    "description": "Show line numbers with matches.",
+    "tags": ["search", "line", "numbers", "grep"]
+  },
+  {
+    "title": "file-management",
+    "command": "wc <filename>",
+    "description": "Count lines, words, and characters in file.",
+    "tags": ["count", "lines", "words", "characters"]
+  },
+  {
+    "title": "file-management",
+    "command": "wc -l <filename>",
+    "description": "Count lines only.",
+    "tags": ["count", "lines", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "wc -w <filename>",
+    "description": "Count words only.",
+    "tags": ["count", "words", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "wc -c <filename>",
+    "description": "Count characters only.",
+    "tags": ["count", "characters", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "sort <filename>",
+    "description": "Sort lines of text file.",
+    "tags": ["sort", "lines", "order", "text"]
+  },
+  {
+    "title": "file-management",
+    "command": "sort -r <filename>",
+    "description": "Sort in reverse order.",
+    "tags": ["sort", "reverse", "order", "text"]
+  },
+  {
+    "title": "file-management",
+    "command": "sort -n <filename>",
+    "description": "Sort numerically.",
+    "tags": ["sort", "numeric", "numbers", "text"]
+  },
+  {
+    "title": "file-management",
+    "command": "uniq <filename>",
+    "description": "Remove duplicate consecutive lines.",
+    "tags": ["unique", "duplicate", "remove", "lines"]
+  },
+  {
+    "title": "file-management",
+    "command": "sort file.txt | uniq",
+    "description": "Sort and remove duplicates.",
+    "tags": ["sort", "unique", "duplicate", "pipeline"]
+  },
+  {
+    "title": "file-management",
+    "command": "diff file1 file2",
+    "description": "Compare two files line by line.",
+    "tags": ["compare", "difference", "files", "diff"]
+  },
+  {
+    "title": "file-management",
+    "command": "cmp file1 file2",
+    "description": "Compare two files byte by byte.",
+    "tags": ["compare", "bytes", "files", "binary"]
+  },
+  {
+    "title": "file-management",
+    "command": "file <filename>",
+    "description": "Determine file type.",
+    "tags": ["type", "file", "info", "determine"]
+  },
+  {
+    "title": "file-management",
+    "command": "stat <filename>",
+    "description": "Display file/directory status information.",
+    "tags": ["status", "info", "file", "metadata"]
+  },
+  {
+    "title": "file-management",
+    "command": "du -sh <directory>",
+    "description": "Show disk usage of directory in human readable format.",
+    "tags": ["disk", "usage", "size", "directory"]
+  },
+  {
+    "title": "file-management",
+    "command": "du -sh *",
+    "description": "Show disk usage of all items in current directory.",
+    "tags": ["disk", "usage", "size", "all"]
+  },
+  {
+    "title": "file-management",
+    "command": "df -h",
+    "description": "Show disk space usage of filesystems in human readable format.",
+    "tags": ["disk", "space", "filesystem", "usage"]
+  },
+  {
+    "title": "file-management",
+    "command": "ln -s <target> <link_name>",
+    "description": "Create symbolic link (soft link).",
+    "tags": ["link", "symbolic", "soft", "shortcut"]
+  },
+  {
+    "title": "file-management",
+    "command": "ln <target> <link_name>",
+    "description": "Create hard link.",
+    "tags": ["link", "hard", "reference", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "chmod 755 <filename>",
+    "description": "Change file permissions (owner: rwx, group: r-x, others: r-x).",
+    "tags": ["permissions", "chmod", "access", "security"]
+  },
+  {
+    "title": "file-management",
+    "command": "chmod u+x <filename>",
+    "description": "Add execute permission for user/owner.",
+    "tags": ["permissions", "execute", "user", "chmod"]
+  },
+  {
+    "title": "file-management",
+    "command": "chmod g-w <filename>",
+    "description": "Remove write permission for group.",
+    "tags": ["permissions", "remove", "write", "chmod"]
+  },
+  {
+    "title": "file-management",
+    "command": "chmod a+r <filename>",
+    "description": "Add read permission for all (user, group, others).",
+    "tags": ["permissions", "read", "all", "chmod"]
+  },
+  {
+    "title": "file-management",
+    "command": "chown user:group <filename>",
+    "description": "Change file owner and group.",
+    "tags": ["ownership", "owner", "group", "chown"]
+  },
+  {
+    "title": "file-management",
+    "command": "chgrp groupname <filename>",
+    "description": "Change group ownership of file.",
+    "tags": ["group", "ownership", "chgrp", "permissions"]
+  },
+  {
+    "title": "file-management",
+    "command": "tar -czvf archive.tar.gz /path/to/directory",
+    "description": "Create compressed tar archive (gzip).",
+    "tags": ["archive", "compress", "tar", "gzip"]
+  },
+  {
+    "title": "file-management",
+    "command": "tar -xzvf archive.tar.gz",
+    "description": "Extract compressed tar archive.",
+    "tags": ["extract", "archive", "tar", "gzip"]
+  },
+  {
+    "title": "file-management",
+    "command": "zip -r archive.zip /path/to/directory",
+    "description": "Create zip archive.",
+    "tags": ["archive", "compress", "zip", "create"]
+  },
+  {
+    "title": "file-management",
+    "command": "unzip archive.zip",
+    "description": "Extract zip archive.",
+    "tags": ["extract", "archive", "zip", "uncompress"]
+  },
+  {
+    "title": "system",
+    "command": "uname -a",
+    "description": "Display all system information.",
+    "tags": ["system", "info", "kernel", "version"]
+  },
+  {
+    "title": "system",
+    "command": "uptime",
+    "description": "Show how long system has been running and load average.",
+    "tags": ["uptime", "load", "running", "time"]
+  },
+  {
+    "title": "system",
+    "command": "top",
+    "description": "Display real-time system processes and resource usage.",
+    "tags": ["processes", "monitor", "real-time", "resources"]
+  },
+  {
+    "title": "system",
+    "command": "htop",
+    "description": "Interactive process viewer (better than top).",
+    "tags": ["processes", "interactive", "monitor", "htop"]
+  },
+  {
+    "title": "system",
+    "command": "ps aux",
+    "description": "Display all running processes.",
+    "tags": ["processes", "list", "running", "ps"]
+  },
+  {
+    "title": "system",
+    "command": "ps aux | grep process_name",
+    "description": "Find specific process.",
+    "tags": ["process", "find", "search", "grep"]
+  },
+  {
+    "title": "system",
+    "command": "kill <PID>",
+    "description": "Terminate process by PID.",
+    "tags": ["kill", "terminate", "process", "pid"]
+  },
+  {
+    "title": "system",
+    "command": "kill -9 <PID>",
+    "description": "Force kill process (SIGKILL).",
+    "tags": ["kill", "force", "terminate", "sigkill"]
+  },
+  {
+    "title": "system",
+    "command": "killall process_name",
+    "description": "Kill all processes with given name.",
+    "tags": ["kill", "all", "process", "name"]
+  },
+  {
+    "title": "system",
+    "command": "pkill process_name",
+    "description": "Kill process by name.",
+    "tags": ["kill", "process", "name", "pkill"]
+  },
+  {
+    "title": "system",
+    "command": "bg",
+    "description": "Resume suspended job in background.",
+    "tags": ["background", "job", "resume", "suspended"]
+  },
+  {
+    "title": "system",
+    "command": "fg",
+    "description": "Bring background job to foreground.",
+    "tags": ["foreground", "job", "bring", "background"]
+  },
+  {
+    "title": "system",
+    "command": "jobs",
+    "description": "List background jobs.",
+    "tags": ["jobs", "background", "list", "processes"]
+  },
+  {
+    "title": "system",
+    "command": "free -h",
+    "description": "Display memory usage in human readable format.",
+    "tags": ["memory", "usage", "ram", "free"]
+  },
+  {
+    "title": "system",
+    "command": "vmstat",
+    "description": "Display virtual memory statistics.",
+    "tags": ["memory", "virtual", "statistics", "vm"]
+  },
+  {
+    "title": "system",
+    "command": "iostat",
+    "description": "Display CPU and I/O statistics.",
+    "tags": ["io", "statistics", "cpu", "disk"]
+  },
+  {
+    "title": "system",
+    "command": "lscpu",
+    "description": "Display CPU architecture information.",
+    "tags": ["cpu", "architecture", "info", "processor"]
+  },
+  {
+    "title": "system",
+    "command": "lsblk",
+    "description": "List block devices (disks and partitions).",
+    "tags": ["disk", "block", "devices", "partitions"]
+  },
+  {
+    "title": "system",
+    "command": "lspci",
+    "description": "List PCI devices.",
+    "tags": ["pci", "devices", "hardware", "list"]
+  },
+  {
+    "title": "system",
+    "command": "lsusb",
+    "description": "List USB devices.",
+    "tags": ["usb", "devices", "hardware", "list"]
+  },
+  {
+    "title": "system",
+    "command": "dmidecode",
+    "description": "Display DMI (SMBIOS) table contents (hardware info).",
+    "tags": ["hardware", "bios", "smbios", "info"]
+  },
+  {
+    "title": "system",
+    "command": "sudo !!",
+    "description": "Run previous command with sudo.",
+    "tags": ["sudo", "previous", "command", "privileges"]
+  },
+  {
+    "title": "system",
+    "command": "sudo apt update",
+    "description": "Update package list (Debian/Ubuntu).",
+    "tags": ["update", "packages", "apt", "debian"]
+  },
+  {
+    "title": "system",
+    "command": "sudo apt upgrade",
+    "description": "Upgrade installed packages (Debian/Ubuntu).",
+    "tags": ["upgrade", "packages", "apt", "debian"]
+  },
+  {
+    "title": "system",
+    "command": "sudo apt install package_name",
+    "description": "Install package (Debian/Ubuntu).",
+    "tags": ["install", "package", "apt", "debian"]
+  },
+  {
+    "title": "system",
+    "command": "sudo apt remove package_name",
+    "description": "Remove package (Debian/Ubuntu).",
+    "tags": ["remove", "package", "apt", "debian"]
+  },
+  {
+    "title": "system",
+    "command": "sudo apt autoremove",
+    "description": "Remove unused packages (Debian/Ubuntu).",
+    "tags": ["remove", "unused", "packages", "clean"]
+  },
+  {
+    "title": "system",
+    "command": "sudo apt purge package_name",
+    "description": "Remove package with configuration files (Debian/Ubuntu).",
+    "tags": ["remove", "purge", "package", "config"]
+  },
+  {
+    "title": "system",
+    "command": "sudo yum update",
+    "description": "Update packages (RHEL/CentOS/Fedora).",
+    "tags": ["update", "packages", "yum", "rhel"]
+  },
+  {
+    "title": "system",
+    "command": "sudo yum install package_name",
+    "description": "Install package (RHEL/CentOS/Fedora).",
+    "tags": ["install", "package", "yum", "rhel"]
+  },
+  {
+    "title": "system",
+    "command": "sudo yum remove package_name",
+    "description": "Remove package (RHEL/CentOS/Fedora).",
+    "tags": ["remove", "package", "yum", "rhel"]
+  },
+  {
+    "title": "system",
+    "command": "sudo dnf update",
+    "description": "Update packages (Fedora/RHEL8+).",
+    "tags": ["update", "packages", "dnf", "fedora"]
+  },
+  {
+    "title": "system",
+    "command": "sudo dnf install package_name",
+    "description": "Install package (Fedora/RHEL8+).",
+    "tags": ["install", "package", "dnf", "fedora"]
+  },
+  {
+    "title": "system",
+    "command": "sudo pacman -Syu",
+    "description": "Update system (Arch Linux).",
+    "tags": ["update", "packages", "pacman", "arch"]
+  },
+  {
+    "title": "system",
+    "command": "sudo pacman -S package_name",
+    "description": "Install package (Arch Linux).",
+    "tags": ["install", "package", "pacman", "arch"]
+  },
+  {
+    "title": "system",
+    "command": "sudo pacman -R package_name",
+    "description": "Remove package (Arch Linux).",
+    "tags": ["remove", "package", "pacman", "arch"]
+  },
+  {
+    "title": "system",
+    "command": "sudo systemctl start service_name",
+    "description": "Start a systemd service.",
+    "tags": ["start", "service", "systemd", "systemctl"]
+  },
+  {
+    "title": "system",
+    "command": "sudo systemctl stop service_name",
+    "description": "Stop a systemd service.",
+    "tags": ["stop", "service", "systemd", "systemctl"]
+  },
+  {
+    "title": "system",
+    "command": "sudo systemctl restart service_name",
+    "description": "Restart a systemd service.",
+    "tags": ["restart", "service", "systemd", "systemctl"]
+  },
+  {
+    "title": "system",
+    "command": "sudo systemctl status service_name",
+    "description": "Check status of a systemd service.",
+    "tags": ["status", "service", "systemd", "systemctl"]
+  },
+  {
+    "title": "system",
+    "command": "sudo systemctl enable service_name",
+    "description": "Enable service to start on boot.",
+    "tags": ["enable", "service", "boot", "systemd"]
+  },
+  {
+    "title": "system",
+    "command": "sudo systemctl disable service_name",
+    "description": "Disable service from starting on boot.",
+    "tags": ["disable", "service", "boot", "systemd"]
+  },
+  {
+    "title": "system",
+    "command": "sudo systemctl daemon-reload",
+    "description": "Reload systemd manager configuration.",
+    "tags": ["reload", "systemd", "daemon", "configuration"]
+  },
+  {
+    "title": "system",
+    "command": "journalctl -xe",
+    "description": "View system logs with details.",
+    "tags": ["logs", "journal", "systemd", "view"]
+  },
+  {
+    "title": "system",
+    "command": "journalctl -u service_name",
+    "description": "View logs for specific service.",
+    "tags": ["logs", "service", "journal", "systemd"]
+  },
+  {
+    "title": "system",
+    "command": "journalctl -f",
+    "description": "Follow journal logs in real-time.",
+    "tags": ["logs", "follow", "real-time", "journal"]
+  },
+  {
+    "title": "system",
+    "command": "dmesg",
+    "description": "Display kernel ring buffer messages.",
+    "tags": ["kernel", "messages", "boot", "dmesg"]
+  },
+  {
+    "title": "system",
+    "command": "dmesg | tail -20",
+    "description": "View last 20 kernel messages.",
+    "tags": ["kernel", "messages", "recent", "tail"]
+  },
+  {
+    "title": "system",
+    "command": "hostnamectl",
+    "description": "View or set system hostname.",
+    "tags": ["hostname", "system", "view", "set"]
+  },
+  {
+    "title": "system",
+    "command": "timedatectl",
+    "description": "View or set system time and date.",
+    "tags": ["time", "date", "system", "clock"]
+  },
+  {
+    "title": "system",
+    "command": "timedatectl set-timezone America/New_York",
+    "description": "Set system timezone.",
+    "tags": ["timezone", "set", "system", "clock"]
+  },
+  {
+    "title": "system",
+    "command": "shutdown -h now",
+    "description": "Shutdown system immediately.",
+    "tags": ["shutdown", "halt", "poweroff", "now"]
+  },
+  {
+    "title": "system",
+    "command": "shutdown -r now",
+    "description": "Reboot system immediately.",
+    "tags": ["reboot", "restart", "now", "shutdown"]
+  },
+  {
+    "title": "system",
+    "command": "shutdown -h +10",
+    "description": "Shutdown in 10 minutes.",
+    "tags": ["shutdown", "schedule", "minutes", "delay"]
+  },
+  {
+    "title": "system",
+    "command": "reboot",
+    "description": "Reboot system.",
+    "tags": ["reboot", "restart", "system"]
+  },
+  {
+    "title": "system",
+    "command": "poweroff",
+    "description": "Power off system.",
+    "tags": ["poweroff", "shutdown", "halt", "system"]
+  },
+  {
+    "title": "system",
+    "command": "init 0",
+    "description": "Change to runlevel 0 (halt).",
+    "tags": ["runlevel", "halt", "shutdown", "init"]
+  },
+  {
+    "title": "system",
+    "command": "init 6",
+    "description": "Change to runlevel 6 (reboot).",
+    "tags": ["runlevel", "reboot", "restart", "init"]
+  },
+  {
+    "title": "system",
+    "command": "runlevel",
+    "description": "Display current runlevel.",
+    "tags": ["runlevel", "current", "system", "state"]
+  },
+  {
+    "title": "network",
+    "command": "ip addr show",
+    "description": "Display network interfaces and IP addresses (modern).",
+    "tags": ["network", "ip", "interfaces", "address"]
+  },
+  {
+    "title": "network",
+    "command": "ifconfig",
+    "description": "Display network interfaces and IP addresses (legacy).",
+    "tags": ["network", "ip", "interfaces", "legacy"]
+  },
+  {
+    "title": "network",
+    "command": "ip link show",
+    "description": "Display network link status.",
+    "tags": ["network", "link", "status", "interfaces"]
+  },
+  {
+    "title": "network",
+    "command": "ip route show",
+    "description": "Display routing table.",
+    "tags": ["network", "route", "routing", "table"]
+  },
+  {
+    "title": "network",
+    "command": "route -n",
+    "description": "Display routing table (legacy).",
+    "tags": ["network", "route", "routing", "legacy"]
+  },
+  {
+    "title": "network",
+    "command": "netstat -tulpn",
+    "description": "Display listening ports and processes.",
+    "tags": ["network", "ports", "listening", "processes"]
+  },
+  {
+    "title": "network",
+    "command": "ss -tulpn",
+    "description": "Display socket statistics (modern netstat).",
+    "tags": ["network", "sockets", "ports", "ss"]
+  },
+  {
+    "title": "network",
+    "command": "ping google.com",
+    "description": "Test network connectivity to host.",
+    "tags": ["network", "test", "connectivity", "ping"]
+  },
+  {
+    "title": "network",
+    "command": "ping -c 5 google.com",
+    "description": "Send 5 ping packets then stop.",
+    "tags": ["network", "ping", "count", "test"]
+  },
+  {
+    "title": "network",
+    "command": "traceroute google.com",
+    "description": "Trace route to host showing all hops.",
+    "tags": ["network", "trace", "route", "hops"]
+  },
+  {
+    "title": "network",
+    "command": "tracepath google.com",
+    "description": "Trace path to host (similar to traceroute).",
+    "tags": ["network", "trace", "path", "hops"]
+  },
+  {
+    "title": "network",
+    "command": "mtr google.com",
+    "description": "Combination of ping and traceroute (real-time).",
+    "tags": ["network", "diagnostic", "ping", "traceroute"]
+  },
+  {
+    "title": "network",
+    "command": "dig google.com",
+    "description": "DNS lookup utility.",
+    "tags": ["dns", "lookup", "domain", "dig"]
+  },
+  {
+    "title": "network",
+    "command": "dig google.com A",
+    "description": "Lookup A record (IPv4 address).",
+    "tags": ["dns", "lookup", "a-record", "ipv4"]
+  },
+  {
+    "title": "network",
+    "command": "dig google.com MX",
+    "description": "Lookup MX record (mail servers).",
+    "tags": ["dns", "lookup", "mx-record", "mail"]
+  },
+  {
+    "title": "network",
+    "command": "nslookup google.com",
+    "description": "DNS lookup (older utility).",
+    "tags": ["dns", "lookup", "domain", "nslookup"]
+  },
+  {
+    "title": "network",
+    "command": "host google.com",
+    "description": "DNS lookup utility (simple).",
+    "tags": ["dns", "lookup", "domain", "host"]
+  },
+  {
+    "title": "network",
+    "command": "whois google.com",
+    "description": "Lookup domain registration information.",
+    "tags": ["domain", "whois", "registration", "info"]
+  },
+  {
+    "title": "network",
+    "command": "curl https://example.com",
+    "description": "Transfer data from or to a server.",
+    "tags": ["http", "curl", "download", "api"]
+  },
+  {
+    "title": "network",
+    "command": "curl -o file.txt https://example.com",
+    "description": "Download file and save with specific name.",
+    "tags": ["curl", "download", "save", "file"]
+  },
+  {
+    "title": "network",
+    "command": "curl -I https://example.com",
+    "description": "Fetch only headers.",
+    "tags": ["curl", "headers", "http", "info"]
+  },
+  {
+    "title": "network",
+    "command": "wget https://example.com/file.zip",
+    "description": "Download file from web.",
+    "tags": ["wget", "download", "web", "file"]
+  },
+  {
+    "title": "network",
+    "command": "wget -c https://example.com/file.zip",
+    "description": "Continue interrupted download.",
+    "tags": ["wget", "download", "continue", "resume"]
+  },
+  {
+    "title": "network",
+    "command": "ssh user@hostname",
+    "description": "Connect to remote server via SSH.",
+    "tags": ["ssh", "remote", "connect", "secure"]
+  },
+  {
+    "title": "network",
+    "command": "ssh -p 2222 user@hostname",
+    "description": "Connect to SSH server on non-standard port.",
+    "tags": ["ssh", "port", "custom", "connect"]
+  },
+  {
+    "title": "network",
+    "command": "scp file.txt user@hostname:/path",
+    "description": "Copy file to remote server securely.",
+    "tags": ["scp", "copy", "secure", "remote"]
+  },
+  {
+    "title": "network",
+    "command": "scp user@hostname:/path/file.txt .",
+    "description": "Copy file from remote server to local.",
+    "tags": ["scp", "copy", "secure", "download"]
+  },
+  {
+    "title": "network",
+    "command": "scp -r directory user@hostname:/path",
+    "description": "Copy directory recursively to remote server.",
+    "tags": ["scp", "copy", "directory", "recursive"]
+  },
+  {
+    "title": "network",
+    "command": "rsync -avz /local/path user@hostname:/remote/path",
+    "description": "Synchronize files/directories between systems.",
+    "tags": ["rsync", "sync", "copy", "backup"]
+  },
+  {
+    "title": "network",
+    "command": "rsync -avz --delete /local/path user@hostname:/remote/path",
+    "description": "Sync and delete extra files on remote.",
+    "tags": ["rsync", "sync", "delete", "mirror"]
+  },
+  {
+    "title": "network",
+    "command": "sftp user@hostname",
+    "description": "Secure FTP client (interactive file transfer).",
+    "tags": ["sftp", "ftp", "secure", "interactive"]
+  },
+  {
+    "title": "network",
+    "command": "nc -zv hostname port",
+    "description": "Test if port is open using netcat.",
+    "tags": ["netcat", "port", "test", "connect"]
+  },
+  {
+    "title": "network",
+    "command": "nc -l port",
+    "description": "Listen on port using netcat.",
+    "tags": ["netcat", "listen", "port", "server"]
+  },
+  {
+    "title": "network",
+    "command": "telnet hostname port",
+    "description": "Test TCP connection to port.",
+    "tags": ["telnet", "test", "port", "tcp"]
+  },
+  {
+    "title": "network",
+    "command": "iptables -L",
+    "description": "List firewall rules.",
+    "tags": ["firewall", "iptables", "rules", "list"]
+  },
+  {
+    "title": "network",
+    "command": "ufw status",
+    "description": "Check Uncomplicated Firewall status.",
+    "tags": ["firewall", "ufw", "status", "ubuntu"]
+  },
+  {
+    "title": "network",
+    "command": "hostname",
+    "description": "Display system hostname.",
+    "tags": ["hostname", "system", "name", "network"]
+  },
+  {
+    "title": "network",
+    "command": "hostname -I",
+    "description": "Display all IP addresses of the host.",
+    "tags": ["hostname", "ip", "addresses", "all"]
+  },
+  {
+    "title": "network",
+    "command": "arp -a",
+    "description": "Display ARP cache.",
+    "tags": ["arp", "cache", "mac", "address"]
+  },
+  {
+    "title": "users",
+    "command": "whoami",
+    "description": "Display current username.",
+    "tags": ["user", "current", "username", "identity"]
+  },
+  {
+    "title": "users",
+    "command": "who",
+    "description": "Display who is logged in.",
+    "tags": ["users", "logged", "in", "sessions"]
+  },
+  {
+    "title": "users",
+    "command": "w",
+    "description": "Display who is logged in and what they're doing.",
+    "tags": ["users", "logged", "activity", "processes"]
+  },
+  {
+    "title": "users",
+    "command": "last",
+    "description": "Show last logged in users.",
+    "tags": ["users", "last", "login", "history"]
+  },
+  {
+    "title": "users",
+    "command": "id",
+    "description": "Display user and group information.",
+    "tags": ["user", "group", "id", "information"]
+  },
+  {
+    "title": "users",
+    "command": "groups",
+    "description": "Display groups a user belongs to.",
+    "tags": ["groups", "user", "membership", "belongs"]
+  },
+  {
+    "title": "users",
+    "command": "adduser username",
+    "description": "Add new user (Debian/Ubuntu).",
+    "tags": ["user", "add", "create", "new"]
+  },
+  {
+    "title": "users",
+    "command": "useradd username",
+    "description": "Add new user (RHEL/CentOS).",
+    "tags": ["user", "add", "create", "new"]
+  },
+  {
+    "title": "users",
+    "command": "passwd username",
+    "description": "Change user password.",
+    "tags": ["password", "change", "user", "security"]
+  },
+  {
+    "title": "users",
+    "command": "usermod -aG groupname username",
+    "description": "Add user to group.",
+    "tags": ["user", "group", "add", "modify"]
+  },
+  {
+    "title": "users",
+    "command": "deluser username",
+    "description": "Delete user (Debian/Ubuntu).",
+    "tags": ["user", "delete", "remove"]
+  },
+  {
+    "title": "users",
+    "command": "userdel username",
+    "description": "Delete user (RHEL/CentOS).",
+    "tags": ["user", "delete", "remove"]
+  },
+  {
+    "title": "users",
+    "command": "su username",
+    "description": "Switch user.",
+    "tags": ["switch", "user", "su", "change"]
+  },
+  {
+    "title": "users",
+    "command": "sudo -i",
+    "description": "Switch to root user with environment.",
+    "tags": ["sudo", "root", "switch", "environment"]
+  },
+  {
+    "title": "users",
+    "command": "sudo -u username command",
+    "description": "Run command as different user.",
+    "tags": ["sudo", "user", "run", "as"]
+  },
+  {
+    "title": "users",
+    "command": "visudo",
+    "description": "Edit sudoers file safely.",
+    "tags": ["sudo", "edit", "sudoers", "security"]
+  },
+  {
+    "title": "users",
+    "command": "getent passwd",
+    "description": "List all users.",
+    "tags": ["users", "list", "all", "system"]
+  },
+  {
+    "title": "users",
+    "command": "getent group",
+    "description": "List all groups.",
+    "tags": ["groups", "list", "all", "system"]
+  },
+  {
+    "title": "shell",
+    "command": "echo \"Hello World\"",
+    "description": "Display text to terminal.",
+    "tags": ["echo", "print", "text", "output"]
+  },
+  {
+    "title": "shell",
+    "command": "echo $PATH",
+    "description": "Display PATH environment variable.",
+    "tags": ["echo", "path", "environment", "variable"]
+  },
+  {
+    "title": "shell",
+    "command": "export VAR=\"value\"",
+    "description": "Set environment variable for current session.",
+    "tags": ["export", "environment", "variable", "set"]
+  },
+  {
+    "title": "shell",
+    "command": "env",
+    "description": "Display all environment variables.",
+    "tags": ["environment", "variables", "display", "all"]
+  },
+  {
+    "title": "shell",
+    "command": "set",
+    "description": "Display shell variables and functions.",
+    "tags": ["shell", "variables", "display", "functions"]
+  },
+  {
+    "title": "shell",
+    "command": "unset VARIABLE",
+    "description": "Remove environment variable.",
+    "tags": ["unset", "remove", "environment", "variable"]
+  },
+  {
+    "title": "shell",
+    "command": "alias",
+    "description": "List all aliases.",
+    "tags": ["alias", "list", "shortcuts", "commands"]
+  },
+  {
+    "title": "shell",
+    "command": "alias ll='ls -la'",
+    "description": "Create command alias.",
+    "tags": ["alias", "create", "shortcut", "command"]
+  },
+  {
+    "title": "shell",
+    "command": "unalias ll",
+    "description": "Remove alias.",
+    "tags": ["unalias", "remove", "alias", "shortcut"]
+  },
+  {
+    "title": "shell",
+    "command": "history",
+    "description": "Display command history.",
+    "tags": ["history", "commands", "previous", "list"]
+  },
+  {
+    "title": "shell",
+    "command": "history | grep \"keyword\"",
+    "description": "Search command history.",
+    "tags": ["history", "search", "grep", "commands"]
+  },
+  {
+    "title": "shell",
+    "command": "!!",
+    "description": "Execute previous command.",
+    "tags": ["previous", "command", "execute", "shortcut"]
+  },
+  {
+    "title": "shell",
+    "command": "!ls",
+    "description": "Execute last command starting with 'ls'.",
+    "tags": ["history", "execute", "last", "command"]
+  },
+  {
+    "title": "shell",
+    "command": "clear",
+    "description": "Clear terminal screen.",
+    "tags": ["clear", "screen", "terminal", "clean"]
+  },
+  {
+    "title": "shell",
+    "command": "reset",
+    "description": "Reset terminal to default state.",
+    "tags": ["reset", "terminal", "default", "state"]
+  },
+  {
+    "title": "shell",
+    "command": "exit",
+    "description": "Exit terminal/shell.",
+    "tags": ["exit", "close", "terminal", "shell"]
+  },
+  {
+    "title": "shell",
+    "command": "logout",
+    "description": "Logout from shell session.",
+    "tags": ["logout", "exit", "session", "shell"]
+  },
+  {
+    "title": "shell",
+    "command": "source ~/.bashrc",
+    "description": "Reload bash configuration file.",
+    "tags": ["source", "reload", "bashrc", "configuration"]
+  },
+  {
+    "title": "shell",
+    "command": ". ~/.bashrc",
+    "description": "Alternative way to source bashrc.",
+    "tags": ["source", "reload", "bashrc", "dot"]
+  },
+  {
+    "title": "shell",
+    "command": "which command",
+    "description": "Show full path of command.",
+    "tags": ["which", "path", "command", "location"]
+  },
+  {
+    "title": "shell",
+    "command": "whereis command",
+    "description": "Locate binary, source, and manual pages for command.",
+    "tags": ["whereis", "locate", "command", "files"]
+  },
+  {
+    "title": "shell",
+    "command": "whatis command",
+    "description": "Display one-line description of command.",
+    "tags": ["whatis", "description", "command", "help"]
+  },
+  {
+    "title": "shell",
+    "command": "type command",
+    "description": "Display information about command type.",
+    "tags": ["type", "command", "info", "shell"]
+  },
+  {
+    "title": "shell",
+    "command": "time command",
+    "description": "Measure time taken to execute command.",
+    "tags": ["time", "measure", "performance", "command"]
+  },
+  {
+    "title": "shell",
+    "command": "sleep 5",
+    "description": "Pause for specified number of seconds.",
+    "tags": ["sleep", "pause", "wait", "delay"]
+  },
+  {
+    "title": "shell",
+    "command": "watch -n 1 command",
+    "description": "Execute command repeatedly every N seconds.",
+    "tags": ["watch", "monitor", "repeat", "interval"]
+  },
+  {
+    "title": "shell",
+    "command": "command1 | command2",
+    "description": "Pipe output of command1 to command2.",
+    "tags": ["pipe", "output", "input", "pipeline"]
+  },
+  {
+    "title": "shell",
+    "command": "command > file.txt",
+    "description": "Redirect output to file (overwrite).",
+    "tags": ["redirect", "output", "file", "overwrite"]
+  },
+  {
+    "title": "shell",
+    "command": "command >> file.txt",
+    "description": "Redirect output to file (append).",
+    "tags": ["redirect", "output", "file", "append"]
+  },
+  {
+    "title": "shell",
+    "command": "command < file.txt",
+    "description": "Redirect file as input to command.",
+    "tags": ["redirect", "input", "file", "command"]
+  },
+  {
+    "title": "shell",
+    "command": "command 2> error.log",
+    "description": "Redirect stderr to file.",
+    "tags": ["redirect", "stderr", "error", "file"]
+  },
+  {
+    "title": "shell",
+    "command": "command &> output.log",
+    "description": "Redirect both stdout and stderr to file.",
+    "tags": ["redirect", "stdout", "stderr", "both"]
+  },
+  {
+    "title": "shell",
+    "command": "command1 && command2",
+    "description": "Execute command2 only if command1 succeeds.",
+    "tags": ["and", "conditional", "execute", "success"]
+  },
+  {
+    "title": "shell",
+    "command": "command1 || command2",
+    "description": "Execute command2 only if command1 fails.",
+    "tags": ["or", "conditional", "execute", "failure"]
+  },
+  {
+    "title": "shell",
+    "command": "command1 ; command2",
+    "description": "Execute commands sequentially.",
+    "tags": ["sequential", "commands", "execute", "semicolon"]
+  },
+  {
+    "title": "shell",
+    "command": "command &",
+    "description": "Run command in background.",
+    "tags": ["background", "run", "async", "ampersand"]
+  },
+  {
+    "title": "shell",
+    "command": "nohup command &",
+    "description": "Run command in background immune to hangups.",
+    "tags": ["nohup", "background", "immune", "hangups"]
+  },
+  {
+    "title": "shell",
+    "command": "disown",
+    "description": "Remove job from shell's job table.",
+    "tags": ["disown", "job", "remove", "background"]
+  },
+  {
+    "title": "text-processing",
+    "command": "awk '{print $1}' file.txt",
+    "description": "Print first column of file.",
+    "tags": ["awk", "text", "processing", "columns"]
+  },
+  {
+    "title": "text-processing",
+    "command": "awk -F',' '{print $2}' file.csv",
+    "description": "Print second column of CSV file.",
+    "tags": ["awk", "csv", "processing", "columns"]
+  },
+  {
+    "title": "text-processing",
+    "command": "awk '/pattern/ {print $0}' file.txt",
+    "description": "Print lines matching pattern.",
+    "tags": ["awk", "pattern", "match", "print"]
+  },
+  {
+    "title": "text-processing",
+    "command": "awk '{sum+=$1} END {print sum}' file.txt",
+    "description": "Sum values in first column.",
+    "tags": ["awk", "sum", "calculate", "column"]
+  },
+  {
+    "title": "text-processing",
+    "command": "sed 's/old/new/g' file.txt",
+    "description": "Replace all occurrences of 'old' with 'new'.",
+    "tags": ["sed", "replace", "text", "substitute"]
+  },
+  {
+    "title": "text-processing",
+    "command": "sed 's/old/new/' file.txt",
+    "description": "Replace first occurrence of 'old' with 'new' on each line.",
+    "tags": ["sed", "replace", "first", "occurrence"]
+  },
+  {
+    "title": "text-processing",
+    "command": "sed '5d' file.txt",
+    "description": "Delete 5th line of file.",
+    "tags": ["sed", "delete", "line", "remove"]
+  },
+  {
+    "title": "text-processing",
+    "command": "sed -n '10,20p' file.txt",
+    "description": "Print lines 10 to 20.",
+    "tags": ["sed", "print", "range", "lines"]
+  },
+  {
+    "title": "text-processing",
+    "command": "sed -i 's/old/new/g' file.txt",
+    "description": "Replace text in file in-place.",
+    "tags": ["sed", "replace", "in-place", "modify"]
+  },
+  {
+    "title": "text-processing",
+    "command": "cut -d',' -f1 file.csv",
+    "description": "Extract first column from CSV.",
+    "tags": ["cut", "extract", "column", "csv"]
+  },
+  {
+    "title": "text-processing",
+    "command": "cut -c1-10 file.txt",
+    "description": "Extract first 10 characters from each line.",
+    "tags": ["cut", "extract", "characters", "position"]
+  },
+  {
+    "title": "text-processing",
+    "command": "paste file1.txt file2.txt",
+    "description": "Merge lines of files side by side.",
+    "tags": ["paste", "merge", "files", "side"]
+  },
+  {
+    "title": "text-processing",
+    "command": "join file1.txt file2.txt",
+    "description": "Join lines of two files on common field.",
+    "tags": ["join", "merge", "files", "common"]
+  },
+  {
+    "title": "text-processing",
+    "command": "tr 'a-z' 'A-Z' < file.txt",
+    "description": "Convert lowercase to uppercase.",
+    "tags": ["tr", "translate", "case", "convert"]
+  },
+  {
+    "title": "text-processing",
+    "command": "tr -d '\\n' < file.txt",
+    "description": "Delete newline characters.",
+    "tags": ["tr", "delete", "newline", "characters"]
+  },
+  {
+    "title": "text-processing",
+    "command": "tr -s ' ' < file.txt",
+    "description": "Squeeze multiple spaces into single space.",
+    "tags": ["tr", "squeeze", "spaces", "multiple"]
+  },
+  {
+    "title": "text-processing",
+    "command": "column -t file.txt",
+    "description": "Format text into columns.",
+    "tags": ["column", "format", "table", "align"]
+  },
+  {
+    "title": "text-processing",
+    "command": "fold -w 80 file.txt",
+    "description": "Wrap lines at 80 characters.",
+    "tags": ["fold", "wrap", "lines", "width"]
+  },
+  {
+    "title": "text-processing",
+    "command": "fmt file.txt",
+    "description": "Format text to fit within specified width.",
+    "tags": ["fmt", "format", "text", "paragraph"]
+  },
+  {
+    "title": "text-processing",
+    "command": "nl file.txt",
+    "description": "Number lines of file.",
+    "tags": ["nl", "number", "lines", "file"]
+  },
+  {
+    "title": "text-processing",
+    "command": "pr file.txt",
+    "description": "Format file for printing.",
+    "tags": ["pr", "print", "format", "file"]
+  },
+  {
+    "title": "compression",
+    "command": "gzip file.txt",
+    "description": "Compress file using gzip.",
+    "tags": ["compress", "gzip", "file", "archive"]
+  },
+  {
+    "title": "compression",
+    "command": "gunzip file.txt.gz",
+    "description": "Decompress gzip file.",
+    "tags": ["decompress", "gunzip", "extract", "archive"]
+  },
+  {
+    "title": "compression",
+    "command": "gzip -d file.txt.gz",
+    "description": "Alternative way to decompress gzip.",
+    "tags": ["decompress", "gzip", "extract", "alternative"]
+  },
+  {
+    "title": "compression",
+    "command": "gzip -9 file.txt",
+    "description": "Maximum compression (slower).",
+    "tags": ["compress", "gzip", "maximum", "slow"]
+  },
+  {
+    "title": "compression",
+    "command": "bzip2 file.txt",
+    "description": "Compress file using bzip2 (better compression than gzip).",
+    "tags": ["compress", "bzip2", "file", "archive"]
+  },
+  {
+    "title": "compression",
+    "command": "bunzip2 file.txt.bz2",
+    "description": "Decompress bzip2 file.",
+    "tags": ["decompress", "bunzip2", "extract", "archive"]
+  },
+  {
+    "title": "compression",
+    "command": "xz file.txt",
+    "description": "Compress file using xz (high compression ratio).",
+    "tags": ["compress", "xz", "file", "archive"]
+  },
+  {
+    "title": "compression",
+    "command": "unxz file.txt.xz",
+    "description": "Decompress xz file.",
+    "tags": ["decompress", "unxz", "extract", "archive"]
+  },
+  {
+    "title": "compression",
+    "command": "zcat file.txt.gz",
+    "description": "View compressed file without decompressing.",
+    "tags": ["view", "compressed", "zcat", "gzip"]
+  },
+  {
+    "title": "compression",
+    "command": "bzcat file.txt.bz2",
+    "description": "View bzip2 compressed file.",
+    "tags": ["view", "compressed", "bzcat", "bzip2"]
+  },
+  {
+    "title": "compression",
+    "command": "xzcat file.txt.xz",
+    "description": "View xz compressed file.",
+    "tags": ["view", "compressed", "xzcat", "xz"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "cal",
+    "description": "Display calendar.",
+    "tags": ["calendar", "month", "date", "display"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "cal -y",
+    "description": "Display calendar for entire year.",
+    "tags": ["calendar", "year", "display", "all"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "date",
+    "description": "Display current date and time.",
+    "tags": ["date", "time", "current", "display"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "date '+%Y-%m-%d %H:%M:%S'",
+    "description": "Display date in custom format.",
+    "tags": ["date", "format", "custom", "display"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "bc",
+    "description": "Command-line calculator.",
+    "tags": ["calculator", "bc", "math", "calculate"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "echo \"5 + 3\" | bc",
+    "description": "Perform calculation using bc.",
+    "tags": ["calculator", "bc", "pipe", "math"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "factor 42",
+    "description": "Display prime factors of number.",
+    "tags": ["factor", "prime", "numbers", "math"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "seq 1 10",
+    "description": "Generate sequence of numbers.",
+    "tags": ["seq", "sequence", "numbers", "generate"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "seq 1 2 10",
+    "description": "Generate sequence with step 2.",
+    "tags": ["seq", "sequence", "step", "generate"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "shuf -i 1-100 -n 10",
+    "description": "Generate 10 random numbers between 1-100.",
+    "tags": ["shuf", "random", "numbers", "generate"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "shuf file.txt",
+    "description": "Shuffle lines of file randomly.",
+    "tags": ["shuf", "shuffle", "random", "lines"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sort -R file.txt",
+    "description": "Alternative way to shuffle file.",
+    "tags": ["sort", "shuffle", "random", "alternative"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "yes",
+    "description": "Repeatedly output 'y' (or specified string).",
+    "tags": ["yes", "repeat", "output", "string"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "yes no",
+    "description": "Repeatedly output 'no'.",
+    "tags": ["yes", "repeat", "output", "custom"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "xargs command",
+    "description": "Build and execute command lines from standard input.",
+    "tags": ["xargs", "execute", "input", "pipeline"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "find . -name \"*.txt\" | xargs rm",
+    "description": "Find and delete all txt files.",
+    "tags": ["xargs", "find", "delete", "pipeline"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "find . -name \"*.js\" | xargs grep -l \"function\"",
+    "description": "Find JavaScript files containing 'function'.",
+    "tags": ["xargs", "find", "grep", "pipeline"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "parallel command {} ::: arg1 arg2 arg3",
+    "description": "Run commands in parallel.",
+    "tags": ["parallel", "concurrent", "execute", "multiple"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "tee file.txt",
+    "description": "Read from stdin and write to stdout and file.",
+    "tags": ["tee", "split", "output", "file"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "command | tee output.log",
+    "description": "Save output to file while also displaying it.",
+    "tags": ["tee", "save", "output", "display"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "command | tee -a output.log",
+    "description": "Append output to file while displaying it.",
+    "tags": ["tee", "append", "output", "display"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "script session.log",
+    "description": "Record terminal session to file.",
+    "tags": ["script", "record", "session", "terminal"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "screen",
+    "description": "Terminal multiplexer - manage multiple terminal sessions.",
+    "tags": ["screen", "multiplexer", "terminal", "sessions"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "tmux",
+    "description": "Terminal multiplexer (modern alternative to screen).",
+    "tags": ["tmux", "multiplexer", "terminal", "sessions"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "crontab -e",
+    "description": "Edit cron jobs for current user.",
+    "tags": ["cron", "jobs", "schedule", "edit"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "crontab -l",
+    "description": "List cron jobs for current user.",
+    "tags": ["cron", "jobs", "list", "schedule"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "crontab -r",
+    "description": "Remove all cron jobs for current user.",
+    "tags": ["cron", "jobs", "remove", "delete"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "at now + 1 hour",
+    "description": "Schedule command to run once at specific time.",
+    "tags": ["at", "schedule", "once", "time"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "atq",
+    "description": "Display pending at jobs.",
+    "tags": ["at", "jobs", "pending", "list"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "atrm job_id",
+    "description": "Remove at job.",
+    "tags": ["at", "remove", "job", "delete"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "man command",
+    "description": "Display manual page for command.",
+    "tags": ["man", "manual", "help", "documentation"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "info command",
+    "description": "Display info page for command (more detailed).",
+    "tags": ["info", "manual", "detailed", "documentation"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "apropos keyword",
+    "description": "Search manual pages for keyword.",
+    "tags": ["apropos", "search", "manual", "keyword"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "whatis command",
+    "description": "Display brief description of command.",
+    "tags": ["whatis", "description", "brief", "command"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "help command",
+    "description": "Display help for shell builtin command.",
+    "tags": ["help", "builtin", "command", "shell"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "command --help",
+    "description": "Display help for command (usually).",
+    "tags": ["help", "command", "options", "usage"]
+  }
+]

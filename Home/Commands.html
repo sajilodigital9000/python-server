@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SajiloDocs - Command Center</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* --- VARIABLE SYSTEM --- */
+      :root {
+        --bg: #0b0e14;
+        --sidebar-bg: #0f1219;
+        --card-bg: #161b22;
+        --text-primary: #f0f6fc;
+        --text-secondary: #8b949e;
+        --accent: #38bdf8;
+        --border: #30363d;
+        --code-bg: rgba(0, 0, 0, 0.3);
+        --highlight-bg: rgba(56, 189, 248, 0.3);
+        --transition: 0.3s ease;
+      }
+
+      [data-theme="light"] {
+        --bg: #f6f8fa;
+        --sidebar-bg: #ffffff;
+        --card-bg: #ffffff;
+        --text-primary: #1f2328;
+        --text-secondary: #656d76;
+        --border: #d0d7de;
+        --code-bg: #f1f5f9;
+      }
+
+      /* --- BASE STYLES --- */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text-primary);
+        transition: background var(--transition);
+        overflow-x: hidden;
+      }
+
+      /* --- SIDEBAR --- */
+      #sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 260px;
+        background: var(--sidebar-bg);
+        border-right: 1px solid var(--border);
+        z-index: 100;
+        transition: transform var(--transition);
+      }
+
+      @media (max-width: 1024px) {
+        #sidebar {
+          transform: translateX(-100%);
+        }
+        #sidebar.open {
+          transform: translateX(0);
+        }
+      }
+
+      .sidebar-header {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-list {
+        padding: 0 0.75rem;
+        list-style: none;
+      }
+      .nav-item {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        margin-bottom: 4px;
+        border: none;
+        background: transparent;
+        color: var(--text-secondary);
+        text-align: left;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: capitalize;
+        transition: var(--transition);
+      }
+
+      .nav-item:hover {
+        background: var(--border);
+        color: var(--text-primary);
+      }
+      .nav-item.active {
+        background: rgba(56, 189, 248, 0.1);
+        color: var(--accent);
+        border-left: 4px solid var(--accent);
+      }
+
+      /* --- MAIN CONTENT --- */
+      main {
+        flex: 1;
+        margin-left: 260px;
+        transition: margin var(--transition);
+      }
+      @media (max-width: 1024px) {
+        main {
+          margin-left: 0;
+        }
+      }
+
+      .header-sticky {
+        position: sticky;
+        top: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.5rem;
+        z-index: 50;
+        backdrop-filter: blur(8px);
+      }
+
+      .search-container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        gap: 1rem;
+        position: relative;
+        align-items: center;
+      }
+
+      .search-input {
+        flex: 1;
+        padding: 0.75rem 1rem 0.75rem 2.5rem;
+        background: var(--code-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        color: var(--text-primary);
+        outline: none;
+      }
+
+      .search-input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px var(--highlight-bg);
+      }
+      .fa-search {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-secondary);
+      }
+
+      /* --- CARDS --- */
+      .content-area {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+      }
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: transform 0.2s;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+      .command-box {
+        background: var(--code-bg);
+        padding: 1rem;
+        border-radius: 10px;
+        font-family: "Fira Code", monospace;
+        color: #fbbf24;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        word-break: break-all;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .tag {
+        font-size: 0.7rem;
+        background: var(--border);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        color: var(--text-secondary);
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+      .tag:hover {
+        background: var(--accent);
+        color: white;
+      }
+
+      .highlight {
+        background: var(--highlight-bg);
+        color: var(--text-primary);
+        border-radius: 2px;
+      }
+
+      /* Interactive Input */
+      .cmd-input {
+        background: rgba(56, 189, 248, 0.15);
+        border: 1px dashed var(--accent);
+        color: var(--accent);
+        padding: 0 4px;
+        border-radius: 3px;
+        outline: none;
+        width: auto;
+        min-width: 50px;
+        font-family: inherit;
+      }
+
+      /* Buttons */
+      .btn-icon {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+      }
+      .btn-copy {
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        padding: 0.4rem 0.8rem;
+        border-radius: 6px;
+        color: var(--accent);
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .btn-copy:hover {
+        background: var(--accent);
+        color: white;
+      }
+
+      #overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 90;
+      }
+      #overlay.active {
+        display: block;
+      }
+
+      @media (min-width: 1025px) {
+        .mobile-toggle {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overlay" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <h2 style="font-size: 1.2rem; color: white">
+          <i class="fas fa-terminal" style="color: var(--accent)"></i>
+          SajiloDocs
+        </h2>
+        <button class="btn-icon" onclick="toggleTheme()">
+          <i id="themeIcon" class="fas fa-moon"></i>
+        </button>
+      </div>
+      <nav class="nav-list" id="navLinks"></nav>
+    </aside>
+
+    <main>
+      <div class="header-sticky">
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="globalSearch"
+            class="search-input"
+            placeholder="Search... (Press '/' to focus)"
+          />
+          <button class="btn-icon mobile-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="content-area">
+        <div id="titleSection">
+          <h1 id="catName" style="text-transform: capitalize">
+            Select Category
+          </h1>
+          <p
+            id="catCount"
+            style="color: var(--text-secondary); margin-bottom: 2rem"
+          ></p>
+        </div>
+        <div id="commandContainer"></div>
+      </div>
+    </main>
+
+    <script>
+      const categories = [
+        "favorites",
+        "windows",
+        "npm",
+        "pnpm",
+        "git",
+        "linux",
+        "mac",
+        "vscode",
+        "davinci",
+        "nextjs",
+      ];
+      let currentData = [];
+      let favorites = JSON.parse(localStorage.getItem("favCommands")) || [];
+      let activeKeywords = [];
+
+      // 1. Sidebar & Theme
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("open");
+        document.getElementById("overlay").classList.toggle("active");
+      }
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.getAttribute("data-theme") === "dark";
+        html.setAttribute("data-theme", isDark ? "light" : "dark");
+        document.getElementById("themeIcon").className = isDark
+          ? "fas fa-sun"
+          : "fas fa-moon";
+      }
+
+      // 2. Hotkey (/)
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "/" && document.activeElement.tagName !== "INPUT") {
+          e.preventDefault();
+          document.getElementById("globalSearch").focus();
+        }
+      });
+
+      // 3. Load Data
+      async function loadCategory(cat) {
+        if (window.innerWidth <= 1024) {
+          document.getElementById("sidebar").classList.remove("open");
+          document.getElementById("overlay").classList.remove("active");
+        }
+
+        document
+          .querySelectorAll(".nav-item")
+          .forEach((el) => el.classList.remove("active"));
+        document.getElementById(`nav-${cat}`).classList.add("active");
+
+        if (cat === "favorites") {
+          currentData = favorites;
+        } else {
+          try {
+            const res = await fetch(`./commands/${cat}.json`);
+            currentData = await res.json();
+          } catch (e) {
+            console.error("Missing JSON", cat);
+            currentData = [];
+          }
+        }
+        document.getElementById("globalSearch").value = "";
+        activeKeywords = [];
+        render(currentData);
+        updateHeaders(cat, currentData.length);
+      }
+
+      function updateHeaders(name, count) {
+        document.getElementById("catName").innerText = name;
+        document.getElementById(
+          "catCount"
+        ).innerText = `${count} commands available`;
+      }
+
+      // 4. Highlight & Render
+      function highlightText(text) {
+        if (!activeKeywords.length) return text;
+        let highlighted = text;
+        activeKeywords.forEach((key) => {
+          const regex = new RegExp(`(${key})`, "gi");
+          highlighted = highlighted.replace(
+            regex,
+            '<mark class="highlight">$1</mark>'
+          );
+        });
+        return highlighted;
+      }
+
+      function render(data) {
+        const container = document.getElementById("commandContainer");
+        if (data.length === 0) {
+          container.innerHTML = `<p style="text-align:center; color:var(--text-secondary); margin-top:2rem;">No commands found.</p>`;
+          return;
+        }
+
+        container.innerHTML = data
+          .map((item, idx) => {
+            const isFav = favorites.some((f) => f.command === item.command);
+            const commandWithInputs = item.command.replace(
+              /<([^>]+)>/g,
+              (match, name) => {
+                return `<input type="text" class="cmd-input" placeholder="${name}" oninput="this.style.width = ((this.value.length + 1) * 8) + 'px'">`;
+              }
+            );
+
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <h3>${highlightText(item.title)}</h3>
+                        <div class="flex" style="gap:10px; display:flex;">
+                            <button class="btn-icon" onclick="toggleFav('${item.command.replace(
+                              /'/g,
+                              "\\'"
+                            )}')">
+                                <i class="${
+                                  isFav ? "fas" : "far"
+                                } fa-star" style="color:${
+              isFav ? "#fbbf24" : ""
+            }"></i>
+                            </button>
+                            <button class="btn-copy" onclick="copyDynamic(this, '${item.command.replace(
+                              /'/g,
+                              "\\'"
+                            )}')">
+                                <i class="far fa-copy"></i> Copy
+                            </button>
+                        </div>
+                    </div>
+                    <div class="command-box">${commandWithInputs}</div>
+                    <p style="color:var(--text-secondary); font-size: 0.9rem; margin-bottom:1rem">${highlightText(
+                      item.description
+                    )}</p>
+                    <div>
+                        ${item.tags
+                          .map(
+                            (t) =>
+                              `<span class="tag" onclick="filterByTag('${t}')">#${highlightText(
+                                t
+                              )}</span>`
+                          )
+                          .join("")}
+                    </div>
+                </div>`;
+          })
+          .join("");
+      }
+
+      // 5. Copy & Favorites Logic
+      function copyDynamic(btn, originalCmd) {
+        const card = btn.closest(".card");
+        const inputs = card.querySelectorAll(".cmd-input");
+        let finalCmd = originalCmd;
+
+        inputs.forEach((input) => {
+          const val = input.value || `<${input.placeholder}>`;
+          finalCmd = finalCmd.replace(/<[^>]+>/, val);
+        });
+
+        const fallbackCopy = (text) => {
+          const ta = document.createElement("textarea");
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+        };
+
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(finalCmd).then(() => showSuccess(btn));
+        } else {
+          fallbackCopy(finalCmd);
+          showSuccess(btn);
+        }
+      }
+
+      function showSuccess(btn) {
+        const old = btn.innerHTML;
+        btn.innerHTML = `<i class="fas fa-check"></i> Copied`;
+        setTimeout(() => (btn.innerHTML = old), 1500);
+      }
+
+      function toggleFav(cmdStr) {
+        const item =
+          currentData.find((i) => i.command === cmdStr) ||
+          favorites.find((i) => i.command === cmdStr);
+        const index = favorites.findIndex((f) => f.command === cmdStr);
+        if (index > -1) favorites.splice(index, 1);
+        else if (item) favorites.push(item);
+
+        localStorage.setItem("favCommands", JSON.stringify(favorites));
+        render(currentData);
+      }
+
+      function filterByTag(tag) {
+        document.getElementById("globalSearch").value = tag;
+        activeKeywords = [tag.toLowerCase()];
+        const filtered = currentData.filter((i) => i.tags.includes(tag));
+        render(filtered);
+      }
+
+      // 6. Refined Search Logic
+      document.getElementById("globalSearch").addEventListener("input", (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        activeKeywords = term.split(/\s+/).filter((k) => k.length > 0);
+
+        if (activeKeywords.length === 0) {
+          render(currentData);
+          return;
+        }
+
+        const filtered = currentData.filter((item) => {
+          return activeKeywords.every((key) => {
+            return (
+              item.title.toLowerCase().includes(key) ||
+              item.command.toLowerCase().includes(key) ||
+              item.description.toLowerCase().includes(key) ||
+              item.tags.some((t) => t.toLowerCase().includes(key))
+            );
+          });
+        });
+
+        filtered.sort((a, b) => {
+          const aTitle = a.title.toLowerCase().includes(term) ? 1 : 0;
+          const bTitle = b.title.toLowerCase().includes(term) ? 1 : 0;
+          return bTitle - aTitle;
+        });
+
+        render(filtered);
+      });
+
+      // Init
+      document.getElementById("navLinks").innerHTML = categories
+        .map(
+          (c) => `
+            <button class="nav-item" id="nav-${c}" onclick="loadCategory('${c}')">
+                <span>${c === "favorites" ? "⭐ " : ""}${c}</span>
+                <i class="fas fa-chevron-right" style="font-size:0.7rem; opacity:0.3"></i>
+            </button>
+        `
+        )
+        .join("");
+
+      loadCategory("windows");
+    </script>
+  </body>
+</html>

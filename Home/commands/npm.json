@@ -1,0 +1,464 @@
+[
+  {
+    "title": "jest",
+    "command": "npm install --save-dev jest",
+    "description": "Delightful JavaScript testing framework with focus on simplicity.",
+    "tags": ["test", "testing", "framework", "unit"],
+    "category": "testing"
+  },
+  {
+    "title": "mocha",
+    "command": "npm install --save-dev mocha",
+    "description": "Feature-rich JavaScript test framework running on Node.js.",
+    "tags": ["test", "framework", "bdd", "tdd"],
+    "category": "testing"
+  },
+  {
+    "title": "chai",
+    "command": "npm install --save-dev chai",
+    "description": "BDD/TDD assertion library for Node.js and browser.",
+    "tags": ["assert", "test", "bdd", "tdd"],
+    "category": "testing"
+  },
+  {
+    "title": "cypress",
+    "command": "npm install --save-dev cypress",
+    "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+    "tags": ["e2e", "test", "browser", "integration"],
+    "category": "testing"
+  },
+  {
+    "title": "testing-library",
+    "command": "npm install --save-dev @testing-library/react",
+    "description": "Simple and complete testing utilities for React.",
+    "tags": ["test", "react", "dom", "components"],
+    "category": "testing"
+  },
+  {
+    "title": "express",
+    "command": "npm install express",
+    "description": "Fast, unopinionated, minimalist web framework for Node.js.",
+    "tags": ["web", "framework", "server", "api"],
+    "category": "backend"
+  },
+  {
+    "title": "koa",
+    "command": "npm install koa",
+    "description": "Next generation web framework for Node.js by Express team.",
+    "tags": ["web", "framework", "modern", "middleware"],
+    "category": "backend"
+  },
+  {
+    "title": "nest",
+    "command": "npm install @nestjs/core",
+    "description": "Progressive Node.js framework for building efficient server-side applications.",
+    "tags": ["framework", "typescript", "architecture", "enterprise"],
+    "category": "backend"
+  },
+  {
+    "title": "fastify",
+    "command": "npm install fastify",
+    "description": "Fast and low overhead web framework for Node.js.",
+    "tags": ["fast", "web", "framework", "low-overhead"],
+    "category": "backend"
+  },
+  {
+    "title": "socket.io",
+    "command": "npm install socket.io",
+    "description": "Real-time bidirectional event-based communication.",
+    "tags": ["websocket", "real-time", "communication", "events"],
+    "category": "backend"
+  },
+  {
+    "title": "react",
+    "command": "npm install react react-dom",
+    "description": "JavaScript library for building user interfaces.",
+    "tags": ["ui", "frontend", "components", "library"],
+    "category": "frontend"
+  },
+  {
+    "title": "vue",
+    "command": "npm install vue",
+    "description": "Progressive JavaScript framework for building UI on the web.",
+    "tags": ["framework", "ui", "progressive", "components"],
+    "category": "frontend"
+  },
+  {
+    "title": "angular",
+    "command": "npm install @angular/core",
+    "description": "Platform for building mobile and desktop web applications.",
+    "tags": ["framework", "typescript", "enterprise", "spa"],
+    "category": "frontend"
+  },
+  {
+    "title": "svelte",
+    "command": "npm install svelte",
+    "description": "Cybernetically enhanced web apps - compiler that generates optimal JavaScript.",
+    "tags": ["compiler", "framework", "reactive", "no-runtime"],
+    "category": "frontend"
+  },
+  {
+    "title": "next.js",
+    "command": "npm install next react react-dom",
+    "description": "React framework for production with hybrid static & server rendering.",
+    "tags": ["react", "ssr", "framework", "production"],
+    "category": "frontend"
+  },
+  {
+    "title": "material-ui",
+    "command": "npm install @mui/material @emotion/react @emotion/styled",
+    "description": "React components for faster and easier web development (Material Design).",
+    "tags": ["ui", "components", "material", "design"],
+    "category": "ui"
+  },
+  {
+    "title": "ant-design",
+    "command": "npm install antd",
+    "description": "A design system with values of Nature and Determinacy for better user experience.",
+    "tags": ["ui", "components", "design", "system"],
+    "category": "ui"
+  },
+  {
+    "title": "tailwindcss",
+    "command": "npm install -D tailwindcss",
+    "description": "Utility-first CSS framework for rapidly building custom designs.",
+    "tags": ["css", "framework", "utility", "design"],
+    "category": "ui"
+  },
+  {
+    "title": "bootstrap",
+    "command": "npm install bootstrap",
+    "description": "Most popular HTML, CSS, and JS library for developing responsive projects.",
+    "tags": ["css", "framework", "responsive", "components"],
+    "category": "ui"
+  },
+  {
+    "title": "chakra-ui",
+    "command": "npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion",
+    "description": "Simple, modular and accessible component library for React.",
+    "tags": ["ui", "components", "accessible", "react"],
+    "category": "ui"
+  },
+  {
+    "title": "mongoose",
+    "command": "npm install mongoose",
+    "description": "Elegant MongoDB object modeling for Node.js.",
+    "tags": ["mongodb", "orm", "database", "model"],
+    "category": "database"
+  },
+  {
+    "title": "sequelize",
+    "command": "npm install sequelize",
+    "description": "Promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and MSSQL.",
+    "tags": ["orm", "sql", "database", "postgres"],
+    "category": "database"
+  },
+  {
+    "title": "prisma",
+    "command": "npm install prisma --save-dev",
+    "description": "Next-generation Node.js and TypeScript ORM.",
+    "tags": ["orm", "database", "typescript", "modern"],
+    "category": "database"
+  },
+  {
+    "title": "typeorm",
+    "command": "npm install typeorm",
+    "description": "ORM for TypeScript and JavaScript (ES7, ES6, ES5) that works with many databases.",
+    "tags": ["orm", "typescript", "database", "decorators"],
+    "category": "database"
+  },
+  {
+    "title": "redis",
+    "command": "npm install redis",
+    "description": "Redis client for Node.js.",
+    "tags": ["redis", "cache", "database", "in-memory"],
+    "category": "database"
+  },
+  {
+    "title": "lodash",
+    "command": "npm install lodash",
+    "description": "Modern JavaScript utility library delivering modularity, performance & extras.",
+    "tags": ["utility", "helpers", "functions", "array"],
+    "category": "utilities"
+  },
+  {
+    "title": "axios",
+    "command": "npm install axios",
+    "description": "Promise based HTTP client for the browser and Node.js.",
+    "tags": ["http", "client", "ajax", "requests"],
+    "category": "utilities"
+  },
+  {
+    "title": "moment",
+    "command": "npm install moment",
+    "description": "Parse, validate, manipulate, and display dates and times in JavaScript.",
+    "tags": ["date", "time", "format", "parse"],
+    "category": "utilities"
+  },
+  {
+    "title": "dayjs",
+    "command": "npm install dayjs",
+    "description": "Fast 2kB alternative to Moment.js with the same modern API.",
+    "tags": ["date", "time", "lightweight", "moment"],
+    "category": "utilities"
+  },
+  {
+    "title": "uuid",
+    "command": "npm install uuid",
+    "description": "For the creation of RFC4122 UUIDs.",
+    "tags": ["uuid", "unique", "id", "identifier"],
+    "category": "utilities"
+  },
+  {
+    "title": "dotenv",
+    "command": "npm install dotenv",
+    "description": "Loads environment variables from .env file into process.env.",
+    "tags": ["environment", "variables", "config", "secret"],
+    "category": "utilities"
+  },
+  {
+    "title": "commander",
+    "command": "npm install commander",
+    "description": "Complete solution for Node.js command-line interfaces.",
+    "tags": ["cli", "command", "line", "interface"],
+    "category": "cool"
+  },
+  {
+    "title": "chalk",
+    "command": "npm install chalk",
+    "description": "Terminal string styling done right - colorful CLI output.",
+    "tags": ["color", "terminal", "cli", "style"],
+    "category": "cool"
+  },
+  {
+    "title": "inquirer",
+    "command": "npm install inquirer",
+    "description": "Collection of common interactive command line user interfaces.",
+    "tags": ["cli", "interactive", "prompt", "questions"],
+    "category": "cool"
+  },
+  {
+    "title": "ora",
+    "command": "npm install ora",
+    "description": "Elegant terminal spinner for CLI tasks.",
+    "tags": ["spinner", "loading", "terminal", "cli"],
+    "category": "cool"
+  },
+  {
+    "title": "figlet",
+    "command": "npm install figlet",
+    "description": "Creates ASCII art from text - great for CLI banner text.",
+    "tags": ["ascii", "art", "banner", "text"],
+    "category": "cool"
+  },
+  {
+    "title": "boxen",
+    "command": "npm install boxen",
+    "description": "Create boxes in the terminal - perfect for CLI messages.",
+    "tags": ["box", "terminal", "cli", "message"],
+    "category": "cool"
+  },
+  {
+    "title": "cheerio",
+    "command": "npm install cheerio",
+    "description": "Fast, flexible & lean implementation of core jQuery for server.",
+    "tags": ["jquery", "dom", "parser", "scraping"],
+    "category": "cool"
+  },
+  {
+    "title": "puppeteer",
+    "command": "npm install puppeteer",
+    "description": "Headless Chrome Node.js API for automation and scraping.",
+    "tags": ["browser", "automation", "scraping", "headless"],
+    "category": "cool"
+  },
+  {
+    "title": "sharp",
+    "command": "npm install sharp",
+    "description": "High performance Node.js image processing library.",
+    "tags": ["image", "processing", "resize", "optimize"],
+    "category": "cool"
+  },
+  {
+    "title": "socket.io",
+    "command": "npm install socket.io",
+    "description": "Real-time bidirectional event-based communication.",
+    "tags": ["websocket", "real-time", "communication", "events"],
+    "category": "cool"
+  },
+  {
+    "title": "ws",
+    "command": "npm install ws",
+    "description": "Simple to use, blazing fast and thoroughly tested WebSocket client/server.",
+    "tags": ["websocket", "real-time", "fast", "simple"],
+    "category": "cool"
+  },
+  {
+    "title": "jsonwebtoken",
+    "command": "npm install jsonwebtoken",
+    "description": "JSON Web Token implementation for Node.js.",
+    "tags": ["jwt", "authentication", "token", "security"],
+    "category": "cool"
+  },
+  {
+    "title": "bcrypt",
+    "command": "npm install bcrypt",
+    "description": "Library to help you hash passwords securely.",
+    "tags": ["password", "hash", "security", "encryption"],
+    "category": "cool"
+  },
+  {
+    "title": "cors",
+    "command": "npm install cors",
+    "description": "Express/Connect middleware for enabling CORS.",
+    "tags": ["cors", "security", "express", "middleware"],
+    "category": "cool"
+  },
+  {
+    "title": "helmet",
+    "command": "npm install helmet",
+    "description": "Helps secure Express apps by setting various HTTP headers.",
+    "tags": ["security", "express", "headers", "protection"],
+    "category": "cool"
+  },
+  {
+    "title": "compression",
+    "command": "npm install compression",
+    "description": "Express/Connect compression middleware for gzip support.",
+    "tags": ["compression", "gzip", "express", "performance"],
+    "category": "cool"
+  },
+  {
+    "title": "morgan",
+    "command": "npm install morgan",
+    "description": "HTTP request logger middleware for Node.js.",
+    "tags": ["logging", "express", "middleware", "requests"],
+    "category": "cool"
+  },
+  {
+    "title": "winston",
+    "command": "npm install winston",
+    "description": "Universal logging library with support for multiple transports.",
+    "tags": ["logging", "logger", "transports", "universal"],
+    "category": "cool"
+  },
+  {
+    "title": "pm2",
+    "command": "npm install pm2 -g",
+    "description": "Production process manager for Node.js applications with built-in load balancer.",
+    "tags": ["process", "manager", "production", "monitoring"],
+    "category": "cool"
+  },
+  {
+    "title": "concurrently",
+    "command": "npm install concurrently --save-dev",
+    "description": "Run multiple commands concurrently - great for running client and server together.",
+    "tags": ["concurrent", "parallel", "scripts", "dev"],
+    "category": "cool"
+  },
+  {
+    "title": "cross-env",
+    "command": "npm install cross-env --save-dev",
+    "description": "Run scripts that set and use environment variables across platforms.",
+    "tags": ["environment", "variables", "cross-platform", "scripts"],
+    "category": "cool"
+  },
+  {
+    "title": "rimraf",
+    "command": "npm install rimraf --save-dev",
+    "description": "UNIX command rm -rf for Node.js - deep deletion of files/folders.",
+    "tags": ["delete", "remove", "clean", "files"],
+    "category": "cool"
+  },
+  {
+    "title": "fs-extra",
+    "command": "npm install fs-extra",
+    "description": "Adds file system methods that aren't included in native fs module.",
+    "tags": ["filesystem", "fs", "extra", "utilities"],
+    "category": "cool"
+  },
+  {
+    "title": "node-cron",
+    "command": "npm install node-cron",
+    "description": "Task scheduler for Node.js applications (cron jobs).",
+    "tags": ["cron", "scheduler", "tasks", "jobs"],
+    "category": "cool"
+  },
+  {
+    "title": "qrcode",
+    "command": "npm install qrcode",
+    "description": "QR code generator for Node.js and browser.",
+    "tags": ["qr", "code", "generator", "barcode"],
+    "category": "cool"
+  },
+  {
+    "title": "pdfkit",
+    "command": "npm install pdfkit",
+    "description": "PDF generation library for Node.js and browser.",
+    "tags": ["pdf", "generation", "document", "create"],
+    "category": "cool"
+  },
+  {
+    "title": "exceljs",
+    "command": "npm install exceljs",
+    "description": "Excel workbook manager for Node.js.",
+    "tags": ["excel", "spreadsheet", "xlsx", "workbook"],
+    "category": "cool"
+  },
+  {
+    "title": "babel",
+    "command": "npm install --save-dev @babel/core @babel/cli @babel/preset-env",
+    "description": "Compiler for writing next generation JavaScript.",
+    "tags": ["compiler", "transpile", "es6", "javascript"],
+    "category": "build"
+  },
+  {
+    "title": "parcel",
+    "command": "npm install --save-dev parcel",
+    "description": "Blazing fast, zero configuration web application bundler.",
+    "tags": ["bundle", "zero-config", "fast", "web"],
+    "category": "build"
+  },
+  {
+    "title": "rollup",
+    "command": "npm install --save-dev rollup",
+    "description": "Next-generation ES6 module bundler - great for libraries.",
+    "tags": ["bundle", "es6", "modules", "library"],
+    "category": "build"
+  },
+  {
+    "title": "terser",
+    "command": "npm install --save-dev terser",
+    "description": "JavaScript parser, mangler and compressor toolkit for ES6+.",
+    "tags": ["minify", "compress", "uglify", "javascript"],
+    "category": "build"
+  },
+  {
+    "title": "postcss",
+    "command": "npm install --save-dev postcss",
+    "description": "Tool for transforming CSS with JavaScript plugins.",
+    "tags": ["css", "transform", "plugins", "autoprefixer"],
+    "category": "build"
+  },
+  {
+    "title": "newrelic",
+    "command": "npm install newrelic",
+    "description": "Application performance monitoring and observability platform.",
+    "tags": ["monitoring", "performance", "apm", "observability"],
+    "category": "monitoring"
+  },
+  {
+    "title": "datadog",
+    "command": "npm install dd-trace",
+    "description": "Datadog APM tracing client for Node.js.",
+    "tags": ["monitoring", "tracing", "apm", "observability"],
+    "category": "monitoring"
+  },
+  {
+    "title": "opentelemetry",
+    "command": "npm install @opentelemetry/api",
+    "description": "Cloud-native observability framework for distributed tracing.",
+    "tags": ["observability", "tracing", "metrics", "distributed"],
+    "category": "monitoring"
+  }
+]

@@ -477,45 +477,52 @@ body.light-mode .file-card:hover {
 }
 
 .dropdown-divider {
-    height: 1px;
-    background: var(--border);
-    margin: 4px 0;
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
 }
 
 /* Submenus */
 .dropdown-item.has-submenu {
-    position: relative;
-    justify-content: space-between;
+  position: relative;
+  justify-content: space-between;
 }
 
 .submenu-arrow {
-    width: 14px;
-    height: 14px;
-    opacity: 0.6;
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
 }
 
 .submenu {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: -5px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    width: 180px;
-    padding: 5px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-    margin-left: 2px;
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -5px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 180px;
+  padding: 5px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  margin-left: 2px;
 }
 
 .dropdown-item.has-submenu:hover .submenu {
-    display: block;
-    animation: submenu-fade 0.2s ease-out;
+  display: block;
+  animation: submenu-fade 0.2s ease-out;
 }
 
 @keyframes submenu-fade {
-    from { opacity: 0; transform: translateX(-10px); }
-    to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Properties Sidebar / Bottom Sheet */
@@ -609,6 +616,214 @@ body.light-mode .file-card:hover {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+}
+
+/* ========== MOBILE RESPONSIVE STYLES ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    align-items: flex-start;
+  }
+
+  .brand {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .header-actions #sysInfo {
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .header-actions .btn,
+  .header-actions select {
+    flex: 1 1 calc(33.33% - 6px);
+    min-width: 0;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+
+  .header-actions .btn i {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-actions .btn span {
+    display: none;
+  }
+
+  .header-actions .btn-primary {
+    flex: 1 1 100%;
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 20px;
+  }
+
+  .toolbar .btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .breadcrumb {
+    width: 100%;
+    order: -1;
+    font-size: 0.85rem;
+  }
+
+  .search-box {
+    flex: 1 1 100%;
+    min-width: 0;
+    font-size: 0.9rem;
+  }
+
+  #filterBar {
+    gap: 6px;
+    padding: 10px 20px;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  #explorer {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  #explorer.grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .file-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .preview-area {
+    height: 100px;
+  }
+
+  .file-name {
+    font-size: 0.85rem;
+  }
+
+  .list-meta {
+    font-size: 0.7rem;
+  }
+
+  #detailsPanel {
+    width: 100% !important;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    max-height: 80vh;
+  }
+
+  #panelResizer {
+    display: none;
+  }
+
+  .details-header {
+    padding: 15px 20px;
+  }
+
+  .details-content {
+    padding: 20px;
+  }
+
+  #batchToolbar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 20px;
+  }
+
+  #batchToolbar .btn {
+    flex: 1 1 calc(50% - 4px);
+    font-size: 0.85rem;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  #batchCount {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown {
+    width: 90%;
+    max-width: none;
+  }
+
+  .dropdown-item {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-btn.prev {
+    left: 15px;
+  }
+
+  .nav-btn.next {
+    right: 15px;
+  }
+
+  .fullscreen-actions {
+    top: 15px;
+    right: 15px;
+    gap: 8px;
+  }
+
+  .fullscreen-action-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .header-actions .btn,
+  .header-actions select {
+    flex: 1 1 calc(50% - 4px);
+  }
+
+  #explorer.grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .toolbar .btn span {
+    display: none;
+  }
+
+  .toolbar .btn i {
+    margin: 0;
+  }
+
+  #batchToolbar .btn {
+    flex: 1 1 100%;
+  }
 }
 
 #statsBar {

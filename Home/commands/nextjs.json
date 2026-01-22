@@ -1,0 +1,752 @@
+[
+  {
+    "title": "Create Next.js App",
+    "command": "npx create-next-app@latest",
+    "description": "Create a new Next.js application with default settings.",
+    "tags": ["create", "new", "app", "project"]
+  },
+  {
+    "title": "Create Next.js App with TypeScript",
+    "command": "npx create-next-app@latest --typescript",
+    "description": "Create a new Next.js app with TypeScript configuration.",
+    "tags": ["create", "typescript", "ts", "app"]
+  },
+  {
+    "title": "Create Next.js App with Tailwind CSS",
+    "command": "npx create-next-app@latest --tailwind",
+    "description": "Create a new Next.js app with Tailwind CSS preconfigured.",
+    "tags": ["create", "tailwind", "css", "styling"]
+  },
+  {
+    "title": "Create Next.js App with ESLint",
+    "command": "npx create-next-app@latest --eslint",
+    "description": "Create a new Next.js app with ESLint configured.",
+    "tags": ["create", "eslint", "linting", "code-quality"]
+  },
+  {
+    "title": "Create Next.js App with App Router",
+    "command": "npx create-next-app@latest --app",
+    "description": "Create a new Next.js app using the App Router (default in v13+).",
+    "tags": ["create", "app-router", "v13", "layout"]
+  },
+  {
+    "title": "Create Next.js App with Pages Router",
+    "command": "npx create-next-app@latest --no-app",
+    "description": "Create a new Next.js app using the Pages Router.",
+    "tags": ["create", "pages-router", "legacy", "v12"]
+  },
+  {
+    "title": "Create Next.js App with src/ directory",
+    "command": "npx create-next-app@latest --src-dir",
+    "description": "Create a new Next.js app with src/ directory structure.",
+    "tags": ["create", "src-dir", "structure", "organization"]
+  },
+  {
+    "title": "Create Next.js App with import alias",
+    "command": "npx create-next-app@latest --import-alias \"@/*\"",
+    "description": "Create a new Next.js app with custom import alias configured.",
+    "tags": ["create", "import-alias", "paths", "configuration"]
+  },
+  {
+    "title": "Development Server",
+    "command": "npm run dev",
+    "description": "Start Next.js development server with hot reload.",
+    "tags": ["dev", "development", "server", "start"]
+  },
+  {
+    "title": "Development Server on Custom Port",
+    "command": "npm run dev -- -p 3001",
+    "description": "Start development server on port 3001.",
+    "tags": ["dev", "port", "custom", "development"]
+  },
+  {
+    "title": "Development Server with HTTPS",
+    "command": "npm run dev -- --experimental-https",
+    "description": "Start development server with HTTPS enabled.",
+    "tags": ["dev", "https", "ssl", "development"]
+  },
+  {
+    "title": "Build for Production",
+    "command": "npm run build",
+    "description": "Create optimized production build of the application.",
+    "tags": ["build", "production", "optimize", "compile"]
+  },
+  {
+    "title": "Build with Analyze",
+    "command": "npm run build -- --analyze",
+    "description": "Build and analyze bundle size with @next/bundle-analyzer.",
+    "tags": ["build", "analyze", "bundle", "size"]
+  },
+  {
+    "title": "Build with Debug",
+    "command": "npm run build -- --debug",
+    "description": "Build with debug output enabled.",
+    "tags": ["build", "debug", "verbose", "output"]
+  },
+  {
+    "title": "Start Production Server",
+    "command": "npm run start",
+    "description": "Start production server after building.",
+    "tags": ["start", "production", "server", "run"]
+  },
+  {
+    "title": "Lint Code",
+    "command": "npm run lint",
+    "description": "Run ESLint to check code quality.",
+    "tags": ["lint", "eslint", "code-quality", "check"]
+  },
+  {
+    "title": "Lint with Fix",
+    "command": "npm run lint -- --fix",
+    "description": "Run ESLint and automatically fix fixable issues.",
+    "tags": ["lint", "fix", "eslint", "auto-fix"]
+  },
+  {
+    "title": "Run Tests",
+    "command": "npm run test",
+    "description": "Run Jest tests.",
+    "tags": ["test", "jest", "testing", "run"]
+  },
+  {
+    "title": "Run Tests in Watch Mode",
+    "command": "npm run test -- --watch",
+    "description": "Run Jest tests in watch mode for development.",
+    "tags": ["test", "watch", "jest", "development"]
+  },
+  {
+    "title": "Run Tests with Coverage",
+    "command": "npm run test -- --coverage",
+    "description": "Run tests and generate coverage report.",
+    "tags": ["test", "coverage", "report", "jest"]
+  },
+  {
+    "title": "TypeScript Type Check",
+    "command": "npm run type-check",
+    "description": "Run TypeScript compiler to check types.",
+    "tags": ["typescript", "type-check", "tsc", "compiler"]
+  },
+  {
+    "title": "Export Static Site",
+    "command": "npm run export",
+    "description": "Export static HTML site (Pages Router only).",
+    "tags": ["export", "static", "html", "pages-router"]
+  },
+  {
+    "title": "Export with Trailing Slash",
+    "command": "npm run export -- --trailing-slash",
+    "description": "Export static site with trailing slashes in URLs.",
+    "tags": ["export", "trailing-slash", "static", "urls"]
+  },
+  {
+    "title": "Next.js Info",
+    "command": "npx next info",
+    "description": "Display system and Next.js environment information.",
+    "tags": ["info", "environment", "system", "diagnostics"]
+  },
+  {
+    "title": "Next.js Telemetry",
+    "command": "npx next telemetry disable",
+    "description": "Disable Next.js telemetry data collection.",
+    "tags": ["telemetry", "disable", "privacy", "configuration"]
+  },
+  {
+    "title": "Next.js Telemetry Status",
+    "command": "npx next telemetry status",
+    "description": "Check telemetry data collection status.",
+    "tags": ["telemetry", "status", "check", "configuration"]
+  },
+  {
+    "title": "Next.js Telemetry Enable",
+    "command": "npx next telemetry enable",
+    "description": "Enable Next.js telemetry data collection.",
+    "tags": ["telemetry", "enable", "configuration"]
+  },
+  {
+    "title": "Custom Server Development",
+    "command": "node server.js",
+    "description": "Start custom server for Next.js application.",
+    "tags": ["custom", "server", "node", "development"]
+  },
+  {
+    "title": "Run with Turbopack (Experimental)",
+    "command": "npm run dev -- --turbo",
+    "description": "Start development server with Turbopack for faster builds.",
+    "tags": ["dev", "turbo", "turbopack", "experimental", "fast"]
+  },
+  {
+    "title": "Run with SWC Minify",
+    "command": "npm run build -- --swc-minify",
+    "description": "Use SWC for minification instead of Terser.",
+    "tags": ["build", "swc", "minify", "optimization"]
+  },
+  {
+    "title": "Start with Custom Host",
+    "command": "npm run dev -- --hostname 0.0.0.0",
+    "description": "Start development server accessible on network.",
+    "tags": ["dev", "host", "network", "access"]
+  },
+  {
+    "title": "Build with Experimental Features",
+    "command": "npm run build -- --experimental-app-only",
+    "description": "Build only App Router pages (experimental).",
+    "tags": ["build", "experimental", "app-router", "feature"]
+  },
+  {
+    "title": "Development with Experimental HTTPS",
+    "command": "npm run dev -- --experimental-https --experimental-https-key key.pem --experimental-https-cert cert.pem",
+    "description": "Start dev server with custom HTTPS certificates.",
+    "tags": ["dev", "https", "ssl", "certificates", "experimental"]
+  },
+  {
+    "title": "Next.js CLI Help",
+    "command": "npx next --help",
+    "description": "Display help for Next.js CLI commands.",
+    "tags": ["help", "cli", "commands", "documentation"]
+  },
+  {
+    "title": "Next.js Build Help",
+    "command": "npx next build --help",
+    "description": "Display help for build command options.",
+    "tags": ["help", "build", "options", "documentation"]
+  },
+  {
+    "title": "Next.js Dev Help",
+    "command": "npx next dev --help",
+    "description": "Display help for dev command options.",
+    "tags": ["help", "dev", "options", "documentation"]
+  },
+  {
+    "title": "Next.js Start Help",
+    "command": "npx next start --help",
+    "description": "Display help for start command options.",
+    "tags": ["help", "start", "options", "documentation"]
+  },
+  {
+    "title": "Create Next.js App with All Features",
+    "command": "npx create-next-app@latest --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\"",
+    "description": "Create Next.js app with all modern features enabled.",
+    "tags": ["create", "full", "features", "modern", "complete"]
+  },
+  {
+    "title": "Run with React Strict Mode",
+    "command": "npm run dev -- --strict",
+    "description": "Enable React Strict Mode in development.",
+    "tags": ["dev", "strict-mode", "react", "development"]
+  },
+  {
+    "title": "Build with Profile",
+    "command": "npm run build -- --profile",
+    "description": "Enable React production profiling.",
+    "tags": ["build", "profile", "react", "performance"]
+  },
+  {
+    "title": "Development with CPU Profiling",
+    "command": "npm run dev -- --cpu-prof",
+    "description": "Enable CPU profiling in development.",
+    "tags": ["dev", "cpu", "profile", "performance"]
+  },
+  {
+    "title": "Build with Detailed Logging",
+    "command": "npm run build -- --verbose",
+    "description": "Enable verbose logging during build.",
+    "tags": ["build", "verbose", "logging", "detailed"]
+  },
+  {
+    "title": "Run with Custom Config",
+    "command": "npm run dev -- --config custom-next.config.js",
+    "description": "Use custom Next.js configuration file.",
+    "tags": ["dev", "config", "custom", "configuration"]
+  },
+  {
+    "title": "Build for Specific Environment",
+    "command": "NODE_ENV=production npm run build",
+    "description": "Build for production environment.",
+    "tags": ["build", "production", "environment", "node-env"]
+  },
+  {
+    "title": "Development with Memory Limit",
+    "command": "NODE_OPTIONS='--max-old-space-size=4096' npm run dev",
+    "description": "Increase memory limit for development server.",
+    "tags": ["dev", "memory", "limit", "performance"]
+  },
+  {
+    "title": "Build with Memory Limit",
+    "command": "NODE_OPTIONS='--max-old-space-size=8192' npm run build",
+    "description": "Increase memory limit for build process.",
+    "tags": ["build", "memory", "limit", "performance"]
+  },
+  {
+    "title": "Run with Custom Next Binary",
+    "command": "node_modules/.bin/next dev",
+    "description": "Run Next.js using local binary.",
+    "tags": ["dev", "binary", "local", "node-modules"]
+  },
+  {
+    "title": "Clean Build Cache",
+    "command": "rm -rf .next/cache",
+    "description": "Clear Next.js build cache.",
+    "tags": ["clean", "cache", "build", "clear"]
+  },
+  {
+    "title": "Clean All Build Artifacts",
+    "command": "rm -rf .next && rm -rf node_modules/.cache",
+    "description": "Clear all Next.js build artifacts and caches.",
+    "tags": ["clean", "all", "artifacts", "cache", "reset"]
+  },
+  {
+    "title": "Update Next.js",
+    "command": "npm install next@latest",
+    "description": "Update Next.js to latest version.",
+    "tags": ["update", "upgrade", "version", "next"]
+  },
+  {
+    "title": "Update Next.js with React",
+    "command": "npm install next@latest react@latest react-dom@latest",
+    "description": "Update Next.js and React to latest versions.",
+    "tags": ["update", "upgrade", "react", "next"]
+  },
+  {
+    "title": "Install Next.js Dependencies",
+    "command": "npm install next react react-dom",
+    "description": "Install core Next.js dependencies.",
+    "tags": ["install", "dependencies", "next", "react"]
+  },
+  {
+    "title": "Install with Exact Version",
+    "command": "npm install next@13.4.0",
+    "description": "Install specific version of Next.js.",
+    "tags": ["install", "version", "specific", "next"]
+  },
+  {
+    "title": "Install Next.js Plugins",
+    "command": "npm install @next/bundle-analyzer",
+    "description": "Install bundle analyzer plugin for Next.js.",
+    "tags": ["install", "plugin", "bundle-analyzer", "performance"]
+  },
+  {
+    "title": "Install Next Font",
+    "command": "npm install @next/font",
+    "description": "Install Next.js font optimization package.",
+    "tags": ["install", "font", "optimization", "next-font"]
+  },
+  {
+    "title": "Install Next SEO",
+    "command": "npm install next-seo",
+    "description": "Install SEO optimization package for Next.js.",
+    "tags": ["install", "seo", "optimization", "metadata"]
+  },
+  {
+    "title": "Install Next Auth",
+    "command": "npm install next-auth",
+    "description": "Install authentication package for Next.js.",
+    "tags": ["install", "auth", "authentication", "security"]
+  },
+  {
+    "title": "Install Next PWA",
+    "command": "npm install next-pwa",
+    "description": "Install PWA (Progressive Web App) support for Next.js.",
+    "tags": ["install", "pwa", "progressive", "web-app"]
+  },
+  {
+    "title": "Install Next Sitemap",
+    "command": "npm install next-sitemap",
+    "description": "Install sitemap generator for Next.js.",
+    "tags": ["install", "sitemap", "seo", "generator"]
+  },
+  {
+    "title": "Install Next MDX",
+    "command": "npm install @next/mdx",
+    "description": "Install MDX support for Next.js.",
+    "tags": ["install", "mdx", "markdown", "content"]
+  },
+  {
+    "title": "Install Next International",
+    "command": "npm install next-international",
+    "description": "Install internationalization package for Next.js.",
+    "tags": ["install", "i18n", "internationalization", "translation"]
+  },
+  {
+    "title": "Create API Route",
+    "command": "touch pages/api/hello.js",
+    "description": "Create API route file (Pages Router).",
+    "tags": ["create", "api", "route", "pages-router"]
+  },
+  {
+    "title": "Create App Router Page",
+    "command": "touch app/page.tsx",
+    "description": "Create main page in App Router.",
+    "tags": ["create", "page", "app-router", "tsx"]
+  },
+  {
+    "title": "Create App Router Layout",
+    "command": "touch app/layout.tsx",
+    "description": "Create root layout in App Router.",
+    "tags": ["create", "layout", "app-router", "tsx"]
+  },
+  {
+    "title": "Create Dynamic Route",
+    "command": "mkdir -p pages/blog && touch pages/blog/[slug].js",
+    "description": "Create dynamic route (Pages Router).",
+    "tags": ["create", "dynamic", "route", "pages-router"]
+  },
+  {
+    "title": "Create App Router Dynamic Route",
+    "command": "mkdir -p app/blog && touch app/blog/[slug]/page.tsx",
+    "description": "Create dynamic route in App Router.",
+    "tags": ["create", "dynamic", "route", "app-router"]
+  },
+  {
+    "title": "Create Catch-All Route",
+    "command": "touch pages/[...slug].js",
+    "description": "Create catch-all route (Pages Router).",
+    "tags": ["create", "catch-all", "route", "pages-router"]
+  },
+  {
+    "title": "Create App Router Catch-All",
+    "command": "touch app/[...slug]/page.tsx",
+    "description": "Create catch-all route in App Router.",
+    "tags": ["create", "catch-all", "route", "app-router"]
+  },
+  {
+    "title": "Create Optional Catch-All Route",
+    "command": "touch pages/[[...slug]].js",
+    "description": "Create optional catch-all route (Pages Router).",
+    "tags": ["create", "optional", "catch-all", "route"]
+  },
+  {
+    "title": "Create Middleware",
+    "command": "touch middleware.js",
+    "description": "Create Next.js middleware file.",
+    "tags": ["create", "middleware", "auth", "redirect"]
+  },
+  {
+    "title": "Create next.config.js",
+    "command": "touch next.config.js",
+    "description": "Create Next.js configuration file.",
+    "tags": ["create", "config", "configuration", "next-config"]
+  },
+  {
+    "title": "Create tsconfig.json",
+    "command": "touch tsconfig.json",
+    "description": "Create TypeScript configuration file.",
+    "tags": ["create", "tsconfig", "typescript", "configuration"]
+  },
+  {
+    "title": "Create tailwind.config.js",
+    "command": "touch tailwind.config.js",
+    "description": "Create Tailwind CSS configuration.",
+    "tags": ["create", "tailwind", "config", "css"]
+  },
+  {
+    "title": "Create .env.local",
+    "command": "touch .env.local",
+    "description": "Create local environment variables file.",
+    "tags": ["create", "env", "environment", "variables"]
+  },
+  {
+    "title": "Create .env.production",
+    "command": "touch .env.production",
+    "description": "Create production environment variables file.",
+    "tags": ["create", "env", "production", "variables"]
+  },
+  {
+    "title": "Create .env.development",
+    "command": "touch .env.development",
+    "description": "Create development environment variables file.",
+    "tags": ["create", "env", "development", "variables"]
+  },
+  {
+    "title": "Create public/robots.txt",
+    "command": "touch public/robots.txt",
+    "description": "Create robots.txt file for SEO.",
+    "tags": ["create", "robots", "seo", "public"]
+  },
+  {
+    "title": "Create public/sitemap.xml",
+    "command": "touch public/sitemap.xml",
+    "description": "Create static sitemap file.",
+    "tags": ["create", "sitemap", "seo", "public"]
+  },
+  {
+    "title": "Create components directory",
+    "command": "mkdir -p components",
+    "description": "Create components directory for reusable components.",
+    "tags": ["create", "components", "directory", "structure"]
+  },
+  {
+    "title": "Create lib directory",
+    "command": "mkdir -p lib",
+    "description": "Create lib directory for utilities and helpers.",
+    "tags": ["create", "lib", "utilities", "helpers"]
+  },
+  {
+    "title": "Create hooks directory",
+    "command": "mkdir -p hooks",
+    "description": "Create hooks directory for custom React hooks.",
+    "tags": ["create", "hooks", "custom", "react"]
+  },
+  {
+    "title": "Create styles directory",
+    "command": "mkdir -p styles",
+    "description": "Create styles directory for CSS modules.",
+    "tags": ["create", "styles", "css", "modules"]
+  },
+  {
+    "title": "Create utils directory",
+    "command": "mkdir -p utils",
+    "description": "Create utils directory for utility functions.",
+    "tags": ["create", "utils", "utilities", "functions"]
+  },
+  {
+    "title": "Create types directory",
+    "command": "mkdir -p types",
+    "description": "Create types directory for TypeScript definitions.",
+    "tags": ["create", "types", "typescript", "definitions"]
+  },
+  {
+    "title": "Create constants directory",
+    "command": "mkdir -p constants",
+    "description": "Create constants directory for application constants.",
+    "tags": ["create", "constants", "config", "values"]
+  },
+  {
+    "title": "Run with Docker",
+    "command": "docker build -t next-app . && docker run -p 3000:3000 next-app",
+    "description": "Build and run Next.js app with Docker.",
+    "tags": ["docker", "container", "build", "run"]
+  },
+  {
+    "title": "Run with Docker Compose",
+    "command": "docker-compose up",
+    "description": "Start Next.js app with Docker Compose.",
+    "tags": ["docker", "compose", "container", "orchestration"]
+  },
+  {
+    "title": "Deploy to Vercel",
+    "command": "vercel",
+    "description": "Deploy Next.js app to Vercel.",
+    "tags": ["deploy", "vercel", "hosting", "production"]
+  },
+  {
+    "title": "Deploy to Vercel with Production",
+    "command": "vercel --prod",
+    "description": "Deploy to production on Vercel.",
+    "tags": ["deploy", "vercel", "production", "hosting"]
+  },
+  {
+    "title": "Deploy Preview",
+    "command": "vercel --preview",
+    "description": "Create preview deployment on Vercel.",
+    "tags": ["deploy", "vercel", "preview", "staging"]
+  },
+  {
+    "title": "Link to Vercel Project",
+    "command": "vercel link",
+    "description": "Link local project to Vercel project.",
+    "tags": ["vercel", "link", "project", "connect"]
+  },
+  {
+    "title": "Pull Vercel Environment Variables",
+    "command": "vercel env pull .env.local",
+    "description": "Pull environment variables from Vercel.",
+    "tags": ["vercel", "env", "environment", "variables"]
+  },
+  {
+    "title": "Deploy to Netlify",
+    "command": "netlify deploy",
+    "description": "Deploy Next.js app to Netlify.",
+    "tags": ["deploy", "netlify", "hosting", "production"]
+  },
+  {
+    "title": "Build for Netlify",
+    "command": "npm run build && npm run export",
+    "description": "Build and export for Netlify static hosting.",
+    "tags": ["build", "export", "netlify", "static"]
+  },
+  {
+    "title": "Deploy to GitHub Pages",
+    "command": "npm run build && npm run export && touch out/.nojekyll && gh-pages -d out",
+    "description": "Build and deploy to GitHub Pages.",
+    "tags": ["deploy", "github", "pages", "static"]
+  },
+  {
+    "title": "Deploy to AWS Amplify",
+    "command": "amplify publish",
+    "description": "Deploy Next.js app to AWS Amplify.",
+    "tags": ["deploy", "aws", "amplify", "hosting"]
+  },
+  {
+    "title": "Generate Sitemap",
+    "command": "npm run build && npx next-sitemap",
+    "description": "Generate sitemap for Next.js app.",
+    "tags": ["generate", "sitemap", "seo", "build"]
+  },
+  {
+    "title": "Generate Robots.txt",
+    "command": "echo 'User-agent: *\\nAllow: /' > public/robots.txt",
+    "description": "Create basic robots.txt file.",
+    "tags": ["generate", "robots", "txt", "seo"]
+  },
+  {
+    "title": "Add Meta Tags",
+    "command": "npm run dev",
+    "description": "Start dev server to test meta tags in development.",
+    "tags": ["meta", "tags", "seo", "development"]
+  },
+  {
+    "title": "Test PWA Installation",
+    "command": "npm run build && npm run start",
+    "description": "Build and start production server to test PWA.",
+    "tags": ["test", "pwa", "progressive", "web-app"]
+  },
+  {
+    "title": "Test API Routes",
+    "command": "curl http://localhost:3000/api/hello",
+    "description": "Test API route from command line.",
+    "tags": ["test", "api", "route", "curl"]
+  },
+  {
+    "title": "Test Static Generation",
+    "command": "npm run build && ls .next/server/pages",
+    "description": "Check statically generated pages.",
+    "tags": ["test", "static", "generation", "build"]
+  },
+  {
+    "title": "Check Bundle Size",
+    "command": "npm run build -- --analyze",
+    "description": "Analyze bundle size after build.",
+    "tags": ["check", "bundle", "size", "analyze"]
+  },
+  {
+    "title": "Check TypeScript Errors",
+    "command": "npm run type-check",
+    "description": "Check for TypeScript compilation errors.",
+    "tags": ["check", "typescript", "errors", "compilation"]
+  },
+  {
+    "title": "Check ESLint Errors",
+    "command": "npm run lint",
+    "description": "Check for code quality issues with ESLint.",
+    "tags": ["check", "eslint", "errors", "code-quality"]
+  },
+  {
+    "title": "Run Performance Audit",
+    "command": "npm run build && lighthouse http://localhost:3000",
+    "description": "Run Lighthouse performance audit.",
+    "tags": ["performance", "audit", "lighthouse", "metrics"]
+  },
+  {
+    "title": "Test Responsive Design",
+    "command": "npm run dev",
+    "description": "Start dev server and test in browser dev tools.",
+    "tags": ["test", "responsive", "design", "development"]
+  },
+  {
+    "title": "Check Accessibility",
+    "command": "npm run build && npm run start",
+    "description": "Build and test accessibility with browser tools.",
+    "tags": ["check", "accessibility", "a11y", "production"]
+  },
+  {
+    "title": "Internationalization Test",
+    "command": "npm run dev",
+    "description": "Test i18n features in development.",
+    "tags": ["test", "i18n", "internationalization", "development"]
+  },
+  {
+    "title": "Middleware Test",
+    "command": "npm run dev",
+    "description": "Test middleware functionality in development.",
+    "tags": ["test", "middleware", "development", "server"]
+  },
+  {
+    "title": "Image Optimization Test",
+    "command": "npm run build",
+    "description": "Build to test Next.js Image component optimization.",
+    "tags": ["test", "image", "optimization", "build"]
+  },
+  {
+    "title": "Font Optimization Test",
+    "command": "npm run dev",
+    "description": "Test @next/font optimization in development.",
+    "tags": ["test", "font", "optimization", "development"]
+  },
+  {
+    "title": "Script Component Test",
+    "command": "npm run dev",
+    "description": "Test Next.js Script component in development.",
+    "tags": ["test", "script", "component", "development"]
+  },
+  {
+    "title": "Link Component Test",
+    "command": "npm run dev",
+    "description": "Test Next.js Link component prefetching.",
+    "tags": ["test", "link", "component", "prefetch"]
+  },
+  {
+    "title": "Dynamic Import Test",
+    "command": "npm run build",
+    "description": "Build to test dynamic import code splitting.",
+    "tags": ["test", "dynamic", "import", "code-splitting"]
+  },
+  {
+    "title": "API Route Middleware Test",
+    "command": "curl -X POST http://localhost:3000/api/test",
+    "description": "Test API route with different HTTP methods.",
+    "tags": ["test", "api", "middleware", "http"]
+  },
+  {
+    "title": "Environment Variables Test",
+    "command": "echo $NEXT_PUBLIC_API_URL",
+    "description": "Check if environment variables are loaded.",
+    "tags": ["test", "env", "variables", "configuration"]
+  },
+  {
+    "title": "CSS Modules Test",
+    "command": "npm run dev",
+    "description": "Test CSS Modules in development.",
+    "tags": ["test", "css", "modules", "development"]
+  },
+  {
+    "title": "Tailwind CSS Test",
+    "command": "npm run dev",
+    "description": "Test Tailwind CSS in development.",
+    "tags": ["test", "tailwind", "css", "development"]
+  },
+  {
+    "title": "SWR/React Query Test",
+    "command": "npm run dev",
+    "description": "Test data fetching libraries in development.",
+    "tags": ["test", "data", "fetching", "development"]
+  },
+  {
+    "title": "State Management Test",
+    "command": "npm run dev",
+    "description": "Test state management (Redux, Zustand, etc.) in development.",
+    "tags": ["test", "state", "management", "development"]
+  },
+  {
+    "title": "Authentication Test",
+    "command": "npm run dev",
+    "description": "Test authentication flow in development.",
+    "tags": ["test", "auth", "authentication", "development"]
+  },
+  {
+    "title": "Form Handling Test",
+    "command": "npm run dev",
+    "description": "Test form handling in development.",
+    "tags": ["test", "form", "handling", "development"]
+  },
+  {
+    "title": "Error Boundary Test",
+    "command": "npm run dev",
+    "description": "Test React Error Boundaries in development.",
+    "tags": ["test", "error", "boundary", "development"]
+  },
+  {
+    "title": "Loading State Test",
+    "command": "npm run dev",
+    "description": "Test loading states and Suspense in development.",
+    "tags": ["test", "loading", "suspense", "development"]
+  }
+]

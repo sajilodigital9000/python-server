@@ -1,0 +1,1946 @@
+[
+  {
+    "title": "system-info",
+    "command": "sw_vers",
+    "description": "Display macOS version information.",
+    "tags": ["system", "version", "info", "macos"]
+  },
+  {
+    "title": "system-info",
+    "command": "system_profiler SPSoftwareDataType",
+    "description": "Display detailed system software information.",
+    "tags": ["system", "profiler", "software", "details"]
+  },
+  {
+    "title": "system-info",
+    "command": "system_profiler SPHardwareDataType",
+    "description": "Display detailed hardware information.",
+    "tags": ["system", "profiler", "hardware", "details"]
+  },
+  {
+    "title": "system-info",
+    "command": "scutil --get ComputerName",
+    "description": "Get computer name.",
+    "tags": ["computer", "name", "get", "hostname"]
+  },
+  {
+    "title": "system-info",
+    "command": "scutil --get LocalHostName",
+    "description": "Get local hostname.",
+    "tags": ["hostname", "local", "get", "network"]
+  },
+  {
+    "title": "system-info",
+    "command": "scutil --get HostName",
+    "description": "Get hostname.",
+    "tags": ["hostname", "get", "network"]
+  },
+  {
+    "title": "system-info",
+    "command": "hostname",
+    "description": "Display hostname.",
+    "tags": ["hostname", "display", "system"]
+  },
+  {
+    "title": "system-info",
+    "command": "ioreg -l | grep \"model\"",
+    "description": "Get Mac model information.",
+    "tags": ["model", "hardware", "ioreg", "mac"]
+  },
+  {
+    "title": "system-info",
+    "command": "sysctl -n hw.model",
+    "description": "Get Mac hardware model.",
+    "tags": ["hardware", "model", "sysctl", "mac"]
+  },
+  {
+    "title": "system-info",
+    "command": "sysctl hw.memsize",
+    "description": "Get total RAM size in bytes.",
+    "tags": ["ram", "memory", "size", "hardware"]
+  },
+  {
+    "title": "system-info",
+    "command": "sysctl -a | grep cpu",
+    "description": "Display CPU information.",
+    "tags": ["cpu", "processor", "info", "hardware"]
+  },
+  {
+    "title": "system-info",
+    "command": "system_profiler SPDisplaysDataType",
+    "description": "Display graphics/display information.",
+    "tags": ["display", "graphics", "monitor", "info"]
+  },
+  {
+    "title": "system-info",
+    "command": "diskutil list",
+    "description": "List all disks and partitions.",
+    "tags": ["disk", "list", "partitions", "storage"]
+  },
+  {
+    "title": "system-info",
+    "command": "pmset -g",
+    "description": "Display power management settings.",
+    "tags": ["power", "management", "battery", "settings"]
+  },
+  {
+    "title": "system-info",
+    "command": "pmset -g batt",
+    "description": "Display battery status.",
+    "tags": ["battery", "status", "power", "laptop"]
+  },
+  {
+    "title": "system-info",
+    "command": "pmset -g cap",
+    "description": "Display power adapter information.",
+    "tags": ["power", "adapter", "charger", "info"]
+  },
+  {
+    "title": "system-info",
+    "command": "system_profiler SPPowerDataType",
+    "description": "Display detailed power information.",
+    "tags": ["power", "battery", "detailed", "info"]
+  },
+  {
+    "title": "system-info",
+    "command": "nvram -p",
+    "description": "Display NVRAM variables.",
+    "tags": ["nvram", "variables", "firmware", "settings"]
+  },
+  {
+    "title": "system-info",
+    "command": "csrutil status",
+    "description": "Check System Integrity Protection status.",
+    "tags": ["sip", "security", "integrity", "protection"]
+  },
+  {
+    "title": "system-info",
+    "command": "spctl --status",
+    "description": "Check Gatekeeper status.",
+    "tags": ["gatekeeper", "security", "app", "verification"]
+  },
+  {
+    "title": "system-info",
+    "command": "defaults read /Library/Preferences/com.apple.security GKAutoUnlockEnabled",
+    "description": "Check Auto Unlock status.",
+    "tags": ["auto", "unlock", "security", "apple-watch"]
+  },
+  {
+    "title": "file-management",
+    "command": "open .",
+    "description": "Open current directory in Finder.",
+    "tags": ["open", "finder", "directory", "current"]
+  },
+  {
+    "title": "file-management",
+    "command": "open <file>",
+    "description": "Open file with default application.",
+    "tags": ["open", "file", "default", "app"]
+  },
+  {
+    "title": "file-management",
+    "command": "open -a <application> <file>",
+    "description": "Open file with specific application.",
+    "tags": ["open", "application", "specific", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "open -R <file>",
+    "description": "Reveal file in Finder.",
+    "tags": ["open", "reveal", "finder", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "mdfind <query>",
+    "description": "Search files using Spotlight.",
+    "tags": ["search", "spotlight", "mdfind", "files"]
+  },
+  {
+    "title": "file-management",
+    "command": "mdfind -name <filename>",
+    "description": "Search for files by name.",
+    "tags": ["search", "filename", "spotlight", "mdfind"]
+  },
+  {
+    "title": "file-management",
+    "command": "mdls <file>",
+    "description": "Display metadata attributes of file.",
+    "tags": ["metadata", "attributes", "file", "info"]
+  },
+  {
+    "title": "file-management",
+    "command": "xattr <file>",
+    "description": "Display extended attributes of file.",
+    "tags": ["extended", "attributes", "xattr", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "xattr -l <file>",
+    "description": "List all extended attributes with values.",
+    "tags": ["extended", "attributes", "list", "values"]
+  },
+  {
+    "title": "file-management",
+    "command": "xattr -d <attribute> <file>",
+    "description": "Delete extended attribute from file.",
+    "tags": ["extended", "attributes", "delete", "remove"]
+  },
+  {
+    "title": "file-management",
+    "command": "xattr -c <file>",
+    "description": "Clear all extended attributes from file.",
+    "tags": ["extended", "attributes", "clear", "all"]
+  },
+  {
+    "title": "file-management",
+    "command": "GetFileInfo <file>",
+    "description": "Display file information (creator/type codes).",
+    "tags": ["file", "info", "creator", "type"]
+  },
+  {
+    "title": "file-management",
+    "command": "SetFile -d \"MM/DD/YYYY HH:MM:SS\" <file>",
+    "description": "Set file creation date.",
+    "tags": ["file", "date", "creation", "set"]
+  },
+  {
+    "title": "file-management",
+    "command": "SetFile -m \"MM/DD/YYYY HH:MM:SS\" <file>",
+    "description": "Set file modification date.",
+    "tags": ["file", "date", "modification", "set"]
+  },
+  {
+    "title": "file-management",
+    "command": "ditto <src> <dst>",
+    "description": "Copy files and directories preserving metadata.",
+    "tags": ["copy", "ditto", "metadata", "preserve"]
+  },
+  {
+    "title": "file-management",
+    "command": "cp -X <src> <dst>",
+    "description": "Copy without extended attributes.",
+    "tags": ["copy", "without", "extended", "attributes"]
+  },
+  {
+    "title": "file-management",
+    "command": "cp -p <src> <dst>",
+    "description": "Copy preserving timestamps and permissions.",
+    "tags": ["copy", "preserve", "timestamps", "permissions"]
+  },
+  {
+    "title": "file-management",
+    "command": "chflags nohidden <file>",
+    "description": "Remove hidden flag from file.",
+    "tags": ["hidden", "file", "show", "chflags"]
+  },
+  {
+    "title": "file-management",
+    "command": "chflags hidden <file>",
+    "description": "Set hidden flag on file.",
+    "tags": ["hidden", "file", "hide", "chflags"]
+  },
+  {
+    "title": "file-management",
+    "command": "ls -la@",
+    "description": "List files with extended attributes.",
+    "tags": ["list", "extended", "attributes", "files"]
+  },
+  {
+    "title": "file-management",
+    "command": "codesign -dvv <app>",
+    "description": "Display code signing information for app.",
+    "tags": ["codesign", "app", "signing", "security"]
+  },
+  {
+    "title": "file-management",
+    "command": "codesign --verify --verbose <app>",
+    "description": "Verify code signature of app.",
+    "tags": ["codesign", "verify", "app", "signature"]
+  },
+  {
+    "title": "file-management",
+    "command": "spctl -a -v <app>",
+    "description": "Check if app is notarized.",
+    "tags": ["spctl", "notarized", "app", "gatekeeper"]
+  },
+  {
+    "title": "file-management",
+    "command": "hdiutil create -size 1g -fs JHFS+ -volname \"Test\" test.dmg",
+    "description": "Create disk image.",
+    "tags": ["disk", "image", "create", "hdiutil"]
+  },
+  {
+    "title": "file-management",
+    "command": "hdiutil attach <image>.dmg",
+    "description": "Mount disk image.",
+    "tags": ["disk", "image", "mount", "hdiutil"]
+  },
+  {
+    "title": "file-management",
+    "command": "hdiutil detach /Volumes/<volume>",
+    "description": "Unmount disk image.",
+    "tags": ["disk", "image", "unmount", "hdiutil"]
+  },
+  {
+    "title": "file-management",
+    "command": "hdiutil convert <source>.dmg -format UDRO -o <dest>.dmg",
+    "description": "Convert disk image format.",
+    "tags": ["disk", "image", "convert", "format"]
+  },
+  {
+    "title": "file-management",
+    "command": "hdiutil compact <image>.dmg",
+    "description": "Compact disk image.",
+    "tags": ["disk", "image", "compact", "shrink"]
+  },
+  {
+    "title": "file-management",
+    "command": "hdiutil resize -size <newsize>g <image>.dmg",
+    "description": "Resize disk image.",
+    "tags": ["disk", "image", "resize", "hdiutil"]
+  },
+  {
+    "title": "file-management",
+    "command": "hdiutil internet-enable -yes <image>.dmg",
+    "description": "Enable internet-enabled disk image.",
+    "tags": ["disk", "image", "internet", "enable"]
+  },
+  {
+    "title": "file-management",
+    "command": "mdimport <file>",
+    "description": "Force Spotlight to index file.",
+    "tags": ["spotlight", "index", "mdimport", "file"]
+  },
+  {
+    "title": "file-management",
+    "command": "mdutil -E /",
+    "description": "Erase and rebuild Spotlight index.",
+    "tags": ["spotlight", "index", "rebuild", "erase"]
+  },
+  {
+    "title": "file-management",
+    "command": "mdutil -i off /",
+    "description": "Disable Spotlight indexing.",
+    "tags": ["spotlight", "index", "disable", "off"]
+  },
+  {
+    "title": "file-management",
+    "command": "mdutil -i on /",
+    "description": "Enable Spotlight indexing.",
+    "tags": ["spotlight", "index", "enable", "on"]
+  },
+  {
+    "title": "file-management",
+    "command": "tmutil listbackups",
+    "description": "List Time Machine backups.",
+    "tags": ["time", "machine", "backups", "list"]
+  },
+  {
+    "title": "file-management",
+    "command": "tmutil compare",
+    "description": "Compare current state with backup.",
+    "tags": ["time", "machine", "compare", "backup"]
+  },
+  {
+    "title": "file-management",
+    "command": "tmutil delete <backup>",
+    "description": "Delete Time Machine backup.",
+    "tags": ["time", "machine", "delete", "backup"]
+  },
+  {
+    "title": "file-management",
+    "command": "tmutil thinlocalsnapshots / 1000000000 4",
+    "description": "Thin local Time Machine snapshots.",
+    "tags": ["time", "machine", "snapshots", "thin"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -listallhardwareports",
+    "description": "List all network hardware ports.",
+    "tags": ["network", "ports", "hardware", "list"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -listallnetworkservices",
+    "description": "List all network services.",
+    "tags": ["network", "services", "list", "all"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -getinfo \"Wi-Fi\"",
+    "description": "Get Wi-Fi network information.",
+    "tags": ["network", "wifi", "info", "get"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -setairportnetwork en0 <SSID> <password>",
+    "description": "Connect to Wi-Fi network.",
+    "tags": ["network", "wifi", "connect", "airport"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -setdhcp \"Wi-Fi\"",
+    "description": "Set network interface to use DHCP.",
+    "tags": ["network", "dhcp", "set", "interface"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -setmanual \"Wi-Fi\" <IP> <Subnet> <Router>",
+    "description": "Set manual network configuration.",
+    "tags": ["network", "manual", "ip", "configuration"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -setdnsservers \"Wi-Fi\" <DNS1> <DNS2>",
+    "description": "Set DNS servers.",
+    "tags": ["network", "dns", "servers", "set"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -setwebproxy \"Wi-Fi\" <host> <port>",
+    "description": "Set web proxy.",
+    "tags": ["network", "proxy", "web", "set"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -setsecurewebproxy \"Wi-Fi\" <host> <port>",
+    "description": "Set secure web proxy.",
+    "tags": ["network", "proxy", "secure", "web"]
+  },
+  {
+    "title": "network",
+    "command": "networksetup -setproxybypassdomains \"Wi-Fi\" \"*.local\" \"169.254/16\"",
+    "description": "Set proxy bypass domains.",
+    "tags": ["network", "proxy", "bypass", "domains"]
+  },
+  {
+    "title": "network",
+    "command": "airport -s",
+    "description": "Scan for Wi-Fi networks.",
+    "tags": ["wifi", "scan", "networks", "airport"]
+  },
+  {
+    "title": "network",
+    "command": "airport -I",
+    "description": "Get current Wi-Fi connection information.",
+    "tags": ["wifi", "info", "current", "airport"]
+  },
+  {
+    "title": "network",
+    "command": "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s",
+    "description": "Full path to airport utility (if not in PATH).",
+    "tags": ["wifi", "airport", "full", "path"]
+  },
+  {
+    "title": "network",
+    "command": "scutil --dns",
+    "description": "Display DNS configuration.",
+    "tags": ["dns", "configuration", "display", "scutil"]
+  },
+  {
+    "title": "network",
+    "command": "scselect",
+    "description": "List available network locations.",
+    "tags": ["network", "locations", "list", "scselect"]
+  },
+  {
+    "title": "network",
+    "command": "scselect <location>",
+    "description": "Switch network location.",
+    "tags": ["network", "location", "switch", "scselect"]
+  },
+  {
+    "title": "network",
+    "command": "ifconfig en0",
+    "description": "Display Ethernet interface configuration.",
+    "tags": ["network", "ethernet", "interface", "ifconfig"]
+  },
+  {
+    "title": "network",
+    "command": "ifconfig en1",
+    "description": "Display Wi-Fi interface configuration.",
+    "tags": ["network", "wifi", "interface", "ifconfig"]
+  },
+  {
+    "title": "network",
+    "command": "route -n get default",
+    "description": "Display default route information.",
+    "tags": ["route", "default", "gateway", "network"]
+  },
+  {
+    "title": "network",
+    "command": "arp -a",
+    "description": "Display ARP cache.",
+    "tags": ["arp", "cache", "mac", "address"]
+  },
+  {
+    "title": "network",
+    "command": "netstat -nr",
+    "description": "Display routing tables.",
+    "tags": ["network", "routing", "tables", "netstat"]
+  },
+  {
+    "title": "network",
+    "command": "netstat -an | grep LISTEN",
+    "description": "Display listening ports.",
+    "tags": ["network", "ports", "listening", "netstat"]
+  },
+  {
+    "title": "network",
+    "command": "lsof -i :80",
+    "description": "Show processes using port 80.",
+    "tags": ["network", "ports", "processes", "lsof"]
+  },
+  {
+    "title": "network",
+    "command": "security find-internet-password -s <server>",
+    "description": "Find internet password in keychain.",
+    "tags": ["security", "keychain", "password", "internet"]
+  },
+  {
+    "title": "network",
+    "command": "security find-generic-password -a <account> -s <service>",
+    "description": "Find generic password in keychain.",
+    "tags": ["security", "keychain", "password", "generic"]
+  },
+  {
+    "title": "network",
+    "command": "security dump-keychain",
+    "description": "Dump keychain contents.",
+    "tags": ["security", "keychain", "dump", "contents"]
+  },
+  {
+    "title": "network",
+    "command": "security unlock-keychain ~/Library/Keychains/login.keychain",
+    "description": "Unlock keychain.",
+    "tags": ["security", "keychain", "unlock", "login"]
+  },
+  {
+    "title": "network",
+    "command": "security lock-keychain ~/Library/Keychains/login.keychain",
+    "description": "Lock keychain.",
+    "tags": ["security", "keychain", "lock", "login"]
+  },
+  {
+    "title": "network",
+    "command": "security add-generic-password -a <account> -s <service> -w <password>",
+    "description": "Add password to keychain.",
+    "tags": ["security", "keychain", "add", "password"]
+  },
+  {
+    "title": "network",
+    "command": "security delete-generic-password -a <account> -s <service>",
+    "description": "Delete password from keychain.",
+    "tags": ["security", "keychain", "delete", "password"]
+  },
+  {
+    "title": "network",
+    "command": "security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k <password> <keychain>",
+    "description": "Allow keychain access from command line.",
+    "tags": ["security", "keychain", "access", "command-line"]
+  },
+  {
+    "title": "processes",
+    "command": "ps aux",
+    "description": "Display all running processes.",
+    "tags": ["processes", "list", "running", "ps"]
+  },
+  {
+    "title": "processes",
+    "command": "top -o cpu",
+    "description": "Display processes sorted by CPU usage.",
+    "tags": ["processes", "cpu", "usage", "top"]
+  },
+  {
+    "title": "processes",
+    "command": "top -o rsize",
+    "description": "Display processes sorted by memory usage.",
+    "tags": ["processes", "memory", "usage", "top"]
+  },
+  {
+    "title": "processes",
+    "command": "launchctl list",
+    "description": "List launchd services.",
+    "tags": ["launchctl", "services", "list", "launchd"]
+  },
+  {
+    "title": "processes",
+    "command": "launchctl load ~/Library/LaunchAgents/<plist>",
+    "description": "Load launch agent.",
+    "tags": ["launchctl", "load", "agent", "launchd"]
+  },
+  {
+    "title": "processes",
+    "command": "launchctl unload ~/Library/LaunchAgents/<plist>",
+    "description": "Unload launch agent.",
+    "tags": ["launchctl", "unload", "agent", "launchd"]
+  },
+  {
+    "title": "processes",
+    "command": "launchctl start <service>",
+    "description": "Start launchd service.",
+    "tags": ["launchctl", "start", "service", "launchd"]
+  },
+  {
+    "title": "processes",
+    "command": "launchctl stop <service>",
+    "description": "Stop launchd service.",
+    "tags": ["launchctl", "stop", "service", "launchd"]
+  },
+  {
+    "title": "processes",
+    "command": "launchctl enable system/<service>",
+    "description": "Enable system launchd service.",
+    "tags": ["launchctl", "enable", "system", "service"]
+  },
+  {
+    "title": "processes",
+    "command": "launchctl disable system/<service>",
+    "description": "Disable system launchd service.",
+    "tags": ["launchctl", "disable", "system", "service"]
+  },
+  {
+    "title": "processes",
+    "command": "sudo launchctl bootstrap system /System/Library/LaunchDaemons/<service>",
+    "description": "Bootstrap system daemon (macOS 10.10+).",
+    "tags": ["launchctl", "bootstrap", "system", "daemon"]
+  },
+  {
+    "title": "processes",
+    "command": "sudo launchctl bootout system /System/Library/LaunchDaemons/<service>",
+    "description": "Unload system daemon (macOS 10.10+).",
+    "tags": ["launchctl", "bootout", "system", "daemon"]
+  },
+  {
+    "title": "processes",
+    "command": "lsof -i",
+    "description": "List open internet files/ports.",
+    "tags": ["processes", "ports", "open", "lsof"]
+  },
+  {
+    "title": "processes",
+    "command": "lsof -c <process>",
+    "description": "List files opened by specific process.",
+    "tags": ["processes", "files", "opened", "lsof"]
+  },
+  {
+    "title": "processes",
+    "command": "lsof -p <PID>",
+    "description": "List files opened by specific PID.",
+    "tags": ["processes", "pid", "files", "lsof"]
+  },
+  {
+    "title": "processes",
+    "command": "lsof +D <directory>",
+    "description": "List files opened in directory.",
+    "tags": ["processes", "directory", "files", "lsof"]
+  },
+  {
+    "title": "processes",
+    "command": "sudo killall -HUP mDNSResponder",
+    "description": "Restart DNS resolver.",
+    "tags": ["dns", "restart", "killall", "mdnsresponder"]
+  },
+  {
+    "title": "processes",
+    "command": "sudo killall -9 <process>",
+    "description": "Force kill process.",
+    "tags": ["kill", "force", "process", "killall"]
+  },
+  {
+    "title": "processes",
+    "command": "pkill -f <pattern>",
+    "description": "Kill processes matching pattern.",
+    "tags": ["kill", "processes", "pattern", "pkill"]
+  },
+  {
+    "title": "processes",
+    "command": "sudo purge",
+    "description": "Purge memory cache.",
+    "tags": ["memory", "cache", "purge", "clean"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil info /",
+    "description": "Display disk information for root volume.",
+    "tags": ["disk", "info", "root", "volume"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil verifyVolume /",
+    "description": "Verify disk volume.",
+    "tags": ["disk", "verify", "volume", "check"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil repairVolume /",
+    "description": "Repair disk volume.",
+    "tags": ["disk", "repair", "volume", "fix"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil verifyPermissions /",
+    "description": "Verify disk permissions.",
+    "tags": ["disk", "verify", "permissions", "check"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil repairPermissions /",
+    "description": "Repair disk permissions (deprecated in recent macOS).",
+    "tags": ["disk", "repair", "permissions", "fix"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil cs list",
+    "description": "List Core Storage volumes.",
+    "tags": ["disk", "core", "storage", "list"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil apfs list",
+    "description": "List APFS containers and volumes.",
+    "tags": ["disk", "apfs", "list", "containers"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil apfs unlockVolume <volume>",
+    "description": "Unlock encrypted APFS volume.",
+    "tags": ["disk", "apfs", "unlock", "encrypted"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil apfs lockVolume <volume>",
+    "description": "Lock encrypted APFS volume.",
+    "tags": ["disk", "apfs", "lock", "encrypted"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil apfs changePassphrase <volume>",
+    "description": "Change APFS volume passphrase.",
+    "tags": ["disk", "apfs", "passphrase", "change"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil apfs addVolume <container> APFS <name>",
+    "description": "Add new APFS volume.",
+    "tags": ["disk", "apfs", "add", "volume"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil apfs deleteVolume <volume>",
+    "description": "Delete APFS volume.",
+    "tags": ["disk", "apfs", "delete", "volume"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil apfs resizeContainer <container> <size>",
+    "description": "Resize APFS container.",
+    "tags": ["disk", "apfs", "resize", "container"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil eraseDisk JHFS+ \"Macintosh HD\" GPT /dev/disk2",
+    "description": "Erase disk with HFS+ format.",
+    "tags": ["disk", "erase", "format", "hfs"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil eraseDisk APFS \"Macintosh HD\" GPT /dev/disk2",
+    "description": "Erase disk with APFS format.",
+    "tags": ["disk", "erase", "format", "apfs"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil partitionDisk /dev/disk2 GPT APFS \"Macintosh HD\" 100%",
+    "description": "Partition disk with APFS.",
+    "tags": ["disk", "partition", "apfs", "gpt"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil mount <device>",
+    "description": "Mount disk.",
+    "tags": ["disk", "mount", "device", "volume"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil unmount <device>",
+    "description": "Unmount disk.",
+    "tags": ["disk", "unmount", "device", "volume"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil unmountDisk <device>",
+    "description": "Unmount entire disk.",
+    "tags": ["disk", "unmount", "entire", "device"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil eject <device>",
+    "description": "Eject disk.",
+    "tags": ["disk", "eject", "device", "remove"]
+  },
+  {
+    "title": "disk",
+    "command": "diskutil rename <volume> \"New Name\"",
+    "description": "Rename volume.",
+    "tags": ["disk", "rename", "volume", "name"]
+  },
+  {
+    "title": "disk",
+    "command": "du -sh *",
+    "description": "Display disk usage of items in current directory.",
+    "tags": ["disk", "usage", "directory", "size"]
+  },
+  {
+    "title": "disk",
+    "command": "df -h",
+    "description": "Display disk space usage.",
+    "tags": ["disk", "space", "usage", "df"]
+  },
+  {
+    "title": "disk",
+    "command": "sudo trimforce enable",
+    "description": "Enable TRIM support for third-party SSDs.",
+    "tags": ["disk", "trim", "ssd", "enable"]
+  },
+  {
+    "title": "audio",
+    "command": "osascript -e \"set volume output volume 50\"",
+    "description": "Set output volume to 50%.",
+    "tags": ["audio", "volume", "set", "output"]
+  },
+  {
+    "title": "audio",
+    "command": "osascript -e \"output volume of (get volume settings)\"",
+    "description": "Get current output volume.",
+    "tags": ["audio", "volume", "get", "output"]
+  },
+  {
+    "title": "audio",
+    "command": "osascript -e \"set volume output muted true\"",
+    "description": "Mute output.",
+    "tags": ["audio", "mute", "output", "silence"]
+  },
+  {
+    "title": "audio",
+    "command": "osascript -e \"set volume output muted false\"",
+    "description": "Unmute output.",
+    "tags": ["audio", "unmute", "output", "sound"]
+  },
+  {
+    "title": "audio",
+    "command": "sudo killall coreaudiod",
+    "description": "Restart audio service.",
+    "tags": ["audio", "restart", "service", "coreaudio"]
+  },
+  {
+    "title": "audio",
+    "command": "audiofx off",
+    "description": "Turn off audio effects (if available).",
+    "tags": ["audio", "effects", "off", "disable"]
+  },
+  {
+    "title": "audio",
+    "command": "switchaudiosource -s \"Built-in Output\"",
+    "description": "Switch audio output source.",
+    "tags": ["audio", "source", "output", "switch"]
+  },
+  {
+    "title": "audio",
+    "command": "switchaudiosource -t output -c",
+    "description": "Show current output audio source.",
+    "tags": ["audio", "source", "output", "current"]
+  },
+  {
+    "title": "audio",
+    "command": "switchaudiosource -t input -c",
+    "description": "Show current input audio source.",
+    "tags": ["audio", "source", "input", "current"]
+  },
+  {
+    "title": "audio",
+    "command": "say \"Hello World\"",
+    "description": "Text to speech.",
+    "tags": ["audio", "speech", "text", "say"]
+  },
+  {
+    "title": "audio",
+    "command": "say -v Alex \"Hello World\"",
+    "description": "Text to speech with specific voice.",
+    "tags": ["audio", "speech", "voice", "specific"]
+  },
+  {
+    "title": "audio",
+    "command": "say -f file.txt",
+    "description": "Read text file aloud.",
+    "tags": ["audio", "speech", "file", "read"]
+  },
+  {
+    "title": "audio",
+    "command": "afplay <audiofile>",
+    "description": "Play audio file.",
+    "tags": ["audio", "play", "file", "afplay"]
+  },
+  {
+    "title": "display",
+    "command": "osascript -e \"tell application \\\"System Events\\\" to tell appearance preferences to set dark mode to true\"",
+    "description": "Enable Dark Mode.",
+    "tags": ["display", "dark", "mode", "enable"]
+  },
+  {
+    "title": "display",
+    "command": "osascript -e \"tell application \\\"System Events\\\" to tell appearance preferences to set dark mode to false\"",
+    "description": "Disable Dark Mode (Light Mode).",
+    "tags": ["display", "light", "mode", "disable"]
+  },
+  {
+    "title": "display",
+    "command": "defaults write -g AppleInterfaceStyle -string \"Dark\"",
+    "description": "Enable Dark Mode via defaults.",
+    "tags": ["display", "dark", "mode", "defaults"]
+  },
+  {
+    "title": "display",
+    "command": "defaults delete -g AppleInterfaceStyle",
+    "description": "Disable Dark Mode via defaults.",
+    "tags": ["display", "light", "mode", "defaults"]
+  },
+  {
+    "title": "display",
+    "command": "sudo nvram boot-args=\"-v\"",
+    "description": "Enable verbose boot.",
+    "tags": ["boot", "verbose", "nvram", "startup"]
+  },
+  {
+    "title": "display",
+    "command": "sudo nvram boot-args=\"\"",
+    "description": "Disable verbose boot.",
+    "tags": ["boot", "normal", "nvram", "startup"]
+  },
+  {
+    "title": "display",
+    "command": "sudo nvram StartupMute=%01",
+    "description": "Mute startup sound.",
+    "tags": ["boot", "sound", "mute", "startup"]
+  },
+  {
+    "title": "display",
+    "command": "sudo nvram StartupMute=%00",
+    "description": "Unmute startup sound.",
+    "tags": ["boot", "sound", "unmute", "startup"]
+  },
+  {
+    "title": "display",
+    "command": "sudo pmset displaysleep 10",
+    "description": "Set display sleep time to 10 minutes.",
+    "tags": ["display", "sleep", "time", "pmset"]
+  },
+  {
+    "title": "display",
+    "command": "sudo pmset disksleep 20",
+    "description": "Set disk sleep time to 20 minutes.",
+    "tags": ["disk", "sleep", "time", "pmset"]
+  },
+  {
+    "title": "display",
+    "command": "sudo pmset sleep 30",
+    "description": "Set system sleep time to 30 minutes.",
+    "tags": ["system", "sleep", "time", "pmset"]
+  },
+  {
+    "title": "display",
+    "command": "sudo pmset -a hibernatemode 0",
+    "description": "Disable hibernation.",
+    "tags": ["hibernation", "disable", "sleep", "pmset"]
+  },
+  {
+    "title": "display",
+    "command": "sudo pmset -a hibernatemode 3",
+    "description": "Enable hibernation.",
+    "tags": ["hibernation", "enable", "sleep", "pmset"]
+  },
+  {
+    "title": "display",
+    "command": "sudo pmset -a autopoweroff 0",
+    "description": "Disable automatic power off.",
+    "tags": ["power", "off", "disable", "automatic"]
+  },
+  {
+    "title": "display",
+    "command": "sudo pmset -a standbydelay 86400",
+    "description": "Set standby delay to 24 hours.",
+    "tags": ["standby", "delay", "power", "pmset"]
+  },
+  {
+    "title": "display",
+    "command": "caffeinate",
+    "description": "Prevent system from sleeping.",
+    "tags": ["sleep", "prevent", "caffeinate", "awake"]
+  },
+  {
+    "title": "display",
+    "command": "caffeinate -u -t 3600",
+    "description": "Prevent sleep for 1 hour.",
+    "tags": ["sleep", "prevent", "caffeinate", "timer"]
+  },
+  {
+    "title": "display",
+    "command": "caffeinate -i",
+    "description": "Prevent idle sleep.",
+    "tags": ["sleep", "idle", "prevent", "caffeinate"]
+  },
+  {
+    "title": "display",
+    "command": "caffeinate -d",
+    "description": "Prevent display from sleeping.",
+    "tags": ["display", "sleep", "prevent", "caffeinate"]
+  },
+  {
+    "title": "display",
+    "command": "brightness 0.5",
+    "description": "Set display brightness to 50%.",
+    "tags": ["display", "brightness", "set", "screen"]
+  },
+  {
+    "title": "display",
+    "command": "sudo nvram -c",
+    "description": "Clear NVRAM.",
+    "tags": ["nvram", "clear", "reset", "pr"]
+  },
+  {
+    "title": "display",
+    "command": "sudo nvram -x -p",
+    "description": "Display NVRAM in XML format.",
+    "tags": ["nvram", "xml", "display", "format"]
+  },
+  {
+    "title": "users",
+    "command": "dscl . -list /Users",
+    "description": "List all user accounts.",
+    "tags": ["users", "list", "accounts", "dscl"]
+  },
+  {
+    "title": "users",
+    "command": "dscl . -list /Groups",
+    "description": "List all groups.",
+    "tags": ["groups", "list", "dscl"]
+  },
+  {
+    "title": "users",
+    "command": "dscl . -read /Users/<username>",
+    "description": "Display user information.",
+    "tags": ["users", "info", "display", "dscl"]
+  },
+  {
+    "title": "users",
+    "command": "dscl . -passwd /Users/<username>",
+    "description": "Change user password.",
+    "tags": ["users", "password", "change", "dscl"]
+  },
+  {
+    "title": "users",
+    "command": "dscl . -create /Users/<username>",
+    "description": "Create new user.",
+    "tags": ["users", "create", "new", "dscl"]
+  },
+  {
+    "title": "users",
+    "command": "dscl . -delete /Users/<username>",
+    "description": "Delete user.",
+    "tags": ["users", "delete", "remove", "dscl"]
+  },
+  {
+    "title": "users",
+    "command": "dseditgroup -o edit -a <username> -t user admin",
+    "description": "Add user to admin group.",
+    "tags": ["users", "admin", "add", "group"]
+  },
+  {
+    "title": "users",
+    "command": "dseditgroup -o edit -d <username> -t user admin",
+    "description": "Remove user from admin group.",
+    "tags": ["users", "admin", "remove", "group"]
+  },
+  {
+    "title": "users",
+    "command": "sudo sysadminctl -addUser <username> -password <password>",
+    "description": "Create new user (modern method).",
+    "tags": ["users", "create", "new", "sysadminctl"]
+  },
+  {
+    "title": "users",
+    "command": "sudo sysadminctl -deleteUser <username>",
+    "description": "Delete user (modern method).",
+    "tags": ["users", "delete", "remove", "sysadminctl"]
+  },
+  {
+    "title": "users",
+    "command": "sudo sysadminctl -resetPasswordFor <username> -newPassword <password>",
+    "description": "Reset user password (modern method).",
+    "tags": ["users", "password", "reset", "sysadminctl"]
+  },
+  {
+    "title": "users",
+    "command": "id",
+    "description": "Display current user identity.",
+    "tags": ["users", "identity", "current", "id"]
+  },
+  {
+    "title": "users",
+    "command": "whoami",
+    "description": "Display current username.",
+    "tags": ["users", "username", "current", "whoami"]
+  },
+  {
+    "title": "users",
+    "command": "who",
+    "description": "Display who is logged in.",
+    "tags": ["users", "logged", "in", "who"]
+  },
+  {
+    "title": "users",
+    "command": "w",
+    "description": "Display who is logged in and what they're doing.",
+    "tags": ["users", "logged", "activity", "w"]
+  },
+  {
+    "title": "users",
+    "command": "last",
+    "description": "Show last logged in users.",
+    "tags": ["users", "last", "login", "history"]
+  },
+  {
+    "title": "users",
+    "command": "log show --predicate 'eventMessage contains \"login\"' --last 1h",
+    "description": "Show login events from last hour.",
+    "tags": ["users", "login", "events", "log"]
+  },
+  {
+    "title": "users",
+    "command": "sudo log config --mode \"level:debug\"",
+    "description": "Enable debug logging.",
+    "tags": ["log", "debug", "enable", "config"]
+  },
+  {
+    "title": "users",
+    "command": "sudo log config --mode \"level:default\"",
+    "description": "Restore default logging.",
+    "tags": ["log", "default", "restore", "config"]
+  },
+  {
+    "title": "users",
+    "command": "log stream --predicate 'subsystem contains \"com.apple.loginwindow\"'",
+    "description": "Stream login window events.",
+    "tags": ["log", "stream", "login", "events"]
+  },
+  {
+    "title": "apps",
+    "command": "mdfind \"kMDItemKind == Application\"",
+    "description": "Find all applications.",
+    "tags": ["apps", "find", "applications", "mdfind"]
+  },
+  {
+    "title": "apps",
+    "command": "system_profiler SPApplicationsDataType",
+    "description": "List installed applications with details.",
+    "tags": ["apps", "installed", "list", "profiler"]
+  },
+  {
+    "title": "apps",
+    "command": "pkgutil --pkgs",
+    "description": "List all installed packages.",
+    "tags": ["apps", "packages", "installed", "pkgutil"]
+  },
+  {
+    "title": "apps",
+    "command": "pkgutil --pkg-info <package-id>",
+    "description": "Show package information.",
+    "tags": ["apps", "package", "info", "pkgutil"]
+  },
+  {
+    "title": "apps",
+    "command": "pkgutil --files <package-id>",
+    "description": "List files installed by package.",
+    "tags": ["apps", "package", "files", "pkgutil"]
+  },
+  {
+    "title": "apps",
+    "command": "pkgutil --forget <package-id>",
+    "description": "Forget package (doesn't remove files).",
+    "tags": ["apps", "package", "forget", "pkgutil"]
+  },
+  {
+    "title": "apps",
+    "command": "softwareupdate -l",
+    "description": "List available software updates.",
+    "tags": ["apps", "updates", "software", "list"]
+  },
+  {
+    "title": "apps",
+    "command": "softwareupdate -i -a",
+    "description": "Install all available updates.",
+    "tags": ["apps", "updates", "install", "all"]
+  },
+  {
+    "title": "apps",
+    "command": "softwareupdate -i <update-name>",
+    "description": "Install specific update.",
+    "tags": ["apps", "updates", "install", "specific"]
+  },
+  {
+    "title": "apps",
+    "command": "sudo softwareupdate --ignore <update-name>",
+    "description": "Ignore specific update.",
+    "tags": ["apps", "updates", "ignore", "software"]
+  },
+  {
+    "title": "apps",
+    "command": "sudo softwareupdate --reset-ignored",
+    "description": "Reset ignored updates.",
+    "tags": ["apps", "updates", "reset", "ignored"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults read",
+    "description": "Read all user defaults.",
+    "tags": ["apps", "defaults", "read", "preferences"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults read <domain>",
+    "description": "Read defaults for specific domain.",
+    "tags": ["apps", "defaults", "read", "domain"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults read <domain> <key>",
+    "description": "Read specific default value.",
+    "tags": ["apps", "defaults", "read", "key"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults write <domain> <key> <value>",
+    "description": "Write default value.",
+    "tags": ["apps", "defaults", "write", "preferences"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults delete <domain> <key>",
+    "description": "Delete default value.",
+    "tags": ["apps", "defaults", "delete", "preferences"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults delete <domain>",
+    "description": "Delete all defaults for domain.",
+    "tags": ["apps", "defaults", "delete", "all"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults domains",
+    "description": "List all domains with defaults.",
+    "tags": ["apps", "defaults", "domains", "list"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults find <word>",
+    "description": "Find defaults containing word.",
+    "tags": ["apps", "defaults", "find", "search"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults export <domain> -",
+    "description": "Export defaults to stdout.",
+    "tags": ["apps", "defaults", "export", "stdout"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults export <domain> file.plist",
+    "description": "Export defaults to file.",
+    "tags": ["apps", "defaults", "export", "file"]
+  },
+  {
+    "title": "apps",
+    "command": "defaults import <domain> file.plist",
+    "description": "Import defaults from file.",
+    "tags": ["apps", "defaults", "import", "file"]
+  },
+  {
+    "title": "apps",
+    "command": "plutil -convert xml1 file.plist",
+    "description": "Convert plist to XML format.",
+    "tags": ["apps", "plist", "convert", "xml"]
+  },
+  {
+    "title": "apps",
+    "command": "plutil -convert binary1 file.plist",
+    "description": "Convert plist to binary format.",
+    "tags": ["apps", "plist", "convert", "binary"]
+  },
+  {
+    "title": "apps",
+    "command": "plutil -p file.plist",
+    "description": "Display plist in human-readable format.",
+    "tags": ["apps", "plist", "display", "readable"]
+  },
+  {
+    "title": "apps",
+    "command": "plutil -lint file.plist",
+    "description": "Check plist syntax.",
+    "tags": ["apps", "plist", "syntax", "check"]
+  },
+  {
+    "title": "apps",
+    "command": "sudo jamf recon",
+    "description": "Recon inventory (Jamf management).",
+    "tags": ["apps", "jamf", "inventory", "recon"]
+  },
+  {
+    "title": "apps",
+    "command": "sudo jamf policy",
+    "description": "Run Jamf policies.",
+    "tags": ["apps", "jamf", "policy", "run"]
+  },
+  {
+    "title": "apps",
+    "command": "mas list",
+    "description": "List apps installed from Mac App Store.",
+    "tags": ["apps", "appstore", "mas", "list"]
+  },
+  {
+    "title": "apps",
+    "command": "mas search <app-name>",
+    "description": "Search Mac App Store.",
+    "tags": ["apps", "appstore", "search", "mas"]
+  },
+  {
+    "title": "apps",
+    "command": "mas install <app-id>",
+    "description": "Install app from Mac App Store.",
+    "tags": ["apps", "appstore", "install", "mas"]
+  },
+  {
+    "title": "apps",
+    "command": "mas outdated",
+    "description": "List outdated Mac App Store apps.",
+    "tags": ["apps", "appstore", "outdated", "mas"]
+  },
+  {
+    "title": "apps",
+    "command": "mas upgrade",
+    "description": "Upgrade all Mac App Store apps.",
+    "tags": ["apps", "appstore", "upgrade", "mas"]
+  },
+  {
+    "title": "security",
+    "command": "fdesetup status",
+    "description": "Check FileVault status.",
+    "tags": ["security", "filevault", "status", "encryption"]
+  },
+  {
+    "title": "security",
+    "command": "fdesetup list",
+    "description": "List FileVault enabled users.",
+    "tags": ["security", "filevault", "users", "list"]
+  },
+  {
+    "title": "security",
+    "command": "sudo fdesetup add -usertoadd <username>",
+    "description": "Add user to FileVault.",
+    "tags": ["security", "filevault", "add", "user"]
+  },
+  {
+    "title": "security",
+    "command": "sudo fdesetup remove -user <username>",
+    "description": "Remove user from FileVault.",
+    "tags": ["security", "filevault", "remove", "user"]
+  },
+  {
+    "title": "security",
+    "command": "sudo fdesetup changerecovery -personal",
+    "description": "Change personal recovery key.",
+    "tags": ["security", "filevault", "recovery", "key"]
+  },
+  {
+    "title": "security",
+    "command": "sudo fdesetup changerecovery -institutional -keychain <path>",
+    "description": "Change institutional recovery key.",
+    "tags": ["security", "filevault", "institutional", "recovery"]
+  },
+  {
+    "title": "security",
+    "command": "sudo fdesetup authrestart",
+    "description": "Restart with FileVault authentication.",
+    "tags": ["security", "filevault", "restart", "auth"]
+  },
+  {
+    "title": "security",
+    "command": "sudo tmutil enable",
+    "description": "Enable Time Machine.",
+    "tags": ["security", "time", "machine", "enable"]
+  },
+  {
+    "title": "security",
+    "command": "sudo tmutil disable",
+    "description": "Disable Time Machine.",
+    "tags": ["security", "time", "machine", "disable"]
+  },
+  {
+    "title": "security",
+    "command": "sudo tmutil addexclusion <path>",
+    "description": "Exclude path from Time Machine.",
+    "tags": ["security", "time", "machine", "exclude"]
+  },
+  {
+    "title": "security",
+    "command": "sudo tmutil removeexclusion <path>",
+    "description": "Remove exclusion from Time Machine.",
+    "tags": ["security", "time", "machine", "include"]
+  },
+  {
+    "title": "security",
+    "command": "sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on",
+    "description": "Enable firewall.",
+    "tags": ["security", "firewall", "enable", "on"]
+  },
+  {
+    "title": "security",
+    "command": "sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off",
+    "description": "Disable firewall.",
+    "tags": ["security", "firewall", "disable", "off"]
+  },
+  {
+    "title": "security",
+    "command": "sudo /usr/libexec/ApplicationFirewall/socketfilterfw --listapps",
+    "description": "List firewall rules.",
+    "tags": ["security", "firewall", "rules", "list"]
+  },
+  {
+    "title": "security",
+    "command": "sudo /usr/libexec/ApplicationFirewall/socketfilterfw --blockapp <path>",
+    "description": "Block app in firewall.",
+    "tags": ["security", "firewall", "block", "app"]
+  },
+  {
+    "title": "security",
+    "command": "sudo /usr/libexec/ApplicationFirewall/socketfilterfw --unblockapp <path>",
+    "description": "Unblock app in firewall.",
+    "tags": ["security", "firewall", "unblock", "app"]
+  },
+  {
+    "title": "security",
+    "command": "sudo pwpolicy -getaccountpolicies",
+    "description": "Get account policies.",
+    "tags": ["security", "policy", "account", "pwpolicy"]
+  },
+  {
+    "title": "security",
+    "command": "sudo pwpolicy -setaccountpolicies",
+    "description": "Set account policies.",
+    "tags": ["security", "policy", "account", "set"]
+  },
+  {
+    "title": "security",
+    "command": "sudo pwpolicy -clearaccountpolicies",
+    "description": "Clear account policies.",
+    "tags": ["security", "policy", "account", "clear"]
+  },
+  {
+    "title": "security",
+    "command": "sudo pwpolicy -u <username> -setpolicy \"minChars=8\"",
+    "description": "Set password policy for user.",
+    "tags": ["security", "policy", "password", "user"]
+  },
+  {
+    "title": "security",
+    "command": "sudo pwpolicy -u <username> -getpolicy",
+    "description": "Get password policy for user.",
+    "tags": ["security", "policy", "password", "get"]
+  },
+  {
+    "title": "security",
+    "command": "sudo asr -s <source> -t <target>",
+    "description": "Apple Software Restore.",
+    "tags": ["security", "restore", "asr", "backup"]
+  },
+  {
+    "title": "security",
+    "command": "sudo bless --folder <folder> --bootefi",
+    "description": "Bless EFI boot.",
+    "tags": ["security", "bless", "efi", "boot"]
+  },
+  {
+    "title": "security",
+    "command": "sudo nvram \"recovery-boot-mode=unused\"",
+    "description": "Boot to recovery mode.",
+    "tags": ["security", "recovery", "boot", "nvram"]
+  },
+  {
+    "title": "security",
+    "command": "sudo kextcache --clear-staging",
+    "description": "Clear kernel extension cache.",
+    "tags": ["security", "kext", "cache", "clear"]
+  },
+  {
+    "title": "security",
+    "command": "sudo kextutil <kext>",
+    "description": "Load kernel extension.",
+    "tags": ["security", "kext", "load", "kernel"]
+  },
+  {
+    "title": "printing",
+    "command": "lpstat -p",
+    "description": "List printers.",
+    "tags": ["printing", "printers", "list", "lpstat"]
+  },
+  {
+    "title": "printing",
+    "command": "lpstat -d",
+    "description": "Show default printer.",
+    "tags": ["printing", "default", "printer", "lpstat"]
+  },
+  {
+    "title": "printing",
+    "command": "lpstat -a",
+    "description": "Show printer acceptance status.",
+    "tags": ["printing", "status", "acceptance", "lpstat"]
+  },
+  {
+    "title": "printing",
+    "command": "lpadmin -p <printer> -E -v <device-uri> -m everywhere",
+    "description": "Add printer.",
+    "tags": ["printing", "add", "printer", "lpadmin"]
+  },
+  {
+    "title": "printing",
+    "command": "lpadmin -x <printer>",
+    "description": "Delete printer.",
+    "tags": ["printing", "delete", "printer", "lpadmin"]
+  },
+  {
+    "title": "printing",
+    "command": "lpadmin -d <printer>",
+    "description": "Set default printer.",
+    "tags": ["printing", "default", "set", "printer"]
+  },
+  {
+    "title": "printing",
+    "command": "cupsenable <printer>",
+    "description": "Enable printer.",
+    "tags": ["printing", "enable", "printer", "cups"]
+  },
+  {
+    "title": "printing",
+    "command": "cupsdisable <printer>",
+    "description": "Disable printer.",
+    "tags": ["printing", "disable", "printer", "cups"]
+  },
+  {
+    "title": "printing",
+    "command": "lpq",
+    "description": "Show print queue.",
+    "tags": ["printing", "queue", "show", "lpq"]
+  },
+  {
+    "title": "printing",
+    "command": "lprm -",
+    "description": "Remove all jobs from print queue.",
+    "tags": ["printing", "queue", "remove", "all"]
+  },
+  {
+    "title": "printing",
+    "command": "lpr <file>",
+    "description": "Print file.",
+    "tags": ["printing", "print", "file", "lpr"]
+  },
+  {
+    "title": "printing",
+    "command": "lpoptions -l",
+    "description": "List printer options.",
+    "tags": ["printing", "options", "list", "lpoptions"]
+  },
+  {
+    "title": "printing",
+    "command": "cupsctl",
+    "description": "Show CUPS configuration.",
+    "tags": ["printing", "cups", "configuration", "show"]
+  },
+  {
+    "title": "printing",
+    "command": "cupsctl --debug-logging",
+    "description": "Enable CUPS debug logging.",
+    "tags": ["printing", "cups", "debug", "logging"]
+  },
+  {
+    "title": "printing",
+    "command": "cupsctl --no-debug-logging",
+    "description": "Disable CUPS debug logging.",
+    "tags": ["printing", "cups", "debug", "disable"]
+  },
+  {
+    "title": "printing",
+    "command": "ipptool <printer-uri> testfile.ipp",
+    "description": "Test IPP printer.",
+    "tags": ["printing", "test", "ipp", "printer"]
+  },
+  {
+    "title": "printing",
+    "command": "ippfind",
+    "description": "Find IPP printers.",
+    "tags": ["printing", "find", "ipp", "printers"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "blueutil --power 1",
+    "description": "Turn Bluetooth on.",
+    "tags": ["bluetooth", "on", "power", "blueutil"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "blueutil --power 0",
+    "description": "Turn Bluetooth off.",
+    "tags": ["bluetooth", "off", "power", "blueutil"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "blueutil --paired",
+    "description": "List paired devices.",
+    "tags": ["bluetooth", "paired", "devices", "list"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "blueutil --connect <mac-address>",
+    "description": "Connect to Bluetooth device.",
+    "tags": ["bluetooth", "connect", "device", "blueutil"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "blueutil --disconnect <mac-address>",
+    "description": "Disconnect from Bluetooth device.",
+    "tags": ["bluetooth", "disconnect", "device", "blueutil"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "blueutil --info <mac-address>",
+    "description": "Get Bluetooth device info.",
+    "tags": ["bluetooth", "info", "device", "blueutil"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "system_profiler SPBluetoothDataType",
+    "description": "Display detailed Bluetooth information.",
+    "tags": ["bluetooth", "detailed", "info", "profiler"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "defaults write com.apple.BluetoothAudioAgent \"Apple Bitpool Max (editable)\" 80",
+    "description": "Improve Bluetooth audio quality.",
+    "tags": ["bluetooth", "audio", "quality", "improve"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "defaults write com.apple.BluetoothAudioAgent \"Apple Bitpool Min (editable)\" 80",
+    "description": "Set Bluetooth audio bitpool minimum.",
+    "tags": ["bluetooth", "audio", "bitpool", "minimum"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "defaults write /Library/Preferences/com.apple.Bluetooth ControllerPowerState 0",
+    "description": "Disable Bluetooth on boot.",
+    "tags": ["bluetooth", "disable", "boot", "startup"]
+  },
+  {
+    "title": "bluetooth",
+    "command": "defaults write /Library/Preferences/com.apple.Bluetooth ControllerPowerState 1",
+    "description": "Enable Bluetooth on boot.",
+    "tags": ["bluetooth", "enable", "boot", "startup"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "screencapture -i screenshot.png",
+    "description": "Take screenshot interactively.",
+    "tags": ["screenshot", "capture", "screen", "image"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "screencapture -S screenshot.png",
+    "description": "Take screenshot of selected area.",
+    "tags": ["screenshot", "selected", "area", "capture"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "screencapture -T 5 screenshot.png",
+    "description": "Take screenshot after 5 second delay.",
+    "tags": ["screenshot", "delay", "timer", "capture"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "screencapture -C screenshot.png",
+    "description": "Take screenshot with cursor.",
+    "tags": ["screenshot", "cursor", "capture", "mouse"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "screencapture -x screenshot.png",
+    "description": "Take screenshot without sound.",
+    "tags": ["screenshot", "silent", "quiet", "capture"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "textutil -convert txt file.rtf",
+    "description": "Convert RTF to text.",
+    "tags": ["text", "convert", "rtf", "txt"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "textutil -convert html file.rtf",
+    "description": "Convert RTF to HTML.",
+    "tags": ["text", "convert", "rtf", "html"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "textutil -convert docx file.rtf",
+    "description": "Convert RTF to DOCX.",
+    "tags": ["text", "convert", "rtf", "docx"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "textutil -info file.rtf",
+    "description": "Get text file information.",
+    "tags": ["text", "info", "file", "textutil"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sips -g all image.jpg",
+    "description": "Get image information.",
+    "tags": ["image", "info", "sips", "metadata"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sips -Z 1024 image.jpg",
+    "description": "Resize image to max 1024 pixels.",
+    "tags": ["image", "resize", "sips", "scale"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sips -s format png image.jpg --out image.png",
+    "description": "Convert image format.",
+    "tags": ["image", "convert", "format", "sips"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sips -r 90 image.jpg",
+    "description": "Rotate image 90 degrees.",
+    "tags": ["image", "rotate", "sips", "degrees"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sips -c 200 200 image.jpg",
+    "description": "Crop image to 200x200.",
+    "tags": ["image", "crop", "sips", "dimensions"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "iconutil -c icns icons.iconset",
+    "description": "Create .icns file from iconset.",
+    "tags": ["icon", "create", "icns", "iconutil"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "iconutil -c iconset icon.icns",
+    "description": "Extract iconset from .icns file.",
+    "tags": ["icon", "extract", "iconset", "iconutil"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "tccutil reset All",
+    "description": "Reset all privacy permissions.",
+    "tags": ["privacy", "permissions", "reset", "tccutil"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "tccutil reset Camera",
+    "description": "Reset camera permissions.",
+    "tags": ["privacy", "camera", "reset", "tccutil"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "tccutil reset Microphone",
+    "description": "Reset microphone permissions.",
+    "tags": ["privacy", "microphone", "reset", "tccutil"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "tccutil reset ScreenCapture",
+    "description": "Reset screen recording permissions.",
+    "tags": ["privacy", "screen", "recording", "reset"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "log stream --predicate 'subsystem == \"com.apple.TCC\"'",
+    "description": "Stream privacy permission events.",
+    "tags": ["privacy", "tcc", "events", "stream"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sysdiagnose",
+    "description": "Generate system diagnostic report.",
+    "tags": ["diagnostic", "report", "system", "sysdiagnose"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo sysdiagnose -f ~/Desktop",
+    "description": "Save diagnostic report to Desktop.",
+    "tags": ["diagnostic", "report", "save", "desktop"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo periodic daily weekly monthly",
+    "description": "Run periodic maintenance scripts.",
+    "tags": ["maintenance", "periodic", "scripts", "run"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo update_dyld_shared_cache",
+    "description": "Update dyld shared cache.",
+    "tags": ["dyld", "cache", "update", "shared"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo update_dyld_shared_cache -root /",
+    "description": "Update dyld shared cache for root.",
+    "tags": ["dyld", "cache", "update", "root"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo kextcache -system-prelinked-kernel",
+    "description": "Rebuild kernel extension cache.",
+    "tags": ["kext", "cache", "rebuild", "kernel"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo kextcache -system-caches",
+    "description": "Rebuild system caches.",
+    "tags": ["kext", "cache", "system", "rebuild"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo dscacheutil -flushcache",
+    "description": "Flush DNS cache.",
+    "tags": ["dns", "cache", "flush", "network"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo killall -HUP mDNSResponder",
+    "description": "Restart DNS responder.",
+    "tags": ["dns", "restart", "mdnsresponder", "network"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo launchctl unload /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist",
+    "description": "Unload mDNSResponder.",
+    "tags": ["dns", "unload", "mdnsresponder", "launchctl"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo launchctl load /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist",
+    "description": "Load mDNSResponder.",
+    "tags": ["dns", "load", "mdnsresponder", "launchctl"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo discoveryutil udnsflushcaches",
+    "description": "Flush DNS caches (Yosemite).",
+    "tags": ["dns", "flush", "cache", "yosemite"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo discoveryutil mdnsflushcache",
+    "description": "Flush mDNS cache (Yosemite).",
+    "tags": ["dns", "flush", "mdns", "yosemite"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo softwareupdate --schedule off",
+    "description": "Disable automatic software updates.",
+    "tags": ["updates", "disable", "automatic", "software"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo softwareupdate --schedule on",
+    "description": "Enable automatic software updates.",
+    "tags": ["updates", "enable", "automatic", "software"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/libexec/xpchelper --rebuild-cache",
+    "description": "Rebuild XPC helper cache.",
+    "tags": ["xpc", "cache", "rebuild", "helper"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user",
+    "description": "Rebuild Launch Services database.",
+    "tags": ["launch", "services", "rebuild", "database"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/libexec/repair_packages --verify --standard-pkgs /",
+    "description": "Verify system packages.",
+    "tags": ["packages", "verify", "system", "repair"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /",
+    "description": "Repair system packages.",
+    "tags": ["packages", "repair", "system", "fix"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/sbin/softwareupdate --download --all",
+    "description": "Download all software updates.",
+    "tags": ["updates", "download", "all", "software"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/sbin/softwareupdate --install --all",
+    "description": "Install all software updates.",
+    "tags": ["updates", "install", "all", "software"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true",
+    "description": "Enable automatic update checks.",
+    "tags": ["updates", "automatic", "enable", "checks"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool true",
+    "description": "Enable automatic update downloads.",
+    "tags": ["updates", "automatic", "download", "enable"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -bool true",
+    "description": "Enable automatic critical updates.",
+    "tags": ["updates", "critical", "automatic", "enable"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate ConfigDataInstall -bool true",
+    "description": "Enable automatic configuration data updates.",
+    "tags": ["updates", "config", "data", "automatic"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate ScheduleFrequency -int 1",
+    "description": "Set update check frequency to daily.",
+    "tags": ["updates", "frequency", "daily", "schedule"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true",
+    "description": "Enable automatic macOS updates.",
+    "tags": ["updates", "macos", "automatic", "enable"]
+  }
+]

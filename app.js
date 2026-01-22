@@ -341,7 +341,7 @@ function statBtn(title, icon, value) {
 
 
 
-async function fetchFiles(path = "") {
+async function fetchFiles(path = "", fromHistory = false) {
     setLoader(true);
     const isGlobal = document.getElementById('globalSearch').checked;
     const q = document.getElementById('searchInput').value;
@@ -368,6 +368,13 @@ async function fetchFiles(path = "") {
     } else {
         currentPath = data.path;
         filesList = data.items;
+    }
+
+    // Add to browser history for mobile back button support
+    if (!fromHistory && !inRecycleBin && !isGlobal) {
+        const state = { path: currentPath };
+        const url = currentPath ? `?path=${encodeURIComponent(currentPath)}` : '?';
+        history.pushState(state, '', url);
     }
 
     updateBreadcrumbs();
@@ -885,12 +892,31 @@ function showMenu(e, item) {
 }
 
 function toggleDetails(show, item = null) {
+
     const panel = document.getElementById('detailsPanel');
-    if (!show) return panel.classList.remove('active');
+    const content = document.getElementById('detailContent');
+
+
+    if (!panel || !content) {
+        console.error('Details panel elements not found');
+        return;
+    }
+
+    if (!show) {
+        panel.classList.remove('active');
+        return;
+    }
+
+    if (!item) {
+        console.error('No item provided to toggleDetails');
+        return;
+    }
+
+
     const encodedUrl = getFullUrl(item.name);
     const isImg = !item.is_dir && /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item.name);
 
-    document.getElementById('detailContent').innerHTML = `
+    content.innerHTML = `
         <div style="width:100%; height:200px; background:#000; display:flex; align-items:center; justify-content:center; border-radius:12px; margin-bottom:1.5rem; overflow:hidden;">
             ${isImg ? `<img src="${encodedUrl}" style="max-width:100%; max-height:100%; object-fit:contain;">` : `<i data-lucide="${item.is_dir ? 'folder' : 'file-text'}" style="width:80px; height:80px;"></i>`}
         </div>
@@ -900,7 +926,9 @@ function toggleDetails(show, item = null) {
             <div><small style="color:var(--text-muted)">LOCATION</small><p style="color:var(--primary)">/Home/${currentPath}</p></div>
         </div>
     `;
+
     panel.classList.add('active');
+
     lucide.createIcons();
 }
 
@@ -960,8 +988,12 @@ function closeUploadDrawer() {
 
 // --- Standard Logic & Listeners ---
 function handleMenuAction(action) {
+
     const encodedUrl = getFullUrl(selectedItem.name);
-    if (action === 'details') toggleDetails(true, selectedItem);
+
+    if (action === 'details') {
+        toggleDetails(true, selectedItem);
+    }
     if (action === 'download') { const a = document.createElement('a'); a.href = encodedUrl; a.download = selectedItem.name; a.click(); }
     if (action === 'rename') renameItem(selectedItem.name);
     if (action === 'delete') deleteItem(selectedItem.name);
@@ -969,6 +1001,7 @@ function handleMenuAction(action) {
     if (action === 'purge') purgeItem(selectedItem.name);
     if (action === 'share') shareItem(selectedItem);
     if (action === 'open-page') openPage(getFullUrl(selectedItem.name));
+
     document.getElementById('contextMenu').style.display = 'none';
 }
 
@@ -1272,6 +1305,27 @@ async function deleteItem(n) { if (confirm(`Delete ${n}?`)) { await fetch('/api/
 async function renameItem(o) { const n = prompt("Rename to:", o); if (n) { await fetch('/api/rename', { method: 'POST', body: JSON.stringify({ path: currentPath, old_name: o, new_name: n }) }); fetchFiles(currentPath); } }
 async function createNewFolder() { const n = prompt("Folder Name:"); if (n) { await fetch('/api/mkdir', { method: 'POST', body: JSON.stringify({ path: currentPath, folder: n }) }); fetchFiles(currentPath); } }
 document.getElementById('fileInput').onchange = (e) => uploadFiles(e.target.files);
+
+// Mobile back button support via History API
+window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.path !== undefined) {
+        fetchFiles(e.state.path, true);
+    } else {
+        fetchFiles('', true);
+    }
+});
+
+// Click outside to close preview panel
+// document.addEventListener('click', (e) => {
+//     const panel = document.getElementById('detailsPanel');
+//     if (!panel.classList.contains('active')) return;
+
+//     // Check if click is outside panel and not on a file card (which opens panel)
+//     if (!panel.contains(e.target) && !e.target.closest('.file-card')) {
+//         toggleDetails(false);
+//     }
+// });
+
 
 fetchFiles();
 

@@ -1,0 +1,69 @@
+{
+    "links": [
+        {
+            "title": "Message from CEO",
+            "value": "This is to make easy for us to access and share links and other stuff , so don't touch unless you really need it.",
+            "type": "text"
+        },
+        {
+            "title": "Server IP Address",
+            "value": "192.168.100.137:4142",
+            "type": "url"
+        },
+        {
+            "title": "Admin Access",
+            "value": "http://192.168.100.137:4142/?show_hidden=123",
+            "type": "url"
+        },
+        {
+            "title": "pdf",
+            "value": "https://s3.amazonaws.com/Boson/BEE_User_Manual.pdf",
+            "type": "url"
+        },
+        {
+            "title": "3000 Hosted",
+            "value": "https://kmx76rfq-3000.inc1.devtunnels.ms/",
+            "type": "url"
+        },
+        {
+            "title": "Favicon Maker",
+            "value": "https://favicon.pub/",
+            "type": "url"
+        },
+        {
+            "title": "Image compresser",
+            "value": "https://imagecompresser.com/",
+            "type": "url",
+            "tags": [
+                "image",
+                "compress",
+                "compressor"
+            ],
+            "desc": "Image compressor for free"
+        },
+        {
+            "title": "aesthetic pngs",
+            "value": "https://drive.google.com/drive/folders/16c0SK-JlSnoJSBKue0m3195HQEvM70ig?utm_referrer=sp_auto_dm",
+            "type": "url",
+            "tags": [
+                "dattey"
+            ],
+            "desc": "here aesthetic png resources"
+        },
+        {
+            "title": "Hosted LInk",
+            "description": "The live edit of my code.",
+            "value": "https://prod.liveshare.vsengsaas.visualstudio.com/join?353F5BD7FC5285C7B66CA55A5A7E452621BB",
+            "type": "url"
+        },
+        {
+            "title": "dattey yt automations",
+            "value": "https://drive.google.com/file/d/1y-Eu38a8TYkO9YXwAkAiIWHMEQn6-xIm/view?utm_referrer=sp_auto_dm",
+            "type": "url",
+            "tags": [
+                "dattey automation"
+            ],
+            "desc": "og"
+        }
+    ]
+}

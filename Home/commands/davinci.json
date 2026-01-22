@@ -1,0 +1,884 @@
+[
+  {
+    "title": "New Project",
+    "command": "Ctrl/Cmd + N",
+    "description": "Create a new project.",
+    "tags": ["new", "project", "create", "general"]
+  },
+  {
+    "title": "Open Project",
+    "command": "Ctrl/Cmd + O",
+    "description": "Open an existing project.",
+    "tags": ["open", "project", "load", "general"]
+  },
+  {
+    "title": "Save Project",
+    "command": "Ctrl/Cmd + S",
+    "description": "Save the current project.",
+    "tags": ["save", "project", "store", "general"]
+  },
+  {
+    "title": "Save Project As",
+    "command": "Ctrl/Cmd + Shift + S",
+    "description": "Save project with a new name.",
+    "tags": ["save", "as", "project", "general"]
+  },
+  {
+    "title": "Undo",
+    "command": "Ctrl/Cmd + Z",
+    "description": "Undo the last action.",
+    "tags": ["undo", "revert", "general", "edit"]
+  },
+  {
+    "title": "Redo",
+    "command": "Ctrl/Cmd + Shift + Z",
+    "description": "Redo the last undone action.",
+    "tags": ["redo", "repeat", "general", "edit"]
+  },
+  {
+    "title": "Select All",
+    "command": "Ctrl/Cmd + A",
+    "description": "Select all items in current view.",
+    "tags": ["select", "all", "general", "edit"]
+  },
+  {
+    "title": "Delete Selected",
+    "command": "Delete/Backspace",
+    "description": "Delete selected items.",
+    "tags": ["delete", "remove", "general", "edit"]
+  },
+  {
+    "title": "Cancel/Exit",
+    "command": "Esc",
+    "description": "Cancel current operation or exit mode.",
+    "tags": ["cancel", "exit", "escape", "general"]
+  },
+  {
+    "title": "Play/Pause",
+    "command": "Space or Ctrl/Cmd + P",
+    "description": "Start or pause playback.",
+    "tags": ["play", "pause", "transport", "navigation"]
+  },
+  {
+    "title": "Go to Timeline Start",
+    "command": "Home",
+    "description": "Move playhead to beginning of timeline.",
+    "tags": ["start", "timeline", "beginning", "navigation"]
+  },
+  {
+    "title": "Go to Timeline End",
+    "command": "End",
+    "description": "Move playhead to end of timeline.",
+    "tags": ["end", "timeline", "navigation"]
+  },
+  {
+    "title": "Previous Edit Point",
+    "command": "Page Up",
+    "description": "Jump to previous edit point on timeline.",
+    "tags": ["previous", "edit", "point", "navigation"]
+  },
+  {
+    "title": "Next Edit Point",
+    "command": "Page Down",
+    "description": "Jump to next edit point on timeline.",
+    "tags": ["next", "edit", "point", "navigation"]
+  },
+  {
+    "title": "Previous Clip",
+    "command": "Up Arrow",
+    "description": "Move to previous clip in timeline.",
+    "tags": ["previous", "clip", "navigation"]
+  },
+  {
+    "title": "Next Clip",
+    "command": "Down Arrow",
+    "description": "Move to next clip in timeline.",
+    "tags": ["next", "clip", "navigation"]
+  },
+  {
+    "title": "Frame Back",
+    "command": "Left Arrow",
+    "description": "Move back one frame.",
+    "tags": ["back", "frame", "navigation"]
+  },
+  {
+    "title": "Frame Forward",
+    "command": "Right Arrow",
+    "description": "Move forward one frame.",
+    "tags": ["forward", "frame", "navigation"]
+  },
+  {
+    "title": "Second Back",
+    "command": "Shift + Left Arrow",
+    "description": "Move back one second.",
+    "tags": ["back", "second", "navigation"]
+  },
+  {
+    "title": "Second Forward",
+    "command": "Shift + Right Arrow",
+    "description": "Move forward one second.",
+    "tags": ["forward", "second", "navigation"]
+  },
+  {
+    "title": "Reverse Play",
+    "command": "J",
+    "description": "Play backwards in reverse.",
+    "tags": ["reverse", "play", "navigation", "jog"]
+  },
+  {
+    "title": "Stop Playback",
+    "command": "K",
+    "description": "Stop all playback.",
+    "tags": ["stop", "playback", "navigation"]
+  },
+  {
+    "title": "Forward Play",
+    "command": "L",
+    "description": "Play forward at normal speed.",
+    "tags": ["forward", "play", "navigation", "jog"]
+  },
+  {
+    "title": "Set In Point",
+    "command": "I",
+    "description": "Set In point at current playhead position.",
+    "tags": ["in", "point", "marker", "navigation"]
+  },
+  {
+    "title": "Set Out Point",
+    "command": "O",
+    "description": "Set Out point at current playhead position.",
+    "tags": ["out", "point", "marker", "navigation"]
+  },
+  {
+    "title": "Set In/Out on Clip",
+    "command": "X",
+    "description": "Set In and Out points on selected clip.",
+    "tags": ["in", "out", "points", "navigation"]
+  },
+  {
+    "title": "Go to In Point",
+    "command": "Shift + I",
+    "description": "Move playhead to In point.",
+    "tags": ["go", "in", "point", "navigation"]
+  },
+  {
+    "title": "Go to Out Point",
+    "command": "Shift + O",
+    "description": "Move playhead to Out point.",
+    "tags": ["go", "out", "point", "navigation"]
+  },
+  {
+    "title": "Insert Edit",
+    "command": "F9",
+    "description": "Insert clip at playhead position (pushes other clips).",
+    "tags": ["insert", "edit", "timeline", "editing"]
+  },
+  {
+    "title": "Overwrite Edit",
+    "command": "F10",
+    "description": "Overwrite clip at playhead position.",
+    "tags": ["overwrite", "edit", "timeline", "editing"]
+  },
+  {
+    "title": "Replace Edit",
+    "command": "F11",
+    "description": "Replace clip at playhead position.",
+    "tags": ["replace", "edit", "timeline", "editing"]
+  },
+  {
+    "title": "Fit to Fill Edit",
+    "command": "F12",
+    "description": "Fit clip to fill between In and Out points.",
+    "tags": ["fit", "fill", "edit", "timeline"]
+  },
+  {
+    "title": "Blade Tool",
+    "command": "Ctrl/Cmd + B or B",
+    "description": "Cut/split clip at playhead position.",
+    "tags": ["blade", "cut", "split", "editing"]
+  },
+  {
+    "title": "Razor All Tracks",
+    "command": "Ctrl/Cmd + \\",
+    "description": "Cut all tracks at playhead position.",
+    "tags": ["cut", "razor", "all", "tracks"]
+  },
+  {
+    "title": "Selection Tool",
+    "command": "A",
+    "description": "Activate arrow/selection tool.",
+    "tags": ["arrow", "selection", "tool", "editing"]
+  },
+  {
+    "title": "Trim Edit Mode",
+    "command": "T",
+    "description": "Activate trim edit mode.",
+    "tags": ["trim", "edit", "mode", "editing"]
+  },
+  {
+    "title": "Range Selection Tool",
+    "command": "R",
+    "description": "Activate range selection tool.",
+    "tags": ["range", "selection", "tool", "editing"]
+  },
+  {
+    "title": "Color Correction Mode",
+    "command": "C",
+    "description": "Switch to Color page for color grading.",
+    "tags": ["color", "correction", "mode", "grading"]
+  },
+  {
+    "title": "Slip Tool",
+    "command": "S",
+    "description": "Activate slip tool for adjusting clip content.",
+    "tags": ["slip", "tool", "editing"]
+  },
+  {
+    "title": "Slide Tool",
+    "command": "Y",
+    "description": "Activate slide tool for moving clips.",
+    "tags": ["slide", "tool", "editing"]
+  },
+  {
+    "title": "Position Tool",
+    "command": "P",
+    "description": "Activate position tool for moving clips.",
+    "tags": ["position", "tool", "editing"]
+  },
+  {
+    "title": "Zoom Tool",
+    "command": "Z",
+    "description": "Activate zoom tool for magnifying timeline.",
+    "tags": ["zoom", "tool", "editing"]
+  },
+  {
+    "title": "Fit Timeline to Window",
+    "command": "Ctrl/Cmd + Shift + F",
+    "description": "Zoom timeline to fit current window.",
+    "tags": ["fit", "timeline", "window", "zoom"]
+  },
+  {
+    "title": "Zoom In Timeline",
+    "command": "Ctrl/Cmd + =",
+    "description": "Zoom in on timeline view.",
+    "tags": ["zoom", "in", "timeline", "view"]
+  },
+  {
+    "title": "Zoom Out Timeline",
+    "command": "Ctrl/Cmd + -",
+    "description": "Zoom out on timeline view.",
+    "tags": ["zoom", "out", "timeline", "view"]
+  },
+  {
+    "title": "Reset Zoom",
+    "command": "Ctrl/Cmd + 0",
+    "description": "Reset timeline zoom to 100%.",
+    "tags": ["reset", "zoom", "100%", "timeline"]
+  },
+  {
+    "title": "Extend Edit to Playhead",
+    "command": "E",
+    "description": "Extend selected edit point to playhead position.",
+    "tags": ["extend", "edit", "playhead", "trim"]
+  },
+  {
+    "title": "Change Clip Speed",
+    "command": "Ctrl/Cmd + R",
+    "description": "Open retime controls for selected clip.",
+    "tags": ["speed", "duration", "clip", "retime"]
+  },
+  {
+    "title": "Disable Selected Clips",
+    "command": "Ctrl/Cmd + D",
+    "description": "Toggle selected clips on/off.",
+    "tags": ["disable", "clip", "toggle", "editing"]
+  },
+  {
+    "title": "Enable Selected Clips",
+    "command": "Shift + D",
+    "description": "Enable previously disabled clips.",
+    "tags": ["enable", "clip", "toggle", "editing"]
+  },
+  {
+    "title": "Link/Unlink Clips",
+    "command": "Ctrl/Cmd + L",
+    "description": "Link or unlink audio and video clips.",
+    "tags": ["link", "unlink", "clip", "audio"]
+  },
+  {
+    "title": "Unlink from Timeline",
+    "command": "Ctrl/Cmd + U",
+    "description": "Unlink clip from timeline (make independent).",
+    "tags": ["unlink", "clip", "timeline", "editing"]
+  },
+  {
+    "title": "Ripple Trim Start",
+    "command": "Q",
+    "description": "Ripple trim clip start to playhead.",
+    "tags": ["ripple", "trim", "start", "playhead"]
+  },
+  {
+    "title": "Ripple Trim End",
+    "command": "W",
+    "description": "Ripple trim clip end to playhead.",
+    "tags": ["ripple", "trim", "end", "playhead"]
+  },
+  {
+    "title": "Reverse Clip Speed",
+    "command": "Ctrl/Cmd + Shift + R",
+    "description": "Reverse playback direction of clip.",
+    "tags": ["reverse", "speed", "clip", "retime"]
+  },
+  {
+    "title": "Add Video Track",
+    "command": "Ctrl/Cmd + T",
+    "description": "Add new video track above current tracks.",
+    "tags": ["add", "video", "track", "timeline"]
+  },
+  {
+    "title": "Add Audio Track",
+    "command": "Ctrl/Cmd + Shift + T",
+    "description": "Add new audio track above current tracks.",
+    "tags": ["add", "audio", "track", "timeline"]
+  },
+  {
+    "title": "Add Subtitle Track",
+    "command": "Ctrl/Cmd + Alt/Opt + T",
+    "description": "Add new subtitle track.",
+    "tags": ["add", "subtitle", "track", "timeline"]
+  },
+  {
+    "title": "Delete Track",
+    "command": "Ctrl/Cmd + Alt/Opt + Delete",
+    "description": "Delete selected empty track.",
+    "tags": ["delete", "track", "remove", "timeline"]
+  },
+  {
+    "title": "Toggle Track Height",
+    "command": "Ctrl/Cmd + Alt/Opt + Up/Down Arrow",
+    "description": "Increase or decrease track height.",
+    "tags": ["toggle", "track", "height", "timeline"]
+  },
+  {
+    "title": "Toggle Track Visibility",
+    "command": "V",
+    "description": "Show/hide selected track.",
+    "tags": ["toggle", "track", "visibility", "timeline"]
+  },
+  {
+    "title": "Toggle Track Lock",
+    "command": "Shift + L",
+    "description": "Lock/unlock selected track.",
+    "tags": ["toggle", "track", "lock", "timeline"]
+  },
+  {
+    "title": "Mute Track",
+    "command": "Shift + M",
+    "description": "Mute/unmute audio track.",
+    "tags": ["mute", "track", "audio", "timeline"]
+  },
+  {
+    "title": "Solo Track",
+    "command": "Shift + S",
+    "description": "Solo selected audio track.",
+    "tags": ["solo", "track", "audio", "timeline"]
+  },
+  {
+    "title": "Snap to Grid",
+    "command": "N",
+    "description": "Toggle snapping to grid/timeline items.",
+    "tags": ["snap", "grid", "toggle", "timeline"]
+  },
+  {
+    "title": "Toggle Multicam",
+    "command": "Shift + 0",
+    "description": "Enable/disable multicam mode.",
+    "tags": ["toggle", "multicam", "mode", "editing"]
+  },
+  {
+    "title": "Add Marker",
+    "command": "M",
+    "description": "Add marker at current playhead position.",
+    "tags": ["add", "marker", "timeline", "navigation"]
+  },
+  {
+    "title": "Go to Next Marker",
+    "command": "Shift + M",
+    "description": "Jump to next marker on timeline.",
+    "tags": ["next", "marker", "navigation"]
+  },
+  {
+    "title": "Go to Previous Marker",
+    "command": "Ctrl/Cmd + Alt/Opt + M",
+    "description": "Jump to previous marker on timeline.",
+    "tags": ["previous", "marker", "navigation"]
+  },
+  {
+    "title": "Clear Marker",
+    "command": "Ctrl/Cmd + Alt/Opt + Shift + M",
+    "description": "Clear marker at current position.",
+    "tags": ["clear", "marker", "remove", "timeline"]
+  },
+  {
+    "title": "Add Fusion Clip",
+    "command": "Ctrl/Cmd + Shift + Y",
+    "description": "Add Fusion composition to timeline.",
+    "tags": ["add", "fusion", "clip", "effects"]
+  },
+  {
+    "title": "Add Adjustment Clip",
+    "command": "Ctrl/Cmd + Y",
+    "description": "Add adjustment clip to timeline.",
+    "tags": ["add", "adjustment", "clip", "effects"]
+  },
+  {
+    "title": "Add Title",
+    "command": "Ctrl/Cmd + T",
+    "description": "Add title/text to timeline.",
+    "tags": ["add", "title", "text", "timeline"]
+  },
+  {
+    "title": "Add Transition",
+    "command": "Ctrl/Cmd + T (on edit point)",
+    "description": "Add default transition at edit point.",
+    "tags": ["add", "transition", "edit", "point"]
+  },
+  {
+    "title": "Add Default Transition",
+    "command": "Ctrl/Cmd + D (on edit point)",
+    "description": "Add default crossfade transition.",
+    "tags": ["add", "default", "transition", "crossfade"]
+  },
+  {
+    "title": "Render In/Out",
+    "command": "Ctrl/Cmd + R",
+    "description": "Render timeline between In and Out points.",
+    "tags": ["render", "in", "out", "export"]
+  },
+  {
+    "title": "Render Timeline",
+    "command": "Ctrl/Cmd + Shift + R",
+    "description": "Render entire timeline.",
+    "tags": ["render", "timeline", "export"]
+  },
+  {
+    "title": "Go to Media Page",
+    "command": "Ctrl/Cmd + 1",
+    "description": "Switch to Media page.",
+    "tags": ["go", "media", "page", "navigation"]
+  },
+  {
+    "title": "Go to Cut Page",
+    "command": "Ctrl/Cmd + 2",
+    "description": "Switch to Cut page.",
+    "tags": ["go", "cut", "page", "navigation"]
+  },
+  {
+    "title": "Go to Edit Page",
+    "command": "Ctrl/Cmd + 3",
+    "description": "Switch to Edit page.",
+    "tags": ["go", "edit", "page", "navigation"]
+  },
+  {
+    "title": "Go to Fusion Page",
+    "command": "Ctrl/Cmd + 4",
+    "description": "Switch to Fusion page.",
+    "tags": ["go", "fusion", "page", "navigation"]
+  },
+  {
+    "title": "Go to Color Page",
+    "command": "Ctrl/Cmd + 5",
+    "description": "Switch to Color page.",
+    "tags": ["go", "color", "page", "navigation"]
+  },
+  {
+    "title": "Go to Fairlight Page",
+    "command": "Ctrl/Cmd + 6",
+    "description": "Switch to Fairlight page.",
+    "tags": ["go", "fairlight", "page", "audio"]
+  },
+  {
+    "title": "Go to Deliver Page",
+    "command": "Ctrl/Cmd + 7",
+    "description": "Switch to Deliver page.",
+    "tags": ["go", "deliver", "page", "export"]
+  },
+  {
+    "title": "Toggle Full Screen",
+    "command": "Ctrl/Cmd + F",
+    "description": "Toggle full screen mode.",
+    "tags": ["toggle", "full", "screen", "view"]
+  },
+  {
+    "title": "Toggle UI Layout",
+    "command": "Ctrl/Cmd + Shift + L",
+    "description": "Cycle through UI layouts.",
+    "tags": ["toggle", "ui", "layout", "view"]
+  },
+  {
+    "title": "Toggle Viewer Zoom",
+    "command": "Z (in viewer)",
+    "description": "Zoom in/out in viewer.",
+    "tags": ["toggle", "viewer", "zoom", "view"]
+  },
+  {
+    "title": "Reset Viewer Zoom",
+    "command": "Shift + Z (in viewer)",
+    "description": "Reset viewer zoom to fit.",
+    "tags": ["reset", "viewer", "zoom", "view"]
+  },
+  {
+    "title": "Toggle Scopes",
+    "command": "Ctrl/Cmd + Shift + W",
+    "description": "Show/hide video scopes.",
+    "tags": ["toggle", "scopes", "video", "color"]
+  },
+  {
+    "title": "Toggle Inspector",
+    "command": "Ctrl/Cmd + Shift + I",
+    "description": "Show/hide inspector panel.",
+    "tags": ["toggle", "inspector", "panel", "view"]
+  },
+  {
+    "title": "Toggle Effects Library",
+    "command": "Ctrl/Cmd + Shift + E",
+    "description": "Show/hide effects library.",
+    "tags": ["toggle", "effects", "library", "view"]
+  },
+  {
+    "title": "Toggle Media Pool",
+    "command": "Ctrl/Cmd + Shift + M",
+    "description": "Show/hide media pool.",
+    "tags": ["toggle", "media", "pool", "view"]
+  },
+  {
+    "title": "Toggle Timeline",
+    "command": "Ctrl/Cmd + Shift + T",
+    "description": "Show/hide timeline.",
+    "tags": ["toggle", "timeline", "view"]
+  },
+  {
+    "title": "Toggle Source Viewer",
+    "command": "Ctrl/Cmd + Shift + S",
+    "description": "Show/hide source viewer.",
+    "tags": ["toggle", "source", "viewer", "view"]
+  },
+  {
+    "title": "Toggle Record Viewer",
+    "command": "Ctrl/Cmd + Shift + R",
+    "description": "Show/hide record viewer.",
+    "tags": ["toggle", "record", "viewer", "view"]
+  },
+  {
+    "title": "Split Screen",
+    "command": "Ctrl/Cmd + Shift + 5",
+    "description": "Toggle split screen in viewer.",
+    "tags": ["split", "screen", "viewer", "view"]
+  },
+  {
+    "title": "Wipe Comparison",
+    "command": "Ctrl/Cmd + Shift + 6",
+    "description": "Toggle wipe comparison in viewer.",
+    "tags": ["wipe", "comparison", "viewer", "view"]
+  },
+  {
+    "title": "Color Wheels",
+    "command": "Alt/Opt + 1",
+    "description": "Switch to primary color wheels.",
+    "tags": ["color", "wheels", "primary", "grading"]
+  },
+  {
+    "title": "Color Curves",
+    "command": "Alt/Opt + 2",
+    "description": "Switch to color curves.",
+    "tags": ["color", "curves", "grading"]
+  },
+  {
+    "title": "Color Qualifier",
+    "command": "Alt/Opt + 3",
+    "description": "Switch to color qualifier.",
+    "tags": ["color", "qualifier", "keying", "grading"]
+  },
+  {
+    "title": "Power Windows",
+    "command": "Alt/Opt + 4",
+    "description": "Switch to power windows.",
+    "tags": ["power", "windows", "masking", "grading"]
+  },
+  {
+    "title": "Tracker",
+    "command": "Alt/Opt + 5",
+    "description": "Switch to tracker.",
+    "tags": ["tracker", "motion", "grading"]
+  },
+  {
+    "title": "Blur",
+    "command": "Alt/Opt + 6",
+    "description": "Switch to blur tools.",
+    "tags": ["blur", "effects", "grading"]
+  },
+  {
+    "title": "Keyframing",
+    "command": "Alt/Opt + K",
+    "description": "Add keyframe at current position.",
+    "tags": ["keyframe", "animation", "effects"]
+  },
+  {
+    "title": "Next Keyframe",
+    "command": "Shift + K",
+    "description": "Jump to next keyframe.",
+    "tags": ["next", "keyframe", "animation"]
+  },
+  {
+    "title": "Previous Keyframe",
+    "command": "Ctrl/Cmd + Shift + K",
+    "description": "Jump to previous keyframe.",
+    "tags": ["previous", "keyframe", "animation"]
+  },
+  {
+    "title": "Reset Parameter",
+    "command": "Ctrl/Cmd + Shift + R (on parameter)",
+    "description": "Reset selected parameter to default.",
+    "tags": ["reset", "parameter", "default"]
+  },
+  {
+    "title": "Copy Attributes",
+    "command": "Ctrl/Cmd + Alt/Opt + C",
+    "description": "Copy clip attributes.",
+    "tags": ["copy", "attributes", "clip", "effects"]
+  },
+  {
+    "title": "Paste Attributes",
+    "command": "Ctrl/Cmd + Alt/Opt + V",
+    "description": "Paste copied attributes to clip.",
+    "tags": ["paste", "attributes", "clip", "effects"]
+  },
+  {
+    "title": "Match Frame",
+    "command": "F",
+    "description": "Match source frame to timeline position.",
+    "tags": ["match", "frame", "source", "timeline"]
+  },
+  {
+    "title": "Reveal in Media Pool",
+    "command": "Shift + F",
+    "description": "Reveal clip in media pool.",
+    "tags": ["reveal", "media", "pool", "clip"]
+  },
+  {
+    "title": "Reveal in Finder/Explorer",
+    "command": "Ctrl/Cmd + Shift + R",
+    "description": "Reveal clip in system file browser.",
+    "tags": ["reveal", "finder", "explorer", "file"]
+  },
+  {
+    "title": "Media Management",
+    "command": "Ctrl/Cmd + Shift + M",
+    "description": "Open media management dialog.",
+    "tags": ["media", "management", "dialog", "file"]
+  },
+  {
+    "title": "Project Settings",
+    "command": "Shift + 9",
+    "description": "Open project settings.",
+    "tags": ["project", "settings", "configuration"]
+  },
+  {
+    "title": "Preferences",
+    "command": "Ctrl/Cmd + , (comma)",
+    "description": "Open DaVinci Resolve preferences.",
+    "tags": ["preferences", "settings", "configuration"]
+  },
+  {
+    "title": "Keyboard Customization",
+    "command": "Shift + 0",
+    "description": "Open keyboard customization panel.",
+    "tags": ["keyboard", "customization", "shortcuts"]
+  },
+  {
+    "title": "Render Cache Settings",
+    "command": "Shift + C",
+    "description": "Toggle render cache for selected clips.",
+    "tags": ["render", "cache", "settings", "performance"]
+  },
+  {
+    "title": "Delete Render Cache",
+    "command": "Ctrl/Cmd + Shift + Delete",
+    "description": "Delete all render cache files.",
+    "tags": ["delete", "render", "cache", "cleanup"]
+  },
+  {
+    "title": "Consolidate Media",
+    "command": "Ctrl/Cmd + Shift + C",
+    "description": "Consolidate project media.",
+    "tags": ["consolidate", "media", "project", "file"]
+  },
+  {
+    "title": "Transcode Media",
+    "command": "Ctrl/Cmd + Shift + T",
+    "description": "Transcode media to optimized format.",
+    "tags": ["transcode", "media", "optimize", "performance"]
+  },
+  {
+    "title": "Generate Optimized Media",
+    "command": "Ctrl/Cmd + Shift + O",
+    "description": "Generate optimized media for selected clips.",
+    "tags": ["generate", "optimized", "media", "performance"]
+  },
+  {
+    "title": "Delete Optimized Media",
+    "command": "Ctrl/Cmd + Shift + D",
+    "description": "Delete optimized media files.",
+    "tags": ["delete", "optimized", "media", "cleanup"]
+  },
+  {
+    "title": "Proxy Mode",
+    "command": "Ctrl/Cmd + Shift + P",
+    "description": "Toggle proxy mode for playback.",
+    "tags": ["proxy", "mode", "playback", "performance"]
+  },
+  {
+    "title": "Playback Resolution",
+    "command": "Ctrl/Cmd + Shift + F (in viewer)",
+    "description": "Cycle through playback resolutions.",
+    "tags": ["playback", "resolution", "viewer", "performance"]
+  },
+  {
+    "title": "Drop Frame Indicator",
+    "command": "Ctrl/Cmd + Shift + I",
+    "description": "Toggle drop frame indicator.",
+    "tags": ["drop", "frame", "indicator", "view"]
+  },
+  {
+    "title": "Timecode Display",
+    "command": "Ctrl/Cmd + Shift + T (in viewer)",
+    "description": "Toggle timecode display in viewer.",
+    "tags": ["timecode", "display", "viewer", "view"]
+  },
+  {
+    "title": "Safe Areas",
+    "command": "Ctrl/Cmd + Shift + A",
+    "description": "Toggle safe area guides.",
+    "tags": ["safe", "areas", "guides", "view"]
+  },
+  {
+    "title": "Grid Overlay",
+    "command": "Ctrl/Cmd + Shift + G",
+    "description": "Toggle grid overlay in viewer.",
+    "tags": ["grid", "overlay", "viewer", "view"]
+  },
+  {
+    "title": "Waveform Monitor",
+    "command": "Ctrl/Cmd + Shift + W",
+    "description": "Toggle waveform monitor.",
+    "tags": ["waveform", "monitor", "audio", "view"]
+  },
+  {
+    "title": "Vectorscope",
+    "command": "Ctrl/Cmd + Shift + V",
+    "description": "Toggle vectorscope.",
+    "tags": ["vectorscope", "color", "view"]
+  },
+  {
+    "title": "Histogram",
+    "command": "Ctrl/Cmd + Shift + H",
+    "description": "Toggle histogram display.",
+    "tags": ["histogram", "color", "view"]
+  },
+  {
+    "title": "Parade Scope",
+    "command": "Ctrl/Cmd + Shift + P",
+    "description": "Toggle parade scope.",
+    "tags": ["parade", "scope", "color", "view"]
+  },
+  {
+    "title": "Split Screen Audio",
+    "command": "Ctrl/Cmd + Shift + A (in Fairlight)",
+    "description": "Toggle split screen audio meters.",
+    "tags": ["split", "screen", "audio", "meters"]
+  },
+  {
+    "title": "Audio Mixer",
+    "command": "Ctrl/Cmd + Shift + M (in Fairlight)",
+    "description": "Toggle audio mixer panel.",
+    "tags": ["audio", "mixer", "panel", "fairlight"]
+  },
+  {
+    "title": "EQ Editor",
+    "command": "Ctrl/Cmd + Shift + E (in Fairlight)",
+    "description": "Toggle EQ editor.",
+    "tags": ["eq", "editor", "audio", "fairlight"]
+  },
+  {
+    "title": "Dynamic Editor",
+    "command": "Ctrl/Cmd + Shift + D (in Fairlight)",
+    "description": "Toggle dynamics editor.",
+    "tags": ["dynamic", "editor", "audio", "fairlight"]
+  },
+  {
+    "title": "Render All Audio",
+    "command": "Ctrl/Cmd + Shift + R (in Fairlight)",
+    "description": "Render all audio clips.",
+    "tags": ["render", "all", "audio", "fairlight"]
+  },
+  {
+    "title": "Bounce to New Track",
+    "command": "Ctrl/Cmd + Shift + B (in Fairlight)",
+    "description": "Bounce audio to new track.",
+    "tags": ["bounce", "new", "track", "audio"]
+  },
+  {
+    "title": "Add Audio Effect",
+    "command": "Ctrl/Cmd + Shift + F (in Fairlight)",
+    "description": "Add audio effect to selected clip.",
+    "tags": ["add", "audio", "effect", "fairlight"]
+  },
+  {
+    "title": "Add Video Effect",
+    "command": "Ctrl/Cmd + Shift + V (in Edit)",
+    "description": "Add video effect to selected clip.",
+    "tags": ["add", "video", "effect", "edit"]
+  },
+  {
+    "title": "Add OpenFX Effect",
+    "command": "Ctrl/Cmd + Shift + O",
+    "description": "Add OpenFX effect to selected clip.",
+    "tags": ["add", "openfx", "effect", "plugin"]
+  },
+  {
+    "title": "Add Fusion Effect",
+    "command": "Ctrl/Cmd + Shift + F",
+    "description": "Add Fusion effect to selected clip.",
+    "tags": ["add", "fusion", "effect", "compositing"]
+  },
+  {
+    "title": "Add Generator",
+    "command": "Ctrl/Cmd + Shift + G",
+    "description": "Add generator (solid color, noise, etc.).",
+    "tags": ["add", "generator", "effect", "background"]
+  },
+  {
+    "title": "Add Noise Reduction",
+    "command": "Ctrl/Cmd + Shift + N",
+    "description": "Add noise reduction effect.",
+    "tags": ["add", "noise", "reduction", "effect"]
+  },
+  {
+    "title": "Add Stabilization",
+    "command": "Ctrl/Cmd + Shift + S",
+    "description": "Add video stabilization effect.",
+    "tags": ["add", "stabilization", "effect", "video"]
+  },
+  {
+    "title": "Add Lens Correction",
+    "command": "Ctrl/Cmd + Shift + L",
+    "description": "Add lens correction effect.",
+    "tags": ["add", "lens", "correction", "effect"]
+  },
+  {
+    "title": "Add Color Grading",
+    "command": "Ctrl/Cmd + Shift + C",
+    "description": "Add color grading node.",
+    "tags": ["add", "color", "grading", "node"]
+  }
+]

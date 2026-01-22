@@ -1,0 +1,235 @@
+{
+    "links": [
+        {
+            "title": "MDN Web Docs",
+            "value": "https://developer.mozilla.org",
+            "type": "url",
+            "tags": [
+                "Documentation",
+                "Reference",
+                "Web Standards"
+            ],
+            "desc": "The official Mozilla resources for HTML, CSS, and JavaScript. The bible of web development."
+        },
+        {
+            "title": "Can I Use",
+            "value": "https://caniuse.com",
+            "type": "url",
+            "tags": [
+                "Tools",
+                "Compatibility",
+                "CSS"
+            ],
+            "desc": "Up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers."
+        },
+        {
+            "title": "Coolors",
+            "value": "https://coolors.co",
+            "type": "url",
+            "tags": [
+                "Design",
+                "Color",
+                "Generator"
+            ],
+            "desc": "The super fast color palettes generator. Create, save and share perfect palettes in seconds."
+        },
+        {
+            "title": "Figma",
+            "value": "https://figma.com",
+            "type": "url",
+            "tags": [
+                "Design",
+                "UI/UX",
+                "Collaboration"
+            ],
+            "desc": "The collaborative interface design tool. Design, prototype, and developer handoff."
+        },
+        {
+            "title": "Vercel",
+            "value": "https://vercel.com",
+            "type": "url",
+            "tags": [
+                "Hosting",
+                "Deployment",
+                "Frontend"
+            ],
+            "desc": "Develop. Preview. Ship. The best platform for frontend frameworks and static sites."
+        },
+        {
+            "title": "GitHub",
+            "value": "https://github.com",
+            "type": "url",
+            "tags": [
+                "Code",
+                "Git",
+                "Collaboration"
+            ],
+            "desc": "The world's leading software development platform."
+        },
+        {
+            "title": "Stack Overflow",
+            "value": "https://stackoverflow.com",
+            "type": "url",
+            "tags": [
+                "Community",
+                "Q&A",
+                "Help"
+            ],
+            "desc": "Public platform to build the definitive collection of coding questions & answers."
+        },
+        {
+            "title": "Font Awesome",
+            "value": "https://fontawesome.com",
+            "type": "url",
+            "tags": [
+                "Icons",
+                "Design",
+                "Assets"
+            ],
+            "desc": "The internet's icon library and toolkit."
+        },
+        {
+            "title": "Google Fonts",
+            "value": "https://fonts.google.com",
+            "type": "url",
+            "tags": [
+                "Typography",
+                "Design",
+                "Assets"
+            ],
+            "desc": "Making the web more beautiful, fast, and open through great typography."
+        },
+        {
+            "title": "TinyPNG",
+            "value": "https://tinypng.com",
+            "type": "url",
+            "tags": [
+                "Tools",
+                "Image",
+                "Optimization"
+            ],
+            "desc": "Smart PNG and JPEG compression for your website images."
+        },
+        {
+            "title": "Regexr",
+            "value": "https://regexr.com",
+            "type": "url",
+            "tags": [
+                "Tools",
+                "Regex",
+                "Utility"
+            ],
+            "desc": "Online tool to learn, build, & test Regular Expressions."
+        },
+        {
+            "title": "JSON Formatter",
+            "value": "https://jsonformatter.curiousconcept.com",
+            "type": "url",
+            "tags": [
+                "Tools",
+                "JSON",
+                "Utility"
+            ],
+            "desc": "Curious Concept JSON Formatter & Validator."
+        },
+        {
+            "title": "CSS Gradient",
+            "value": "https://cssgradient.io",
+            "type": "url",
+            "tags": [
+                "Design",
+                "CSS",
+                "Generator"
+            ],
+            "desc": "Free tool to let you generate gradient backgrounds for your website."
+        },
+        {
+            "title": "Unsplash",
+            "value": "https://unsplash.com",
+            "type": "url",
+            "tags": [
+                "Assets",
+                "Images",
+                "Design"
+            ],
+            "desc": "The internet’s source for visuals. Powered by creators everywhere."
+        },
+        {
+            "title": "React Docs",
+            "value": "https://react.dev",
+            "type": "url",
+            "tags": [
+                "Documentation",
+                "Frontend",
+                "Framework"
+            ],
+            "desc": "The library for web and native user interfaces."
+        },
+        {
+            "title": "Tailwind CSS",
+            "value": "https://tailwindcss.com",
+            "type": "url",
+            "tags": [
+                "Documentation",
+                "CSS",
+                "Framework"
+            ],
+            "desc": "Rapidly build modern websites without ever leaving your HTML."
+        },
+        {
+            "title": "Postman",
+            "value": "https://www.postman.com",
+            "type": "url",
+            "tags": [
+                "Tools",
+                "API",
+                "Testing"
+            ],
+            "desc": "The collaboration platform for API development."
+        },
+        {
+            "title": "VS Code",
+            "value": "https://code.visualstudio.com",
+            "type": "url",
+            "tags": [
+                "Tools",
+                "Editor",
+                "Microsoft"
+            ],
+            "desc": "Code editing. Redefined. Free. Open source. Runs everywhere."
+        },
+        {
+            "title": "DevDocs",
+            "value": "https://devdocs.io",
+            "type": "url",
+            "tags": [
+                "Documentation",
+                "Offline",
+                "Reference"
+            ],
+            "desc": "Combines multiple API documentations in a fast, organized, and searchable interface."
+        },
+        {
+            "title": "Wappalyzer Chrome Ext",
+            "value": "https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg",
+            "type": "url",
+            "tags": [
+                "Extensions",
+                "Tools",
+                "Analysis"
+            ],
+            "desc": "Identify web technologies. Find out the CMS, ecommerce platform or JavaScript framework any website is using."
+        },
+        {
+            "title": "JSON Viewer Awesome",
+            "value": "https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbeipionfjccbmbnjlhjjlen",
+            "type": "url",
+            "tags": [
+                "Extensions",
+                "JSON",
+                "Tools"
+            ],
+            "desc": "The most beautiful and customizable JSON/JSONP highlighter that your eyes have ever seen."
+        }
+    ]
+}

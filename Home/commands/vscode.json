@@ -1,0 +1,1556 @@
+[
+  {
+    "title": "Open Command Palette",
+    "command": "Ctrl+Shift+P or F1",
+    "description": "Opens the command palette to access all VSCode commands.",
+    "tags": ["navigation", "command", "palette", "quick"]
+  },
+  {
+    "title": "Quick Open File",
+    "command": "Ctrl+P",
+    "description": "Quickly open files by typing their names.",
+    "tags": ["navigation", "file", "open", "quick"]
+  },
+  {
+    "title": "Open Recent",
+    "command": "Ctrl+R",
+    "description": "Shows recently opened files and folders.",
+    "tags": ["navigation", "recent", "history", "files"]
+  },
+  {
+    "title": "New Window",
+    "command": "Ctrl+Shift+N",
+    "description": "Opens a new VSCode window.",
+    "tags": ["window", "new", "instance"]
+  },
+  {
+    "title": "Close Window",
+    "command": "Ctrl+Shift+W",
+    "description": "Closes the current VSCode window.",
+    "tags": ["window", "close", "exit"]
+  },
+  {
+    "title": "New File",
+    "command": "Ctrl+N",
+    "description": "Creates a new untitled file.",
+    "tags": ["file", "new", "create"]
+  },
+  {
+    "title": "Open File",
+    "command": "Ctrl+O",
+    "description": "Opens a file dialog to select a file.",
+    "tags": ["file", "open", "dialog"]
+  },
+  {
+    "title": "Save File",
+    "command": "Ctrl+S",
+    "description": "Saves the current file.",
+    "tags": ["file", "save", "write"]
+  },
+  {
+    "title": "Save As",
+    "command": "Ctrl+Shift+S",
+    "description": "Saves the current file with a new name.",
+    "tags": ["file", "save", "as", "rename"]
+  },
+  {
+    "title": "Save All",
+    "command": "Ctrl+K S",
+    "description": "Saves all open files.",
+    "tags": ["file", "save", "all", "multiple"]
+  },
+  {
+    "title": "Close Editor",
+    "command": "Ctrl+W or Ctrl+F4",
+    "description": "Closes the active editor.",
+    "tags": ["editor", "close", "tab"]
+  },
+  {
+    "title": "Close All Editors",
+    "command": "Ctrl+K Ctrl+W",
+    "description": "Closes all open editors.",
+    "tags": ["editor", "close", "all", "tabs"]
+  },
+  {
+    "title": "Reopen Closed Editor",
+    "command": "Ctrl+Shift+T",
+    "description": "Reopens the last closed editor.",
+    "tags": ["editor", "reopen", "undo", "close"]
+  },
+  {
+    "title": "Keep Editor",
+    "command": "Ctrl+K Enter",
+    "description": "Keeps the current editor open while opening others.",
+    "tags": ["editor", "keep", "pin", "sticky"]
+  },
+  {
+    "title": "Toggle Sidebar",
+    "command": "Ctrl+B",
+    "description": "Shows or hides the sidebar.",
+    "tags": ["sidebar", "toggle", "view", "panel"]
+  },
+  {
+    "title": "Toggle Panel",
+    "command": "Ctrl+J",
+    "description": "Shows or hides the bottom panel (terminal, problems, etc.).",
+    "tags": ["panel", "toggle", "terminal", "bottom"]
+  },
+  {
+    "title": "Toggle Zen Mode",
+    "command": "Ctrl+K Z",
+    "description": "Enters Zen mode (fullscreen distraction-free editing).",
+    "tags": ["zen", "mode", "fullscreen", "distraction-free"]
+  },
+  {
+    "title": "Toggle Full Screen",
+    "command": "F11",
+    "description": "Toggles full screen mode.",
+    "tags": ["fullscreen", "toggle", "view"]
+  },
+  {
+    "title": "Split Editor",
+    "command": "Ctrl+\\",
+    "description": "Splits the current editor into two.",
+    "tags": ["editor", "split", "view", "layout"]
+  },
+  {
+    "title": "Focus Next Editor Group",
+    "command": "Ctrl+K Ctrl+Right",
+    "description": "Moves focus to the next editor group.",
+    "tags": ["editor", "group", "focus", "navigation"]
+  },
+  {
+    "title": "Focus Previous Editor Group",
+    "command": "Ctrl+K Ctrl+Left",
+    "description": "Moves focus to the previous editor group.",
+    "tags": ["editor", "group", "focus", "navigation"]
+  },
+  {
+    "title": "Move Editor Group",
+    "command": "Ctrl+K Ctrl+Shift+Right/Left",
+    "description": "Moves the current editor group.",
+    "tags": ["editor", "group", "move", "rearrange"]
+  },
+  {
+    "title": "Navigate Editor Groups",
+    "command": "Ctrl+1, Ctrl+2, etc.",
+    "description": "Focuses on editor groups 1, 2, 3, etc.",
+    "tags": ["editor", "group", "focus", "number"]
+  },
+  {
+    "title": "Go to File",
+    "command": "Ctrl+P then type :line_number",
+    "description": "Opens a file and goes to a specific line.",
+    "tags": ["navigation", "file", "line", "goto"]
+  },
+  {
+    "title": "Go to Symbol in File",
+    "command": "Ctrl+Shift+O",
+    "description": "Shows all symbols in the current file.",
+    "tags": ["navigation", "symbol", "function", "class"]
+  },
+  {
+    "title": "Go to Symbol in Workspace",
+    "command": "Ctrl+T",
+    "description": "Shows all symbols in the workspace.",
+    "tags": ["navigation", "symbol", "workspace", "global"]
+  },
+  {
+    "title": "Go to Line",
+    "command": "Ctrl+G",
+    "description": "Goes to a specific line number.",
+    "tags": ["navigation", "line", "number", "goto"]
+  },
+  {
+    "title": "Go to Definition",
+    "command": "F12",
+    "description": "Goes to the definition of the symbol under cursor.",
+    "tags": ["navigation", "definition", "symbol", "goto"]
+  },
+  {
+    "title": "Peek Definition",
+    "command": "Alt+F12",
+    "description": "Shows the definition in a peek window.",
+    "tags": ["navigation", "definition", "peek", "inline"]
+  },
+  {
+    "title": "Go to References",
+    "command": "Shift+F12",
+    "description": "Shows all references to the symbol under cursor.",
+    "tags": ["navigation", "references", "usage", "find"]
+  },
+  {
+    "title": "Go to Implementation",
+    "command": "Ctrl+F12",
+    "description": "Goes to the implementation of an interface or abstract class.",
+    "tags": ["navigation", "implementation", "interface", "abstract"]
+  },
+  {
+    "title": "Go to Type Definition",
+    "command": "Ctrl+Shift+F12",
+    "description": "Goes to the type definition of a symbol.",
+    "tags": ["navigation", "type", "definition", "goto"]
+  },
+  {
+    "title": "Quick Fix",
+    "command": "Ctrl+.",
+    "description": "Shows available quick fixes at the cursor position.",
+    "tags": ["code", "fix", "quick", "suggestion"]
+  },
+  {
+    "title": "Trigger Suggest",
+    "command": "Ctrl+Space",
+    "description": "Triggers code completion suggestions.",
+    "tags": ["code", "completion", "suggest", "intellisense"]
+  },
+  {
+    "title": "Trigger Parameter Hints",
+    "command": "Ctrl+Shift+Space",
+    "description": "Shows parameter hints for the current function.",
+    "tags": ["code", "parameter", "hints", "function"]
+  },
+  {
+    "title": "Format Document",
+    "command": "Shift+Alt+F",
+    "description": "Formats the entire document.",
+    "tags": ["format", "document", "beautify", "prettier"]
+  },
+  {
+    "title": "Format Selection",
+    "command": "Ctrl+K Ctrl+F",
+    "description": "Formats the selected text.",
+    "tags": ["format", "selection", "beautify", "prettier"]
+  },
+  {
+    "title": "Rename Symbol",
+    "command": "F2",
+    "description": "Renames the symbol under the cursor throughout the workspace.",
+    "tags": ["refactor", "rename", "symbol", "variable"]
+  },
+  {
+    "title": "Extract Variable",
+    "command": "Ctrl+Shift+R then V",
+    "description": "Extracts selected code into a new variable.",
+    "tags": ["refactor", "extract", "variable", "code"]
+  },
+  {
+    "title": "Extract Function",
+    "command": "Ctrl+Shift+R then F",
+    "description": "Extracts selected code into a new function.",
+    "tags": ["refactor", "extract", "function", "method"]
+  },
+  {
+    "title": "Extract Method",
+    "command": "Ctrl+Shift+R then M",
+    "description": "Extracts selected code into a new method.",
+    "tags": ["refactor", "extract", "method", "code"]
+  },
+  {
+    "title": "Extract Interface",
+    "command": "Ctrl+Shift+R then I",
+    "description": "Extracts an interface from a class.",
+    "tags": ["refactor", "extract", "interface", "class"]
+  },
+  {
+    "title": "Find",
+    "command": "Ctrl+F",
+    "description": "Finds text in the current file.",
+    "tags": ["find", "search", "text", "file"]
+  },
+  {
+    "title": "Replace",
+    "command": "Ctrl+H",
+    "description": "Finds and replaces text in the current file.",
+    "tags": ["find", "replace", "text", "file"]
+  },
+  {
+    "title": "Find Next",
+    "command": "F3",
+    "description": "Finds the next occurrence of the search term.",
+    "tags": ["find", "next", "search", "occurrence"]
+  },
+  {
+    "title": "Find Previous",
+    "command": "Shift+F3",
+    "description": "Finds the previous occurrence of the search term.",
+    "tags": ["find", "previous", "search", "occurrence"]
+  },
+  {
+    "title": "Find in Files",
+    "command": "Ctrl+Shift+F",
+    "description": "Finds text across all files in the workspace.",
+    "tags": ["find", "search", "files", "workspace"]
+  },
+  {
+    "title": "Replace in Files",
+    "command": "Ctrl+Shift+H",
+    "description": "Finds and replaces text across all files.",
+    "tags": ["find", "replace", "files", "workspace"]
+  },
+  {
+    "title": "Toggle Find Case Sensitive",
+    "command": "Alt+C",
+    "description": "Toggles case sensitivity in find.",
+    "tags": ["find", "case", "sensitive", "toggle"]
+  },
+  {
+    "title": "Toggle Find Whole Word",
+    "command": "Alt+W",
+    "description": "Toggles whole word matching in find.",
+    "tags": ["find", "whole", "word", "toggle"]
+  },
+  {
+    "title": "Toggle Find Regex",
+    "command": "Alt+R",
+    "description": "Toggles regular expression mode in find.",
+    "tags": ["find", "regex", "regular", "expression"]
+  },
+  {
+    "title": "Toggle Comment",
+    "command": "Ctrl+/",
+    "description": "Toggles line comment for selected lines.",
+    "tags": ["comment", "toggle", "line", "code"]
+  },
+  {
+    "title": "Add Line Comment",
+    "command": "Ctrl+K Ctrl+C",
+    "description": "Adds line comment.",
+    "tags": ["comment", "add", "line", "code"]
+  },
+  {
+    "title": "Remove Line Comment",
+    "command": "Ctrl+K Ctrl+U",
+    "description": "Removes line comment.",
+    "tags": ["comment", "remove", "line", "code"]
+  },
+  {
+    "title": "Toggle Block Comment",
+    "command": "Shift+Alt+A",
+    "description": "Toggles block comment for selection.",
+    "tags": ["comment", "block", "toggle", "code"]
+  },
+  {
+    "title": "Navigate Back",
+    "command": "Alt+Left",
+    "description": "Goes back to the previous location.",
+    "tags": ["navigation", "back", "history", "location"]
+  },
+  {
+    "title": "Navigate Forward",
+    "command": "Alt+Right",
+    "description": "Goes forward to the next location.",
+    "tags": ["navigation", "forward", "history", "location"]
+  },
+  {
+    "title": "Go to Bracket",
+    "command": "Ctrl+Shift+\\",
+    "description": "Goes to the matching bracket.",
+    "tags": ["navigation", "bracket", "match", "code"]
+  },
+  {
+    "title": "Select to Bracket",
+    "command": "Ctrl+Shift+Alt+Right",
+    "description": "Selects text from cursor to matching bracket.",
+    "tags": ["select", "bracket", "match", "code"]
+  },
+  {
+    "title": "Fold All",
+    "command": "Ctrl+K Ctrl+0",
+    "description": "Folds all regions in the editor.",
+    "tags": ["fold", "collapse", "code", "region"]
+  },
+  {
+    "title": "Unfold All",
+    "command": "Ctrl+K Ctrl+J",
+    "description": "Unfolds all regions in the editor.",
+    "tags": ["unfold", "expand", "code", "region"]
+  },
+  {
+    "title": "Fold Level",
+    "command": "Ctrl+K Ctrl+1, 2, 3, etc.",
+    "description": "Folds regions at a specific level.",
+    "tags": ["fold", "level", "collapse", "code"]
+  },
+  {
+    "title": "Fold Region",
+    "command": "Ctrl+Shift+[",
+    "description": "Folds the current region.",
+    "tags": ["fold", "region", "collapse", "code"]
+  },
+  {
+    "title": "Unfold Region",
+    "command": "Ctrl+Shift+]",
+    "description": "Unfolds the current region.",
+    "tags": ["unfold", "region", "expand", "code"]
+  },
+  {
+    "title": "Add Cursor Above",
+    "command": "Ctrl+Alt+Up",
+    "description": "Adds a cursor above the current line.",
+    "tags": ["cursor", "multiple", "selection", "edit"]
+  },
+  {
+    "title": "Add Cursor Below",
+    "command": "Ctrl+Alt+Down",
+    "description": "Adds a cursor below the current line.",
+    "tags": ["cursor", "multiple", "selection", "edit"]
+  },
+  {
+    "title": "Add Cursors to Line Ends",
+    "command": "Ctrl+Shift+L",
+    "description": "Adds cursors to all occurrences of the current selection.",
+    "tags": ["cursor", "multiple", "selection", "occurrences"]
+  },
+  {
+    "title": "Select All Occurrences",
+    "command": "Ctrl+F2",
+    "description": "Selects all occurrences of the current word.",
+    "tags": ["select", "occurrences", "word", "multiple"]
+  },
+  {
+    "title": "Column Selection",
+    "command": "Shift+Alt+Drag",
+    "description": "Enables column (box) selection by dragging.",
+    "tags": ["selection", "column", "box", "block"]
+  },
+  {
+    "title": "Column Select Up",
+    "command": "Ctrl+Shift+Alt+Up",
+    "description": "Adds cursor above in column selection mode.",
+    "tags": ["selection", "column", "cursor", "up"]
+  },
+  {
+    "title": "Column Select Down",
+    "command": "Ctrl+Shift+Alt+Down",
+    "description": "Adds cursor below in column selection mode.",
+    "tags": ["selection", "column", "cursor", "down"]
+  },
+  {
+    "title": "Move Line Up",
+    "command": "Alt+Up",
+    "description": "Moves the current line or selection up.",
+    "tags": ["move", "line", "up", "rearrange"]
+  },
+  {
+    "title": "Move Line Down",
+    "command": "Alt+Down",
+    "description": "Moves the current line or selection down.",
+    "tags": ["move", "line", "down", "rearrange"]
+  },
+  {
+    "title": "Copy Line Up",
+    "command": "Shift+Alt+Up",
+    "description": "Copies the current line or selection up.",
+    "tags": ["copy", "line", "up", "duplicate"]
+  },
+  {
+    "title": "Copy Line Down",
+    "command": "Shift+Alt+Down",
+    "description": "Copies the current line or selection down.",
+    "tags": ["copy", "line", "down", "duplicate"]
+  },
+  {
+    "title": "Delete Line",
+    "command": "Ctrl+Shift+K",
+    "description": "Deletes the current line.",
+    "tags": ["delete", "line", "remove"]
+  },
+  {
+    "title": "Insert Line Above",
+    "command": "Ctrl+Shift+Enter",
+    "description": "Inserts a new line above the current line.",
+    "tags": ["insert", "line", "above", "new"]
+  },
+  {
+    "title": "Insert Line Below",
+    "command": "Ctrl+Enter",
+    "description": "Inserts a new line below the current line.",
+    "tags": ["insert", "line", "below", "new"]
+  },
+  {
+    "title": "Jump to Matching Bracket",
+    "command": "Ctrl+Shift+\\",
+    "description": "Moves cursor to the matching bracket.",
+    "tags": ["navigation", "bracket", "match", "jump"]
+  },
+  {
+    "title": "Indent Line",
+    "command": "Ctrl+]",
+    "description": "Indents the current line or selection.",
+    "tags": ["indent", "line", "tab", "increase"]
+  },
+  {
+    "title": "Outdent Line",
+    "command": "Ctrl+[",
+    "description": "Outdents (unindents) the current line or selection.",
+    "tags": ["outdent", "unindent", "tab", "decrease"]
+  },
+  {
+    "title": "Go to Beginning of Line",
+    "command": "Home",
+    "description": "Moves cursor to the beginning of the line.",
+    "tags": ["navigation", "line", "beginning", "home"]
+  },
+  {
+    "title": "Go to End of Line",
+    "command": "End",
+    "description": "Moves cursor to the end of the line.",
+    "tags": ["navigation", "line", "end"]
+  },
+  {
+    "title": "Go to Beginning of File",
+    "command": "Ctrl+Home",
+    "description": "Moves cursor to the beginning of the file.",
+    "tags": ["navigation", "file", "beginning", "top"]
+  },
+  {
+    "title": "Go to End of File",
+    "command": "Ctrl+End",
+    "description": "Moves cursor to the end of the file.",
+    "tags": ["navigation", "file", "end", "bottom"]
+  },
+  {
+    "title": "Scroll Line Up",
+    "command": "Ctrl+Up",
+    "description": "Scrolls the editor up one line.",
+    "tags": ["scroll", "line", "up", "view"]
+  },
+  {
+    "title": "Scroll Line Down",
+    "command": "Ctrl+Down",
+    "description": "Scrolls the editor down one line.",
+    "tags": ["scroll", "line", "down", "view"]
+  },
+  {
+    "title": "Scroll Page Up",
+    "command": "PageUp",
+    "description": "Scrolls the editor up one page.",
+    "tags": ["scroll", "page", "up", "view"]
+  },
+  {
+    "title": "Scroll Page Down",
+    "command": "PageDown",
+    "description": "Scrolls the editor down one page.",
+    "tags": ["scroll", "page", "down", "view"]
+  },
+  {
+    "title": "Toggle Terminal",
+    "command": "Ctrl+`",
+    "description": "Shows or hides the integrated terminal.",
+    "tags": ["terminal", "toggle", "integrated", "console"]
+  },
+  {
+    "title": "Create New Terminal",
+    "command": "Ctrl+Shift+`",
+    "description": "Creates a new terminal instance.",
+    "tags": ["terminal", "new", "create", "instance"]
+  },
+  {
+    "title": "Split Terminal",
+    "command": "Ctrl+Shift+5",
+    "description": "Splits the current terminal.",
+    "tags": ["terminal", "split", "panel", "multiple"]
+  },
+  {
+    "title": "Focus Next Terminal",
+    "command": "Ctrl+PageDown",
+    "description": "Focuses the next terminal in the list.",
+    "tags": ["terminal", "focus", "next", "navigation"]
+  },
+  {
+    "title": "Focus Previous Terminal",
+    "command": "Ctrl+PageUp",
+    "description": "Focuses the previous terminal in the list.",
+    "tags": ["terminal", "focus", "previous", "navigation"]
+  },
+  {
+    "title": "Kill Terminal",
+    "command": "Ctrl+Shift+W",
+    "description": "Kills the active terminal instance.",
+    "tags": ["terminal", "kill", "close", "stop"]
+  },
+  {
+    "title": "Clear Terminal",
+    "command": "Ctrl+K",
+    "description": "Clears the terminal content (when terminal is focused).",
+    "tags": ["terminal", "clear", "clean", "output"]
+  },
+  {
+    "title": "Run Build Task",
+    "command": "Ctrl+Shift+B",
+    "description": "Runs the build task.",
+    "tags": ["build", "task", "run", "compile"]
+  },
+  {
+    "title": "Run Task",
+    "command": "Ctrl+Shift+T",
+    "description": "Runs a task from the task runner.",
+    "tags": ["task", "run", "execute", "runner"]
+  },
+  {
+    "title": "Terminate Task",
+    "command": "Ctrl+C",
+    "description": "Terminates the running task.",
+    "tags": ["task", "terminate", "stop", "kill"]
+  },
+  {
+    "title": "Restart Task",
+    "command": "Ctrl+Shift+F5",
+    "description": "Restarts the running task.",
+    "tags": ["task", "restart", "rerun", "reload"]
+  },
+  {
+    "title": "Show Problems",
+    "command": "Ctrl+Shift+M",
+    "description": "Shows the Problems panel.",
+    "tags": ["problems", "errors", "warnings", "panel"]
+  },
+  {
+    "title": "Next Problem",
+    "command": "F8",
+    "description": "Goes to the next problem (error or warning).",
+    "tags": ["problems", "next", "error", "warning"]
+  },
+  {
+    "title": "Previous Problem",
+    "command": "Shift+F8",
+    "description": "Goes to the previous problem.",
+    "tags": ["problems", "previous", "error", "warning"]
+  },
+  {
+    "title": "Toggle Output Panel",
+    "command": "Ctrl+Shift+U",
+    "description": "Shows or hides the Output panel.",
+    "tags": ["output", "panel", "toggle", "view"]
+  },
+  {
+    "title": "Debug: Start",
+    "command": "F5",
+    "description": "Starts debugging.",
+    "tags": ["debug", "start", "run", "execute"]
+  },
+  {
+    "title": "Debug: Stop",
+    "command": "Shift+F5",
+    "description": "Stops debugging.",
+    "tags": ["debug", "stop", "terminate", "end"]
+  },
+  {
+    "title": "Debug: Restart",
+    "command": "Ctrl+Shift+F5",
+    "description": "Restarts debugging.",
+    "tags": ["debug", "restart", "rerun", "reload"]
+  },
+  {
+    "title": "Debug: Continue",
+    "command": "F5",
+    "description": "Continues execution (when paused).",
+    "tags": ["debug", "continue", "resume", "execution"]
+  },
+  {
+    "title": "Debug: Step Over",
+    "command": "F10",
+    "description": "Steps over the current line.",
+    "tags": ["debug", "step", "over", "next"]
+  },
+  {
+    "title": "Debug: Step Into",
+    "command": "F11",
+    "description": "Steps into the current function.",
+    "tags": ["debug", "step", "into", "function"]
+  },
+  {
+    "title": "Debug: Step Out",
+    "command": "Shift+F11",
+    "description": "Steps out of the current function.",
+    "tags": ["debug", "step", "out", "return"]
+  },
+  {
+    "title": "Debug: Toggle Breakpoint",
+    "command": "F9",
+    "description": "Toggles a breakpoint on the current line.",
+    "tags": ["debug", "breakpoint", "toggle", "set"]
+  },
+  {
+    "title": "Debug: Add Conditional Breakpoint",
+    "command": "Shift+F9",
+    "description": "Adds a conditional breakpoint.",
+    "tags": ["debug", "breakpoint", "conditional", "add"]
+  },
+  {
+    "title": "Debug: Enable All Breakpoints",
+    "command": "Ctrl+F9",
+    "description": "Enables all breakpoints.",
+    "tags": ["debug", "breakpoint", "enable", "all"]
+  },
+  {
+    "title": "Debug: Disable All Breakpoints",
+    "command": "Ctrl+Shift+F9",
+    "description": "Disables all breakpoints.",
+    "tags": ["debug", "breakpoint", "disable", "all"]
+  },
+  {
+    "title": "Debug: Remove All Breakpoints",
+    "command": "Ctrl+Shift+F8",
+    "description": "Removes all breakpoints.",
+    "tags": ["debug", "breakpoint", "remove", "all"]
+  },
+  {
+    "title": "Debug: Open Debug Console",
+    "command": "Ctrl+Shift+Y",
+    "description": "Opens the Debug Console.",
+    "tags": ["debug", "console", "open", "panel"]
+  },
+  {
+    "title": "Debug: Focus on Debug View",
+    "command": "Ctrl+Shift+D",
+    "description": "Focuses on the Debug view.",
+    "tags": ["debug", "focus", "view", "panel"]
+  },
+  {
+    "title": "Toggle Integrated Terminal",
+    "command": "Ctrl+`",
+    "description": "Shows or hides the integrated terminal.",
+    "tags": ["terminal", "integrated", "toggle", "console"]
+  },
+  {
+    "title": "Open Extensions",
+    "command": "Ctrl+Shift+X",
+    "description": "Opens the Extensions view.",
+    "tags": ["extensions", "plugins", "view", "marketplace"]
+  },
+  {
+    "title": "Install Extension",
+    "command": "ext install <extension_name>",
+    "description": "Installs an extension from the marketplace.",
+    "tags": ["extensions", "install", "add", "marketplace"]
+  },
+  {
+    "title": "Update All Extensions",
+    "command": "Extensions: Update All Extensions",
+    "description": "Updates all installed extensions.",
+    "tags": ["extensions", "update", "all", "upgrade"]
+  },
+  {
+    "title": "Disable Extension",
+    "command": "Extensions: Disable",
+    "description": "Disables the selected extension.",
+    "tags": ["extensions", "disable", "turn off", "deactivate"]
+  },
+  {
+    "title": "Enable Extension",
+    "command": "Extensions: Enable",
+    "description": "Enables the selected extension.",
+    "tags": ["extensions", "enable", "turn on", "activate"]
+  },
+  {
+    "title": "Uninstall Extension",
+    "command": "Extensions: Uninstall",
+    "description": "Uninstalls the selected extension.",
+    "tags": ["extensions", "uninstall", "remove", "delete"]
+  },
+  {
+    "title": "Reload Window",
+    "command": "Ctrl+Shift+P then 'Developer: Reload Window'",
+    "description": "Reloads the VSCode window.",
+    "tags": ["reload", "window", "restart", "developer"]
+  },
+  {
+    "title": "Toggle Developer Tools",
+    "command": "Ctrl+Shift+I or F12",
+    "description": "Opens developer tools (Chromium DevTools).",
+    "tags": ["developer", "tools", "inspect", "debug"]
+  },
+  {
+    "title": "Open Settings",
+    "command": "Ctrl+,",
+    "description": "Opens Settings.",
+    "tags": ["settings", "preferences", "configure", "open"]
+  },
+  {
+    "title": "Open Settings (JSON)",
+    "command": "Ctrl+Shift+P then 'Preferences: Open Settings (JSON)'",
+    "description": "Opens Settings in JSON format.",
+    "tags": ["settings", "json", "preferences", "configure"]
+  },
+  {
+    "title": "Open Keyboard Shortcuts",
+    "command": "Ctrl+K Ctrl+S",
+    "description": "Opens Keyboard Shortcuts editor.",
+    "tags": ["keyboard", "shortcuts", "bindings", "configure"]
+  },
+  {
+    "title": "Open Keyboard Shortcuts (JSON)",
+    "command": "Ctrl+Shift+P then 'Preferences: Open Keyboard Shortcuts (JSON)'",
+    "description": "Opens Keyboard Shortcuts in JSON format.",
+    "tags": ["keyboard", "shortcuts", "json", "bindings"]
+  },
+  {
+    "title": "Open User Snippets",
+    "command": "Ctrl+Shift+P then 'Preferences: Configure User Snippets'",
+    "description": "Opens user snippets configuration.",
+    "tags": ["snippets", "user", "configure", "templates"]
+  },
+  {
+    "title": "Open Color Theme",
+    "command": "Ctrl+K Ctrl+T",
+    "description": "Opens the color theme picker.",
+    "tags": ["theme", "color", "appearance", "picker"]
+  },
+  {
+    "title": "Open File Icon Theme",
+    "command": "Ctrl+Shift+P then 'Preferences: File Icon Theme'",
+    "description": "Opens the file icon theme picker.",
+    "tags": ["theme", "icon", "file", "appearance"]
+  },
+  {
+    "title": "Open Product Icon Theme",
+    "command": "Ctrl+Shift+P then 'Preferences: Product Icon Theme'",
+    "description": "Opens the product icon theme picker.",
+    "tags": ["theme", "icon", "product", "appearance"]
+  },
+  {
+    "title": "Toggle Word Wrap",
+    "command": "Alt+Z",
+    "description": "Toggles word wrap.",
+    "tags": ["word", "wrap", "toggle", "format"]
+  },
+  {
+    "title": "Toggle Render Whitespace",
+    "command": "Ctrl+Shift+P then 'View: Toggle Render Whitespace'",
+    "description": "Toggles display of whitespace characters.",
+    "tags": ["whitespace", "render", "toggle", "view"]
+  },
+  {
+    "title": "Toggle Render Control Characters",
+    "command": "Ctrl+Shift+P then 'View: Toggle Control Characters'",
+    "description": "Toggles display of control characters.",
+    "tags": ["control", "characters", "toggle", "view"]
+  },
+  {
+    "title": "Toggle Breadcrumbs",
+    "command": "Ctrl+Shift+P then 'View: Toggle Breadcrumbs'",
+    "description": "Toggles breadcrumbs navigation bar.",
+    "tags": ["breadcrumbs", "navigation", "toggle", "view"]
+  },
+  {
+    "title": "Toggle Minimap",
+    "command": "Ctrl+Shift+P then 'View: Toggle Minimap'",
+    "description": "Toggles the minimap (code overview).",
+    "tags": ["minimap", "overview", "toggle", "view"]
+  },
+  {
+    "title": "Toggle Sidebar Position",
+    "command": "Ctrl+Shift+P then 'View: Toggle Side Bar Position'",
+    "description": "Toggles sidebar between left and right positions.",
+    "tags": ["sidebar", "position", "toggle", "view"]
+  },
+  {
+    "title": "Toggle Editor Group Layout",
+    "command": "Shift+Alt+0",
+    "description": "Toggles between vertical and horizontal editor layouts.",
+    "tags": ["editor", "layout", "toggle", "vertical", "horizontal"]
+  },
+  {
+    "title": "Reset Editor Group Layout",
+    "command": "Ctrl+K Ctrl+R",
+    "description": "Resets editor group layout to default.",
+    "tags": ["editor", "layout", "reset", "default"]
+  },
+  {
+    "title": "Focus Active Editor Group",
+    "command": "Ctrl+4",
+    "description": "Focuses the active editor group.",
+    "tags": ["editor", "group", "focus", "active"]
+  },
+  {
+    "title": "Focus First Editor Group",
+    "command": "Ctrl+1",
+    "description": "Focuses the first editor group.",
+    "tags": ["editor", "group", "focus", "first"]
+  },
+  {
+    "title": "Focus Second Editor Group",
+    "command": "Ctrl+2",
+    "description": "Focuses the second editor group.",
+    "tags": ["editor", "group", "focus", "second"]
+  },
+  {
+    "title": "Focus Third Editor Group",
+    "command": "Ctrl+3",
+    "description": "Focuses the third editor group.",
+    "tags": ["editor", "group", "focus", "third"]
+  },
+  {
+    "title": "Maximize Editor Group",
+    "command": "Ctrl+K Ctrl+M",
+    "description": "Maximizes the current editor group.",
+    "tags": ["editor", "group", "maximize", "fullscreen"]
+  },
+  {
+    "title": "Toggle Maximized Editor Group",
+    "command": "Ctrl+K Z",
+    "description": "Toggles maximized editor group (Zen mode).",
+    "tags": ["editor", "maximize", "zen", "toggle"]
+  },
+  {
+    "title": "Open Folder",
+    "command": "Ctrl+K Ctrl+O",
+    "description": "Opens a folder in VSCode.",
+    "tags": ["folder", "open", "workspace", "project"]
+  },
+  {
+    "title": "Close Folder",
+    "command": "Ctrl+K F",
+    "description": "Closes the current folder/workspace.",
+    "tags": ["folder", "close", "workspace", "project"]
+  },
+  {
+    "title": "Save Workspace As",
+    "command": "Ctrl+K Ctrl+S then 'Save Workspace As'",
+    "description": "Saves the current workspace configuration.",
+    "tags": ["workspace", "save", "as", "configuration"]
+  },
+  {
+    "title": "Open Workspace",
+    "command": "Ctrl+R",
+    "description": "Opens a recently used workspace.",
+    "tags": ["workspace", "open", "recent", "project"]
+  },
+  {
+    "title": "Add Folder to Workspace",
+    "command": "Ctrl+K Ctrl+A",
+    "description": "Adds a folder to the current workspace.",
+    "tags": ["workspace", "folder", "add", "multi-root"]
+  },
+  {
+    "title": "Remove Folder from Workspace",
+    "command": "Ctrl+K R",
+    "description": "Removes a folder from the workspace.",
+    "tags": ["workspace", "folder", "remove", "multi-root"]
+  },
+  {
+    "title": "Duplicate Workspace in New Window",
+    "command": "Ctrl+K Ctrl+Shift+N",
+    "description": "Duplicates the workspace in a new window.",
+    "tags": ["workspace", "duplicate", "new", "window"]
+  },
+  {
+    "title": "Open Recent",
+    "command": "Ctrl+R",
+    "description": "Shows recently opened files and folders.",
+    "tags": ["recent", "open", "history", "files"]
+  },
+  {
+    "title": "Clear Recently Opened",
+    "command": "Ctrl+Shift+P then 'File: Clear Recently Opened'",
+    "description": "Clears the list of recently opened files.",
+    "tags": ["recent", "clear", "history", "files"]
+  },
+  {
+    "title": "Open File in New Window",
+    "command": "Ctrl+K O",
+    "description": "Opens the current file in a new window.",
+    "tags": ["file", "new", "window", "open"]
+  },
+  {
+    "title": "Compare File with Saved",
+    "command": "Ctrl+K D",
+    "description": "Compares the current file with the saved version.",
+    "tags": ["compare", "file", "diff", "saved"]
+  },
+  {
+    "title": "Compare Two Files",
+    "command": "Ctrl+K Ctrl+D",
+    "description": "Compares two selected files.",
+    "tags": ["compare", "files", "diff", "two"]
+  },
+  {
+    "title": "Reveal File in Explorer",
+    "command": "Ctrl+K R",
+    "description": "Reveals the current file in the Explorer.",
+    "tags": ["reveal", "file", "explorer", "show"]
+  },
+  {
+    "title": "Reveal File in OS",
+    "command": "Ctrl+K Ctrl+R",
+    "description": "Reveals the current file in the operating system.",
+    "tags": ["reveal", "file", "os", "show"]
+  },
+  {
+    "title": "Copy Path of Active File",
+    "command": "Ctrl+K P",
+    "description": "Copies the path of the active file.",
+    "tags": ["copy", "path", "file", "active"]
+  },
+  {
+    "title": "Copy Relative Path",
+    "command": "Ctrl+K Ctrl+P",
+    "description": "Copies the relative path of the active file.",
+    "tags": ["copy", "path", "relative", "file"]
+  },
+  {
+    "title": "Open Markdown Preview",
+    "command": "Ctrl+Shift+V",
+    "description": "Opens Markdown preview in a side-by-side editor.",
+    "tags": ["markdown", "preview", "open", "view"]
+  },
+  {
+    "title": "Open Markdown Preview to Side",
+    "command": "Ctrl+K V",
+    "description": "Opens Markdown preview to the side.",
+    "tags": ["markdown", "preview", "side", "view"]
+  },
+  {
+    "title": "Toggle Markdown Preview",
+    "command": "Ctrl+Shift+V",
+    "description": "Toggles Markdown preview.",
+    "tags": ["markdown", "preview", "toggle", "view"]
+  },
+  {
+    "title": "Markdown: Toggle Heading Level",
+    "command": "Ctrl+Shift+] and Ctrl+Shift+[",
+    "description": "Increases or decreases heading level in Markdown.",
+    "tags": ["markdown", "heading", "level", "toggle"]
+  },
+  {
+    "title": "Markdown: Toggle Bold",
+    "command": "Ctrl+B",
+    "description": "Toggles bold formatting in Markdown.",
+    "tags": ["markdown", "bold", "format", "toggle"]
+  },
+  {
+    "title": "Markdown: Toggle Italic",
+    "command": "Ctrl+I",
+    "description": "Toggles italic formatting in Markdown.",
+    "tags": ["markdown", "italic", "format", "toggle"]
+  },
+  {
+    "title": "Markdown: Toggle Code",
+    "command": "Ctrl+`",
+    "description": "Toggles inline code formatting in Markdown.",
+    "tags": ["markdown", "code", "inline", "format"]
+  },
+  {
+    "title": "Markdown: Toggle Code Block",
+    "command": "Ctrl+Shift+`",
+    "description": "Toggles code block in Markdown.",
+    "tags": ["markdown", "code", "block", "format"]
+  },
+  {
+    "title": "Markdown: Toggle List",
+    "command": "Ctrl+Shift+L",
+    "description": "Toggles list formatting in Markdown.",
+    "tags": ["markdown", "list", "format", "toggle"]
+  },
+  {
+    "title": "Git: Stage All Changes",
+    "command": "Ctrl+Shift+G then stage all",
+    "description": "Stages all changed files in Git.",
+    "tags": ["git", "stage", "all", "changes"]
+  },
+  {
+    "title": "Git: Commit Staged",
+    "command": "Ctrl+Enter (in Source Control view)",
+    "description": "Commits staged changes.",
+    "tags": ["git", "commit", "staged", "changes"]
+  },
+  {
+    "title": "Git: Commit All",
+    "command": "Ctrl+Shift+Enter (in Source Control view)",
+    "description": "Commits all changes (stages and commits).",
+    "tags": ["git", "commit", "all", "changes"]
+  },
+  {
+    "title": "Git: Push",
+    "command": "Ctrl+Shift+P then 'Git: Push'",
+    "description": "Pushes committed changes to remote.",
+    "tags": ["git", "push", "remote", "changes"]
+  },
+  {
+    "title": "Git: Pull",
+    "command": "Ctrl+Shift+P then 'Git: Pull'",
+    "description": "Pulls changes from remote.",
+    "tags": ["git", "pull", "remote", "changes"]
+  },
+  {
+    "title": "Git: Clone",
+    "command": "Ctrl+Shift+P then 'Git: Clone'",
+    "description": "Clones a Git repository.",
+    "tags": ["git", "clone", "repository", "remote"]
+  },
+  {
+    "title": "Git: Checkout",
+    "command": "Ctrl+Shift+P then 'Git: Checkout to'",
+    "description": "Checks out a branch or commit.",
+    "tags": ["git", "checkout", "branch", "commit"]
+  },
+  {
+    "title": "Git: Create Branch",
+    "command": "Ctrl+Shift+P then 'Git: Create Branch'",
+    "description": "Creates a new branch.",
+    "tags": ["git", "branch", "create", "new"]
+  },
+  {
+    "title": "Git: Merge Branch",
+    "command": "Ctrl+Shift+P then 'Git: Merge Branch'",
+    "description": "Merges a branch into current branch.",
+    "tags": ["git", "merge", "branch", "combine"]
+  },
+  {
+    "title": "Git: View History",
+    "command": "Ctrl+Shift+G then H",
+    "description": "Views Git history for current file.",
+    "tags": ["git", "history", "log", "file"]
+  },
+  {
+    "title": "Git: View History (All)",
+    "command": "Ctrl+Shift+G then Shift+H",
+    "description": "Views Git history for all files.",
+    "tags": ["git", "history", "log", "all"]
+  },
+  {
+    "title": "Git: Discard Changes",
+    "command": "Ctrl+Shift+P then 'Git: Discard Changes'",
+    "description": "Discards changes in selected file.",
+    "tags": ["git", "discard", "changes", "undo"]
+  },
+  {
+    "title": "Git: Stash",
+    "command": "Ctrl+Shift+P then 'Git: Stash'",
+    "description": "Stashes current changes.",
+    "tags": ["git", "stash", "save", "changes"]
+  },
+  {
+    "title": "Git: Pop Stash",
+    "command": "Ctrl+Shift+P then 'Git: Pop Stash'",
+    "description": "Applies and removes a stash.",
+    "tags": ["git", "stash", "pop", "apply"]
+  },
+  {
+    "title": "Git: Apply Stash",
+    "command": "Ctrl+Shift+P then 'Git: Apply Stash'",
+    "description": "Applies a stash without removing it.",
+    "tags": ["git", "stash", "apply", "keep"]
+  },
+  {
+    "title": "Git: View Stashes",
+    "command": "Ctrl+Shift+P then 'Git: View Stashes'",
+    "description": "Views all stashes.",
+    "tags": ["git", "stash", "view", "list"]
+  },
+  {
+    "title": "Git: Init Repository",
+    "command": "Ctrl+Shift+P then 'Git: Initialize Repository'",
+    "description": "Initializes a Git repository in the current folder.",
+    "tags": ["git", "init", "repository", "initialize"]
+  },
+  {
+    "title": "Git: Open File",
+    "command": "Ctrl+Shift+G then Enter",
+    "description": "Opens the selected file from Source Control view.",
+    "tags": ["git", "open", "file", "source control"]
+  },
+  {
+    "title": "Git: Refresh",
+    "command": "Ctrl+R (in Source Control view)",
+    "description": "Refreshes the Source Control view.",
+    "tags": ["git", "refresh", "update", "source control"]
+  },
+  {
+    "title": "Toggle Source Control",
+    "command": "Ctrl+Shift+G",
+    "description": "Shows or hides the Source Control view.",
+    "tags": ["git", "source control", "toggle", "view"]
+  },
+  {
+    "title": "Focus Source Control",
+    "command": "Ctrl+Shift+G G",
+    "description": "Focuses the Source Control view.",
+    "tags": ["git", "source control", "focus", "view"]
+  },
+  {
+    "title": "Open Changes",
+    "command": "Ctrl+Enter (on changed file)",
+    "description": "Opens the diff view for changed file.",
+    "tags": ["git", "diff", "changes", "open"]
+  },
+  {
+    "title": "Open Changes (Next)",
+    "command": "Alt+F5",
+    "description": "Opens the next change in diff view.",
+    "tags": ["git", "diff", "changes", "next"]
+  },
+  {
+    "title": "Open Changes (Previous)",
+    "command": "Shift+Alt+F5",
+    "description": "Opens the previous change in diff view.",
+    "tags": ["git", "diff", "changes", "previous"]
+  },
+  {
+    "title": "Toggle Inline Diff",
+    "command": "Ctrl+Shift+P then 'Toggle Inline Diff'",
+    "description": "Toggles inline diff view.",
+    "tags": ["git", "diff", "inline", "toggle"]
+  },
+  {
+    "title": "Accept Current Change",
+    "command": "Ctrl+Shift+.",
+    "description": "Accepts the current change in merge editor.",
+    "tags": ["git", "merge", "accept", "change"]
+  },
+  {
+    "title": "Accept Incoming Change",
+    "command": "Ctrl+Shift+,",
+    "description": "Accepts the incoming change in merge editor.",
+    "tags": ["git", "merge", "accept", "incoming"]
+  },
+  {
+    "title": "Accept Both Changes",
+    "command": "Ctrl+Shift+/",
+    "description": "Accepts both changes in merge editor.",
+    "tags": ["git", "merge", "accept", "both"]
+  },
+  {
+    "title": "Navigate Next Conflict",
+    "command": "Alt+Down (in merge editor)",
+    "description": "Navigates to the next conflict in merge editor.",
+    "tags": ["git", "merge", "conflict", "next"]
+  },
+  {
+    "title": "Navigate Previous Conflict",
+    "command": "Alt+Up (in merge editor)",
+    "description": "Navigates to the previous conflict in merge editor.",
+    "tags": ["git", "merge", "conflict", "previous"]
+  },
+  {
+    "title": "Compare With",
+    "command": "Ctrl+Shift+P then 'File: Compare Active File With'",
+    "description": "Compares active file with another file.",
+    "tags": ["compare", "file", "diff", "active"]
+  },
+  {
+    "title": "Compare With Saved",
+    "command": "Ctrl+K D",
+    "description": "Compares active file with saved version.",
+    "tags": ["compare", "file", "saved", "diff"]
+  },
+  {
+    "title": "Compare With Clipboard",
+    "command": "Ctrl+Shift+P then 'File: Compare Active File With Clipboard'",
+    "description": "Compares active file with clipboard contents.",
+    "tags": ["compare", "file", "clipboard", "diff"]
+  },
+  {
+    "title": "Open Diff Editor",
+    "command": "Ctrl+Shift+P then 'File: Open Diff Editor'",
+    "description": "Opens a diff editor for two files.",
+    "tags": ["diff", "editor", "open", "compare"]
+  },
+  {
+    "title": "Toggle Diff Editor",
+    "command": "F7",
+    "description": "Toggles the diff editor.",
+    "tags": ["diff", "editor", "toggle", "view"]
+  },
+  {
+    "title": "Focus Diff Editor",
+    "command": "Ctrl+Shift+D",
+    "description": "Focuses the diff editor.",
+    "tags": ["diff", "editor", "focus", "view"]
+  },
+  {
+    "title": "Close Diff Editor",
+    "command": "Ctrl+W",
+    "description": "Closes the diff editor.",
+    "tags": ["diff", "editor", "close", "view"]
+  },
+  {
+    "title": "Open Changes in Diff Editor",
+    "command": "Ctrl+Shift+G then D",
+    "description": "Opens changes in diff editor.",
+    "tags": ["git", "diff", "changes", "editor"]
+  },
+  {
+    "title": "Open Changes in Separate Editor",
+    "command": "Ctrl+Shift+G then S",
+    "description": "Opens changes in a separate editor.",
+    "tags": ["git", "diff", "changes", "separate"]
+  },
+  {
+    "title": "Open Changes in Inline Editor",
+    "command": "Ctrl+Shift+G then I",
+    "description": "Opens changes in inline editor.",
+    "tags": ["git", "diff", "changes", "inline"]
+  },
+  {
+    "title": "Focus Changes Editor",
+    "command": "Ctrl+Shift+G then E",
+    "description": "Focuses the changes editor.",
+    "tags": ["git", "diff", "changes", "focus"]
+  },
+  {
+    "title": "Close Changes Editor",
+    "command": "Ctrl+Shift+G then W",
+    "description": "Closes the changes editor.",
+    "tags": ["git", "diff", "changes", "close"]
+  },
+  {
+    "title": "Toggle Changes Editor",
+    "command": "Ctrl+Shift+G then T",
+    "description": "Toggles the changes editor.",
+    "tags": ["git", "diff", "changes", "toggle"]
+  },
+  {
+    "title": "Navigate Changes",
+    "command": "Ctrl+Shift+G then N",
+    "description": "Navigates through changes.",
+    "tags": ["git", "diff", "changes", "navigate"]
+  },
+  {
+    "title": "Accept Change",
+    "command": "Ctrl+Shift+G then A",
+    "description": "Accepts the current change.",
+    "tags": ["git", "diff", "accept", "change"]
+  },
+  {
+    "title": "Reject Change",
+    "command": "Ctrl+Shift+G then R",
+    "description": "Rejects the current change.",
+    "tags": ["git", "diff", "reject", "change"]
+  },
+  {
+    "title": "Stage Change",
+    "command": "Ctrl+Shift+G then S",
+    "description": "Stages the current change.",
+    "tags": ["git", "stage", "change", "diff"]
+  },
+  {
+    "title": "Unstage Change",
+    "command": "Ctrl+Shift+G then U",
+    "description": "Unstages the current change.",
+    "tags": ["git", "unstage", "change", "diff"]
+  },
+  {
+    "title": "Discard Change",
+    "command": "Ctrl+Shift+G then D",
+    "description": "Discards the current change.",
+    "tags": ["git", "discard", "change", "diff"]
+  },
+  {
+    "title": "Revert Change",
+    "command": "Ctrl+Shift+G then V",
+    "description": "Reverts the current change.",
+    "tags": ["git", "revert", "change", "diff"]
+  },
+  {
+    "title": "Show Change",
+    "command": "Ctrl+Shift+G then C",
+    "description": "Shows the current change.",
+    "tags": ["git", "show", "change", "diff"]
+  },
+  {
+    "title": "Hide Change",
+    "command": "Ctrl+Shift+G then H",
+    "description": "Hides the current change.",
+    "tags": ["git", "hide", "change", "diff"]
+  },
+  {
+    "title": "Toggle Change",
+    "command": "Ctrl+Shift+G then T",
+    "description": "Toggles the current change.",
+    "tags": ["git", "toggle", "change", "diff"]
+  },
+  {
+    "title": "Focus Change",
+    "command": "Ctrl+Shift+G then F",
+    "description": "Focuses the current change.",
+    "tags": ["git", "focus", "change", "diff"]
+  },
+  {
+    "title": "Blame",
+    "command": "Ctrl+Shift+G then B",
+    "description": "Shows Git blame information.",
+    "tags": ["git", "blame", "history", "author"]
+  },
+  {
+    "title": "Toggle Blame",
+    "command": "Ctrl+Shift+G then L",
+    "description": "Toggles Git blame information.",
+    "tags": ["git", "blame", "toggle", "history"]
+  },
+  {
+    "title": "Show Blame",
+    "command": "Ctrl+Shift+G then M",
+    "description": "Shows Git blame information.",
+    "tags": ["git", "blame", "show", "history"]
+  },
+  {
+    "title": "Hide Blame",
+    "command": "Ctrl+Shift+G then N",
+    "description": "Hides Git blame information.",
+    "tags": ["git", "blame", "hide", "history"]
+  },
+  {
+    "title": "Focus Blame",
+    "command": "Ctrl+Shift+G then O",
+    "description": "Focuses Git blame information.",
+    "tags": ["git", "blame", "focus", "history"]
+  },
+  {
+    "title": "Close Blame",
+    "command": "Ctrl+Shift+G then P",
+    "description": "Closes Git blame information.",
+    "tags": ["git", "blame", "close", "history"]
+  },
+  {
+    "title": "Open Blame",
+    "command": "Ctrl+Shift+G then Q",
+    "description": "Opens Git blame information.",
+    "tags": ["git", "blame", "open", "history"]
+  },
+  {
+    "title": "Toggle Blame Annotations",
+    "command": "Ctrl+Shift+G then A",
+    "description": "Toggles Git blame annotations.",
+    "tags": ["git", "blame", "annotations", "toggle"]
+  },
+  {
+    "title": "Show Blame Annotations",
+    "command": "Ctrl+Shift+G then S",
+    "description": "Shows Git blame annotations.",
+    "tags": ["git", "blame", "annotations", "show"]
+  },
+  {
+    "title": "Hide Blame Annotations",
+    "command": "Ctrl+Shift+G then D",
+    "description": "Hides Git blame annotations.",
+    "tags": ["git", "blame", "annotations", "hide"]
+  },
+  {
+    "title": "Focus Blame Annotations",
+    "command": "Ctrl+Shift+G then F",
+    "description": "Focuses Git blame annotations.",
+    "tags": ["git", "blame", "annotations", "focus"]
+  },
+  {
+    "title": "Close Blame Annotations",
+    "command": "Ctrl+Shift+G then G",
+    "description": "Closes Git blame annotations.",
+    "tags": ["git", "blame", "annotations", "close"]
+  },
+  {
+    "title": "Open Blame Annotations",
+    "command": "Ctrl+Shift+G then H",
+    "description": "Opens Git blame annotations.",
+    "tags": ["git", "blame", "annotations", "open"]
+  },
+  {
+    "title": "Toggle Timeline",
+    "command": "Ctrl+Shift+G then T",
+    "description": "Toggles the timeline view.",
+    "tags": ["git", "timeline", "toggle", "view"]
+  },
+  {
+    "title": "Show Timeline",
+    "command": "Ctrl+Shift+G then Y",
+    "description": "Shows the timeline view.",
+    "tags": ["git", "timeline", "show", "view"]
+  },
+  {
+    "title": "Hide Timeline",
+    "command": "Ctrl+Shift+G then U",
+    "description": "Hides the timeline view.",
+    "tags": ["git", "timeline", "hide", "view"]
+  },
+  {
+    "title": "Focus Timeline",
+    "command": "Ctrl+Shift+G then I",
+    "description": "Focuses the timeline view.",
+    "tags": ["git", "timeline", "focus", "view"]
+  },
+  {
+    "title": "Close Timeline",
+    "command": "Ctrl+Shift+G then O",
+    "description": "Closes the timeline view.",
+    "tags": ["git", "timeline", "close", "view"]
+  },
+  {
+    "title": "Open Timeline",
+    "command": "Ctrl+Shift+G then P",
+    "description": "Opens the timeline view.",
+    "tags": ["git", "timeline", "open", "view"]
+  },
+  {
+    "title": "Navigate Timeline",
+    "command": "Ctrl+Shift+G then J",
+    "description": "Navigates the timeline view.",
+    "tags": ["git", "timeline", "navigate", "view"]
+  },
+  {
+    "title": "Select Timeline Item",
+    "command": "Ctrl+Shift+G then K",
+    "description": "Selects an item in the timeline view.",
+    "tags": ["git", "timeline", "select", "item"]
+  },
+  {
+    "title": "Open Timeline Item",
+    "command": "Ctrl+Shift+G then L",
+    "description": "Opens an item in the timeline view.",
+    "tags": ["git", "timeline", "open", "item"]
+  },
+  {
+    "title": "Compare Timeline Item",
+    "command": "Ctrl+Shift+G then ;",
+    "description": "Compares a timeline item.",
+    "tags": ["git", "timeline", "compare", "item"]
+  },
+  {
+    "title": "Revert Timeline Item",
+    "command": "Ctrl+Shift+G then '",
+    "description": "Reverts a timeline item.",
+    "tags": ["git", "timeline", "revert", "item"]
+  },
+  {
+    "title": "Delete Timeline Item",
+    "command": "Ctrl+Shift+G then /",
+    "description": "Deletes a timeline item.",
+    "tags": ["git", "timeline", "delete", "item"]
+  },
+  {
+    "title": "Restore Timeline Item",
+    "command": "Ctrl+Shift+G then .",
+    "description": "Restores a timeline item.",
+    "tags": ["git", "timeline", "restore", "item"]
+  },
+  {
+    "title": "Show Timeline Details",
+    "command": "Ctrl+Shift+G then ,",
+    "description": "Shows details of a timeline item.",
+    "tags": ["git", "timeline", "details", "item"]
+  },
+  {
+    "title": "Hide Timeline Details",
+    "command": "Ctrl+Shift+G then -",
+    "description": "Hides details of a timeline item.",
+    "tags": ["git", "timeline", "details", "hide"]
+  },
+  {
+    "title": "Focus Timeline Details",
+    "command": "Ctrl+Shift+G then =",
+    "description": "Focuses details of a timeline item.",
+    "tags": ["git", "timeline", "details", "focus"]
+  },
+  {
+    "title": "Close Timeline Details",
+    "command": "Ctrl+Shift+G then [",
+    "description": "Closes details of a timeline item.",
+    "tags": ["git", "timeline", "details", "close"]
+  },
+  {
+    "title": "Open Timeline Details",
+    "command": "Ctrl+Shift+G then ]",
+    "description": "Opens details of a timeline item.",
+    "tags": ["git", "timeline", "details", "open"]
+  }
+]

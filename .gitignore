@@ -6,6 +6,10 @@ data/*
 Home/*
 !Home/qr.png
 !Home/Portal.html
+!Home/Commands.html
+!Home/useful-info
+!Home/commands
+!Home/Dashboard.json
 
 #my own to do list
 to-do.txt

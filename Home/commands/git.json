@@ -1,0 +1,1682 @@
+[
+  {
+    "category": "repository",
+    "command": "git init",
+    "description": "Initialize a new Git repository in the current directory.",
+    "tags": ["init", "repository", "create", "start"]
+  },
+  {
+    "category": "repository",
+    "command": "git clone <repository_url>",
+    "description": "Clone a repository from a remote URL to local machine.",
+    "tags": ["clone", "repository", "remote", "download"]
+  },
+  {
+    "category": "repository",
+    "command": "git clone <repository_url> <directory_name>",
+    "description": "Clone repository into specific directory.",
+    "tags": ["clone", "directory", "specific", "custom"]
+  },
+  {
+    "category": "repository",
+    "command": "git clone --depth 1 <repository_url>",
+    "description": "Shallow clone (only latest commit, saves time/space).",
+    "tags": ["clone", "shallow", "fast", "latest"]
+  },
+  {
+    "category": "repository",
+    "command": "git clone --branch <branch_name> <repository_url>",
+    "description": "Clone specific branch only.",
+    "tags": ["clone", "branch", "specific", "checkout"]
+  },
+  {
+    "category": "repository",
+    "command": "git status",
+    "description": "Show the working directory status.",
+    "tags": ["status", "working", "directory", "changes"]
+  },
+  {
+    "category": "repository",
+    "command": "git status -s",
+    "description": "Show status in short format.",
+    "tags": ["status", "short", "brief", "compact"]
+  },
+  {
+    "category": "repository",
+    "command": "git remote -v",
+    "description": "List all remote repositories with URLs.",
+    "tags": ["remote", "list", "urls", "view"]
+  },
+  {
+    "category": "repository",
+    "command": "git remote add <name> <url>",
+    "description": "Add a new remote repository.",
+    "tags": ["remote", "add", "new", "repository"]
+  },
+  {
+    "category": "repository",
+    "command": "git remote remove <name>",
+    "description": "Remove a remote repository.",
+    "tags": ["remote", "remove", "delete", "repository"]
+  },
+  {
+    "category": "repository",
+    "command": "git remote rename <old> <new>",
+    "description": "Rename a remote repository.",
+    "tags": ["remote", "rename", "change", "name"]
+  },
+  {
+    "category": "repository",
+    "command": "git remote show <name>",
+    "description": "Show information about a remote.",
+    "tags": ["remote", "show", "info", "details"]
+  },
+  {
+    "category": "staging",
+    "command": "git add <file>",
+    "description": "Add file to staging area.",
+    "tags": ["add", "stage", "file", "track"]
+  },
+  {
+    "category": "staging",
+    "command": "git add .",
+    "description": "Add all modified and new files to staging area.",
+    "tags": ["add", "all", "stage", "modified"]
+  },
+  {
+    "category": "staging",
+    "command": "git add -A",
+    "description": "Add all files (including deleted) to staging area.",
+    "tags": ["add", "all", "including", "deleted"]
+  },
+  {
+    "category": "staging",
+    "command": "git add -u",
+    "description": "Add modified and deleted files (no new files).",
+    "tags": ["add", "update", "modified", "deleted"]
+  },
+  {
+    "category": "staging",
+    "command": "git add -p",
+    "description": "Interactively stage changes (patch mode).",
+    "tags": ["add", "interactive", "patch", "stage"]
+  },
+  {
+    "category": "staging",
+    "command": "git rm <file>",
+    "description": "Remove file from working directory and staging area.",
+    "tags": ["remove", "delete", "file", "rm"]
+  },
+  {
+    "category": "staging",
+    "command": "git rm --cached <file>",
+    "description": "Remove file from staging area only (keep in working directory).",
+    "tags": ["remove", "cached", "stage", "keep"]
+  },
+  {
+    "category": "staging",
+    "command": "git mv <old> <new>",
+    "description": "Move or rename a file and stage the change.",
+    "tags": ["move", "rename", "file", "mv"]
+  },
+  {
+    "category": "staging",
+    "command": "git restore <file>",
+    "description": "Restore working directory files (Git 2.23+).",
+    "tags": ["restore", "undo", "changes", "working"]
+  },
+  {
+    "category": "staging",
+    "command": "git restore --staged <file>",
+    "description": "Unstage file (remove from staging area).",
+    "tags": ["restore", "unstage", "remove", "staged"]
+  },
+  {
+    "category": "staging",
+    "command": "git reset <file>",
+    "description": "Unstage file (older way, before Git 2.23).",
+    "tags": ["reset", "unstage", "file", "older"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit -m \"commit message\"",
+    "description": "Commit staged changes with a message.",
+    "tags": ["commit", "message", "save", "changes"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit -a -m \"commit message\"",
+    "description": "Stage all modified files and commit with message.",
+    "tags": ["commit", "all", "stage", "modified"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit --amend",
+    "description": "Modify the most recent commit.",
+    "tags": ["commit", "amend", "modify", "recent"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit --amend --no-edit",
+    "description": "Amend commit without changing commit message.",
+    "tags": ["commit", "amend", "no-edit", "message"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit --amend -m \"new message\"",
+    "description": "Amend commit with new message.",
+    "tags": ["commit", "amend", "message", "change"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit --allow-empty -m \"message\"",
+    "description": "Create empty commit (no changes).",
+    "tags": ["commit", "empty", "no-changes", "trigger"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit --verbose",
+    "description": "Show diff of changes in commit message editor.",
+    "tags": ["commit", "verbose", "diff", "show"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit --signoff",
+    "description": "Add Signed-off-by line to commit.",
+    "tags": ["commit", "signoff", "signed", "contributor"]
+  },
+  {
+    "category": "committing",
+    "command": "git commit -S -m \"message\"",
+    "description": "Create GPG-signed commit.",
+    "tags": ["commit", "sign", "gpg", "signed"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log",
+    "description": "Show commit history.",
+    "tags": ["log", "history", "commits", "view"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log --oneline",
+    "description": "Show commit history in compact format.",
+    "tags": ["log", "oneline", "compact", "brief"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log --graph --oneline",
+    "description": "Show commit history with branch graph.",
+    "tags": ["log", "graph", "branches", "visual"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log --all --graph --oneline",
+    "description": "Show all branches history with graph.",
+    "tags": ["log", "all", "branches", "graph"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log -p",
+    "description": "Show commit history with diff patches.",
+    "tags": ["log", "patch", "diff", "detailed"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log --stat",
+    "description": "Show commit history with file statistics.",
+    "tags": ["log", "stat", "files", "changes"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log --since=\"2 weeks ago\"",
+    "description": "Show commits since specific time.",
+    "tags": ["log", "since", "time", "filter"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log --until=\"2023-01-01\"",
+    "description": "Show commits until specific date.",
+    "tags": ["log", "until", "date", "filter"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log --author=\"name\"",
+    "description": "Show commits by specific author.",
+    "tags": ["log", "author", "filter", "name"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log --grep=\"pattern\"",
+    "description": "Search commits by message pattern.",
+    "tags": ["log", "grep", "search", "pattern"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log -S \"function_name\"",
+    "description": "Search commits that added or removed specific string.",
+    "tags": ["log", "search", "string", "changes"]
+  },
+  {
+    "category": "viewing",
+    "command": "git log <file>",
+    "description": "Show commit history for specific file.",
+    "tags": ["log", "file", "history", "specific"]
+  },
+  {
+    "category": "viewing",
+    "command": "git show <commit_hash>",
+    "description": "Show information about a specific commit.",
+    "tags": ["show", "commit", "details", "view"]
+  },
+  {
+    "category": "viewing",
+    "command": "git show HEAD",
+    "description": "Show information about the latest commit.",
+    "tags": ["show", "head", "latest", "commit"]
+  },
+  {
+    "category": "viewing",
+    "command": "git show <commit_hash>:<file>",
+    "description": "Show file content at specific commit.",
+    "tags": ["show", "file", "content", "commit"]
+  },
+  {
+    "category": "viewing",
+    "command": "git diff",
+    "description": "Show unstaged changes in working directory.",
+    "tags": ["diff", "changes", "unstaged", "working"]
+  },
+  {
+    "category": "viewing",
+    "command": "git diff --staged",
+    "description": "Show staged changes (difference between staging and last commit).",
+    "tags": ["diff", "staged", "changes", "cached"]
+  },
+  {
+    "category": "viewing",
+    "command": "git diff HEAD",
+    "description": "Show all changes (staged and unstaged) since last commit.",
+    "tags": ["diff", "head", "all", "changes"]
+  },
+  {
+    "category": "viewing",
+    "command": "git diff <commit1> <commit2>",
+    "description": "Show differences between two commits.",
+    "tags": ["diff", "commits", "compare", "two"]
+  },
+  {
+    "category": "viewing",
+    "command": "git diff <branch1>..<branch2>",
+    "description": "Show differences between two branches.",
+    "tags": ["diff", "branches", "compare", "two"]
+  },
+  {
+    "category": "viewing",
+    "command": "git diff --name-only",
+    "description": "Show only names of changed files.",
+    "tags": ["diff", "name-only", "files", "list"]
+  },
+  {
+    "category": "viewing",
+    "command": "git diff --word-diff",
+    "description": "Show word-level differences instead of line-level.",
+    "tags": ["diff", "word", "level", "detailed"]
+  },
+  {
+    "category": "viewing",
+    "command": "git blame <file>",
+    "description": "Show who last modified each line of a file.",
+    "tags": ["blame", "authorship", "lines", "file"]
+  },
+  {
+    "category": "viewing",
+    "command": "git blame -L 10,20 <file>",
+    "description": "Show blame for specific lines (10 to 20).",
+    "tags": ["blame", "lines", "specific", "range"]
+  },
+  {
+    "category": "viewing",
+    "command": "git shortlog",
+    "description": "Summarize git log output by author.",
+    "tags": ["shortlog", "summary", "authors", "commits"]
+  },
+  {
+    "category": "viewing",
+    "command": "git shortlog -sn",
+    "description": "Show commit count per author.",
+    "tags": ["shortlog", "count", "authors", "commits"]
+  },
+  {
+    "category": "viewing",
+    "command": "git whatchanged",
+    "description": "Show logs with file list of each commit.",
+    "tags": ["whatchanged", "files", "commits", "list"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch",
+    "description": "List all local branches.",
+    "tags": ["branch", "list", "local", "branches"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch -a",
+    "description": "List all branches (local and remote).",
+    "tags": ["branch", "all", "remote", "local"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch -r",
+    "description": "List remote branches only.",
+    "tags": ["branch", "remote", "list", "only"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch -v",
+    "description": "List branches with last commit info.",
+    "tags": ["branch", "verbose", "info", "commits"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch <branch_name>",
+    "description": "Create new branch.",
+    "tags": ["branch", "create", "new", "make"]
+  },
+  {
+    "category": "branches",
+    "command": "git checkout <branch_name>",
+    "description": "Switch to existing branch.",
+    "tags": ["checkout", "switch", "branch", "change"]
+  },
+  {
+    "category": "branches",
+    "command": "git checkout -b <branch_name>",
+    "description": "Create new branch and switch to it.",
+    "tags": ["checkout", "branch", "create", "switch"]
+  },
+  {
+    "category": "branches",
+    "command": "git checkout -b <branch_name> <start_point>",
+    "description": "Create new branch from specific commit/branch.",
+    "tags": ["checkout", "branch", "create", "specific"]
+  },
+  {
+    "category": "branches",
+    "command": "git switch <branch_name>",
+    "description": "Switch branches (Git 2.23+, alternative to checkout).",
+    "tags": ["switch", "branch", "change", "new"]
+  },
+  {
+    "category": "branches",
+    "command": "git switch -c <branch_name>",
+    "description": "Create new branch and switch to it (Git 2.23+).",
+    "tags": ["switch", "branch", "create", "new"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch -d <branch_name>",
+    "description": "Delete branch (safe, only if merged).",
+    "tags": ["branch", "delete", "remove", "safe"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch -D <branch_name>",
+    "description": "Force delete branch (even if not merged).",
+    "tags": ["branch", "delete", "force", "remove"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch -m <new_name>",
+    "description": "Rename current branch.",
+    "tags": ["branch", "rename", "move", "name"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch -m <old_name> <new_name>",
+    "description": "Rename specific branch.",
+    "tags": ["branch", "rename", "specific", "name"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch --merged",
+    "description": "List branches merged into current branch.",
+    "tags": ["branch", "merged", "list", "integrated"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch --no-merged",
+    "description": "List branches not merged into current branch.",
+    "tags": ["branch", "no-merged", "list", "unintegrated"]
+  },
+  {
+    "category": "branches",
+    "command": "git branch --set-upstream-to=<remote>/<branch>",
+    "description": "Set upstream branch for current branch.",
+    "tags": ["branch", "upstream", "set", "track"]
+  },
+  {
+    "category": "merging",
+    "command": "git merge <branch_name>",
+    "description": "Merge specified branch into current branch.",
+    "tags": ["merge", "branch", "combine", "integrate"]
+  },
+  {
+    "category": "merging",
+    "command": "git merge --no-ff <branch_name>",
+    "description": "Merge with no fast-forward (always create merge commit).",
+    "tags": ["merge", "no-ff", "commit", "always"]
+  },
+  {
+    "category": "merging",
+    "command": "git merge --ff-only <branch_name>",
+    "description": "Merge only if fast-forward is possible.",
+    "tags": ["merge", "ff-only", "fast-forward", "safe"]
+  },
+  {
+    "category": "merging",
+    "command": "git merge --squash <branch_name>",
+    "description": "Squash all commits from branch into single commit.",
+    "tags": ["merge", "squash", "single", "commit"]
+  },
+  {
+    "category": "merging",
+    "command": "git merge --abort",
+    "description": "Abort merge in case of conflicts.",
+    "tags": ["merge", "abort", "cancel", "conflicts"]
+  },
+  {
+    "category": "merging",
+    "command": "git merge --continue",
+    "description": "Continue merge after resolving conflicts.",
+    "tags": ["merge", "continue", "resolved", "conflicts"]
+  },
+  {
+    "category": "merging",
+    "command": "git mergetool",
+    "description": "Launch merge conflict resolution tool.",
+    "tags": ["merge", "tool", "conflict", "resolve"]
+  },
+  {
+    "category": "merging",
+    "command": "git merge-base <branch1> <branch2>",
+    "description": "Find common ancestor of two branches.",
+    "tags": ["merge", "base", "ancestor", "common"]
+  },
+  {
+    "category": "rebasing",
+    "command": "git rebase <branch_name>",
+    "description": "Reapply commits on top of another branch.",
+    "tags": ["rebase", "reapply", "commits", "branch"]
+  },
+  {
+    "category": "rebasing",
+    "command": "git rebase -i <commit_hash>",
+    "description": "Interactive rebase (edit, squash, reorder commits).",
+    "tags": ["rebase", "interactive", "edit", "squash"]
+  },
+  {
+    "category": "rebasing",
+    "command": "git rebase --continue",
+    "description": "Continue rebase after resolving conflicts.",
+    "tags": ["rebase", "continue", "resolved", "conflicts"]
+  },
+  {
+    "category": "rebasing",
+    "command": "git rebase --abort",
+    "description": "Abort rebase and return to original state.",
+    "tags": ["rebase", "abort", "cancel", "original"]
+  },
+  {
+    "category": "rebasing",
+    "command": "git rebase --skip",
+    "description": "Skip current commit in rebase.",
+    "tags": ["rebase", "skip", "commit", "current"]
+  },
+  {
+    "category": "rebasing",
+    "command": "git rebase --onto <newbase> <oldbase>",
+    "description": "Rebase specific range of commits onto new base.",
+    "tags": ["rebase", "onto", "specific", "range"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash",
+    "description": "Save uncommitted changes temporarily.",
+    "tags": ["stash", "save", "temporary", "changes"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash save \"message\"",
+    "description": "Stash with custom message.",
+    "tags": ["stash", "save", "message", "custom"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash list",
+    "description": "List all stashes.",
+    "tags": ["stash", "list", "all", "view"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash show",
+    "description": "Show diff of latest stash.",
+    "tags": ["stash", "show", "diff", "latest"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash show stash@{1}",
+    "description": "Show diff of specific stash.",
+    "tags": ["stash", "show", "specific", "diff"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash apply",
+    "description": "Apply latest stash without removing it.",
+    "tags": ["stash", "apply", "latest", "keep"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash apply stash@{1}",
+    "description": "Apply specific stash.",
+    "tags": ["stash", "apply", "specific", "keep"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash pop",
+    "description": "Apply latest stash and remove it from stash list.",
+    "tags": ["stash", "pop", "apply", "remove"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash drop",
+    "description": "Remove latest stash from stash list.",
+    "tags": ["stash", "drop", "remove", "delete"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash drop stash@{1}",
+    "description": "Remove specific stash.",
+    "tags": ["stash", "drop", "specific", "remove"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash clear",
+    "description": "Remove all stashes.",
+    "tags": ["stash", "clear", "all", "remove"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash branch <branch_name>",
+    "description": "Create new branch from stash.",
+    "tags": ["stash", "branch", "create", "new"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash -u",
+    "description": "Stash including untracked files.",
+    "tags": ["stash", "untracked", "include", "files"]
+  },
+  {
+    "category": "stashing",
+    "command": "git stash -a",
+    "description": "Stash all files including ignored files.",
+    "tags": ["stash", "all", "ignored", "include"]
+  },
+  {
+    "category": "tagging",
+    "command": "git tag",
+    "description": "List all tags.",
+    "tags": ["tag", "list", "all", "view"]
+  },
+  {
+    "category": "tagging",
+    "command": "git tag -l \"v1.*\"",
+    "description": "List tags matching pattern.",
+    "tags": ["tag", "list", "pattern", "filter"]
+  },
+  {
+    "category": "tagging",
+    "command": "git tag <tag_name>",
+    "description": "Create lightweight tag on current commit.",
+    "tags": ["tag", "create", "lightweight", "simple"]
+  },
+  {
+    "category": "tagging",
+    "command": "git tag <tag_name> <commit_hash>",
+    "description": "Create tag on specific commit.",
+    "tags": ["tag", "create", "specific", "commit"]
+  },
+  {
+    "category": "tagging",
+    "command": "git tag -a <tag_name> -m \"message\"",
+    "description": "Create annotated tag with message.",
+    "tags": ["tag", "annotated", "create", "message"]
+  },
+  {
+    "category": "tagging",
+    "command": "git tag -d <tag_name>",
+    "description": "Delete tag locally.",
+    "tags": ["tag", "delete", "remove", "local"]
+  },
+  {
+    "category": "tagging",
+    "command": "git push origin <tag_name>",
+    "description": "Push tag to remote repository.",
+    "tags": ["tag", "push", "remote", "origin"]
+  },
+  {
+    "category": "tagging",
+    "command": "git push origin --tags",
+    "description": "Push all tags to remote repository.",
+    "tags": ["tag", "push", "all", "remote"]
+  },
+  {
+    "category": "tagging",
+    "command": "git push origin :refs/tags/<tag_name>",
+    "description": "Delete tag from remote repository.",
+    "tags": ["tag", "delete", "remote", "remove"]
+  },
+  {
+    "category": "tagging",
+    "command": "git checkout <tag_name>",
+    "description": "Checkout tag (puts you in detached HEAD state).",
+    "tags": ["tag", "checkout", "detached", "head"]
+  },
+  {
+    "category": "tagging",
+    "command": "git show <tag_name>",
+    "description": "Show tag information.",
+    "tags": ["tag", "show", "info", "details"]
+  },
+  {
+    "category": "remote",
+    "command": "git fetch",
+    "description": "Download objects and refs from remote repository.",
+    "tags": ["fetch", "download", "remote", "update"]
+  },
+  {
+    "category": "remote",
+    "command": "git fetch <remote_name>",
+    "description": "Fetch from specific remote.",
+    "tags": ["fetch", "remote", "specific", "download"]
+  },
+  {
+    "category": "remote",
+    "command": "git fetch --all",
+    "description": "Fetch from all remotes.",
+    "tags": ["fetch", "all", "remotes", "download"]
+  },
+  {
+    "category": "remote",
+    "command": "git fetch --prune",
+    "description": "Remove remote-tracking references that no longer exist on remote.",
+    "tags": ["fetch", "prune", "clean", "remove"]
+  },
+  {
+    "category": "remote",
+    "command": "git pull",
+    "description": "Fetch and merge changes from remote.",
+    "tags": ["pull", "fetch", "merge", "update"]
+  },
+  {
+    "category": "remote",
+    "command": "git pull <remote> <branch>",
+    "description": "Pull specific branch from remote.",
+    "tags": ["pull", "remote", "branch", "specific"]
+  },
+  {
+    "category": "remote",
+    "command": "git pull --rebase",
+    "description": "Pull with rebase instead of merge.",
+    "tags": ["pull", "rebase", "instead", "merge"]
+  },
+  {
+    "category": "remote",
+    "command": "git pull --ff-only",
+    "description": "Pull only if fast-forward is possible.",
+    "tags": ["pull", "ff-only", "fast-forward", "safe"]
+  },
+  {
+    "category": "remote",
+    "command": "git push",
+    "description": "Push local commits to remote repository.",
+    "tags": ["push", "upload", "remote", "commits"]
+  },
+  {
+    "category": "remote",
+    "command": "git push <remote> <branch>",
+    "description": "Push specific branch to remote.",
+    "tags": ["push", "remote", "branch", "specific"]
+  },
+  {
+    "category": "remote",
+    "command": "git push -u origin <branch>",
+    "description": "Push and set upstream branch.",
+    "tags": ["push", "upstream", "set", "track"]
+  },
+  {
+    "category": "remote",
+    "command": "git push --force",
+    "description": "Force push (overwrites remote history).",
+    "tags": ["push", "force", "overwrite", "dangerous"]
+  },
+  {
+    "category": "remote",
+    "command": "git push --force-with-lease",
+    "description": "Safer force push (only if remote hasn't changed).",
+    "tags": ["push", "force", "lease", "safer"]
+  },
+  {
+    "category": "remote",
+    "command": "git push --all",
+    "description": "Push all branches to remote.",
+    "tags": ["push", "all", "branches", "remote"]
+  },
+  {
+    "category": "remote",
+    "command": "git push --delete <remote> <branch>",
+    "description": "Delete remote branch.",
+    "tags": ["push", "delete", "remote", "branch"]
+  },
+  {
+    "category": "remote",
+    "command": "git push origin :<branch>",
+    "description": "Alternative way to delete remote branch.",
+    "tags": ["push", "delete", "remote", "branch"]
+  },
+  {
+    "category": "remote",
+    "command": "git remote update",
+    "description": "Update all remote-tracking branches.",
+    "tags": ["remote", "update", "tracking", "branches"]
+  },
+  {
+    "category": "undoing",
+    "command": "git reset --soft <commit_hash>",
+    "description": "Reset to commit, keep changes staged.",
+    "tags": ["reset", "soft", "undo", "keep"]
+  },
+  {
+    "category": "undoing",
+    "command": "git reset --mixed <commit_hash>",
+    "description": "Reset to commit, keep changes unstaged (default).",
+    "tags": ["reset", "mixed", "undo", "default"]
+  },
+  {
+    "category": "undoing",
+    "command": "git reset --hard <commit_hash>",
+    "description": "Reset to commit, discard all changes (dangerous).",
+    "tags": ["reset", "hard", "undo", "dangerous"]
+  },
+  {
+    "category": "undoing",
+    "command": "git reset HEAD~1",
+    "description": "Undo last commit, keep changes.",
+    "tags": ["reset", "undo", "commit", "last"]
+  },
+  {
+    "category": "undoing",
+    "command": "git reset --hard HEAD~1",
+    "description": "Undo last commit and discard changes.",
+    "tags": ["reset", "hard", "undo", "discard"]
+  },
+  {
+    "category": "undoing",
+    "command": "git revert <commit_hash>",
+    "description": "Create new commit that undoes changes of specified commit.",
+    "tags": ["revert", "undo", "commit", "safe"]
+  },
+  {
+    "category": "undoing",
+    "command": "git revert HEAD",
+    "description": "Revert latest commit.",
+    "tags": ["revert", "head", "latest", "undo"]
+  },
+  {
+    "category": "undoing",
+    "command": "git revert --no-commit <commit_hash>",
+    "description": "Revert without automatically committing.",
+    "tags": ["revert", "no-commit", "manual", "stage"]
+  },
+  {
+    "category": "undoing",
+    "command": "git revert -n <commit_hash>",
+    "description": "Revert without committing (same as --no-commit).",
+    "tags": ["revert", "no-commit", "manual", "stage"]
+  },
+  {
+    "category": "undoing",
+    "command": "git clean -n",
+    "description": "Show what would be removed (dry run).",
+    "tags": ["clean", "dry-run", "show", "would"]
+  },
+  {
+    "category": "undoing",
+    "command": "git clean -f",
+    "description": "Remove untracked files.",
+    "tags": ["clean", "remove", "untracked", "files"]
+  },
+  {
+    "category": "undoing",
+    "command": "git clean -fd",
+    "description": "Remove untracked files and directories.",
+    "tags": ["clean", "remove", "directories", "untracked"]
+  },
+  {
+    "category": "undoing",
+    "command": "git clean -x",
+    "description": "Remove ignored files as well.",
+    "tags": ["clean", "remove", "ignored", "files"]
+  },
+  {
+    "category": "undoing",
+    "command": "git checkout -- <file>",
+    "description": "Discard changes in working directory for specific file.",
+    "tags": ["checkout", "discard", "changes", "file"]
+  },
+  {
+    "category": "undoing",
+    "command": "git checkout HEAD -- <file>",
+    "description": "Restore file to state in latest commit.",
+    "tags": ["checkout", "restore", "file", "latest"]
+  },
+  {
+    "category": "undoing",
+    "command": "git checkout <commit_hash> -- <file>",
+    "description": "Restore file to state in specific commit.",
+    "tags": ["checkout", "restore", "file", "specific"]
+  },
+  {
+    "category": "config",
+    "command": "git config --list",
+    "description": "List all Git configuration settings.",
+    "tags": ["config", "list", "settings", "all"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global --list",
+    "description": "List global Git configuration.",
+    "tags": ["config", "global", "list", "settings"]
+  },
+  {
+    "category": "config",
+    "command": "git config --local --list",
+    "description": "List repository-specific Git configuration.",
+    "tags": ["config", "local", "list", "repository"]
+  },
+  {
+    "category": "config",
+    "command": "git config user.name \"Your Name\"",
+    "description": "Set user name for current repository.",
+    "tags": ["config", "user", "name", "set"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global user.name \"Your Name\"",
+    "description": "Set global user name.",
+    "tags": ["config", "global", "user", "name"]
+  },
+  {
+    "category": "config",
+    "command": "git config user.email \"email@example.com\"",
+    "description": "Set user email for current repository.",
+    "tags": ["config", "user", "email", "set"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global user.email \"email@example.com\"",
+    "description": "Set global user email.",
+    "tags": ["config", "global", "user", "email"]
+  },
+  {
+    "category": "config",
+    "command": "git config core.editor \"vim\"",
+    "description": "Set default text editor.",
+    "tags": ["config", "editor", "set", "default"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global core.editor \"code --wait\"",
+    "description": "Set VSCode as default editor.",
+    "tags": ["config", "editor", "vscode", "global"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global alias.co checkout",
+    "description": "Create command alias.",
+    "tags": ["config", "alias", "create", "shortcut"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global alias.st status",
+    "description": "Create status alias.",
+    "tags": ["config", "alias", "status", "shortcut"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global alias.br branch",
+    "description": "Create branch alias.",
+    "tags": ["config", "alias", "branch", "shortcut"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global alias.ci commit",
+    "description": "Create commit alias.",
+    "tags": ["config", "alias", "commit", "shortcut"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global alias.unstage \"reset HEAD --\"",
+    "description": "Create unstage alias.",
+    "tags": ["config", "alias", "unstage", "shortcut"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global alias.last \"log -1 HEAD\"",
+    "description": "Create alias to show last commit.",
+    "tags": ["config", "alias", "last", "commit"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global color.ui auto",
+    "description": "Enable colored output.",
+    "tags": ["config", "color", "output", "enable"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global core.autocrlf input",
+    "description": "Configure line endings (Linux/macOS).",
+    "tags": ["config", "line", "endings", "autocrlf"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global core.autocrlf true",
+    "description": "Configure line endings (Windows).",
+    "tags": ["config", "line", "endings", "windows"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global init.defaultBranch main",
+    "description": "Set default branch name to main.",
+    "tags": ["config", "default", "branch", "main"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global pull.rebase true",
+    "description": "Set pull to use rebase by default.",
+    "tags": ["config", "pull", "rebase", "default"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global credential.helper cache",
+    "description": "Cache credentials in memory.",
+    "tags": ["config", "credential", "cache", "helper"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global credential.helper \"store\"",
+    "description": "Store credentials on disk (less secure).",
+    "tags": ["config", "credential", "store", "helper"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global http.sslVerify false",
+    "description": "Disable SSL verification (not recommended).",
+    "tags": ["config", "ssl", "verify", "disable"]
+  },
+  {
+    "category": "config",
+    "command": "git config --unset <key>",
+    "description": "Remove configuration setting.",
+    "tags": ["config", "unset", "remove", "setting"]
+  },
+  {
+    "category": "config",
+    "command": "git config --global --unset <key>",
+    "description": "Remove global configuration setting.",
+    "tags": ["config", "global", "unset", "remove"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule add <repository_url> <path>",
+    "description": "Add a submodule to repository.",
+    "tags": ["submodule", "add", "repository", "include"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule init",
+    "description": "Initialize submodules after clone.",
+    "tags": ["submodule", "init", "initialize", "setup"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule update",
+    "description": "Update submodules to latest commit.",
+    "tags": ["submodule", "update", "latest", "sync"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule update --init",
+    "description": "Initialize and update submodules.",
+    "tags": ["submodule", "update", "init", "both"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule update --init --recursive",
+    "description": "Initialize and update submodules recursively.",
+    "tags": ["submodule", "update", "recursive", "nested"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule update --remote",
+    "description": "Update submodules to remote's latest commit.",
+    "tags": ["submodule", "update", "remote", "latest"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule status",
+    "description": "Show status of submodules.",
+    "tags": ["submodule", "status", "show", "info"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule deinit <path>",
+    "description": "Remove submodule from working tree.",
+    "tags": ["submodule", "deinit", "remove", "working"]
+  },
+  {
+    "category": "submodules",
+    "command": "git submodule foreach <command>",
+    "description": "Execute command in each submodule.",
+    "tags": ["submodule", "foreach", "each", "command"]
+  },
+  {
+    "category": "bisect",
+    "command": "git bisect start",
+    "description": "Start binary search to find bug-introducing commit.",
+    "tags": ["bisect", "start", "binary", "search"]
+  },
+  {
+    "category": "bisect",
+    "command": "git bisect bad",
+    "description": "Mark current commit as bad (contains bug).",
+    "tags": ["bisect", "bad", "bug", "mark"]
+  },
+  {
+    "category": "bisect",
+    "command": "git bisect good <commit_hash>",
+    "description": "Mark specific commit as good (no bug).",
+    "tags": ["bisect", "good", "no-bug", "mark"]
+  },
+  {
+    "category": "bisect",
+    "command": "git bisect good",
+    "description": "Mark current commit as good.",
+    "tags": ["bisect", "good", "current", "mark"]
+  },
+  {
+    "category": "bisect",
+    "command": "git bisect reset",
+    "description": "End bisect session and return to original branch.",
+    "tags": ["bisect", "reset", "end", "session"]
+  },
+  {
+    "category": "bisect",
+    "command": "git bisect run <command>",
+    "description": "Automate bisect with script.",
+    "tags": ["bisect", "run", "automate", "script"]
+  },
+  {
+    "category": "bisect",
+    "command": "git bisect visualize",
+    "description": "Show remaining suspects in gitk.",
+    "tags": ["bisect", "visualize", "gitk", "view"]
+  },
+  {
+    "category": "bisect",
+    "command": "git bisect log",
+    "description": "Show bisect log.",
+    "tags": ["bisect", "log", "history", "show"]
+  },
+  {
+    "category": "worktree",
+    "command": "git worktree add <path> <branch>",
+    "description": "Add another working tree (Git 2.5+).",
+    "tags": ["worktree", "add", "multiple", "working"]
+  },
+  {
+    "category": "worktree",
+    "command": "git worktree list",
+    "description": "List all working trees.",
+    "tags": ["worktree", "list", "all", "show"]
+  },
+  {
+    "category": "worktree",
+    "command": "git worktree remove <path>",
+    "description": "Remove working tree.",
+    "tags": ["worktree", "remove", "delete", "clean"]
+  },
+  {
+    "category": "worktree",
+    "command": "git worktree prune",
+    "description": "Clean up stale working trees.",
+    "tags": ["worktree", "prune", "clean", "stale"]
+  },
+  {
+    "category": "cherry-pick",
+    "command": "git cherry-pick <commit_hash>",
+    "description": "Apply changes from specific commit to current branch.",
+    "tags": ["cherry-pick", "apply", "commit", "changes"]
+  },
+  {
+    "category": "cherry-pick",
+    "command": "git cherry-pick <commit1> <commit2>",
+    "description": "Cherry-pick multiple commits.",
+    "tags": ["cherry-pick", "multiple", "commits", "apply"]
+  },
+  {
+    "category": "cherry-pick",
+    "command": "git cherry-pick <start_commit>^..<end_commit>",
+    "description": "Cherry-pick range of commits.",
+    "tags": ["cherry-pick", "range", "commits", "apply"]
+  },
+  {
+    "category": "cherry-pick",
+    "command": "git cherry-pick --continue",
+    "description": "Continue cherry-pick after resolving conflicts.",
+    "tags": ["cherry-pick", "continue", "conflicts", "resolved"]
+  },
+  {
+    "category": "cherry-pick",
+    "command": "git cherry-pick --abort",
+    "description": "Abort cherry-pick operation.",
+    "tags": ["cherry-pick", "abort", "cancel", "operation"]
+  },
+  {
+    "category": "cherry-pick",
+    "command": "git cherry-pick --skip",
+    "description": "Skip current commit in cherry-pick.",
+    "tags": ["cherry-pick", "skip", "commit", "current"]
+  },
+  {
+    "category": "cherry-pick",
+    "command": "git cherry-pick -n",
+    "description": "Cherry-pick without committing.",
+    "tags": ["cherry-pick", "no-commit", "stage", "only"]
+  },
+  {
+    "category": "cherry-pick",
+    "command": "git cherry-pick -x",
+    "description": "Add reference to original commit in message.",
+    "tags": ["cherry-pick", "reference", "original", "message"]
+  },
+  {
+    "category": "reflog",
+    "command": "git reflog",
+    "description": "Show reference log (history of HEAD changes).",
+    "tags": ["reflog", "history", "head", "changes"]
+  },
+  {
+    "category": "reflog",
+    "command": "git reflog show <branch>",
+    "description": "Show reflog for specific branch.",
+    "tags": ["reflog", "show", "branch", "specific"]
+  },
+  {
+    "category": "reflog",
+    "command": "git reflog expire --expire=now --all",
+    "description": "Expire old reflog entries.",
+    "tags": ["reflog", "expire", "old", "entries"]
+  },
+  {
+    "category": "reflog",
+    "command": "git reflog delete <entry>",
+    "description": "Delete specific reflog entry.",
+    "tags": ["reflog", "delete", "entry", "specific"]
+  },
+  {
+    "category": "archive",
+    "command": "git archive --format zip --output repo.zip HEAD",
+    "description": "Create zip archive of repository.",
+    "tags": ["archive", "zip", "create", "repository"]
+  },
+  {
+    "category": "archive",
+    "command": "git archive --format tar.gz --output repo.tar.gz HEAD",
+    "description": "Create tar.gz archive of repository.",
+    "tags": ["archive", "tar", "gzip", "create"]
+  },
+  {
+    "category": "archive",
+    "command": "git archive --format zip --output repo.zip <branch_name>",
+    "description": "Create archive of specific branch.",
+    "tags": ["archive", "zip", "branch", "specific"]
+  },
+  {
+    "category": "archive",
+    "command": "git archive --format zip --output repo.zip <tag_name>",
+    "description": "Create archive of specific tag.",
+    "tags": ["archive", "zip", "tag", "specific"]
+  },
+  {
+    "category": "archive",
+    "command": "git archive --prefix=project/ HEAD | tar -x",
+    "description": "Extract archive with prefix.",
+    "tags": ["archive", "extract", "prefix", "tar"]
+  },
+  {
+    "category": "maintenance",
+    "command": "git gc",
+    "description": "Run garbage collection (clean up unnecessary files).",
+    "tags": ["gc", "garbage", "collection", "clean"]
+  },
+  {
+    "category": "maintenance",
+    "command": "git gc --aggressive",
+    "description": "Run aggressive garbage collection.",
+    "tags": ["gc", "aggressive", "garbage", "collection"]
+  },
+  {
+    "category": "maintenance",
+    "command": "git fsck",
+    "description": "Verify integrity of Git file system.",
+    "tags": ["fsck", "verify", "integrity", "filesystem"]
+  },
+  {
+    "category": "maintenance",
+    "command": "git prune",
+    "description": "Prune unreachable objects.",
+    "tags": ["prune", "unreachable", "objects", "clean"]
+  },
+  {
+    "category": "maintenance",
+    "command": "git count-objects -v",
+    "description": "Count unpacked objects and display sizes.",
+    "tags": ["count", "objects", "size", "unpacked"]
+  },
+  {
+    "category": "maintenance",
+    "command": "git repack -a -d --depth=250 --window=250",
+    "description": "Repack repository for better performance.",
+    "tags": ["repack", "performance", "optimize", "repository"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git help <command>",
+    "description": "Show help for specific Git command.",
+    "tags": ["help", "command", "documentation", "manual"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git help --all",
+    "description": "Show all available commands.",
+    "tags": ["help", "all", "commands", "available"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git --version",
+    "description": "Show Git version.",
+    "tags": ["version", "git", "show", "info"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git describe",
+    "description": "Describe current commit with nearest tag.",
+    "tags": ["describe", "tag", "nearest", "commit"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git describe --tags",
+    "description": "Describe using only tags.",
+    "tags": ["describe", "tags", "only", "lightweight"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git describe --always",
+    "description": "Describe using abbreviated commit hash if no tag.",
+    "tags": ["describe", "always", "abbreviated", "hash"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git name-rev --name-only <commit_hash>",
+    "description": "Find symbolic name for commit.",
+    "tags": ["name-rev", "symbolic", "name", "commit"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git rev-parse <branch>",
+    "description": "Get commit hash for branch.",
+    "tags": ["rev-parse", "hash", "commit", "branch"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git rev-parse --abbrev-ref HEAD",
+    "description": "Get current branch name.",
+    "tags": ["rev-parse", "branch", "current", "name"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git rev-parse --show-toplevel",
+    "description": "Show root directory of Git repository.",
+    "tags": ["rev-parse", "root", "directory", "repository"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git rev-list --count HEAD",
+    "description": "Count total commits in repository.",
+    "tags": ["rev-list", "count", "commits", "total"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git rev-list --count <branch>",
+    "description": "Count commits in specific branch.",
+    "tags": ["rev-list", "count", "commits", "branch"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git rev-list --max-count=10 HEAD",
+    "description": "Show last 10 commit hashes.",
+    "tags": ["rev-list", "max-count", "hashes", "commits"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git grep \"pattern\"",
+    "description": "Search for pattern in repository.",
+    "tags": ["grep", "search", "pattern", "repository"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git grep -n \"pattern\"",
+    "description": "Search with line numbers.",
+    "tags": ["grep", "search", "line", "numbers"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git grep -c \"pattern\"",
+    "description": "Count occurrences of pattern.",
+    "tags": ["grep", "count", "occurrences", "pattern"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git grep -l \"pattern\"",
+    "description": "Show only filenames containing pattern.",
+    "tags": ["grep", "filenames", "containing", "pattern"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git grep \"pattern\" HEAD~10..HEAD",
+    "description": "Search in last 10 commits.",
+    "tags": ["grep", "search", "range", "commits"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git notes add -m \"note text\"",
+    "description": "Add note to current commit.",
+    "tags": ["notes", "add", "note", "commit"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git notes show",
+    "description": "Show notes for current commit.",
+    "tags": ["notes", "show", "current", "commit"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git notes list",
+    "description": "List all notes.",
+    "tags": ["notes", "list", "all", "show"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git notes edit",
+    "description": "Edit note for current commit.",
+    "tags": ["notes", "edit", "current", "commit"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git notes remove",
+    "description": "Remove note from current commit.",
+    "tags": ["notes", "remove", "delete", "commit"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git notes prune",
+    "description": "Remove notes for nonexistent commits.",
+    "tags": ["notes", "prune", "remove", "nonexistent"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git replace <old> <new>",
+    "description": "Replace one object with another.",
+    "tags": ["replace", "object", "swap", "change"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git replace --list",
+    "description": "List all replace refs.",
+    "tags": ["replace", "list", "refs", "all"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git replace -d <object>",
+    "description": "Delete replace ref.",
+    "tags": ["replace", "delete", "ref", "remove"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git filter-branch",
+    "description": "Rewrite branch history (powerful but dangerous).",
+    "tags": ["filter-branch", "rewrite", "history", "dangerous"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git filter-repo",
+    "description": "Alternative to filter-branch (recommended).",
+    "tags": ["filter-repo", "rewrite", "history", "alternative"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git bundle create repo.bundle HEAD <branch>",
+    "description": "Create bundle file for offline transfer.",
+    "tags": ["bundle", "create", "offline", "transfer"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git clone repo.bundle",
+    "description": "Clone from bundle file.",
+    "tags": ["bundle", "clone", "from", "file"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git instaweb",
+    "description": "Launch web interface for repository.",
+    "tags": ["instaweb", "web", "interface", "launch"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git daemon",
+    "description": "Run Git daemon for anonymous access.",
+    "tags": ["daemon", "run", "anonymous", "access"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git update-server-info",
+    "description": "Update information for dumb transports.",
+    "tags": ["update", "server", "info", "dumb"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git verify-commit <commit>",
+    "description": "Verify GPG signature of commit.",
+    "tags": ["verify", "commit", "gpg", "signature"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git verify-tag <tag>",
+    "description": "Verify GPG signature of tag.",
+    "tags": ["verify", "tag", "gpg", "signature"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git show-ref",
+    "description": "List references in repository.",
+    "tags": ["show-ref", "references", "list", "repository"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git show-ref --heads",
+    "description": "List only branch references.",
+    "tags": ["show-ref", "heads", "branches", "list"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git show-ref --tags",
+    "description": "List only tag references.",
+    "tags": ["show-ref", "tags", "list", "only"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git for-each-ref",
+    "description": "Loop over references.",
+    "tags": ["for-each-ref", "loop", "references", "iterate"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git for-each-ref --sort=-committerdate",
+    "description": "List branches sorted by last commit date.",
+    "tags": ["for-each-ref", "sort", "committerdate", "branches"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git ls-files",
+    "description": "Show information about files in index.",
+    "tags": ["ls-files", "index", "files", "show"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git ls-files --others",
+    "description": "Show untracked files.",
+    "tags": ["ls-files", "others", "untracked", "show"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git ls-files --modified",
+    "description": "Show modified files.",
+    "tags": ["ls-files", "modified", "changed", "show"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git ls-files --deleted",
+    "description": "Show deleted files.",
+    "tags": ["ls-files", "deleted", "removed", "show"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git ls-tree <tree-ish>",
+    "description": "List contents of tree object.",
+    "tags": ["ls-tree", "tree", "contents", "list"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git cat-file -p <object>",
+    "description": "Pretty-print Git object.",
+    "tags": ["cat-file", "pretty", "print", "object"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git cat-file -t <object>",
+    "description": "Show type of Git object.",
+    "tags": ["cat-file", "type", "object", "show"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git cat-file -s <object>",
+    "description": "Show size of Git object.",
+    "tags": ["cat-file", "size", "object", "show"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git hash-object <file>",
+    "description": "Compute object ID for file.",
+    "tags": ["hash-object", "compute", "id", "file"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git write-tree",
+    "description": "Create tree from index.",
+    "tags": ["write-tree", "create", "tree", "index"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git commit-tree <tree>",
+    "description": "Create commit from tree.",
+    "tags": ["commit-tree", "create", "commit", "tree"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git mktree",
+    "description": "Build tree from ls-tree formatted text.",
+    "tags": ["mktree", "build", "tree", "ls-tree"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git mktag",
+    "description": "Create tag object.",
+    "tags": ["mktag", "create", "tag", "object"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git check-ignore <file>",
+    "description": "Check if file is ignored.",
+    "tags": ["check-ignore", "ignored", "file", "verify"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git check-attr <attr> <file>",
+    "description": "Check Git attributes for file.",
+    "tags": ["check-attr", "attributes", "file", "check"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git bugreport",
+    "description": "Collect information for bug report.",
+    "tags": ["bugreport", "collect", "info", "bug"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git diagnose",
+    "description": "Generate diagnostic report.",
+    "tags": ["diagnose", "generate", "report", "diagnostic"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git maintenance run",
+    "description": "Run maintenance tasks.",
+    "tags": ["maintenance", "run", "tasks", "optimize"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git maintenance start",
+    "description": "Start scheduled maintenance.",
+    "tags": ["maintenance", "start", "scheduled", "background"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git maintenance stop",
+    "description": "Stop scheduled maintenance.",
+    "tags": ["maintenance", "stop", "scheduled", "background"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git maintenance register",
+    "description": "Register repository for maintenance.",
+    "tags": ["maintenance", "register", "repository", "setup"]
+  },
+  {
+    "category": "miscellaneous",
+    "command": "git maintenance unregister",
+    "description": "Unregister repository from maintenance.",
+    "tags": ["maintenance", "unregister", "repository", "remove"]
+  }
+]

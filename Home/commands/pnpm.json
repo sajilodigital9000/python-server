@@ -1,0 +1,1190 @@
+[
+  {
+    "title": "installation",
+    "command": "npm install -g pnpm",
+    "description": "Install pnpm globally using npm.",
+    "tags": ["install", "global", "npm", "setup"]
+  },
+  {
+    "title": "installation",
+    "command": "curl -fsSL https://get.pnpm.io/install.sh | sh -",
+    "description": "Install pnpm using the official installer script.",
+    "tags": ["install", "script", "official", "curl"]
+  },
+  {
+    "title": "installation",
+    "command": "iwr https://get.pnpm.io/install.ps1 -useb | iex",
+    "description": "Install pnpm on Windows using PowerShell.",
+    "tags": ["install", "windows", "powershell", "script"]
+  },
+  {
+    "title": "installation",
+    "command": "pnpm --version",
+    "description": "Check pnpm version.",
+    "tags": ["version", "check", "info", "pnpm"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm init",
+    "description": "Create a package.json file.",
+    "tags": ["init", "create", "package", "project"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm add <package>",
+    "description": "Add dependency to package.json and install.",
+    "tags": ["add", "install", "dependency", "package"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm add -D <package>",
+    "description": "Add dev dependency.",
+    "tags": ["add", "dev", "development", "dependency"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm add -O <package>",
+    "description": "Add optional dependency.",
+    "tags": ["add", "optional", "dependency"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm add -g <package>",
+    "description": "Install package globally.",
+    "tags": ["add", "global", "install", "package"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm add <package>@<version>",
+    "description": "Install specific version of package.",
+    "tags": ["add", "version", "specific", "package"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm add <package>@latest",
+    "description": "Install latest version of package.",
+    "tags": ["add", "latest", "version", "package"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm add <package>@next",
+    "description": "Install next version (beta/alpha) of package.",
+    "tags": ["add", "next", "beta", "alpha"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm install",
+    "description": "Install all dependencies from package.json.",
+    "tags": ["install", "dependencies", "all", "package"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm i",
+    "description": "Alias for pnpm install.",
+    "tags": ["install", "alias", "short", "i"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm install --frozen-lockfile",
+    "description": "Install without generating lockfile (CI usage).",
+    "tags": ["install", "frozen", "lockfile", "ci"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm install --prod",
+    "description": "Install only production dependencies.",
+    "tags": ["install", "production", "only", "no-dev"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm install --no-optional",
+    "description": "Install without optional dependencies.",
+    "tags": ["install", "no-optional", "skip", "dependencies"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm install --ignore-scripts",
+    "description": "Install without running lifecycle scripts.",
+    "tags": ["install", "ignore", "scripts", "security"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm install --offline",
+    "description": "Install from store (offline mode).",
+    "tags": ["install", "offline", "store", "cache"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm install --prefer-offline",
+    "description": "Prefer offline mode, fallback to network.",
+    "tags": ["install", "prefer", "offline", "cache"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm install --shamefully-hoist",
+    "description": "Create flat node_modules structure.",
+    "tags": ["install", "shamefully", "hoist", "flat"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm update",
+    "description": "Update packages to latest versions.",
+    "tags": ["update", "upgrade", "packages", "latest"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm update <package>",
+    "description": "Update specific package.",
+    "tags": ["update", "package", "specific", "upgrade"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm update --latest",
+    "description": "Update packages ignoring package.json ranges.",
+    "tags": ["update", "latest", "ignore", "ranges"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm update --interactive",
+    "description": "Interactive update.",
+    "tags": ["update", "interactive", "choose", "select"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm remove <package>",
+    "description": "Remove package from dependencies.",
+    "tags": ["remove", "uninstall", "delete", "package"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm rm <package>",
+    "description": "Alias for pnpm remove.",
+    "tags": ["remove", "alias", "short", "rm"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm remove -g <package>",
+    "description": "Remove global package.",
+    "tags": ["remove", "global", "uninstall", "package"]
+  },
+  {
+    "title": "basic",
+    "command": "pnpm uninstall <package>",
+    "description": "Alias for pnpm remove.",
+    "tags": ["remove", "alias", "uninstall", "package"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm list",
+    "description": "List installed packages.",
+    "tags": ["list", "installed", "packages", "dependencies"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm ls",
+    "description": "Alias for pnpm list.",
+    "tags": ["list", "alias", "ls", "packages"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm list --depth 0",
+    "description": "List only top-level packages.",
+    "tags": ["list", "depth", "top-level", "shallow"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm list --prod",
+    "description": "List production dependencies only.",
+    "tags": ["list", "production", "only", "dependencies"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm list --dev",
+    "description": "List dev dependencies only.",
+    "tags": ["list", "dev", "development", "only"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm list --parseable",
+    "description": "List in parseable format.",
+    "tags": ["list", "parseable", "format", "machine"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm list --long",
+    "description": "List with extended information.",
+    "tags": ["list", "long", "extended", "info"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm list --global",
+    "description": "List globally installed packages.",
+    "tags": ["list", "global", "packages", "installed"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm list -g",
+    "description": "Alias for pnpm list --global.",
+    "tags": ["list", "global", "alias", "g"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm outdated",
+    "description": "Check for outdated packages.",
+    "tags": ["outdated", "check", "packages", "update"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm outdated --long",
+    "description": "Show extended outdated information.",
+    "tags": ["outdated", "long", "extended", "info"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm why <package>",
+    "description": "Show why a package is installed.",
+    "tags": ["why", "reason", "installed", "dependency"]
+  },
+  {
+    "title": "list",
+    "command": "pnpm why -r <package>",
+    "description": "Show why package is installed recursively.",
+    "tags": ["why", "recursive", "reason", "dependency"]
+  },
+  {
+    "title": "running",
+    "command": "pnpm run <script>",
+    "description": "Run script defined in package.json.",
+    "tags": ["run", "script", "execute", "npm-script"]
+  },
+  {
+    "title": "running",
+    "command": "pnpm <script>",
+    "description": "Shortcut for pnpm run <script>.",
+    "tags": ["run", "shortcut", "script", "execute"]
+  },
+  {
+    "title": "running",
+    "command": "pnpm run",
+    "description": "List available scripts.",
+    "tags": ["run", "list", "scripts", "available"]
+  },
+  {
+    "title": "running",
+    "command": "pnpm start",
+    "description": "Run start script.",
+    "tags": ["start", "run", "server", "script"]
+  },
+  {
+    "title": "running",
+    "command": "pnpm test",
+    "description": "Run test script.",
+    "tags": ["test", "run", "testing", "script"]
+  },
+  {
+    "title": "running",
+    "command": "pnpm exec <command>",
+    "description": "Execute command as if pnpm install was run.",
+    "tags": ["exec", "command", "execute", "binary"]
+  },
+  {
+    "title": "running",
+    "command": "pnpm dlx <package>",
+    "description": "Download and execute package without installation.",
+    "tags": ["dlx", "execute", "temporary", "download"]
+  },
+  {
+    "title": "running",
+    "command": "pnpm create <template>",
+    "description": "Create project from template.",
+    "tags": ["create", "template", "project", "scaffold"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm -r <command>",
+    "description": "Run command in all packages (recursive).",
+    "tags": ["workspaces", "recursive", "all", "packages"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm --recursive <command>",
+    "description": "Alias for pnpm -r.",
+    "tags": ["workspaces", "recursive", "alias", "all"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm -r run build",
+    "description": "Run build script in all packages.",
+    "tags": ["workspaces", "recursive", "build", "all"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm -r add <package>",
+    "description": "Add package to all packages.",
+    "tags": ["workspaces", "recursive", "add", "all"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm -r update",
+    "description": "Update all packages in workspace.",
+    "tags": ["workspaces", "recursive", "update", "all"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm -r list",
+    "description": "List packages in all workspaces.",
+    "tags": ["workspaces", "recursive", "list", "all"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm -r exec <command>",
+    "description": "Execute command in all packages.",
+    "tags": ["workspaces", "recursive", "exec", "all"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm --filter <package> <command>",
+    "description": "Run command for specific package.",
+    "tags": ["workspaces", "filter", "specific", "package"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm --filter <package>... <command>",
+    "description": "Run command for package and its dependencies.",
+    "tags": ["workspaces", "filter", "dependencies", "package"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm --filter ...<package> <command>",
+    "description": "Run command for package and its dependents.",
+    "tags": ["workspaces", "filter", "dependents", "package"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm m <command>",
+    "description": "Run command in packages that have been changed since last commit.",
+    "tags": ["workspaces", "changed", "since", "commit"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm multi <command>",
+    "description": "Alias for pnpm m.",
+    "tags": ["workspaces", "changed", "alias", "multi"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm --workspace-root <command>",
+    "description": "Run command only in root workspace.",
+    "tags": ["workspaces", "root", "only", "workspace"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm --stream",
+    "description": "Stream output from child processes.",
+    "tags": ["workspaces", "stream", "output", "parallel"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm --parallel",
+    "description": "Run commands in parallel.",
+    "tags": ["workspaces", "parallel", "concurrent", "speed"]
+  },
+  {
+    "title": "workspaces",
+    "command": "pnpm --aggregate-output",
+    "description": "Aggregate output from parallel runs.",
+    "tags": ["workspaces", "aggregate", "output", "parallel"]
+  },
+  {
+    "title": "store",
+    "command": "pnpm store path",
+    "description": "Show path to pnpm store.",
+    "tags": ["store", "path", "location", "show"]
+  },
+  {
+    "title": "store",
+    "command": "pnpm store status",
+    "description": "Check for modified packages in store.",
+    "tags": ["store", "status", "modified", "check"]
+  },
+  {
+    "title": "store",
+    "command": "pnpm store prune",
+    "description": "Remove unreferenced packages from store.",
+    "tags": ["store", "prune", "clean", "remove"]
+  },
+  {
+    "title": "store",
+    "command": "pnpm store add <package>",
+    "description": "Add package to store without installing.",
+    "tags": ["store", "add", "package", "without-install"]
+  },
+  {
+    "title": "store",
+    "command": "pnpm store usages",
+    "description": "Show which projects use packages from store.",
+    "tags": ["store", "usages", "projects", "show"]
+  },
+  {
+    "title": "cache",
+    "command": "pnpm cache clean",
+    "description": "Clean pnpm cache.",
+    "tags": ["cache", "clean", "clear", "remove"]
+  },
+  {
+    "title": "cache",
+    "command": "pnpm cache dir",
+    "description": "Show cache directory path.",
+    "tags": ["cache", "dir", "path", "directory"]
+  },
+  {
+    "title": "cache",
+    "command": "pnpm cache list",
+    "description": "List cached packages.",
+    "tags": ["cache", "list", "packages", "cached"]
+  },
+  {
+    "title": "cache",
+    "command": "pnpm cache verify",
+    "description": "Verify integrity of cache.",
+    "tags": ["cache", "verify", "integrity", "check"]
+  },
+  {
+    "title": "publishing",
+    "command": "pnpm publish",
+    "description": "Publish package to registry.",
+    "tags": ["publish", "registry", "npm", "package"]
+  },
+  {
+    "title": "publishing",
+    "command": "pnpm publish --dry-run",
+    "description": "Dry run publish.",
+    "tags": ["publish", "dry-run", "test", "simulate"]
+  },
+  {
+    "title": "publishing",
+    "command": "pnpm publish --tag <tag>",
+    "description": "Publish with specific tag.",
+    "tags": ["publish", "tag", "specific", "version"]
+  },
+  {
+    "title": "publishing",
+    "command": "pnpm publish --access public",
+    "description": "Publish scoped package as public.",
+    "tags": ["publish", "access", "public", "scoped"]
+  },
+  {
+    "title": "publishing",
+    "command": "pnpm pack",
+    "description": "Create tarball from package.",
+    "tags": ["pack", "tarball", "archive", "create"]
+  },
+  {
+    "title": "publishing",
+    "command": "pnpm pack --pack-destination <dir>",
+    "description": "Create tarball in specific directory.",
+    "tags": ["pack", "destination", "directory", "specific"]
+  },
+  {
+    "title": "audit",
+    "command": "pnpm audit",
+    "description": "Check for vulnerabilities.",
+    "tags": ["audit", "security", "vulnerabilities", "check"]
+  },
+  {
+    "title": "audit",
+    "command": "pnpm audit --fix",
+    "description": "Fix vulnerabilities.",
+    "tags": ["audit", "fix", "security", "vulnerabilities"]
+  },
+  {
+    "title": "audit",
+    "command": "pnpm audit --prod",
+    "description": "Audit only production dependencies.",
+    "tags": ["audit", "production", "only", "security"]
+  },
+  {
+    "title": "audit",
+    "command": "pnpm audit --dev",
+    "description": "Audit only dev dependencies.",
+    "tags": ["audit", "dev", "development", "only"]
+  },
+  {
+    "title": "audit",
+    "command": "pnpm audit --json",
+    "description": "Output audit report in JSON format.",
+    "tags": ["audit", "json", "report", "output"]
+  },
+  {
+    "title": "config",
+    "command": "pnpm config get <key>",
+    "description": "Get configuration value.",
+    "tags": ["config", "get", "value", "setting"]
+  },
+  {
+    "title": "config",
+    "command": "pnpm config set <key> <value>",
+    "description": "Set configuration value.",
+    "tags": ["config", "set", "value", "setting"]
+  },
+  {
+    "title": "config",
+    "command": "pnpm config delete <key>",
+    "description": "Delete configuration value.",
+    "tags": ["config", "delete", "remove", "setting"]
+  },
+  {
+    "title": "config",
+    "command": "pnpm config list",
+    "description": "List all configuration settings.",
+    "tags": ["config", "list", "settings", "all"]
+  },
+  {
+    "title": "config",
+    "command": "pnpm config edit",
+    "description": "Edit configuration file.",
+    "tags": ["config", "edit", "file", "settings"]
+  },
+  {
+    "title": "config",
+    "command": "pnpm set-script <name> <command>",
+    "description": "Create or modify script in package.json.",
+    "tags": ["config", "script", "set", "package.json"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm root",
+    "description": "Show path to node_modules directory.",
+    "tags": ["root", "node_modules", "path", "show"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm root -g",
+    "description": "Show path to global node_modules.",
+    "tags": ["root", "global", "node_modules", "path"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm bin",
+    "description": "Show path to bin directory.",
+    "tags": ["bin", "binary", "path", "show"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm bin -g",
+    "description": "Show path to global bin directory.",
+    "tags": ["bin", "global", "binary", "path"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm prefix",
+    "description": "Show prefix (install location).",
+    "tags": ["prefix", "location", "install", "path"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm prefix -g",
+    "description": "Show global prefix.",
+    "tags": ["prefix", "global", "location", "path"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm view <package>",
+    "description": "Show package information.",
+    "tags": ["view", "info", "package", "details"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm view <package> version",
+    "description": "Show package version.",
+    "tags": ["view", "version", "package", "info"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm view <package> versions",
+    "description": "Show all package versions.",
+    "tags": ["view", "versions", "all", "package"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm view <package> dependencies",
+    "description": "Show package dependencies.",
+    "tags": ["view", "dependencies", "package", "info"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm view <package> peerDependencies",
+    "description": "Show package peer dependencies.",
+    "tags": ["view", "peer", "dependencies", "package"]
+  },
+  {
+    "title": "info",
+    "command": "pnpm doctor",
+    "description": "Check pnpm installation for issues.",
+    "tags": ["doctor", "check", "health", "issues"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm link",
+    "description": "Link current package globally.",
+    "tags": ["link", "local", "package", "global"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm link <package>",
+    "description": "Link global package to local node_modules.",
+    "tags": ["link", "package", "global", "local"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm link --global",
+    "description": "Alias for pnpm link.",
+    "tags": ["link", "global", "alias", "package"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm unlink",
+    "description": "Unlink package.",
+    "tags": ["unlink", "remove", "link", "package"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm unlink --global",
+    "description": "Unlink global package.",
+    "tags": ["unlink", "global", "remove", "link"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm link <path>",
+    "description": "Link package from local path.",
+    "tags": ["link", "path", "local", "package"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm import",
+    "description": "Import package-lock.json to pnpm-lock.yaml.",
+    "tags": ["import", "package-lock", "lockfile", "convert"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm rebuild",
+    "description": "Rebuild native dependencies.",
+    "tags": ["rebuild", "native", "dependencies", "compile"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm prune",
+    "description": "Remove extraneous packages.",
+    "tags": ["prune", "remove", "extraneous", "clean"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm prune --prod",
+    "description": "Remove dev dependencies and extraneous packages.",
+    "tags": ["prune", "production", "dev", "clean"]
+  },
+  {
+    "title": "linking",
+    "command": "pnpm dedupe",
+    "description": "Reduce duplication in node_modules.",
+    "tags": ["dedupe", "duplicate", "reduce", "optimize"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm licenses list",
+    "description": "List licenses of dependencies.",
+    "tags": ["licenses", "list", "dependencies", "legal"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm fund",
+    "description": "List funding information.",
+    "tags": ["fund", "funding", "support", "dependencies"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm patch <package>",
+    "description": "Create a patch for a package.",
+    "tags": ["patch", "create", "package", "modify"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm patch-commit <path>",
+    "description": "Generate patch file from patched package.",
+    "tags": ["patch", "commit", "generate", "file"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm env <command>",
+    "description": "Manage Node.js environment.",
+    "tags": ["env", "environment", "node", "manage"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm env use --global <version>",
+    "description": "Install and use specific Node.js version.",
+    "tags": ["env", "node", "version", "use"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm env remove --global <version>",
+    "description": "Remove Node.js version.",
+    "tags": ["env", "node", "remove", "version"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm env list",
+    "description": "List installed Node.js versions.",
+    "tags": ["env", "node", "list", "versions"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm setup",
+    "description": "Setup pnpm configuration.",
+    "tags": ["setup", "configure", "config", "init"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm completion",
+    "description": "Generate shell completion script.",
+    "tags": ["completion", "shell", "autocomplete", "generate"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm fetch",
+    "description": "Fetch packages to store without installing.",
+    "tags": ["fetch", "store", "download", "without-install"]
+  },
+  {
+    "title": "miscellaneous",
+    "command": "pnpm deploy",
+    "description": "Deploy package to production.",
+    "tags": ["deploy", "production", "package", "publish"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --ignore-pnpmfile",
+    "description": "Ignore pnpmfile.js.",
+    "tags": ["install", "ignore", "pnpmfile", "performance"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --node-linker hoisted",
+    "description": "Use hoisted node linker.",
+    "tags": ["install", "node-linker", "hoisted", "performance"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --node-linker isolated",
+    "description": "Use isolated node linker (default).",
+    "tags": ["install", "node-linker", "isolated", "default"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --node-linker pnpm",
+    "description": "Use pnpm node linker.",
+    "tags": ["install", "node-linker", "pnpm", "performance"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --symlink",
+    "description": "Use symlinks instead of hard links.",
+    "tags": ["install", "symlink", "links", "performance"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --use-store-server",
+    "description": "Use store server for faster installs.",
+    "tags": ["install", "store-server", "fast", "performance"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm server start",
+    "description": "Start store server.",
+    "tags": ["server", "start", "store", "performance"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm server stop",
+    "description": "Stop store server.",
+    "tags": ["server", "stop", "store", "performance"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --reporter=silent",
+    "description": "Silent install (no output).",
+    "tags": ["install", "silent", "quiet", "reporter"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --reporter=default",
+    "description": "Default reporter output.",
+    "tags": ["install", "reporter", "default", "output"]
+  },
+  {
+    "title": "performance",
+    "command": "pnpm install --reporter=ndjson",
+    "description": "NDJSON reporter output.",
+    "tags": ["install", "reporter", "ndjson", "output"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm add -E <package>",
+    "description": "Add exact version (no ^ or ~).",
+    "tags": ["add", "exact", "version", "pin"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm add --save-peer <package>",
+    "description": "Add peer dependency.",
+    "tags": ["add", "peer", "dependency", "save-peer"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm add --save-bundle <package>",
+    "description": "Add bundled dependency.",
+    "tags": ["add", "bundle", "dependency", "save-bundle"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm add --no-save <package>",
+    "description": "Install without saving to package.json.",
+    "tags": ["add", "no-save", "install", "temporary"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --lockfile-only",
+    "description": "Only update lockfile, not node_modules.",
+    "tags": ["install", "lockfile-only", "update", "lock"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --fix-lockfile",
+    "description": "Fix broken lockfile entries.",
+    "tags": ["install", "fix", "lockfile", "repair"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --force",
+    "description": "Force reinstall dependencies.",
+    "tags": ["install", "force", "reinstall", "dependencies"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --modules-dir <dir>",
+    "description": "Install to custom node_modules directory.",
+    "tags": ["install", "modules-dir", "custom", "directory"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --virtual-store-dir <dir>",
+    "description": "Use custom virtual store directory.",
+    "tags": ["install", "virtual-store", "custom", "directory"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --package-import-method auto",
+    "description": "Auto-select package import method.",
+    "tags": ["install", "package-import", "auto", "method"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --package-import-method copy",
+    "description": "Copy packages instead of linking.",
+    "tags": ["install", "package-import", "copy", "method"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --package-import-method clone-or-copy",
+    "description": "Clone or copy packages.",
+    "tags": ["install", "package-import", "clone", "copy"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm install --package-import-method hardlink",
+    "description": "Use hard links (default).",
+    "tags": ["install", "package-import", "hardlink", "default"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm run --silent <script>",
+    "description": "Run script silently.",
+    "tags": ["run", "silent", "script", "quiet"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm run --if-present <script>",
+    "description": "Run script only if present.",
+    "tags": ["run", "if-present", "script", "conditional"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm run --workspace-concurrency=<number>",
+    "description": "Set max concurrent workspace scripts.",
+    "tags": ["run", "workspace", "concurrency", "parallel"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm run --bail",
+    "description": "Stop on first script failure.",
+    "tags": ["run", "bail", "fail", "stop"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm run --reverse",
+    "description": "Run scripts in reverse order.",
+    "tags": ["run", "reverse", "order", "scripts"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm exec --shell-mode",
+    "description": "Run command in shell mode.",
+    "tags": ["exec", "shell", "mode", "command"]
+  },
+  {
+    "title": "development",
+    "command": "pnpm exec -- <command>",
+    "description": "Pass arguments to executed command.",
+    "tags": ["exec", "arguments", "command", "pass"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm -w <command>",
+    "description": "Run command in root workspace only.",
+    "tags": ["workspace", "root", "only", "w"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --workspace-packages",
+    "description": "Only include workspace packages.",
+    "tags": ["workspace", "packages", "only", "include"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --link-workspace-packages",
+    "description": "Link workspace packages.",
+    "tags": ["workspace", "link", "packages", "local"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --shared-workspace-lockfile",
+    "description": "Use shared workspace lockfile.",
+    "tags": ["workspace", "shared", "lockfile", "single"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --hoist-pattern <pattern>",
+    "description": "Hoist packages matching pattern.",
+    "tags": ["workspace", "hoist", "pattern", "packages"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --public-hoist-pattern <pattern>",
+    "description": "Publicly hoist packages matching pattern.",
+    "tags": ["workspace", "public", "hoist", "pattern"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --shamefully-hoist",
+    "description": "Create flat node_modules structure.",
+    "tags": ["workspace", "shamefully", "hoist", "flat"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --strict-peer-dependencies",
+    "description": "Fail on peer dependency conflicts.",
+    "tags": ["workspace", "strict", "peer", "dependencies"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --resolution-mode highest",
+    "description": "Resolve to highest version.",
+    "tags": ["workspace", "resolution", "mode", "highest"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --resolution-mode time-based",
+    "description": "Resolve based on publish time.",
+    "tags": ["workspace", "resolution", "mode", "time"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --resolution-mode lowest-direct",
+    "description": "Resolve to lowest direct dependency.",
+    "tags": ["workspace", "resolution", "mode", "lowest"]
+  },
+  {
+    "title": "workspace-specific",
+    "command": "pnpm --use-beta-cli",
+    "description": "Use beta version of pnpm CLI.",
+    "tags": ["workspace", "beta", "cli", "experimental"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --loglevel debug",
+    "description": "Set log level to debug.",
+    "tags": ["debug", "loglevel", "verbose", "logging"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --loglevel info",
+    "description": "Set log level to info.",
+    "tags": ["loglevel", "info", "default", "logging"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --loglevel warn",
+    "description": "Set log level to warn.",
+    "tags": ["loglevel", "warn", "warning", "logging"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --loglevel error",
+    "description": "Set log level to error.",
+    "tags": ["loglevel", "error", "critical", "logging"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --loglevel silent",
+    "description": "Set log level to silent.",
+    "tags": ["loglevel", "silent", "quiet", "logging"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --timing",
+    "description": "Enable timing information.",
+    "tags": ["timing", "performance", "measure", "debug"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --reporter=append-only",
+    "description": "Use append-only reporter.",
+    "tags": ["reporter", "append-only", "output", "debug"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --use-stderr",
+    "description": "Output all logs to stderr.",
+    "tags": ["stderr", "output", "logs", "debug"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --stream",
+    "description": "Stream output from child processes.",
+    "tags": ["stream", "output", "child", "processes"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --no-color",
+    "description": "Disable colored output.",
+    "tags": ["no-color", "disable", "output", "plain"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --color",
+    "description": "Force colored output.",
+    "tags": ["color", "force", "output", "colored"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm --help",
+    "description": "Show help.",
+    "tags": ["help", "documentation", "usage", "info"]
+  },
+  {
+    "title": "debugging",
+    "command": "pnpm <command> --help",
+    "description": "Show help for specific command.",
+    "tags": ["help", "command", "specific", "documentation"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --filter=\"[<since>]\" <command>",
+    "description": "Run command for packages changed since commit/tag.",
+    "tags": ["filter", "since", "changed", "git"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --filter=\"./packages/**\" <command>",
+    "description": "Run command for packages in glob pattern.",
+    "tags": ["filter", "glob", "pattern", "packages"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --filter \"{<package>}\" <command>",
+    "description": "Run command for specific package by name.",
+    "tags": ["filter", "package", "name", "specific"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --test-pattern <pattern>",
+    "description": "Define pattern for test files.",
+    "tags": ["test", "pattern", "files", "detection"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --changed-files-ignore-pattern <pattern>",
+    "description": "Ignore files matching pattern for change detection.",
+    "tags": ["changed", "files", "ignore", "pattern"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --sort",
+    "description": "Sort packages topologically.",
+    "tags": ["sort", "topological", "order", "packages"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --reverse",
+    "description": "Reverse package execution order.",
+    "tags": ["reverse", "order", "packages", "execution"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --report-summary",
+    "description": "Generate installation summary report.",
+    "tags": ["report", "summary", "installation", "stats"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --verify-store-integrity",
+    "description": "Verify store integrity.",
+    "tags": ["verify", "store", "integrity", "check"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --config.confirmModulesPurge=false",
+    "description": "Disable module purge confirmation.",
+    "tags": ["config", "confirm", "purge", "modules"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --use-running-store-server",
+    "description": "Use already running store server.",
+    "tags": ["store", "server", "running", "use"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --store-dir <path>",
+    "description": "Set custom store directory.",
+    "tags": ["store", "dir", "custom", "path"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --modules-cache-max-age <duration>",
+    "description": "Set max age for modules cache.",
+    "tags": ["modules", "cache", "max-age", "duration"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --network-concurrency <number>",
+    "description": "Set max concurrent network requests.",
+    "tags": ["network", "concurrency", "requests", "max"]
+  },
+  {
+    "title": "advanced",
+    "command": "pnpm --child-concurrency <number>",
+    "description": "Set max concurrent child processes.",
+    "tags": ["child", "concurrency", "processes", "max"]
+  }
+]

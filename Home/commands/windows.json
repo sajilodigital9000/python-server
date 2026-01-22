@@ -1,0 +1,1544 @@
+[
+  {
+    "title": "List Directory Contents",
+    "command": "dir",
+    "description": "Displays a list of files and subdirectories in a directory.",
+    "tags": ["file", "directory", "list", "basic"]
+  },
+  {
+    "title": "Change Directory",
+    "command": "cd <directory_path>",
+    "description": "Changes the current directory. Use 'cd ..' to go up one level, 'cd /' to go to root.",
+    "tags": ["navigation", "directory", "basic"]
+  },
+  {
+    "title": "Clear Screen",
+    "command": "cls",
+    "description": "Clears the command prompt screen.",
+    "tags": ["clear", "screen", "basic"]
+  },
+  {
+    "title": "Copy Files",
+    "command": "copy <source> <destination>",
+    "description": "Copies one or more files to another location.",
+    "tags": ["file", "copy", "management"]
+  },
+  {
+    "title": "Move Files",
+    "command": "move <source> <destination>",
+    "description": "Moves files from one directory to another.",
+    "tags": ["file", "move", "management"]
+  },
+  {
+    "title": "Delete Files",
+    "command": "del <filename>",
+    "description": "Deletes one or more files. Use '/s' to delete from all subdirectories.",
+    "tags": ["file", "delete", "remove"]
+  },
+  {
+    "title": "Remove Directory",
+    "command": "rmdir <directory_name>",
+    "description": "Removes a directory. Use '/s' to remove directory tree, '/q' for quiet mode.",
+    "tags": ["directory", "delete", "remove"]
+  },
+  {
+    "title": "Create Directory",
+    "command": "mkdir <directory_name>",
+    "description": "Creates a new directory or subdirectory.",
+    "tags": ["directory", "create", "make"]
+  },
+  {
+    "title": "View File Contents",
+    "command": "type <filename>",
+    "description": "Displays the contents of a text file.",
+    "tags": ["file", "view", "content", "text"]
+  },
+  {
+    "title": "Rename Files",
+    "command": "ren <old_name> <new_name>",
+    "description": "Renames a file or directory.",
+    "tags": ["file", "rename", "change"]
+  },
+  {
+    "title": "Find Text in Files",
+    "command": "findstr \"text\" <filename>",
+    "description": "Searches for strings in files. Use '/s' to search in current directory and all subdirectories.",
+    "tags": ["search", "text", "find", "grep"]
+  },
+  {
+    "title": "Display System Information",
+    "command": "systeminfo",
+    "description": "Displays detailed configuration information about a computer and its operating system.",
+    "tags": ["system", "info", "configuration", "hardware"]
+  },
+  {
+    "title": "Check IP Configuration",
+    "command": "ipconfig",
+    "description": "Displays all current TCP/IP network configuration values. Use '/all' for detailed information.",
+    "tags": ["network", "ip", "tcp", "configuration"]
+  },
+  {
+    "title": "Release IP Address",
+    "command": "ipconfig /release",
+    "description": "Discards the current DHCP configuration for all adapters.",
+    "tags": ["network", "ip", "dhcp", "release"]
+  },
+  {
+    "title": "Renew IP Address",
+    "command": "ipconfig /renew",
+    "description": "Renews DHCP configuration for all adapters.",
+    "tags": ["network", "ip", "dhcp", "renew"]
+  },
+  {
+    "title": "Flush DNS Cache",
+    "command": "ipconfig /flushdns",
+    "description": "Purges the DNS Resolver cache.",
+    "tags": ["network", "dns", "cache", "flush"]
+  },
+  {
+    "title": "Test Network Connectivity",
+    "command": "ping <hostname_or_IP>",
+    "description": "Sends ICMP echo request packets to test network connectivity. Use '-t' for continuous ping.",
+    "tags": ["network", "test", "connectivity", "ping"]
+  },
+  {
+    "title": "Trace Network Route",
+    "command": "tracert <hostname_or_IP>",
+    "description": "Traces the route packets take to a network host.",
+    "tags": ["network", "trace", "route", "diagnostic"]
+  },
+  {
+    "title": "Display Network Statistics",
+    "command": "netstat",
+    "description": "Displays active TCP connections, ports, and statistics. Use '-a' for all connections, '-n' for numeric.",
+    "tags": ["network", "statistics", "connections", "ports"]
+  },
+  {
+    "title": "Display ARP Cache",
+    "command": "arp -a",
+    "description": "Displays and modifies the IP-to-Physical address translation tables.",
+    "tags": ["network", "arp", "cache", "mac"]
+  },
+  {
+    "title": "Task List",
+    "command": "tasklist",
+    "description": "Displays a list of currently running processes. Use '/v' for verbose, '/svc' for services.",
+    "tags": ["process", "task", "list", "management"]
+  },
+  {
+    "title": "End Process",
+    "command": "taskkill /pid <process_id> /f",
+    "description": "Terminates tasks by process id. Use '/im' to kill by image name.",
+    "tags": ["process", "kill", "terminate", "task"]
+  },
+  {
+    "title": "Disk Usage",
+    "command": "chkdsk <drive_letter>:",
+    "description": "Checks a disk and displays a status report. Use '/f' to fix errors, '/r' to locate bad sectors.",
+    "tags": ["disk", "check", "repair", "storage"]
+  },
+  {
+    "title": "Format Disk",
+    "command": "format <drive_letter>:",
+    "description": "Formats a disk for use with Windows. Use '/fs' to specify file system.",
+    "tags": ["disk", "format", "storage"]
+  },
+  {
+    "title": "Disk Partition Management",
+    "command": "diskpart",
+    "description": "Starts the Disk Partition utility for managing disks, partitions, and volumes.",
+    "tags": ["disk", "partition", "management", "storage"]
+  },
+  {
+    "title": "File System Check",
+    "command": "sfc /scannow",
+    "description": "Scans and repairs Windows system files.",
+    "tags": ["system", "repair", "files", "check"]
+  },
+  {
+    "title": "Check Disk for Errors",
+    "command": "wmic diskdrive get status",
+    "description": "Checks the status of all disk drives in the system.",
+    "tags": ["disk", "check", "health", "status"]
+  },
+  {
+    "title": "Display Windows Version",
+    "command": "ver",
+    "description": "Displays the Windows version number.",
+    "tags": ["system", "version", "info"]
+  },
+  {
+    "title": "Display Current Date",
+    "command": "date",
+    "description": "Displays or sets the system date.",
+    "tags": ["system", "date", "time"]
+  },
+  {
+    "title": "Display Current Time",
+    "command": "time",
+    "description": "Displays or sets the system time.",
+    "tags": ["system", "time", "date"]
+  },
+  {
+    "title": "Set Environment Variable",
+    "command": "set <variable>=<value>",
+    "description": "Sets or displays environment variables for the current session.",
+    "tags": ["environment", "variable", "set"]
+  },
+  {
+    "title": "List Environment Variables",
+    "command": "set",
+    "description": "Displays all environment variables for the current session.",
+    "tags": ["environment", "variable", "list"]
+  },
+  {
+    "title": "Path Environment Variable",
+    "command": "echo %PATH%",
+    "description": "Displays the PATH environment variable.",
+    "tags": ["environment", "path", "variable"]
+  },
+  {
+    "title": "Command History",
+    "command": "doskey /history",
+    "description": "Displays all commands entered in the current session.",
+    "tags": ["history", "commands", "session"]
+  },
+  {
+    "title": "Help for Commands",
+    "command": "help <command_name>",
+    "description": "Provides help information for Windows commands.",
+    "tags": ["help", "documentation", "assistance"]
+  },
+  {
+    "title": "Command Syntax Help",
+    "command": "<command_name> /?",
+    "description": "Displays help for a specific command.",
+    "tags": ["help", "syntax", "documentation"]
+  },
+  {
+    "title": "Shut Down Computer",
+    "command": "shutdown /s /t 0",
+    "description": "Shuts down the computer immediately. Use '/r' for restart, '/l' for logoff.",
+    "tags": ["system", "shutdown", "power", "restart"]
+  },
+  {
+    "title": "Restart Computer",
+    "command": "shutdown /r /t 0",
+    "description": "Restarts the computer immediately.",
+    "tags": ["system", "restart", "reboot"]
+  },
+  {
+    "title": "Schedule Shutdown",
+    "command": "shutdown /s /t <seconds>",
+    "description": "Schedules a shutdown after specified seconds.",
+    "tags": ["system", "shutdown", "schedule"]
+  },
+  {
+    "title": "Abort Shutdown",
+    "command": "shutdown /a",
+    "description": "Aborts a system shutdown.",
+    "tags": ["system", "shutdown", "abort", "cancel"]
+  },
+  {
+    "title": "Force Shutdown",
+    "command": "shutdown /s /f /t 0",
+    "description": "Forces running applications to close and shuts down the computer.",
+    "tags": ["system", "shutdown", "force", "immediate"]
+  },
+  {
+    "title": "Windows Update History",
+    "command": "wmic qfe list",
+    "description": "Lists all installed Windows updates.",
+    "tags": ["windows", "update", "history", "patches"]
+  },
+  {
+    "title": "Check Windows License",
+    "command": "slmgr /xpr",
+    "description": "Displays the expiration date of the current Windows license.",
+    "tags": ["windows", "license", "activation", "status"]
+  },
+  {
+    "title": "Activate Windows",
+    "command": "slmgr /ato",
+    "description": "Activates Windows using the existing product key.",
+    "tags": ["windows", "activate", "license", "product"]
+  },
+  {
+    "title": "Display Product Key",
+    "command": "wmic path softwarelicensingservice get OA3xOriginalProductKey",
+    "description": "Retrieves the Windows product key from the BIOS.",
+    "tags": ["windows", "product", "key", "license"]
+  },
+  {
+    "title": "Event Viewer Logs",
+    "command": "eventvwr",
+    "description": "Opens the Event Viewer to examine Windows logs.",
+    "tags": ["system", "logs", "events", "diagnostic"]
+  },
+  {
+    "title": "Resource Monitor",
+    "command": "resmon",
+    "description": "Opens the Resource Monitor to view system resource usage.",
+    "tags": ["system", "resources", "monitor", "performance"]
+  },
+  {
+    "title": "System Configuration",
+    "command": "msconfig",
+    "description": "Opens the System Configuration utility for boot and startup management.",
+    "tags": ["system", "configuration", "boot", "startup"]
+  },
+  {
+    "title": "Device Manager",
+    "command": "devmgmt.msc",
+    "description": "Opens the Device Manager to manage hardware devices.",
+    "tags": ["hardware", "devices", "management", "drivers"]
+  },
+  {
+    "title": "Disk Management",
+    "command": "diskmgmt.msc",
+    "description": "Opens the Disk Management console.",
+    "tags": ["disk", "management", "partitions", "volumes"]
+  },
+  {
+    "title": "Services Management",
+    "command": "services.msc",
+    "description": "Opens the Services management console.",
+    "tags": ["services", "management", "windows", "daemons"]
+  },
+  {
+    "title": "Local Group Policy",
+    "command": "gpedit.msc",
+    "description": "Opens the Local Group Policy Editor (Windows Pro/Enterprise only).",
+    "tags": ["policy", "group", "settings", "administrative"]
+  },
+  {
+    "title": "Registry Editor",
+    "command": "regedit",
+    "description": "Opens the Registry Editor for modifying Windows registry.",
+    "tags": ["registry", "editor", "configuration", "advanced"]
+  },
+  {
+    "title": "Windows Features",
+    "command": "optionalfeatures",
+    "description": "Opens Windows Features dialog to enable/disable Windows components.",
+    "tags": ["windows", "features", "components", "optional"]
+  },
+  {
+    "title": "Remote Desktop",
+    "command": "mstsc",
+    "description": "Opens Remote Desktop Connection client.",
+    "tags": ["remote", "desktop", "connection", "rdp"]
+  },
+  {
+    "title": "Command Prompt as Admin",
+    "command": "runas /user:Administrator cmd",
+    "description": "Opens Command Prompt with administrator privileges.",
+    "tags": ["admin", "privileges", "elevated", "command"]
+  },
+  {
+    "title": "PowerShell",
+    "command": "powershell",
+    "description": "Opens Windows PowerShell.",
+    "tags": ["powershell", "shell", "scripting"]
+  },
+  {
+    "title": "PowerShell as Admin",
+    "command": "powershell -Command \"Start-Process powershell -Verb RunAs\"",
+    "description": "Opens PowerShell with administrator privileges.",
+    "tags": ["powershell", "admin", "elevated"]
+  },
+  {
+    "title": "Windows Version Info",
+    "command": "winver",
+    "description": "Displays the About Windows dialog with version information.",
+    "tags": ["windows", "version", "info", "about"]
+  },
+  {
+    "title": "System Properties",
+    "command": "sysdm.cpl",
+    "description": "Opens System Properties dialog.",
+    "tags": ["system", "properties", "settings"]
+  },
+  {
+    "title": "Network Connections",
+    "command": "ncpa.cpl",
+    "description": "Opens Network Connections control panel.",
+    "tags": ["network", "connections", "adapters"]
+  },
+  {
+    "title": "Power Options",
+    "command": "powercfg.cpl",
+    "description": "Opens Power Options control panel.",
+    "tags": ["power", "options", "settings", "battery"]
+  },
+  {
+    "title": "Date and Time",
+    "command": "timedate.cpl",
+    "description": "Opens Date and Time properties.",
+    "tags": ["date", "time", "settings", "clock"]
+  },
+  {
+    "title": "Sound Settings",
+    "command": "mmsys.cpl",
+    "description": "Opens Sound settings control panel.",
+    "tags": ["sound", "audio", "settings"]
+  },
+  {
+    "title": "Display Settings",
+    "command": "desk.cpl",
+    "description": "Opens Display settings control panel.",
+    "tags": ["display", "monitor", "settings", "resolution"]
+  },
+  {
+    "title": "Mouse Properties",
+    "command": "main.cpl",
+    "description": "Opens Mouse Properties control panel.",
+    "tags": ["mouse", "pointer", "settings"]
+  },
+  {
+    "title": "Keyboard Properties",
+    "command": "control keyboard",
+    "description": "Opens Keyboard Properties control panel.",
+    "tags": ["keyboard", "settings", "input"]
+  },
+  {
+    "title": "User Accounts",
+    "command": "netplwiz",
+    "description": "Opens User Accounts management dialog.",
+    "tags": ["user", "accounts", "management", "login"]
+  },
+  {
+    "title": "Add User",
+    "command": "net user <username> <password> /add",
+    "description": "Creates a new user account.",
+    "tags": ["user", "create", "account", "add"]
+  },
+  {
+    "title": "Delete User",
+    "command": "net user <username> /delete",
+    "description": "Deletes a user account.",
+    "tags": ["user", "delete", "account", "remove"]
+  },
+  {
+    "title": "List Users",
+    "command": "net user",
+    "description": "Lists all user accounts on the system.",
+    "tags": ["user", "list", "accounts"]
+  },
+  {
+    "title": "Change User Password",
+    "command": "net user <username> *",
+    "description": "Changes password for a user account.",
+    "tags": ["user", "password", "change", "security"]
+  },
+  {
+    "title": "Add User to Group",
+    "command": "net localgroup <groupname> <username> /add",
+    "description": "Adds a user to a local group.",
+    "tags": ["user", "group", "add", "permissions"]
+  },
+  {
+    "title": "List Groups",
+    "command": "net localgroup",
+    "description": "Lists all local groups on the system.",
+    "tags": ["groups", "list", "permissions"]
+  },
+  {
+    "title": "Display Computer Name",
+    "command": "hostname",
+    "description": "Displays the name of the computer.",
+    "tags": ["computer", "name", "hostname", "network"]
+  },
+  {
+    "title": "Change Computer Name",
+    "command": "wmic computersystem where name=\"%computername%\" call rename name=\"<new_name>\"",
+    "description": "Changes the computer name (requires restart).",
+    "tags": ["computer", "name", "change", "rename"]
+  },
+  {
+    "title": "System Uptime",
+    "command": "systeminfo | find \"System Boot Time\"",
+    "description": "Shows when the system was last booted.",
+    "tags": ["system", "uptime", "boot", "time"]
+  },
+  {
+    "title": "Check Port Availability",
+    "command": "netstat -an | find \":<port_number>\"",
+    "description": "Checks if a specific port is in use.",
+    "tags": ["network", "port", "check", "availability"]
+  },
+  {
+    "title": "List All Listening Ports",
+    "command": "netstat -aon | findstr LISTENING",
+    "description": "Lists all ports that are currently listening for connections.",
+    "tags": ["network", "ports", "listening", "connections"]
+  },
+  {
+    "title": "Find Process Using Port",
+    "command": "netstat -ano | findstr :<port_number>",
+    "description": "Finds which process is using a specific port.",
+    "tags": ["network", "port", "process", "find"]
+  },
+  {
+    "title": "Display Routing Table",
+    "command": "route print",
+    "description": "Displays the IP routing table.",
+    "tags": ["network", "routing", "table", "routes"]
+  },
+  {
+    "title": "Add Static Route",
+    "command": "route add <network> mask <subnet_mask> <gateway>",
+    "description": "Adds a static route to the routing table.",
+    "tags": ["network", "route", "add", "static"]
+  },
+  {
+    "title": "Delete Route",
+    "command": "route delete <network>",
+    "description": "Deletes a route from the routing table.",
+    "tags": ["network", "route", "delete", "remove"]
+  },
+  {
+    "title": "List Shared Folders",
+    "command": "net share",
+    "description": "Lists all shared folders on the computer.",
+    "tags": ["sharing", "folders", "network", "list"]
+  },
+  {
+    "title": "Create Shared Folder",
+    "command": "net share <sharename>=<drive_letter>:\\<path>",
+    "description": "Creates a network share for a folder.",
+    "tags": ["sharing", "folder", "create", "network"]
+  },
+  {
+    "title": "Delete Shared Folder",
+    "command": "net share <sharename> /delete",
+    "description": "Deletes a network share.",
+    "tags": ["sharing", "folder", "delete", "network"]
+  },
+  {
+    "title": "Display Current User",
+    "command": "whoami",
+    "description": "Displays the current username.",
+    "tags": ["user", "current", "identity", "login"]
+  },
+  {
+    "title": "Display User Privileges",
+    "command": "whoami /priv",
+    "description": "Displays the privileges of the current user.",
+    "tags": ["user", "privileges", "permissions", "security"]
+  },
+  {
+    "title": "Display User Groups",
+    "command": "whoami /groups",
+    "description": "Displays the groups the current user belongs to.",
+    "tags": ["user", "groups", "membership", "security"]
+  },
+  {
+    "title": "List All Processes",
+    "command": "wmic process get name,processid",
+    "description": "Lists all running processes with their IDs.",
+    "tags": ["process", "list", "all", "management"]
+  },
+  {
+    "title": "Find Process by Name",
+    "command": "tasklist | findstr <process_name>",
+    "description": "Finds processes by name.",
+    "tags": ["process", "find", "search", "name"]
+  },
+  {
+    "title": "Display Service Status",
+    "command": "sc query <service_name>",
+    "description": "Displays the status of a specific service.",
+    "tags": ["service", "status", "query", "windows"]
+  },
+  {
+    "title": "Start Service",
+    "command": "sc start <service_name>",
+    "description": "Starts a Windows service.",
+    "tags": ["service", "start", "windows", "daemon"]
+  },
+  {
+    "title": "Stop Service",
+    "command": "sc stop <service_name>",
+    "description": "Stops a Windows service.",
+    "tags": ["service", "stop", "windows", "daemon"]
+  },
+  {
+    "title": "Pause Service",
+    "command": "sc pause <service_name>",
+    "description": "Pauses a Windows service.",
+    "tags": ["service", "pause", "windows", "daemon"]
+  },
+  {
+    "title": "Continue Service",
+    "command": "sc continue <service_name>",
+    "description": "Resumes a paused Windows service.",
+    "tags": ["service", "continue", "resume", "windows"]
+  },
+  {
+    "title": "Create New Service",
+    "command": "sc create <service_name> binPath= \"<path_to_exe>\"",
+    "description": "Creates a new Windows service.",
+    "tags": ["service", "create", "new", "windows"]
+  },
+  {
+    "title": "Delete Service",
+    "command": "sc delete <service_name>",
+    "description": "Deletes a Windows service.",
+    "tags": ["service", "delete", "remove", "windows"]
+  },
+  {
+    "title": "Display Service Configuration",
+    "command": "sc qc <service_name>",
+    "description": "Displays the configuration of a service.",
+    "tags": ["service", "configuration", "query", "windows"]
+  },
+  {
+    "title": "Display Installed Drivers",
+    "command": "driverquery",
+    "description": "Lists all installed device drivers.",
+    "tags": ["drivers", "list", "installed", "hardware"]
+  },
+  {
+    "title": "Display Driver Details",
+    "command": "driverquery /v",
+    "description": "Displays detailed information about installed drivers.",
+    "tags": ["drivers", "details", "verbose", "hardware"]
+  },
+  {
+    "title": "Display Hotfixes",
+    "command": "wmic qfe get HotFixID,InstalledOn",
+    "description": "Lists all installed Windows hotfixes with installation dates.",
+    "tags": ["windows", "hotfixes", "updates", "patches"]
+  },
+  {
+    "title": "Display BIOS Information",
+    "command": "wmic bios get name,version,serialnumber",
+    "description": "Displays BIOS information including version and serial number.",
+    "tags": ["bios", "firmware", "hardware", "info"]
+  },
+  {
+    "title": "Display Motherboard Info",
+    "command": "wmic baseboard get product,Manufacturer,version,serialnumber",
+    "description": "Displays motherboard information.",
+    "tags": ["motherboard", "hardware", "info", "system"]
+  },
+  {
+    "title": "Display CPU Information",
+    "command": "wmic cpu get name,NumberOfCores,NumberOfLogicalProcessors",
+    "description": "Displays detailed CPU information.",
+    "tags": ["cpu", "processor", "hardware", "info"]
+  },
+  {
+    "title": "Display Memory Information",
+    "command": "wmic memorychip get capacity,speed,devicelocator",
+    "description": "Displays RAM module information.",
+    "tags": ["memory", "ram", "hardware", "info"]
+  },
+  {
+    "title": "Display Disk Information",
+    "command": "wmic diskdrive get model,size,interfaceType",
+    "description": "Displays information about installed disk drives.",
+    "tags": ["disk", "drive", "storage", "hardware"]
+  },
+  {
+    "title": "Display Graphics Card Info",
+    "command": "wmic path win32_VideoController get name,AdapterRAM",
+    "description": "Displays graphics card information.",
+    "tags": ["graphics", "gpu", "video", "hardware"]
+  },
+  {
+    "title": "Display Network Adapters",
+    "command": "wmic nic get name,AdapterType,MacAddress",
+    "description": "Lists all network adapters with their MAC addresses.",
+    "tags": ["network", "adapters", "mac", "hardware"]
+  },
+  {
+    "title": "Display Monitor Information",
+    "command": "wmic desktopmonitor get ScreenHeight,ScreenWidth",
+    "description": "Displays monitor resolution information.",
+    "tags": ["monitor", "display", "resolution", "hardware"]
+  },
+  {
+    "title": "Display Battery Information",
+    "command": "powercfg /batteryreport",
+    "description": "Generates a battery health report.",
+    "tags": ["battery", "power", "laptop", "health"]
+  },
+  {
+    "title": "Check Power Settings",
+    "command": "powercfg /q",
+    "description": "Displays current power settings.",
+    "tags": ["power", "settings", "battery", "configuration"]
+  },
+  {
+    "title": "Generate Energy Report",
+    "command": "powercfg /energy",
+    "description": "Generates an energy efficiency diagnostic report.",
+    "tags": ["power", "energy", "report", "efficiency"]
+  },
+  {
+    "title": "Display Sleep States",
+    "command": "powercfg /a",
+    "description": "Displays available sleep states.",
+    "tags": ["power", "sleep", "states", "hibernate"]
+  },
+  {
+    "title": "Create Restore Point",
+    "command": "wmic.exe /Namespace:\\\\root\\default Path SystemRestore Call CreateRestorePoint \"My Restore Point\", 100, 7",
+    "description": "Creates a system restore point.",
+    "tags": ["system", "restore", "point", "backup"]
+  },
+  {
+    "title": "List Restore Points",
+    "command": "vssadmin list shadows",
+    "description": "Lists all available restore points.",
+    "tags": ["system", "restore", "points", "list"]
+  },
+  {
+    "title": "Check Disk Space",
+    "command": "wmic logicaldisk get size,freespace,caption",
+    "description": "Displays disk space information for all drives.",
+    "tags": ["disk", "space", "storage", "free"]
+  },
+  {
+    "title": "Display File System Info",
+    "command": "fsutil fsinfo drives",
+    "description": "Lists all drives in the system.",
+    "tags": ["filesystem", "drives", "list"]
+  },
+  {
+    "title": "Display NTFS Info",
+    "command": "fsutil fsinfo ntfsinfo <drive_letter>:",
+    "description": "Displays NTFS file system information for a drive.",
+    "tags": ["ntfs", "filesystem", "info", "drive"]
+  },
+  {
+    "title": "Check File System Usage",
+    "command": "fsutil volume diskfree <drive_letter>:",
+    "description": "Displays disk space usage for a volume.",
+    "tags": ["filesystem", "disk", "space", "usage"]
+  },
+  {
+    "title": "Create Symbolic Link",
+    "command": "mklink <link_name> <target>",
+    "description": "Creates a symbolic link. Use '/d' for directory links, '/h' for hard links.",
+    "tags": ["link", "symbolic", "shortcut", "file"]
+  },
+  {
+    "title": "Take Ownership of File",
+    "command": "takeown /f <filename>",
+    "description": "Takes ownership of a file or folder.",
+    "tags": ["ownership", "file", "security", "permissions"]
+  },
+  {
+    "title": "Grant Full Control",
+    "command": "icacls <filename> /grant <username>:F",
+    "description": "Grants full control permissions to a user for a file or folder.",
+    "tags": ["permissions", "grant", "security", "access"]
+  },
+  {
+    "title": "Remove Permissions",
+    "command": "icacls <filename> /remove <username>",
+    "description": "Removes all permissions for a user from a file or folder.",
+    "tags": ["permissions", "remove", "security", "access"]
+  },
+  {
+    "title": "Reset Permissions",
+    "command": "icacls <filename> /reset",
+    "description": "Resets permissions to default inheritance.",
+    "tags": ["permissions", "reset", "security", "default"]
+  },
+  {
+    "title": "Display File Permissions",
+    "command": "icacls <filename>",
+    "description": "Displays permissions for a file or folder.",
+    "tags": ["permissions", "display", "security", "access"]
+  },
+  {
+    "title": "File Attributes",
+    "command": "attrib",
+    "description": "Displays or changes file attributes. Use '+r' for read-only, '+h' for hidden, '+s' for system.",
+    "tags": ["file", "attributes", "properties", "attrib"]
+  },
+  {
+    "title": "Compare Files",
+    "command": "fc <file1> <file2>",
+    "description": "Compares two files and displays the differences.",
+    "tags": ["file", "compare", "diff", "difference"]
+  },
+  {
+    "title": "File Checksum",
+    "command": "certutil -hashfile <filename> MD5",
+    "description": "Calculates MD5 hash of a file. Replace MD5 with SHA1, SHA256, etc.",
+    "tags": ["file", "hash", "checksum", "security"]
+  },
+  {
+    "title": "Display File Size",
+    "command": "forfiles /c \"cmd /c echo @fsize @file\"",
+    "description": "Lists files with their sizes in the current directory.",
+    "tags": ["file", "size", "list", "directory"]
+  },
+  {
+    "title": "Find Large Files",
+    "command": "forfiles /s /m *.* /c \"cmd /c if @fsize GTR 10000000 echo @path @fsize\"",
+    "description": "Finds files larger than 10MB in the current directory and subdirectories.",
+    "tags": ["file", "large", "find", "size"]
+  },
+  {
+    "title": "Count Files",
+    "command": "dir /a-d | find /c \"\\\"",
+    "description": "Counts the number of files in the current directory.",
+    "tags": ["file", "count", "directory", "number"]
+  },
+  {
+    "title": "Count Directories",
+    "command": "dir /ad | find /c \"\\\"",
+    "description": "Counts the number of directories in the current directory.",
+    "tags": ["directory", "count", "folders", "number"]
+  },
+  {
+    "title": "Find Empty Files",
+    "command": "forfiles /c \"cmd /c if @fsize==0 echo @file\"",
+    "description": "Finds empty files in the current directory.",
+    "tags": ["file", "empty", "find", "zero"]
+  },
+  {
+    "title": "Find Duplicate Files",
+    "command": "dir /s /b | sort | uniq -d",
+    "description": "Finds duplicate file names (requires sort and uniq utilities).",
+    "tags": ["file", "duplicate", "find", "compare"]
+  },
+  {
+    "title": "Display File Extension Info",
+    "command": "assoc .<ext>",
+    "description": "Displays the file type associated with a file extension.",
+    "tags": ["file", "extension", "type", "association"]
+  },
+  {
+    "title": "Display Program for Extension",
+    "command": "ftype <filetype>",
+    "description": "Displays the program used to open a file type.",
+    "tags": ["file", "program", "association", "open"]
+  },
+  {
+    "title": "Open File with Default Program",
+    "command": "start <filename>",
+    "description": "Opens a file with its default program.",
+    "tags": ["file", "open", "start", "launch"]
+  },
+  {
+    "title": "Open Explorer",
+    "command": "explorer",
+    "description": "Opens Windows File Explorer.",
+    "tags": ["explorer", "file", "manager", "gui"]
+  },
+  {
+    "title": "Open Explorer to Path",
+    "command": "explorer <path>",
+    "description": "Opens Windows File Explorer to a specific path.",
+    "tags": ["explorer", "path", "open", "directory"]
+  },
+  {
+    "title": "Create Shortcut",
+    "command": "powershell \"$s=(New-Object -COM WScript.Shell).CreateShortcut('shortcut.lnk');$s.TargetPath='target.exe';$s.Save()\"",
+    "description": "Creates a shortcut to a file or program.",
+    "tags": ["shortcut", "create", "link", "desktop"]
+  },
+  {
+    "title": "Display Clipboard Contents",
+    "command": "clip",
+    "description": "Used with pipes to copy output to clipboard. Example: dir | clip",
+    "tags": ["clipboard", "copy", "paste", "utility"]
+  },
+  {
+    "title": "Print Text File",
+    "command": "print <filename>",
+    "description": "Prints a text file to the default printer.",
+    "tags": ["print", "file", "printer", "output"]
+  },
+  {
+    "title": "Map Network Drive",
+    "command": "net use <drive_letter>: \\\\<server>\\<share>",
+    "description": "Maps a network drive to a local drive letter.",
+    "tags": ["network", "drive", "map", "share"]
+  },
+  {
+    "title": "Disconnect Network Drive",
+    "command": "net use <drive_letter>: /delete",
+    "description": "Disconnects a mapped network drive.",
+    "tags": ["network", "drive", "disconnect", "unmap"]
+  },
+  {
+    "title": "List Network Drives",
+    "command": "net use",
+    "description": "Lists all mapped network drives.",
+    "tags": ["network", "drives", "list", "mapped"]
+  },
+  {
+    "title": "Display Network Statistics by Process",
+    "command": "netstat -b",
+    "description": "Displays network statistics with executable names (requires admin).",
+    "tags": ["network", "statistics", "process", "executable"]
+  },
+  {
+    "title": "Display Active Connections",
+    "command": "netstat -n",
+    "description": "Displays active connections in numerical form.",
+    "tags": ["network", "connections", "active", "numerical"]
+  },
+  {
+    "title": "Display Ethernet Statistics",
+    "command": "netstat -e",
+    "description": "Displays Ethernet statistics.",
+    "tags": ["network", "ethernet", "statistics", "interface"]
+  },
+  {
+    "title": "Display Protocol Statistics",
+    "command": "netstat -s",
+    "description": "Displays protocol statistics (IP, ICMP, TCP, UDP).",
+    "tags": ["network", "protocol", "statistics", "ip"]
+  },
+  {
+    "title": "Display Connection Timers",
+    "command": "netstat -o",
+    "description": "Displays active connections with process IDs and timers.",
+    "tags": ["network", "connections", "timers", "process"]
+  },
+  {
+    "title": "Flush ARP Cache",
+    "command": "netsh interface ip delete arpcache",
+    "description": "Flushes the ARP cache.",
+    "tags": ["network", "arp", "cache", "flush"]
+  },
+  {
+    "title": "Reset TCP/IP Stack",
+    "command": "netsh int ip reset",
+    "description": "Resets TCP/IP stack to default.",
+    "tags": ["network", "tcp", "ip", "reset"]
+  },
+  {
+    "title": "Reset Winsock Catalog",
+    "command": "netsh winsock reset",
+    "description": "Resets Winsock catalog to default.",
+    "tags": ["network", "winsock", "reset", "catalog"]
+  },
+  {
+    "title": "Display Firewall Status",
+    "command": "netsh advfirewall show allprofiles",
+    "description": "Displays firewall status for all profiles.",
+    "tags": ["firewall", "security", "status", "network"]
+  },
+  {
+    "title": "Enable Firewall",
+    "command": "netsh advfirewall set allprofiles state on",
+    "description": "Enables Windows Firewall for all profiles.",
+    "tags": ["firewall", "enable", "security", "network"]
+  },
+  {
+    "title": "Disable Firewall",
+    "command": "netsh advfirewall set allprofiles state off",
+    "description": "Disables Windows Firewall for all profiles.",
+    "tags": ["firewall", "disable", "security", "network"]
+  },
+  {
+    "title": "Add Firewall Rule",
+    "command": "netsh advfirewall firewall add rule name=\"Rule Name\" dir=in action=allow protocol=TCP localport=80",
+    "description": "Adds a new firewall rule.",
+    "tags": ["firewall", "rule", "add", "security"]
+  },
+  {
+    "title": "Delete Firewall Rule",
+    "command": "netsh advfirewall firewall delete rule name=\"Rule Name\"",
+    "description": "Deletes a firewall rule.",
+    "tags": ["firewall", "rule", "delete", "security"]
+  },
+  {
+    "title": "List Firewall Rules",
+    "command": "netsh advfirewall firewall show rule name=all",
+    "description": "Lists all firewall rules.",
+    "tags": ["firewall", "rules", "list", "security"]
+  },
+  {
+    "title": "Display DNS Cache",
+    "command": "ipconfig /displaydns",
+    "description": "Displays the contents of the DNS resolver cache.",
+    "tags": ["dns", "cache", "display", "network"]
+  },
+  {
+    "title": "Register DNS",
+    "command": "ipconfig /registerdns",
+    "description": "Refreshes all DHCP leases and re-registers DNS names.",
+    "tags": ["dns", "register", "network", "dhcp"]
+  },
+  {
+    "title": "Display DHCP Info",
+    "command": "ipconfig /all | findstr DHCP",
+    "description": "Displays DHCP configuration information.",
+    "tags": ["dhcp", "ip", "network", "configuration"]
+  },
+  {
+    "title": "Display DNS Servers",
+    "command": "ipconfig /all | findstr \"DNS Servers\"",
+    "description": "Displays configured DNS servers.",
+    "tags": ["dns", "servers", "network", "configuration"]
+  },
+  {
+    "title": "Test DNS Resolution",
+    "command": "nslookup <hostname>",
+    "description": "Queries DNS servers for domain name resolution.",
+    "tags": ["dns", "test", "resolution", "network"]
+  },
+  {
+    "title": "Display Route to Host",
+    "command": "pathping <hostname>",
+    "description": "Traces route and provides packet loss statistics.",
+    "tags": ["network", "route", "trace", "statistics"]
+  },
+  {
+    "title": "Display Network Adapter Details",
+    "command": "netsh interface ip show config",
+    "description": "Displays IP configuration for all network adapters.",
+    "tags": ["network", "adapter", "ip", "configuration"]
+  },
+  {
+    "title": "Set Static IP Address",
+    "command": "netsh interface ip set address \"Local Area Connection\" static <IP> <Subnet> <Gateway>",
+    "description": "Sets a static IP address for a network adapter.",
+    "tags": ["network", "ip", "static", "configuration"]
+  },
+  {
+    "title": "Set DHCP IP Address",
+    "command": "netsh interface ip set address \"Local Area Connection\" dhcp",
+    "description": "Sets network adapter to obtain IP automatically via DHCP.",
+    "tags": ["network", "ip", "dhcp", "configuration"]
+  },
+  {
+    "title": "Set DNS Server",
+    "command": "netsh interface ip set dns \"Local Area Connection\" static <DNS_IP>",
+    "description": "Sets a static DNS server for a network adapter.",
+    "tags": ["network", "dns", "static", "configuration"]
+  },
+  {
+    "title": "Set DHCP DNS",
+    "command": "netsh interface ip set dns \"Local Area Connection\" dhcp",
+    "description": "Sets network adapter to obtain DNS automatically via DHCP.",
+    "tags": ["network", "dns", "dhcp", "configuration"]
+  },
+  {
+    "title": "Display Wireless Networks",
+    "command": "netsh wlan show networks",
+    "description": "Displays available wireless networks.",
+    "tags": ["wireless", "wifi", "networks", "list"]
+  },
+  {
+    "title": "Display Wireless Profiles",
+    "command": "netsh wlan show profiles",
+    "description": "Displays stored wireless network profiles.",
+    "tags": ["wireless", "wifi", "profiles", "list"]
+  },
+  {
+    "title": "Display Wireless Profile Password",
+    "command": "netsh wlan show profile name=\"<profile_name>\" key=clear",
+    "description": "Displays wireless profile details including password (requires admin).",
+    "tags": ["wireless", "wifi", "password", "profile"]
+  },
+  {
+    "title": "Connect to Wireless Network",
+    "command": "netsh wlan connect name=\"<profile_name>\"",
+    "description": "Connects to a wireless network using a stored profile.",
+    "tags": ["wireless", "wifi", "connect", "network"]
+  },
+  {
+    "title": "Disconnect from Wireless",
+    "command": "netsh wlan disconnect",
+    "description": "Disconnects from the current wireless network.",
+    "tags": ["wireless", "wifi", "disconnect", "network"]
+  },
+  {
+    "title": "Export Wireless Profile",
+    "command": "netsh wlan export profile name=\"<profile_name>\"",
+    "description": "Exports a wireless profile to an XML file.",
+    "tags": ["wireless", "wifi", "export", "profile"]
+  },
+  {
+    "title": "Import Wireless Profile",
+    "command": "netsh wlan add profile filename=\"<filename.xml>\"",
+    "description": "Imports a wireless profile from an XML file.",
+    "tags": ["wireless", "wifi", "import", "profile"]
+  },
+  {
+    "title": "Delete Wireless Profile",
+    "command": "netsh wlan delete profile name=\"<profile_name>\"",
+    "description": "Deletes a wireless network profile.",
+    "tags": ["wireless", "wifi", "delete", "profile"]
+  },
+  {
+    "title": "Display Wireless Interface Info",
+    "command": "netsh wlan show interfaces",
+    "description": "Displays information about wireless interfaces.",
+    "tags": ["wireless", "wifi", "interface", "info"]
+  },
+  {
+    "title": "Display Wireless Driver Info",
+    "command": "netsh wlan show drivers",
+    "description": "Displays wireless adapter driver information.",
+    "tags": ["wireless", "wifi", "driver", "info"]
+  },
+  {
+    "title": "Scan for Wireless Networks",
+    "command": "netsh wlan scan",
+    "description": "Scans for available wireless networks.",
+    "tags": ["wireless", "wifi", "scan", "networks"]
+  },
+  {
+    "title": "Start Wireless Hosted Network",
+    "command": "netsh wlan start hostednetwork",
+    "description": "Starts a wireless hosted network (mobile hotspot).",
+    "tags": ["wireless", "wifi", "hotspot", "hosted"]
+  },
+  {
+    "title": "Stop Wireless Hosted Network",
+    "command": "netsh wlan stop hostednetwork",
+    "description": "Stops a wireless hosted network.",
+    "tags": ["wireless", "wifi", "hotspot", "hosted"]
+  },
+  {
+    "title": "Set Hosted Network SSID",
+    "command": "netsh wlan set hostednetwork mode=allow ssid=<SSID> key=<password>",
+    "description": "Configures a wireless hosted network (mobile hotspot).",
+    "tags": ["wireless", "wifi", "hotspot", "ssid"]
+  },
+  {
+    "title": "Show Hosted Network Settings",
+    "command": "netsh wlan show hostednetwork",
+    "description": "Displays wireless hosted network settings.",
+    "tags": ["wireless", "wifi", "hotspot", "settings"]
+  },
+  {
+    "title": "Display Bluetooth Devices",
+    "command": "powershell Get-PnpDevice -Class Bluetooth",
+    "description": "Lists Bluetooth devices using PowerShell.",
+    "tags": ["bluetooth", "devices", "list", "wireless"]
+  },
+  {
+    "title": "Display USB Devices",
+    "command": "wmic path Win32_USBControllerDevice get Dependent",
+    "description": "Lists connected USB devices.",
+    "tags": ["usb", "devices", "list", "hardware"]
+  },
+  {
+    "title": "Display Printer Queue",
+    "command": "net print",
+    "description": "Displays print jobs in the printer queue.",
+    "tags": ["printer", "queue", "jobs", "print"]
+  },
+  {
+    "title": "Clear Printer Queue",
+    "command": "net stop spooler && net start spooler",
+    "description": "Clears the print spooler queue by restarting the service.",
+    "tags": ["printer", "queue", "clear", "spooler"]
+  },
+  {
+    "title": "List Installed Printers",
+    "command": "wmic printer get name",
+    "description": "Lists all installed printers.",
+    "tags": ["printer", "list", "installed", "devices"]
+  },
+  {
+    "title": "Set Default Printer",
+    "command": "wmic printer where name=\"<printer_name>\" call setdefaultprinter",
+    "description": "Sets a printer as the default printer.",
+    "tags": ["printer", "default", "set", "configuration"]
+  },
+  {
+    "title": "Display Time Zone",
+    "command": "tzutil /g",
+    "description": "Displays the current time zone.",
+    "tags": ["time", "zone", "display", "system"]
+  },
+  {
+    "title": "List Time Zones",
+    "command": "tzutil /l",
+    "description": "Lists all available time zones.",
+    "tags": ["time", "zones", "list", "system"]
+  },
+  {
+    "title": "Change Time Zone",
+    "command": "tzutil /s \"<time_zone_id>\"",
+    "description": "Changes the system time zone.",
+    "tags": ["time", "zone", "change", "system"]
+  },
+  {
+    "title": "Display System Locale",
+    "command": "systeminfo | findstr /C:\"System Locale\"",
+    "description": "Displays the system locale settings.",
+    "tags": ["locale", "language", "system", "settings"]
+  },
+  {
+    "title": "Display Keyboard Layout",
+    "command": "powershell Get-WinUserLanguageList",
+    "description": "Displays keyboard layout and input methods using PowerShell.",
+    "tags": ["keyboard", "layout", "input", "language"]
+  },
+  {
+    "title": "Display Screen Resolution",
+    "command": "wmic desktopmonitor get ScreenHeight,ScreenWidth",
+    "description": "Displays current screen resolution.",
+    "tags": ["screen", "resolution", "display", "monitor"]
+  },
+  {
+    "title": "Display Color Depth",
+    "command": "powershell (Get-WmiObject -Class Win32_VideoController).CurrentBitsPerPixel",
+    "description": "Displays color depth using PowerShell.",
+    "tags": ["color", "depth", "display", "graphics"]
+  },
+  {
+    "title": "Display Refresh Rate",
+    "command": "wmic desktopmonitor get MonitorManufacturer,MonitorType,DisplayFrequency",
+    "description": "Displays monitor refresh rate.",
+    "tags": ["refresh", "rate", "monitor", "display"]
+  },
+  {
+    "title": "List Installed Software",
+    "command": "wmic product get name,version",
+    "description": "Lists installed software (takes time to load).",
+    "tags": ["software", "installed", "list", "programs"]
+  },
+  {
+    "title": "Uninstall Software",
+    "command": "wmic product where name=\"<software_name>\" call uninstall",
+    "description": "Uninstalls software by name.",
+    "tags": ["software", "uninstall", "remove", "programs"]
+  },
+  {
+    "title": "List Windows Features",
+    "command": "dism /online /get-features",
+    "description": "Lists Windows features and their state.",
+    "tags": ["windows", "features", "list", "components"]
+  },
+  {
+    "title": "Enable Windows Feature",
+    "command": "dism /online /enable-feature /featurename:<feature_name>",
+    "description": "Enables a Windows feature.",
+    "tags": ["windows", "feature", "enable", "component"]
+  },
+  {
+    "title": "Disable Windows Feature",
+    "command": "dism /online /disable-feature /featurename:<feature_name>",
+    "description": "Disables a Windows feature.",
+    "tags": ["windows", "feature", "disable", "component"]
+  },
+  {
+    "title": "Check Windows Image Health",
+    "command": "dism /online /cleanup-image /scanhealth",
+    "description": "Scans Windows image for component store corruption.",
+    "tags": ["windows", "image", "health", "scan"]
+  },
+  {
+    "title": "Repair Windows Image",
+    "command": "dism /online /cleanup-image /restorehealth",
+    "description": "Repairs Windows image using Windows Update.",
+    "tags": ["windows", "image", "repair", "restore"]
+  },
+  {
+    "title": "Check Disk for Bad Sectors",
+    "command": "chkdsk /r",
+    "description": "Locates bad sectors and recovers readable information.",
+    "tags": ["disk", "check", "bad", "sectors"]
+  },
+  {
+    "title": "Defragment Disk",
+    "command": "defrag <drive_letter>:",
+    "description": "Defragments a disk drive.",
+    "tags": ["disk", "defragment", "optimize", "performance"]
+  },
+  {
+    "title": "Optimize Disk (TRIM)",
+    "command": "defrag <drive_letter>: /o",
+    "description": "Optimizes an SSD (sends TRIM command).",
+    "tags": ["disk", "ssd", "trim", "optimize"]
+  },
+  {
+    "title": "Display Disk Defrag Analysis",
+    "command": "defrag <drive_letter>: /a",
+    "description": "Analyzes a disk and displays fragmentation report.",
+    "tags": ["disk", "defrag", "analysis", "report"]
+  },
+  {
+    "title": "Check Disk Performance",
+    "command": "winsat disk",
+    "description": "Runs disk performance assessment.",
+    "tags": ["disk", "performance", "assessment", "benchmark"]
+  },
+  {
+    "title": "Check System Performance",
+    "command": "winsat formal",
+    "description": "Runs full system performance assessment.",
+    "tags": ["system", "performance", "assessment", "benchmark"]
+  },
+  {
+    "title": "Display Performance Counters",
+    "command": "typeperf \"\\Processor(_Total)\\% Processor Time\" -sc 1",
+    "description": "Displays performance counter data.",
+    "tags": ["performance", "counters", "monitor", "system"]
+  },
+  {
+    "title": "List Performance Counters",
+    "command": "typeperf -q",
+    "description": "Lists available performance counters.",
+    "tags": ["performance", "counters", "list", "monitor"]
+  },
+  {
+    "title": "Display Memory Usage",
+    "command": "wmic OS get FreePhysicalMemory,TotalVisibleMemorySize",
+    "description": "Displays physical memory usage.",
+    "tags": ["memory", "usage", "ram", "system"]
+  },
+  {
+    "title": "Display Virtual Memory",
+    "command": "wmic pagefile get Name, CurrentUsage",
+    "description": "Displays virtual memory (page file) usage.",
+    "tags": ["memory", "virtual", "pagefile", "swap"]
+  },
+  {
+    "title": "Display CPU Usage",
+    "command": "wmic cpu get loadpercentage",
+    "description": "Displays current CPU usage percentage.",
+    "tags": ["cpu", "usage", "percentage", "performance"]
+  },
+  {
+    "title": "Display Disk Usage",
+    "command": "wmic logicaldisk get Name,Size,FreeSpace",
+    "description": "Displays disk usage for all drives.",
+    "tags": ["disk", "usage", "space", "storage"]
+  },
+  {
+    "title": "Display Network Usage",
+    "command": "typeperf \"\\Network Interface(*)\\Bytes Total/sec\" -sc 1",
+    "description": "Displays network interface usage.",
+    "tags": ["network", "usage", "bandwidth", "interface"]
+  },
+  {
+    "title": "Monitor Process Resource Usage",
+    "command": "wmic process where name=\"<process_name>\" get workingsetsize,virtualsize",
+    "description": "Displays memory usage for a specific process.",
+    "tags": ["process", "memory", "usage", "resources"]
+  },
+  {
+    "title": "Display Startup Programs",
+    "command": "wmic startup get caption,command",
+    "description": "Lists programs that start automatically.",
+    "tags": ["startup", "programs", "boot", "autostart"]
+  },
+  {
+    "title": "Display Boot Configuration",
+    "command": "bcdedit",
+    "description": "Displays boot configuration data.",
+    "tags": ["boot", "configuration", "bcd", "startup"]
+  },
+  {
+    "title": "Set Default Boot Entry",
+    "command": "bcdedit /default {current}",
+    "description": "Sets the current boot entry as default.",
+    "tags": ["boot", "default", "entry", "configuration"]
+  },
+  {
+    "title": "Display Boot Time",
+    "command": "systeminfo | find \"System Boot Time\"",
+    "description": "Displays when the system was last booted.",
+    "tags": ["boot", "time", "system", "uptime"]
+  },
+  {
+    "title": "Display Last Shutdown Time",
+    "command": "wevtutil qe System /q:\"*[System[(EventID=1074)]]\" /rd:true /f:text | findstr /B \"Date:\"",
+    "description": "Displays the last shutdown time from event logs.",
+    "tags": ["shutdown", "time", "last", "event"]
+  },
+  {
+    "title": "Display System Logs",
+    "command": "wevtutil qe System /c:5 /rd:true /f:text",
+    "description": "Displays the last 5 system event log entries.",
+    "tags": ["system", "logs", "events", "view"]
+  },
+  {
+    "title": "Display Application Logs",
+    "command": "wevtutil qe Application /c:5 /rd:true /f:text",
+    "description": "Displays the last 5 application event log entries.",
+    "tags": ["application", "logs", "events", "view"]
+  },
+  {
+    "title": "Display Security Logs",
+    "command": "wevtutil qe Security /c:5 /rd:true /f:text",
+    "description": "Displays the last 5 security event log entries.",
+    "tags": ["security", "logs", "events", "view"]
+  },
+  {
+    "title": "Clear Event Log",
+    "command": "wevtutil cl System",
+    "description": "Clears the system event log (requires admin).",
+    "tags": ["event", "log", "clear", "system"]
+  },
+  {
+    "title": "Export Event Log",
+    "command": "wevtutil epl System system_backup.evtx",
+    "description": "Exports the system event log to a file.",
+    "tags": ["event", "log", "export", "backup"]
+  },
+  {
+    "title": "Display Error Events",
+    "command": "wevtutil qe System /q:\"*[System/Level=2]\" /c:10 /rd:true /f:text",
+    "description": "Displays the last 10 error events from system logs.",
+    "tags": ["error", "events", "logs", "system"]
+  },
+  {
+    "title": "Display Warning Events",
+    "command": "wevtutil qe System /q:\"*[System/Level=3]\" /c:10 /rd:true /f:text",
+    "description": "Displays the last 10 warning events from system logs.",
+    "tags": ["warning", "events", "logs", "system"]
+  },
+  {
+    "title": "Display Critical Events",
+    "command": "wevtutil qe System /q:\"*[System/Level=1]\" /c:10 /rd:true /f:text",
+    "description": "Displays the last 10 critical events from system logs.",
+    "tags": ["critical", "events", "logs", "system"]
+  },
+  {
+    "title": "Query Specific Event ID",
+    "command": "wevtutil qe System /q:\"*[System[(EventID=<id>)]]\" /c:5 /rd:true /f:text",
+    "description": "Displays events with a specific event ID.",
+    "tags": ["event", "id", "query", "logs"]
+  },
+  {
+    "title": "Display Event Log Statistics",
+    "command": "wevtutil gli System",
+    "description": "Displays statistics for the system event log.",
+    "tags": ["event", "log", "statistics", "info"]
+  },
+  {
+    "title": "List Event Logs",
+    "command": "wevtutil el",
+    "description": "Lists all available event logs.",
+    "tags": ["event", "logs", "list", "available"]
+  },
+  {
+    "title": "Display Log Properties",
+    "command": "wevtutil gl <log_name>",
+    "description": "Displays properties of a specific event log.",
+    "tags": ["event", "log", "properties", "configuration"]
+  },
+  {
+    "title": "Set Log Size",
+    "command": "wevtutil sl <log_name> /ms:<size_in_bytes>",
+    "description": "Sets the maximum size of an event log.",
+    "tags": ["event", "log", "size", "configuration"]
+  },
+  {
+    "title": "Archive Event Log",
+    "command": "wevtutil al <log_name>",
+    "description": "Archives an event log.",
+    "tags": ["event", "log", "archive", "backup"]
+  },
+  {
+    "title": "Display Performance Logs",
+    "command": "typeperf -qx",
+    "description": "Lists all performance counters that can be logged.",
+    "tags": ["performance", "logs", "counters", "list"]
+  },
+  {
+    "title": "Start Performance Log",
+    "command": "logman create counter <log_name> -o \"<output_file>.blg\" -c \"\\Processor(_Total)\\% Processor Time\" -f bin -v mmddhhmm",
+    "description": "Creates a performance counter log.",
+    "tags": ["performance", "log", "create", "counter"]
+  },
+  {
+    "title": "Stop Performance Log",
+    "command": "logman stop <log_name>",
+    "description": "Stops a performance counter log.",
+    "tags": ["performance", "log", "stop", "counter"]
+  },
+  {
+    "title": "Delete Performance Log",
+    "command": "logman delete <log_name>",
+    "description": "Deletes a performance counter log.",
+    "tags": ["performance", "log", "delete", "counter"]
+  },
+  {
+    "title": "List Performance Logs",
+    "command": "logman query",
+    "description": "Lists all performance data collector sets.",
+    "tags": ["performance", "logs", "list", "collectors"]
+  },
+  {
+    "title": "Display Logman Details",
+    "command": "logman query <log_name>",
+    "description": "Displays details of a specific performance log.",
+    "tags": ["performance", "log", "details", "query"]
+  },
+  {
+    "title": "Update Performance Log",
+    "command": "logman update <log_name> -c \"\\Memory\\Available MBytes\"",
+    "description": "Updates a performance log with additional counters.",
+    "tags": ["performance", "log", "update", "counters"]
+  },
+  {
+    "title": "Start Trace Log",
+    "command": "logman start <trace_name>",
+    "description": "Starts a trace log.",
+    "tags": ["trace", "log", "start", "performance"]
+  },
+  {
+    "title": "Stop Trace Log",
+    "command": "logman stop <trace_name>",
+    "description": "Stops a trace log.",
+    "tags": ["trace", "log", "stop", "performance"]
+  },
+  {
+    "title": "Create Trace Log",
+    "command": "logman create trace <trace_name> -o \"<output_file>.etl\" -p \"Windows Kernel Trace\"",
+    "description": "Creates a kernel trace log.",
+    "tags": ["trace", "log", "create", "kernel"]
+  },
+  {
+    "title": "Display Trace Providers",
+    "command": "logman query providers",
+    "description": "Lists all available trace providers.",
+    "tags": ["trace", "providers", "list", "available"]
+  },
+  {
+    "title": "Display Provider Details",
+    "command": "logman query providers \"<provider_name>\"",
+    "description": "Displays details of a specific trace provider.",
+    "tags": ["trace", "provider", "details", "query"]
+  },
+  {
+    "title": "Convert ETL to XML",
+    "command": "tracerpt <input_file>.etl -o <output_file>.xml -of XML",
+    "description": "Converts an ETL trace file to XML format.",
+    "tags": ["trace", "convert", "etl", "xml"]
+  },
+  {
+    "title": "Convert ETL to CSV",
+    "command": "tracerpt <input_file>.etl -o <output_file>.csv -of CSV",
+    "description": "Converts an ETL trace file to CSV format.",
+    "tags": ["trace", "convert", "etl", "csv"]
+  },
+  {
+    "title": "Generate Trace Report",
+    "command": "tracerpt <input_file>.etl -o <output_file>.txt -report",
+    "description": "Generates a summary report from a trace file.",
+    "tags": ["trace", "report", "generate", "summary"]
+  },
+  {
+    "title": "Display Trace Summary",
+    "command": "tracerpt <input_file>.etl -summary",
+    "description": "Displays a summary of trace file contents.",
+    "tags": ["trace", "summary", "display", "contents"]
+  },
+  {
+    "title": "List Trace Sessions",
+    "command": "tracelog -l",
+    "description": "Lists active trace sessions.",
+    "tags": ["trace", "sessions", "list", "active"]
+  }
+]
