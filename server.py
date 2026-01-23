@@ -16,7 +16,12 @@ import platform
 import sys
 
 import api_handlers
+import api_handlers
 from collaborative_manager import CollaborativeManager
+try:
+    from dns_service import DNSService
+except ImportError:
+    DNSService = None
 
 # Load Config
 CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
@@ -26,7 +31,9 @@ def load_config():
         "admin_key": "pooju",
         "port": 4142,
         "upload_root": "Home",
-        "hidden_folders": [".recycle_bin", "server-icons","useful-info"]
+        "upload_root": "Home",
+        "hidden_folders": [".recycle_bin", "server-icons","useful-info"],
+        "aliases": []
     }
     if os.path.exists(CONFIG_FILE):
         try:
@@ -38,7 +45,9 @@ def load_config():
 
 CONFIG = load_config()
 ADMIN_KEY = CONFIG["admin_key"]
+ADMIN_KEY = CONFIG["admin_key"]
 HIDDEN_FOLDERS = CONFIG["hidden_folders"]
+ALIASES = CONFIG.get("aliases", [])
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_ROOT = os.path.join(BASE_DIR, CONFIG["upload_root"])
@@ -182,4 +191,23 @@ if __name__ == "__main__":
     generate_qr_file(url, os.path.join(UPLOAD_ROOT, "qr.png"))
     print(f"[{time.strftime('%H:%M:%S')}] Server started at {url}")
     sys.stdout.flush()
-    server.serve_forever()
+    print(f"[{time.strftime('%H:%M:%S')}] Server started at {url}")
+    
+    # Start mDNS Service
+    dns_service = None
+    if DNSService and ALIASES:
+        try:
+            dns_service = DNSService(PORT, ALIASES)
+            dns_service.register()
+        except Exception as e:
+            print(f"[{time.strftime('%H:%M:%S')}] Failed to start DNS service: {e}")
+
+    sys.stdout.flush()
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        if dns_service:
+            dns_service.unregister()
+        print(f"\n[{time.strftime('%H:%M:%S')}] Server stopped.")
